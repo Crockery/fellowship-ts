@@ -1,2 +1,3 @@
 # fellowship-db
-An easy to use collection of Fellowship game data.
+
+Fellowship game data in typescript.

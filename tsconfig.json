@@ -1,28 +1,30 @@
 {
   "compilerOptions": {
-    /* Base Options: */
+    "target": "es2022",
+    "module": "commonjs",
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src",
+    /* Base Options: */
     "baseUrl": ".\\",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     /* Strictness */
-    "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    /* If transpiling with TypeScript: */
-    "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
-    /* AND if you're building for a library: */
     "declaration": true,
     /* If your code doesn't run in the DOM: */
     "lib": ["es2022"],
     "paths": {
       "@shared/*": [".\\shared\\*"],
     }
-  }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
