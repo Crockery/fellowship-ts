@@ -1,0 +1,308 @@
+import type { Hero } from "@shared/types";
+export const Sylvie: Hero = {
+  class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
+  thumbnail: "hero_portrait_Mosse_01_default",
+  name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
+  title: {
+    key: "05ED62E745B745321C6806A5B84DF699",
+    default: "The Daughter of the Forest",
+  },
+  description: {
+    key: "46A8A058428C2AC7BD2D1F8F98E00CD9",
+    default:
+      "Sylvie is a healer who uses her innate connection to nature and its many friends to heal her allies and harm her foes.\r\n\r\nSylvie is a Healer that uses Pet Management Mechanics. She excels at sending her pets to heal her allies over time and attack her enemies.\r\n\r\nShe commands her Flutterflies and Plants to heal allies and attack enemies.\r\n\r\nHer powerful Heal over Time spells allow her to prepare for battle and endure long and sustained fights.",
+  },
+  biography: {
+    key: "08DADB074F7EED9DD6725A84AB7DA20D",
+    default:
+      "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
+  },
+  difficulty: 3,
+  id: "CharacterID.Hero.Mosse",
+  talents: [
+    {
+      id: "Talent.ID.Talent1",
+      name: {
+        default: "Nettle to the Petal",
+        key: "3A75326140BFA7C6290F3BA1B0398991",
+      },
+      unlocked_at: 0,
+      row: 1,
+      cost: 2,
+      description: {
+        default:
+          "Each time you deal damage with <rt.absorb>Nettlebolt</>, your <rt.absorb>Life Petal</> triggers an additional tick of its healing.",
+        key: "2BBC59F945C6A5243533B39211A3B271",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Lifepetal.0",
+    },
+    {
+      id: "Talent.ID.Talent2",
+      name: {
+        default: "Synchronized Fluttering",
+        key: "EFB88164466E2D34A2EE388E16793033",
+      },
+      unlocked_at: 0,
+      row: 1,
+      cost: 2,
+      description: {
+        default:
+          "Hold down <rt.absorb>Fluttercall: Heal</> for 2 seconds to overcharge it, causing the ability to be cast on up to 4 allies within 4000 range in one cast. The mana cost is increased by 100% when cast in this way.\r\n\r\n<bold>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the overcharged version of the ability will trigger.",
+        key: "8C2E90E545B7B7D35D66CCB72DCE2A14",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/Sylvie_AbilityIcon_03.0",
+    },
+    {
+      id: "Talent.ID.Talent3",
+      name: {
+        default: "Verdant Restoration",
+        key: "3249BF6548400871C589E3BCA409C976",
+      },
+      unlocked_at: 0,
+      row: 1,
+      cost: 2,
+      description: {
+        default:
+          "The initial heal of your <rt.absorb>Fluttercall: Restore Life</> has +50% increased critical strike chance.",
+        key: "1BE7FFA54B34176844B493920F64AE4E",
+      },
+      thumbnail:
+        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Shadow_58.0",
+    },
+    {
+      id: "Talent.ID.Talent4",
+      name: {
+        default: "Sprouting Nettles",
+        key: "2C60A9454A47B9F806D9408C282A8CCD",
+      },
+      unlocked_at: 0,
+      row: 2,
+      cost: 1,
+      description: {
+        default:
+          "Each tick of <rt.meikoability1>Flutterfly Healing</> has a chance to make your next <rt.absorb>Nettlebolt</> <rt.bold>instant cast</> and have <rt.warning>+400% critical strike chance</>.\r\n\r\n(2.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        key: "FCA8E9ED47BDCFC1EAC0FAB4EC7EBA42",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/Sylvie_AbilityIcon_02.0",
+    },
+    {
+      id: "Talent.ID.Talent5",
+      name: {
+        default: "Natural Knowledge",
+        key: "065769AD4EA82D9C3CF87383C9BE582C",
+      },
+      unlocked_at: 0,
+      row: 2,
+      cost: 1,
+      description: {
+        default:
+          "Each time your Nettlebolt deals damage, you replenish 1% mana.",
+        key: "5565A2D344A18E7D5400ED89BD4C5801",
+      },
+      thumbnail:
+        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_Skill_Icons_Pack/Tex_blue_9.0",
+    },
+    {
+      id: "Talent.ID.Talent6",
+      name: {
+        default: "Trailing Restoration",
+        key: "BAD9E98A46A79C13E848AAAE3F8E4B07",
+      },
+      unlocked_at: 0,
+      row: 2,
+      cost: 1,
+      description: {
+        default:
+          "The duration of your <rt.absorb>Fluttercall: Restore Life</> is increased by 9 seconds.",
+        key: "A6B1BA8442DA9368B91EDFA6CB556FCC",
+      },
+      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_ArcaneAid.0",
+    },
+    {
+      id: "Talent.ID.Talent18",
+      name: { default: "Symbiosis", key: "23B77C43410F3C625BC77B9C86118B39" },
+      unlocked_at: 0,
+      row: 3,
+      cost: 2,
+      description: {
+        default:
+          "Your <rt.absorb>Prickly Vines</> deal <rt.warning>12% more damage</> for each player that has a <rt.effect>Pink Flutterfly</>.",
+        key: "E8087CEC4011198023BFA5BA7CDF5093",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Vine.0",
+    },
+    {
+      id: "Talent.ID.Talent8",
+      name: {
+        default: "Will of Nature",
+        key: "4D2A346D4EE8D944D9BBF3A08A51E06D",
+      },
+      unlocked_at: 0,
+      row: 3,
+      cost: 2,
+      description: {
+        default:
+          "Your healing is increased by 25% on players with <bold>30% or less health</>.\r\n",
+        key: "4DF530204A7E808B8244D0935DBB044D",
+      },
+      thumbnail: "/Game/ui/icons/NhanceRPGSpells_02/Textures/T_Icon_Fel_07.0",
+    },
+    {
+      id: "Talent.ID.Talent9",
+      name: {
+        default: "Rowdy Rootsap",
+        key: "8A6FDA13410372F10178D8930646AECB",
+      },
+      unlocked_at: 0,
+      row: 3,
+      cost: 2,
+      description: {
+        default:
+          "Your <rt.absorb>Enfeebling Rootsap</> causes the target and all enemies within a 700 radius of the target to have 20% reduced attack speed and 50% reduced movement speed while active.",
+        key: "CC7C78D846BB2DABAA7A58A4ACCDAF7A",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Rootheal.0",
+    },
+    {
+      id: "Talent.ID.Talent10",
+      name: {
+        default: "Nurtured Haven",
+        key: "7463AAFD4EA1ADF20A5265888783FCB6",
+      },
+      unlocked_at: 0,
+      row: 4,
+      cost: 1,
+      description: {
+        default:
+          "The cooldown of your <rt.absorb>Safe Haven</> is reduced each time one of your plants wither.\r\n\r\n<rt.absorb>Prickly Vine</> - 1 second\r\n<rt.absorb>Life Petal</> - 2 seconds\r\n<rt.absorb>Heart Bloom</> - 3 seconds",
+        key: "40968DBD426F60FD404E51A224B78980",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_LinkCD.0",
+    },
+    {
+      id: "Talent.ID.Talent11",
+      name: { default: "Magic Ward", key: "5C172D0E449591E02B05898263F37FA6" },
+      unlocked_at: 0,
+      row: 4,
+      cost: 1,
+      description: {
+        default: "You take <rt.bold>10% less magic damage</>.",
+        key: "2592EF3C4EA009BAAC1B969CA0275794",
+      },
+      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_Arcane_Scroll.0",
+    },
+    {
+      id: "Talent.ID.Talent16",
+      name: {
+        default: "Bluey's Gambit",
+        key: "48A5848F43DB11543AF94B8B2726D0EE",
+      },
+      unlocked_at: 0,
+      row: 4,
+      cost: 1,
+      description: {
+        default:
+          "While your <bold>Blue Flutterfly</> is following you, you take 5% reduced damage.\r\n\r\nWhile your <bold>Blue Flutterfly</> is following another player, they take 5% reduced damage.",
+        key: "EF9A18864B3AEDE66C5626B0CB4A484D",
+      },
+      thumbnail:
+        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Elements_32.0",
+    },
+    {
+      id: "Talent.ID.Talent13",
+      name: {
+        default: "Natural Protector",
+        key: "1ED4858E45F8BA172C288CB6263F1A62",
+      },
+      unlocked_at: 0,
+      row: 5,
+      cost: 3,
+      description: {
+        default:
+          "Your <rt.absorb>Ironleaf Ward</> and <rt.absorb>Safe Haven</> abilities shield players for 15 seconds, absorbing up to <rt.heal>4263% intellect</> damage.",
+        key: "C5CA6B9E43AC73F6FD3DBFBF9FCCA165",
+      },
+      thumbnail: "/Game/ui/icons/Blink_icons/Classes/Symbiose/Druid/Druid17.0",
+    },
+    {
+      id: "Talent.ID.Talent14",
+      name: {
+        default: "Flutterswift",
+        key: "96E3640C456437149CD081999AEEF28E",
+      },
+      unlocked_at: 0,
+      row: 5,
+      cost: 3,
+      description: {
+        default:
+          "Your <rt.absorb>Fluttercall: Heal</> ticks 100% faster for the first 12 seconds each time it begins healing a player.",
+        key: "53DF8E464CF32486EF8450BFAC8173EE",
+      },
+      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_ArcaneWhirl.0",
+    },
+    {
+      id: "Talent.ID.Talent15",
+      name: {
+        default: "Flower Power",
+        key: "DF99486A4609DD215A5505B5B1528B90",
+      },
+      unlocked_at: 0,
+      row: 5,
+      cost: 3,
+      description: {
+        default:
+          "Your <rt.absorb>Heart Bloom</> has 2 charges but only accumulates 8% of all <rt.meikoability1>Flutterfly Healing</>.\r\n\r\n<rt.absorb>Heart Bloom</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+        key: "E4E95D924704DF7E01CC0C849C8A7725",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Bigheal.0",
+    },
+    {
+      id: "Talent.ID.Talent7",
+      name: {
+        default: "Elusive Wildling",
+        key: "069A560441E7058DFF18A1A804FE490B",
+      },
+      unlocked_at: 0,
+      row: 6,
+      cost: 1,
+      description: {
+        default:
+          "You take <rt.bold>20% reduced damage</> while <rt.absorb>Hidden Trail</> is active.",
+        key: "C7CA0E0746EDD1EE6D7AEBA7233E2885",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Hide.0",
+    },
+    {
+      id: "Talent.ID.Talent12",
+      name: {
+        default: "Spirited Fortitude",
+        key: "2DC8302C4E61C3F357D06D892053DFD6",
+      },
+      unlocked_at: 0,
+      row: 6,
+      cost: 1,
+      description: {
+        default: "You take <rt.bold>10% less Area of effect damage</>.",
+        key: "5C29F7F7472F394E4E32138404381645",
+      },
+      thumbnail:
+        "/Game/ui/icons/Blink_icons/Classes/Warrior/Barbarian/Barbarian3.0",
+    },
+    {
+      id: "Talent.ID.Talent17",
+      name: {
+        default: "Bloomin' Boomshrooms",
+        key: "B218768B47A062019532709E1956C305",
+      },
+      unlocked_at: 0,
+      row: 6,
+      cost: 1,
+      description: {
+        default:
+          "Your <rt.absorb>Shroomsplosion</> ability can now target allies, sending up to 5 <bold>Boomshrooms</> to detonate on them, instantly healing them for <rt.heal>308% Intellect</> each.\r\n\r\nWhen targeting allies in this way, the <bold>Boomshroom</> still deals its normal damage to nearby enemies.",
+        key: "B6B6BFD6471169D0F439FCA01321066D",
+      },
+      thumbnail: "/Game/ui/icons/hero_abilities/Sylvie/T_Mosse_Boomshroom.0",
+    },
+  ],
+};
