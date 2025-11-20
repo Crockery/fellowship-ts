@@ -1,4 +1,4 @@
-import type { Hero } from "@shared/types";
+import type { Hero } from "../types";
 export const Sylvie: Hero = {
   class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
   thumbnail: "hero_portrait_Mosse_01_default",

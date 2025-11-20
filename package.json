@@ -17,18 +17,21 @@
   ],
   "license": "ISC",
   "author": "Ryan Crockett",
-  "type": "commonjs",
-  "main": "dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
-    "format-data": "prettier --write ./src/data/**/*.ts",
+    "format": "prettier --write ./src/**/*.ts",
     "gen": "tsx scripts\\gen",
     "build": "tsdown",
-    "build:tsc": "npx tsc -p .",
     "copy-assets": "tsx scripts\\copy-assets",
     "type-check": "tsc --skipLibCheck --noEmit"
   },

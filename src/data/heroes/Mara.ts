@@ -1,4 +1,4 @@
-import type { Hero } from "@shared/types";
+import type { Hero } from "../types";
 export const Mara: Hero = {
   class_color: { R: 111, G: 46, B: 241, A: 255, hex: "#6F2EF1" },
   thumbnail: "hero_portrait_Mara_01",

@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import path from "path";
 import { loadEnvFile } from "process";
-import { clearDirectory } from "scripts/shared";
+import { clearDirectory } from "../shared";
 import sharp from "sharp";
 
 interface ResizeRequest {

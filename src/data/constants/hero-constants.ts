@@ -1,12 +1,12 @@
-import { HeroName } from "../types/";
+import type { HeroName } from "../types/";
 export const HeroNames: HeroName[] = [
-  "Elarion",
   "Ardeos",
+  "Elarion",
   "Tariq",
   "Mara",
   "Meiko",
-  "Sylvie",
   "Rime",
-  "Helena",
+  "Sylvie",
   "Vigour",
+  "Helena",
 ];

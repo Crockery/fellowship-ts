@@ -1,6 +1,5 @@
-import { HeroData } from "@shared/types";
+import type { HeroData, HeroName } from "./data/types";
 import * as AllHeroData from "./data/heroes";
-import { HeroName } from "./data/types";
 import { HeroNames } from "./data/constants/hero-constants";
 
 export class FellowshipTs {

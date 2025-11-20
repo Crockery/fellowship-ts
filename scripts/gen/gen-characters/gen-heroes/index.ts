@@ -2,17 +2,16 @@ import {
   HeroMetaDataRaw,
   HeroDataRaw,
   HeroTalentDataRaw,
-} from "../shared/types";
+} from "../../shared/types";
 import fs from "fs-extra";
-import { FSBlueprint } from "../shared/types/shared";
+import { FSBlueprint } from "../../shared/types/shared";
 import {
   Hero,
   HeroData,
   HeroMetaData,
   HeroTalentData,
-} from "../../../shared/types/heroes";
-
-// TODO: Role info
+} from "../../../../src/data/types";
+import { saveHeroSupplementals } from "./helpers/save-hero-supplementals";
 
 const getHeroMetaData = async (
   meta_data_path: string
@@ -225,7 +224,7 @@ export const genHeroes = async () => {
   await Promise.all(
     all_hero_data.map(async (hero) => {
       const file = `
-        import type { Hero } from "@shared/types";
+        import type { Hero } from "../types";
         export const ${hero.name.default}: Hero = ${JSON.stringify(hero)};
       `;
       await fs.writeFile(`.\\src\\data\\heroes\\${hero.name.default}.ts`, file);
@@ -237,19 +236,8 @@ export const genHeroes = async () => {
 
   await fs.writeFile(`.\\src\\data\\heroes\\index.ts`, heroExports);
 
-  const hero_names = all_hero_data.map((hero) => `"${hero.name.default}"`);
-
-  await fs.writeFile(
-    `.\\src\\data\\types\\hero-types.ts`,
-    `export type HeroName = ${hero_names.join(" | ")}`
-  );
-
-  await fs.writeFile(
-    ".\\src\\data\\constants\\hero-constants.ts",
-    `
-      import { HeroName } from "../types/";
-      export const HeroNames: HeroName[] = [${hero_names}];
-    `
+  await saveHeroSupplementals(
+    all_hero_data.map((hero) => `"${hero.name.default}"`)
   );
 
   console.log("Done generating heroes.");

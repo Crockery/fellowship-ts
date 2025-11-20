@@ -1,4 +1,15 @@
-import { Translateable } from "./shared-types";
+import type { Translateable } from "./fellowship";
+
+export type HeroName =
+  | "Elarion"
+  | "Ardeos"
+  | "Tariq"
+  | "Mara"
+  | "Meiko"
+  | "Sylvie"
+  | "Rime"
+  | "Helena"
+  | "Vigour";
 
 export interface HeroMetaData {
   class_color: {

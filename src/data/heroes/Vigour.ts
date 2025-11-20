@@ -1,4 +1,4 @@
-import type { Hero } from "@shared/types";
+import type { Hero } from "../types";
 export const Vigour: Hero = {
   class_color: { R: 221, G: 219, B: 197, A: 255, hex: "#DDDBC5" },
   thumbnail: "hero_portrait_vigor_default",
