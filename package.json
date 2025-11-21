@@ -34,7 +34,7 @@
     "build": "tsdown",
     "copy-assets": "tsx scripts\\copy-assets",
     "type-check": "tsc --skipLibCheck --noEmit",
-    "test": ""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
