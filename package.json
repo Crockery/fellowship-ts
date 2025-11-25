@@ -1,6 +1,6 @@
 {
   "name": "fellowship-ts",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "Fellowship game data in typescript.",
   "homepage": "https://github.com/Crockery/fellowship-ts#readme",
   "bugs": {
