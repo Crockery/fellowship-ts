@@ -1,5 +1,6 @@
-import { genHeroes } from "./gen-heroes";
+import { genEnemies } from "./gen-enemies";
+// import { genHeroes } from "./gen-heroes";
 
 export const genCharacters = async () => {
-  return await Promise.all([genHeroes()]);
+  return await Promise.all([genEnemies()]);
 };
