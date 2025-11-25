@@ -29,10 +29,10 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "format": "prettier --write ./src/**/*.ts",
-    "gen": "tsx scripts\\gen",
+    "format": "prettier --write ./src/*",
+    "gen": "tsx scripts/gen",
     "build": "tsdown",
-    "copy-assets": "tsx scripts\\copy-assets",
+    "copy-assets": "tsx scripts/copy-assets",
     "type-check": "tsc --skipLibCheck --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

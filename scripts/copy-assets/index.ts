@@ -17,14 +17,14 @@ interface PathConfig {
 
 const ROOT_PATHS: Record<string, PathConfig> = {
   heroes: {
-    root: "Content\\ui\\icons\\hero_portraits",
+    root: "Content/ui/icons/hero_portraits",
     sizes: [
       { x: 300, y: 300, name: "300" },
       { x: 80, y: 80, name: "80" },
     ],
   },
   abilities: {
-    root: "Content\\ui\\icons\\Hero_Abilities",
+    root: "Content/ui/icons/Hero_Abilities",
     sizes: [
       { x: 300, y: 300, name: "300" },
       { x: 80, y: 80, name: "80" },
@@ -41,7 +41,7 @@ interface CopyRequest {
 try {
   loadEnvFile(".env");
 } catch (error) {
-  console.error("Unable to generate data: missing env file.");
+  console.error("Unable to generate data: missing env file.", error);
 }
 
 const getAllPngPaths = async (
@@ -54,8 +54,8 @@ const getAllPngPaths = async (
     .filter((dirent) => dirent.isFile() && path.extname(dirent.name) === ".png")
     .map((dirent) => {
       return {
-        source: `${dirent.parentPath}\\${dirent.name}`,
-        destination: `.\\assets\\${key}\\raw\\${dirent.name}`,
+        source: `${dirent.parentPath}/${dirent.name}`,
+        destination: `./assets/${key}/raw/${dirent.name}`,
         key,
       };
     });
@@ -64,7 +64,7 @@ const getAllPngPaths = async (
 
   const subFiles = await Promise.all(
     directories.map(async (dirent) =>
-      getAllPngPaths(`${dirent.parentPath}\\${dirent.name}`, key)
+      getAllPngPaths(`${dirent.parentPath}/${dirent.name}`, key)
     )
   );
 
@@ -82,7 +82,7 @@ const getAllConversions = (requests: CopyRequest[]): ConversionRequest[] => {
     const config = ROOT_PATHS[request.key];
 
     const destination = request.destination.replace(
-      `raw\\${path.basename(request.destination)}`,
+      `raw/${path.basename(request.destination)}`,
       path.basename(request.destination)
     );
 
@@ -115,9 +115,9 @@ const copyAssets = async () => {
   // directory.
   await Promise.all(
     root_keys.map(async (key) => {
-      await clearDirectory(`.\\assets\\${key}`);
-      await clearDirectory(`.\\assets\\${key}\\raw`);
-      await fs.ensureDir(`.\\assets\\${key}\\raw`);
+      await clearDirectory(`./assets/${key}`);
+      await clearDirectory(`./assets/${key}/raw`);
+      await fs.ensureDir(`./assets/${key}/raw`);
     })
   );
 
@@ -128,7 +128,7 @@ const copyAssets = async () => {
       const root = ROOT_PATHS[key]?.root;
       if (root) {
         return await getAllPngPaths(
-          `${process.env.FMODEL_OUTPUT}\\${root}`,
+          `${process.env.FMODEL_OUTPUT}/${root}`,
           key
         );
       } else {

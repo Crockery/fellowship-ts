@@ -1,12 +1,12 @@
 import type { Translateable } from "./fellowship";
 export type HeroName =
-  | "Ardeos"
   | "Elarion"
-  | "Tariq"
+  | "Ardeos"
   | "Mara"
   | "Meiko"
-  | "Rime"
+  | "Tariq"
   | "Sylvie"
+  | "Rime"
   | "Vigour"
   | "Helena";
 

@@ -14,7 +14,7 @@ import {
 import { saveHeroSupplementals } from "./helpers/save-hero-supplementals";
 
 const getHeroMetaData = async (
-  meta_data_path: string
+  meta_data_path: string,
 ): Promise<HeroMetaData | null> => {
   try {
     const json: HeroMetaDataRaw[] = await fs.readJson(meta_data_path);
@@ -36,7 +36,7 @@ const getHeroMetaData = async (
     if (!thumbnail) {
       console.log(
         `no thumb for ${hero_info_raw.Properties.HeroName.SourceString}`,
-        hero_info_raw.Properties.PortraitTexture
+        hero_info_raw.Properties.PortraitTexture,
       );
     }
 
@@ -72,7 +72,7 @@ const getHeroMetaData = async (
   } catch (error) {
     console.log(
       `Encountered error loading hero json at ${meta_data_path}`,
-      error
+      error,
     );
     return null;
   }
@@ -95,7 +95,7 @@ const getHeroData = async (data_path: string): Promise<HeroData | null> => {
 };
 
 const getHeroTalents = async (
-  talents_path: string
+  talents_path: string,
 ): Promise<HeroTalentData[]> => {
   const json: FSBlueprint[] = await fs.readJson(talents_path);
 
@@ -108,7 +108,7 @@ const getHeroTalents = async (
   }
 
   return (talent_data as HeroTalentDataRaw).Properties.Talents.filter(
-    (talent) => !talent.DisabledInGame
+    (talent) => !talent.DisabledInGame,
   ).map((talent) => {
     return {
       id: talent.TalentID.TagName,
@@ -142,13 +142,15 @@ export const genHeroes = async () => {
 
   // Step 1. Get the directory names within the hero directory
   const hero_paths_all = await fs.readdir(
-    `${process.env.FMODEL_OUTPUT}\\Content\\characters\\Heroes`,
-    { withFileTypes: true }
+    `${process.env.FMODEL_OUTPUT}/Content/characters/Heroes`,
+    { withFileTypes: true },
   );
 
   const hero_keys = hero_paths_all
     .filter((path) => path.isDirectory())
     .map((dirent) => dirent.name);
+
+  console.log(hero_keys);
 
   // Step 2. Using the keys, traverse the hero directory and
   // find which directories have a data, and meta-data file
@@ -158,33 +160,39 @@ export const genHeroes = async () => {
   const getDataPaths = async (hero_key: string) => {
     // Get the files in the hero's directory.
     const paths = await fs.readdir(
-      `${process.env.FMODEL_OUTPUT}\\Content\\characters\\Heroes\\${hero_key}`,
-      { withFileTypes: true }
+      `${process.env.FMODEL_OUTPUT}/Content/characters/Heroes/${hero_key}`,
+      { withFileTypes: true },
     );
 
     const files = paths.filter((dirent) => dirent.isFile());
 
     // Find the "data" file for that hero.
     const data_file = files.find((dirent) =>
-      dirent.name.startsWith(`BP_Hero_${hero_key}.json`)
+      dirent.name
+        .toLowerCase()
+        .startsWith(`bp_hero_${hero_key}.json`.toLowerCase()),
     );
 
     // Find the "meta_data file for that hero. Seems like this can"
     // be named with or without a "_" before "MetaData"
     const metadata_file = files.find(
       (dirent) =>
-        dirent.name.startsWith(`DA_${hero_key}MetaData.json`) ||
-        dirent.name.startsWith(`DA_${hero_key}_MetaData.json`)
+        dirent.name
+          .toLowerCase()
+          .startsWith(`da_${hero_key}metadata.json`.toLowerCase()) ||
+        dirent.name
+          .toLowerCase()
+          .startsWith(`da_${hero_key}_metadata.json`.toLowerCase()),
     );
 
-    const talents_file = `${process.env.FMODEL_OUTPUT}\\Content\\Abilities\\Talents\\${hero_key}\\DA_Talents_${hero_key}.json`;
+    const talents_file = `${process.env.FMODEL_OUTPUT}/Content/Abilities/Talents/${hero_key}/DA_Talents_${hero_key}.json`;
 
     // Only add the hero if they have both a data, and metadata
     // path.
     if (data_file && metadata_file) {
       hero_paths.push({
-        data_file: `${data_file.parentPath}\\${data_file.name}`,
-        metadata_file: `${metadata_file.parentPath}\\${metadata_file.name}`,
+        data_file: `${data_file.parentPath}/${data_file.name}`,
+        metadata_file: `${metadata_file.parentPath}/${metadata_file.name}`,
         talents_file: talents_file,
         hero_key,
       });
@@ -194,7 +202,7 @@ export const genHeroes = async () => {
   await Promise.all(hero_keys.map((key) => getDataPaths(key)));
 
   console.log(
-    `${hero_paths.length} valid heroes found: ${hero_paths.map((hero) => hero.hero_key).join(", ")}`
+    `${hero_paths.length} valid heroes found: ${hero_paths.map((hero) => hero.hero_key).join(", ")}`,
   );
 
   // Step 3. Using the data, and metadata files, convert
@@ -209,16 +217,16 @@ export const genHeroes = async () => {
 
       if (!meta_data || !data) {
         throw new Error(
-          `Unable to get hero data for ${hero.hero_key}: meta: ${!!meta_data} / data: ${!!data}`
+          `Unable to get hero data for ${hero.hero_key}: meta: ${!!meta_data} / data: ${!!data}`,
         );
       }
 
       const data_full: Hero = { ...meta_data, ...data, talents };
       return data_full;
-    })
+    }),
   );
 
-  await fs.ensureDir(".\\src\\data\\heroes");
+  await fs.ensureDir("./src/data/heroes");
 
   // Step 4. Write the hero data to .ts files to be used by the library.
   await Promise.all(
@@ -227,17 +235,17 @@ export const genHeroes = async () => {
         import type { Hero } from "../types";
         export const ${hero.name.default}: Hero = ${JSON.stringify(hero)};
       `;
-      await fs.writeFile(`.\\src\\data\\heroes\\${hero.name.default}.ts`, file);
-    })
+      await fs.writeFile(`./src/data/heroes/${hero.name.default}.ts`, file);
+    }),
   );
 
   // Index file to export all the hero data files.
   const heroExports = `${all_hero_data.map((hero) => `export * from "./${hero.name.default}";`).join("\n")}`;
 
-  await fs.writeFile(`.\\src\\data\\heroes\\index.ts`, heroExports);
+  await fs.writeFile(`./src/data/heroes/index.ts`, heroExports);
 
   await saveHeroSupplementals(
-    all_hero_data.map((hero) => `"${hero.name.default}"`)
+    all_hero_data.map((hero) => `"${hero.name.default}"`),
   );
 
   console.log("Done generating heroes.");

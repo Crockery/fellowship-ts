@@ -3,14 +3,14 @@ import fs from "fs-extra";
 export const saveHeroSupplementals = async (hero_names: string[]) => {
   await Promise.all([
     fs.writeFile(
-      ".\\src\\data\\constants\\hero-constants.ts",
+      "./src/data/constants/hero-constants.ts",
       `
           import type { HeroName } from "../types/";
           export const HeroNames: HeroName[] = [${hero_names}];
         `
     ),
     fs.writeFile(
-      `.\\src\\data\\types\\hero-types.ts`,
+      `./src/data/types/hero-types.ts`,
       `import type { Translateable } from "./fellowship";
       export type HeroName = ${hero_names.join(" | ")}
 
