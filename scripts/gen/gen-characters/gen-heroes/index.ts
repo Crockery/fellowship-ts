@@ -247,7 +247,7 @@ export const genHeroes = async (generator: DataGenerator) => {
   generator.addStaticFileContent({
     file: "constants",
     type: "imports",
-    content: `import type { HeroName } from "../types";`,
+    content: `import type { HeroName } from "../../types";`,
   });
 
   generator.addStaticFileContent({

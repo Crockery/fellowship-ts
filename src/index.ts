@@ -1,6 +1,6 @@
-import type { HeroData, HeroName } from "./data/types";
+import type { HeroData, HeroName } from "./types";
 import * as AllHeroData from "./data/heroes";
-import { HeroNames } from "./data/constants/hero-constants";
+import { HeroNames } from "./constants";
 
 export class FellowshipTs {
   private heroes_map: Map<HeroName, HeroData>;
