@@ -1,15 +1,11 @@
-import type { Translateable } from "./fellowship";
+export * from "./generated";
 
-export type HeroName =
-  | "Elarion"
-  | "Ardeos"
-  | "Tariq"
-  | "Mara"
-  | "Meiko"
-  | "Sylvie"
-  | "Rime"
-  | "Helena"
-  | "Vigour";
+export interface Translateable {
+  key: string;
+  default: string;
+}
+
+// HEROES
 
 export interface HeroMetaData {
   class_color: {
@@ -43,4 +39,13 @@ export interface HeroTalentData {
 
 export interface Hero extends HeroData, HeroMetaData {
   talents: HeroTalentData[];
+}
+
+// ENEMIES
+
+export interface Enemy {
+  name: Translateable;
+  id: string;
+  thumbnail: string;
+  isBoss: boolean;
 }

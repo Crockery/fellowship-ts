@@ -10,8 +10,8 @@ import {
   HeroData,
   HeroMetaData,
   HeroTalentData,
-} from "../../../../src/data/types";
-import { saveHeroSupplementals } from "./helpers/save-hero-supplementals";
+} from "../../../../src/types";
+import { DataGenerator } from "../../shared/data-generator";
 
 const getHeroMetaData = async (
   meta_data_path: string,
@@ -78,11 +78,18 @@ const getHeroMetaData = async (
   }
 };
 
+const isHeroData = (data: FSBlueprint | HeroDataRaw): data is HeroDataRaw => {
+  return (
+    !!data["Properties"] &&
+    !!(data.Properties as Record<string, unknown>).HeroID
+  );
+};
+
 const getHeroData = async (data_path: string): Promise<HeroData | null> => {
   const json: FSBlueprint[] = await fs.readJson(data_path);
 
   const hero_data = json.find((block) => {
-    return !!block["Properties"]?.HeroID;
+    return isHeroData(block);
   });
 
   if (hero_data) {
@@ -136,9 +143,8 @@ interface HeroDataPath {
   hero_key: string;
 }
 
-export const genHeroes = async () => {
-  console.group();
-  console.log("Generating hero data.");
+export const genHeroes = async (generator: DataGenerator) => {
+  generator.addClean("./src/data/heroes");
 
   // Step 1. Get the directory names within the hero directory
   const hero_paths_all = await fs.readdir(
@@ -149,8 +155,6 @@ export const genHeroes = async () => {
   const hero_keys = hero_paths_all
     .filter((path) => path.isDirectory())
     .map((dirent) => dirent.name);
-
-  console.log(hero_keys);
 
   // Step 2. Using the keys, traverse the hero directory and
   // find which directories have a data, and meta-data file
@@ -201,10 +205,6 @@ export const genHeroes = async () => {
 
   await Promise.all(hero_keys.map((key) => getDataPaths(key)));
 
-  console.log(
-    `${hero_paths.length} valid heroes found: ${hero_paths.map((hero) => hero.hero_key).join(", ")}`,
-  );
-
   // Step 3. Using the data, and metadata files, convert
   // the JSON in them to usable hero info JSON.
   const all_hero_data = await Promise.all(
@@ -226,28 +226,39 @@ export const genHeroes = async () => {
     }),
   );
 
-  await fs.ensureDir("./src/data/heroes");
-
-  // Step 4. Write the hero data to .ts files to be used by the library.
-  await Promise.all(
-    all_hero_data.map(async (hero) => {
-      const file = `
+  all_hero_data.forEach(async (hero) => {
+    generator.addWrite({
+      path: `./src/data/heroes/${hero.name.default}.ts`,
+      content: `
         import type { Hero } from "../types";
         export const ${hero.name.default}: Hero = ${JSON.stringify(hero)};
-      `;
-      await fs.writeFile(`./src/data/heroes/${hero.name.default}.ts`, file);
-    }),
-  );
+      `,
+    });
+  });
+
+  const hero_names = all_hero_data.map((hero) => `"${hero.name.default}"`);
 
   // Index file to export all the hero data files.
-  const heroExports = `${all_hero_data.map((hero) => `export * from "./${hero.name.default}";`).join("\n")}`;
+  generator.addWrite({
+    path: `./src/data/heroes/index.ts`,
+    content: `${all_hero_data.map((hero) => `export * from "./${hero.name.default}";`).join("\n")}`,
+  });
 
-  await fs.writeFile(`./src/data/heroes/index.ts`, heroExports);
+  generator.addStaticFileContent({
+    file: "constants",
+    type: "imports",
+    content: `import type { HeroName } from "../types";`,
+  });
 
-  await saveHeroSupplementals(
-    all_hero_data.map((hero) => `"${hero.name.default}"`),
-  );
+  generator.addStaticFileContent({
+    file: "constants",
+    type: "body",
+    content: `export const HeroNames: HeroName[] = [${hero_names}]`,
+  });
 
-  console.log("Done generating heroes.");
-  console.groupEnd();
+  generator.addStaticFileContent({
+    file: "typings",
+    type: "body",
+    content: `export type HeroName = ${hero_names.join(" | ")};`,
+  });
 };

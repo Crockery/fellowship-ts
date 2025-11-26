@@ -4,7 +4,7 @@ export interface FSTransObj {
   SourceString: string;
 }
 
-export interface FSBlueprint extends Record<string, any> {
+export interface FSBlueprint extends Record<string, unknown> {
   Type: string;
   Name: string;
   Class: string;
