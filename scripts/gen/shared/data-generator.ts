@@ -1,5 +1,6 @@
 import fs from "fs-extra";
 import { clearDirectory } from "../../shared/utils/clear-directory";
+import { execSync } from "child_process";
 
 const chunk = <T>(to_chunk: T[], size: number): T[][] => {
   const R = [];
@@ -107,7 +108,9 @@ export class DataGenerator {
       this.writeFile(this.getStaticWrite(this.constants)),
     ]);
 
-    console.log("Done!");
+    console.log("Done! Formatting files.");
+
+    execSync("npm run format");
   }
 
   addClean(path: string) {

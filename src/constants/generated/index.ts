@@ -4,10 +4,10 @@ export const HeroNames: HeroName[] = [
   "Elarion",
   "Ardeos",
   "Tariq",
-  "Meiko",
   "Mara",
-  "Rime",
+  "Meiko",
   "Sylvie",
+  "Rime",
   "Vigour",
   "Helena",
 ];

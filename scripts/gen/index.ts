@@ -2,6 +2,7 @@ import { loadEnvFile } from "node:process";
 import { genCharacters } from "./gen-characters";
 // import { genLang } from "./gen-lang";
 import { DataGenerator } from "./shared/data-generator";
+import { genLang } from "./gen-lang";
 
 try {
   loadEnvFile(".env");
@@ -12,5 +13,6 @@ try {
 const generator = new DataGenerator();
 
 generator.addHandler("characters", genCharacters);
+generator.addHandler("localization", genLang);
 
 generator.start();
