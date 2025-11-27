@@ -108,9 +108,11 @@ export class DataGenerator {
       this.writeFile(this.getStaticWrite(this.constants)),
     ]);
 
-    console.log("Done! Formatting files.");
+    console.log("Formatting files.");
 
     execSync("npm run format");
+
+    console.log("Done!");
   }
 
   addClean(path: string) {

@@ -1,13 +1,13 @@
 export type HeroName =
-  | "Elarion"
   | "Ardeos"
-  | "Tariq"
+  | "Elarion"
+  | "Helena"
   | "Mara"
   | "Meiko"
-  | "Sylvie"
   | "Rime"
-  | "Vigour"
-  | "Helena";
+  | "Sylvie"
+  | "Tariq"
+  | "Vigour";
 export const LangKeys = [
   "de",
   "en",

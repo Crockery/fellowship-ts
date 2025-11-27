@@ -236,12 +236,21 @@ export const genHeroes = async (generator: DataGenerator) => {
     });
   });
 
-  const hero_names = all_hero_data.map((hero) => `"${hero.name.default}"`);
+  const hero_names = all_hero_data
+    .map((hero) => `"${hero.name.default}"`)
+    .sort((a, b) => {
+      return a.localeCompare(b);
+    });
 
   // Index file to export all the hero data files.
   generator.addWrite({
     path: `./src/data/heroes/index.ts`,
-    content: `${all_hero_data.map((hero) => `export * from "./${hero.name.default}";`).join("\n")}`,
+    content: `${all_hero_data
+      .sort((a, b) => {
+        return a.name.default.localeCompare(b.name.default);
+      })
+      .map((hero) => `export * from "./${hero.name.default}";`)
+      .join("\n")}`,
   });
 
   generator.addStaticFileContent({

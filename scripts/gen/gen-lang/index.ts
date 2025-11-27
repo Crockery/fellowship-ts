@@ -36,6 +36,8 @@ export const genLang = async (generator: DataGenerator) => {
   }
 
   if (keys.length) {
+    keys = keys.sort((a, b) => a.localeCompare(b));
+
     await Promise.all(
       keys.map((key) =>
         copyLocaleJson(key, root, `${dest}/locales`, generator),
