@@ -1,4 +1,4 @@
-import type { Hero } from "../types";
+import type { Hero } from "../../types";
 export const Ardeos: Hero = {
   class_color: { R: 235, G: 99, B: 41, A: 255, hex: "#EB6329" },
   thumbnail: "hero_portrait_Firemage_default",

@@ -1,4 +1,4 @@
-import type { Hero } from "../types";
+import type { Hero } from "../../types";
 export const Rime: Hero = {
   class_color: { R: 30, G: 163, B: 238, A: 255, hex: "#1EA3EE" },
   thumbnail: "hero_portrait_rime_default",

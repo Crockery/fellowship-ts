@@ -23,7 +23,6 @@ const getMetaDataPaths = async (
 
   await Promise.all(
     npc_folder_contents.map(async (root_item) => {
-      console.log(root_item);
       if (root_item.type === FileType.FOLDER) {
         const root_contents = await getDirectoryContents(root_item.path);
         await Promise.all(
@@ -61,18 +60,23 @@ const getEnemyMetaData = async (
 
       const enemy_info = json.find(isEnemyDataBlock);
 
-      if (enemy_info) {
+      if (enemy_info && !!enemy_info.Properties.DisplayName?.Key) {
+        let thumbnail = enemy_info.Properties.PortraitIcon?.ObjectName;
+
+        if (thumbnail) {
+          thumbnail = thumbnail.replace("Texture2D'", "").replace("'", "");
+        }
+
         enemies.push({
           id: enemy_info.Properties.CharacterID,
           tags: enemy_info.Properties.CharacterTags,
-          thumbnail: enemy_info.Properties.PortraitIcon.ObjectName.replace(
-            "Texture2D'",
-            "",
-          ).replace("'", ""),
-          name: {
-            default: enemy_info.Properties.DisplayName.SourceString,
-            key: enemy_info.Properties.DisplayName.Key,
-          },
+          thumbnail: thumbnail ?? "",
+          name: enemy_info.Properties.DisplayName
+            ? {
+                default: enemy_info.Properties.DisplayName?.SourceString,
+                key: enemy_info.Properties.DisplayName?.Key,
+              }
+            : undefined,
         });
       }
     }),
@@ -100,14 +104,14 @@ export const genEnemies = async (generator: DataGenerator) => {
     generator.addWrite({
       path: `${srcRoot}/${enemy.id}.ts`,
       content: `
-        import type { Enemy } from "../types";
+        import type { Enemy } from "../../types";
         export const ${enemy.id}: Enemy = ${JSON.stringify(enemy)};
       `,
     });
   });
 
   const enemy_ids = meta_data
-    .map((enemy) => `"${enemy.id}"`)
+    .map((enemy) => enemy.id)
     .sort((a, b) => {
       return a.localeCompare(b);
     });

@@ -44,7 +44,7 @@ export interface Hero extends HeroData, HeroMetaData {
 // ENEMIES
 
 export interface Enemy {
-  name: Translateable;
+  name?: Translateable;
   id: string;
   thumbnail: string;
   tags: string[];

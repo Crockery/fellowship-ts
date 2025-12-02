@@ -1,4 +1,4 @@
-import type { Hero } from "../types";
+import type { Hero } from "../../types";
 export const Elarion: Hero = {
   class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
   thumbnail: "hero_portrait_Bowguy_01",

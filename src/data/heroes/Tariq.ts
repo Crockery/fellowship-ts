@@ -1,4 +1,4 @@
-import type { Hero } from "../types";
+import type { Hero } from "../../types";
 export const Tariq: Hero = {
   class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
   thumbnail: "hero_portrait_Ink_01",

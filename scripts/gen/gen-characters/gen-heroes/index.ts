@@ -230,7 +230,7 @@ export const genHeroes = async (generator: DataGenerator) => {
     generator.addWrite({
       path: `./src/data/heroes/${hero.name.default}.ts`,
       content: `
-        import type { Hero } from "../types";
+        import type { Hero } from "../../types";
         export const ${hero.name.default}: Hero = ${JSON.stringify(hero)};
       `,
     });

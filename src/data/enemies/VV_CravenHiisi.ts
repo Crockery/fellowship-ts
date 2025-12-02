@@ -1,0 +1,7 @@
+import type { Enemy } from "../../types";
+export const VV_CravenHiisi: Enemy = {
+  id: "VV_CravenHiisi",
+  tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  thumbnail: "T_NPC_VV_CravenHiisi",
+  name: { default: "Craven Hiisi", key: "31EA50B54F32F8ADD3008D889FC72601" },
+};

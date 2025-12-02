@@ -2,9 +2,9 @@ import { FSBlueprint, FSObjectDesc, FSTransObj } from "./shared";
 
 export interface NpcDataRaw extends FSBlueprint {
   Properties: {
-    PortraitIcon: FSObjectDesc;
+    PortraitIcon?: FSObjectDesc;
     CharacterID: string;
-    DisplayName: FSTransObj;
+    DisplayName?: FSTransObj;
     CharacterTags: string[];
   };
 }
