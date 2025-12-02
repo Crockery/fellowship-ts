@@ -213,7 +213,7 @@ export const Meiko: Hero = {
       cost: 3,
       description: {
         default:
-          "Each time you consume <rt.effect>Earthfall</> or <rt.effect>Stormfall</>, you gain 1 stack of <rt.effect>Warden of the Temple</>. At <rt.bold>3 stacks</>, your next <rt.absorb>Palm Finisher</> is enhanced.\r\n\r\n<rt.absorb>Double Palm Strike:</> Deals <rt.warning>300% increased damage</> and grants <rt.absorb>25 Serenity</> charges.\r\n\r\n<rt.absorb>Spirited Vortex:</> Deals <rt.warning>50% increased damage</> and its <rt.bold>Dodge Bonus</> is increased to <rt.bold>+10%</>.",
+          "Each time you consume <rt.effect>Earthfall</> or <rt.effect>Stormfall</>, you gain 1 stack of <rt.effect>Warden of the Temple</>. At <rt.bold>3 stacks</>, your next <rt.absorb>Palm Finisher</> is enhanced.\r\n\r\n<rt.absorb>Double Palm Strike:</> Deals <rt.warning>300% increased damage</> and grants <rt.absorb>25 Serenity</> charges.\r\n\r\n<rt.absorb>Spirited Vortex:</> Deals <rt.warning>50% increased damage</> and its <rt.bold>Dodge Bonus</> is increased to <rt.bold>+30%</>.",
         key: "18193A394D0498D19048AA8BDFB3FFFA",
       },
       thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_01.0",

@@ -227,7 +227,7 @@ export const Tariq: Hero = {
       cost: 3,
       description: {
         default:
-          "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +200% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +200% increased damage.\r\n\r\n(3.2 PPM)",
+          "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
         key: "EAB742B145274F2524AA97BDFB4309F0",
       },
       thumbnail:
@@ -244,7 +244,7 @@ export const Tariq: Hero = {
       cost: 3,
       description: {
         default:
-          "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>30%</> more damage per stack consumed.",
+          "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
         key: "E039BA1C4D9B80B2D6B686B896A5425A",
       },
       thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_TimerAbility.0",

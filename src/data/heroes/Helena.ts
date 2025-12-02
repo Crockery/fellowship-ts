@@ -218,7 +218,7 @@ export const Helena: Hero = {
       cost: 3,
       description: {
         default:
-          "When your <rt.mana>Toughness</> has reduced an amount of damage equal to <rt.bold>30% of your Maximum Health</>, you gain <rt.effect>30% increased Strength</> for 8 sec.",
+          "When your <rt.mana>Toughness</> has reduced an amount of damage equal to <rt.bold>30% of your Maximum Health</>, you gain <rt.effect>20% increased Strength</> for 8 sec.",
         key: "DE8CC8424AB03DE2CE37E9BB5772ECE5",
       },
       thumbnail:

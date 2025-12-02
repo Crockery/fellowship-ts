@@ -142,7 +142,7 @@ export const Mara: Hero = {
       cost: 2,
       description: {
         default:
-          "Each time your <rt.absorb>Skittering Blades</> deals damage you are granted <rt.effect>Feed the Queen</>, causing the next <rt.absorb>Queen's Fang</> you or your shadowy clones perform to deal <rt.warning>10% more damage</> per stack of <rt.effect>Feed the Queen</>.\r\n\r\n<rt.effect>Feed the Queen</> stacks up to 6 times.",
+          "Each time your <rt.absorb>Skittering Blades</> deals damage you are granted <rt.effect>Feed the Queen</>, causing the next <rt.absorb>Queen's Fang</> you or your shadowy clones perform to deal <rt.warning>9% more damage</> per stack of <rt.effect>Feed the Queen</>.\r\n\r\n<rt.effect>Feed the Queen</> stacks up to 5 times.",
         key: "2EC65F77455CC13421AF5BA25CBC7F4E",
       },
       thumbnail:

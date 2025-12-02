@@ -91,7 +91,7 @@ export const Elarion: Hero = {
       cost: 1,
       description: {
         default:
-          "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>50% of the power of the initial hit</>.",
+          "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>70% of the power of the initial hit</>.",
         key: "92772EF84049DD49EA5EFAB77078E0DB",
       },
       thumbnail:
