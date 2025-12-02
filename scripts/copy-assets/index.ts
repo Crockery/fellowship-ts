@@ -46,7 +46,7 @@ try {
 
 const getAllPngPaths = async (
   searchDir: string,
-  key: string
+  key: string,
 ): Promise<CopyRequest[]> => {
   const contents = await fs.readdir(searchDir, { withFileTypes: true });
 
@@ -55,7 +55,10 @@ const getAllPngPaths = async (
     .map((dirent) => {
       return {
         source: `${dirent.parentPath}/${dirent.name}`,
-        destination: `./assets/${key}/raw/${dirent.name}`,
+        destination: `./assets/${key}/raw/${dirent.name}`.replace(
+          ".png",
+          ".webp",
+        ),
         key,
       };
     });
@@ -64,8 +67,8 @@ const getAllPngPaths = async (
 
   const subFiles = await Promise.all(
     directories.map(async (dirent) =>
-      getAllPngPaths(`${dirent.parentPath}/${dirent.name}`, key)
-    )
+      getAllPngPaths(`${dirent.parentPath}/${dirent.name}`, key),
+    ),
   );
 
   return [...files, ...subFiles.flatMap((subFile) => subFile)];
@@ -83,7 +86,7 @@ const getAllConversions = (requests: CopyRequest[]): ConversionRequest[] => {
 
     const destination = request.destination.replace(
       `raw/${path.basename(request.destination)}`,
-      path.basename(request.destination)
+      path.basename(request.destination),
     );
 
     if (config) {
@@ -92,7 +95,7 @@ const getAllConversions = (requests: CopyRequest[]): ConversionRequest[] => {
           source: request.destination,
           destination: destination.replace(
             path.extname(destination),
-            `@${size.x}${path.extname(destination)}`
+            `@${size.x}${path.extname(destination)}`,
           ),
           resize: size,
         }));
@@ -116,9 +119,8 @@ const copyAssets = async () => {
   await Promise.all(
     root_keys.map(async (key) => {
       await clearDirectory(`./assets/${key}`);
-      await clearDirectory(`./assets/${key}/raw`);
       await fs.ensureDir(`./assets/${key}/raw`);
-    })
+    }),
   );
 
   // Get the paths to all of the pngs in the source folder.
@@ -129,12 +131,12 @@ const copyAssets = async () => {
       if (root) {
         return await getAllPngPaths(
           `${process.env.FMODEL_OUTPUT}/${root}`,
-          key
+          key,
         );
       } else {
         return [];
       }
-    })
+    }),
   );
 
   const requests = all_requests.flatMap((request) => request);
@@ -143,7 +145,7 @@ const copyAssets = async () => {
   await Promise.all(
     requests.map((request) => {
       return fs.copyFile(request.source, request.destination);
-    })
+    }),
   );
 
   // Convert all of the assets if necessary.
@@ -159,7 +161,7 @@ const copyAssets = async () => {
       } else {
         await sharp(conversion.source).webp().toFile(conversion.destination);
       }
-    })
+    }),
   );
 };
 

@@ -47,5 +47,5 @@ export interface Enemy {
   name: Translateable;
   id: string;
   thumbnail: string;
-  isBoss: boolean;
+  tags: string[];
 }

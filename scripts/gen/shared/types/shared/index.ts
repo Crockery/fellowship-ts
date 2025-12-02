@@ -8,6 +8,7 @@ export interface FSBlueprint extends Record<string, unknown> {
   Type: string;
   Name: string;
   Class: string;
+  Template?: FSObjectDesc;
 }
 
 export interface FSTagNameObj {

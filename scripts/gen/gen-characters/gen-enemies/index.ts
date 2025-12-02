@@ -2,9 +2,10 @@ import path from "path";
 import { getDirectoryContents } from "../../../shared/utils/get-directory-contents";
 import { FileType } from "../../../shared/types";
 import { DataGenerator } from "../../shared/data-generator";
-// import { Enemy } from "../../../../src/data/types";
-// import { FSBlueprint } from "../../shared/types/shared";
-// import fs from "fs-extra";
+import { FSBlueprint } from "../../shared/types/shared";
+import fs from "fs-extra";
+import { type Enemy } from "../../../../src/types";
+import { NpcDataRaw } from "../../shared/types/enemy";
 
 const getMetaDataPaths = async (
   npc_folder_contents: Awaited<ReturnType<typeof getDirectoryContents>>,
@@ -13,7 +14,6 @@ const getMetaDataPaths = async (
 
   const getMetaDataFiles = async (npc_folder: string) => {
     return await getDirectoryContents(npc_folder, (dirent) => {
-      console.log(dirent.name);
       return (
         dirent.name.startsWith("BP_NPC") &&
         path.extname(dirent.name) === ".json"
@@ -23,6 +23,7 @@ const getMetaDataPaths = async (
 
   await Promise.all(
     npc_folder_contents.map(async (root_item) => {
+      console.log(root_item);
       if (root_item.type === FileType.FOLDER) {
         const root_contents = await getDirectoryContents(root_item.path);
         await Promise.all(
@@ -40,20 +41,50 @@ const getMetaDataPaths = async (
   return paths;
 };
 
-// const getEnemyMetaData = async (all_metada_paths: string[]): Enemy[] => {
-//   const enemies: Enemy[] = [];
+const isEnemyDataBlock = (block: FSBlueprint): block is NpcDataRaw => {
+  const name = block.Template?.ObjectName;
 
-//   await Promise.all(
-//     all_metada_paths.map(async (data_path) => {
-//       const json: FSBlueprint[] = await fs.readJson(data_path);
-//     }),
-//   );
+  return (
+    !!name &&
+    (name.startsWith("BP_NPC_Critter") || name.startsWith("BP_AICharacter"))
+  );
+};
 
-//   return enemies;
-// };
+const getEnemyMetaData = async (
+  all_metada_paths: string[],
+): Promise<Enemy[]> => {
+  const enemies: Enemy[] = [];
+
+  await Promise.all(
+    all_metada_paths.map(async (data_path) => {
+      const json: FSBlueprint[] = await fs.readJson(data_path);
+
+      const enemy_info = json.find(isEnemyDataBlock);
+
+      if (enemy_info) {
+        enemies.push({
+          id: enemy_info.Properties.CharacterID,
+          tags: enemy_info.Properties.CharacterTags,
+          thumbnail: enemy_info.Properties.PortraitIcon.ObjectName.replace(
+            "Texture2D'",
+            "",
+          ).replace("'", ""),
+          name: {
+            default: enemy_info.Properties.DisplayName.SourceString,
+            key: enemy_info.Properties.DisplayName.Key,
+          },
+        });
+      }
+    }),
+  );
+
+  return enemies;
+};
 
 export const genEnemies = async (generator: DataGenerator) => {
-  console.group("GENERATING ENEMY DATA");
+  const srcRoot = "./src/data/enemies";
+
+  generator.addClean(srcRoot);
 
   // Get all of the NPC folder directories.
   const npc_folder_contents = await getDirectoryContents(
@@ -63,7 +94,27 @@ export const genEnemies = async (generator: DataGenerator) => {
 
   const all_metada_paths = await getMetaDataPaths(npc_folder_contents);
 
-  console.log(all_metada_paths);
+  const meta_data = await getEnemyMetaData(all_metada_paths);
 
-  console.groupEnd();
+  meta_data.forEach(async (enemy) => {
+    generator.addWrite({
+      path: `${srcRoot}/${enemy.id}.ts`,
+      content: `
+        import type { Enemy } from "../types";
+        export const ${enemy.id}: Enemy = ${JSON.stringify(enemy)};
+      `,
+    });
+  });
+
+  const enemy_ids = meta_data
+    .map((enemy) => `"${enemy.id}"`)
+    .sort((a, b) => {
+      return a.localeCompare(b);
+    });
+
+  // Index file to export all the hero data files.
+  generator.addWrite({
+    path: `${srcRoot}/index.ts`,
+    content: `${enemy_ids.map((id) => `export * from "./${id}";`).join("\n")}`,
+  });
 };
