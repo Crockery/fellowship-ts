@@ -1,15 +1,15 @@
-import type { HeroData, HeroName } from "./types";
+import type { HeroData, HeroId } from "./types";
 import * as AllHeroData from "./data/heroes";
-import { HeroNames } from "./constants";
+import { HeroIds } from "./constants";
 
 export class FellowshipTs {
-  private heroes_map: Map<HeroName, HeroData>;
+  private heroes_map: Map<HeroId, HeroData>;
   constructor() {
     this.heroes_map = new Map();
 
-    HeroNames.forEach((hero_name) => {
-      const hero = AllHeroData[hero_name];
-      this.heroes_map.set(hero.name.default as HeroName, hero);
+    HeroIds.forEach((hero_id) => {
+      const hero = AllHeroData[hero_id];
+      this.heroes_map.set(hero.name.default as HeroId, hero);
     });
   }
 
@@ -17,7 +17,7 @@ export class FellowshipTs {
     return Array.from(this.heroes_map.values());
   }
 
-  getHero(name: HeroName) {
-    return this.heroes_map.get(name);
+  getHero(id: HeroId) {
+    return this.heroes_map.get(id);
   }
 }

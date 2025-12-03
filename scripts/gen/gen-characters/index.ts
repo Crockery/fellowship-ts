@@ -1,4 +1,4 @@
-import { DataGenerator } from "../shared/data-generator";
+import { DataGenerator } from "../../shared";
 import { genEnemies } from "./gen-enemies";
 import { genHeroes } from "./gen-heroes";
 

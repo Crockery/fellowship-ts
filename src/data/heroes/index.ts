@@ -5,8 +5,5 @@ export * from "./Mara";
 export * from "./Meiko";
 export * from "./Mosse";
 export * from "./Rime";
-export * from "./TutorialRime";
-export * from "./TutorialVigor";
-export * from "./TutorialWarmaster";
 export * from "./Vigor";
 export * from "./Warmaster";

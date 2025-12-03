@@ -1,11 +1,13 @@
 import path from "path";
-import { getDirectoryContents } from "../../../shared/utils/get-directory-contents";
-import { FileType } from "../../../shared/types";
-import { DataGenerator } from "../../shared/data-generator";
-import { FSBlueprint } from "../../shared/types/shared";
+import {
+  type FSBlueprint,
+  getDirectoryContents,
+  DataGenerator,
+  FileType,
+} from "../../../shared";
 import fs from "fs-extra";
 import { type Enemy } from "../../../../src/types";
-import { NpcDataRaw } from "../../shared/types/enemy";
+import { NpcDataRaw } from "./types";
 
 const getMetaDataPaths = async (
   npc_folder_contents: Awaited<ReturnType<typeof getDirectoryContents>>,

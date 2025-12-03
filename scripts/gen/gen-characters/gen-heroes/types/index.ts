@@ -4,7 +4,7 @@ import {
   FSObjectDesc,
   FSTagNameObj,
   FSTransObj,
-} from "../../../shared/types/shared";
+} from "../../../../shared/types/shared";
 
 export interface HeroMap {
   HeroID: {

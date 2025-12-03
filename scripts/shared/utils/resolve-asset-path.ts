@@ -1,5 +1,5 @@
 import fs from "fs-extra";
-import { FSBlueprint } from "../../gen/shared/types/shared";
+import { FSBlueprint } from "../types";
 
 export const resolveAssetPath = async <T>(
   asset_path: string,

@@ -1,6 +1,6 @@
 import fs from "fs-extra";
-import { clearDirectory } from "../../shared/utils/clear-directory";
 import { execSync } from "child_process";
+import { clearDirectory } from "./utils";
 
 const chunk = <T>(to_chunk: T[], size: number): T[][] => {
   const R = [];

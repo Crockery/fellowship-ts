@@ -1,4 +1,17 @@
-export type HeroName =
+export const LangKeys = [
+  "de",
+  "en",
+  "es",
+  "fr",
+  "it",
+  "ja",
+  "ko",
+  "pt-BR",
+  "ru",
+  "zh-CN",
+  "zh-Hant",
+];
+export type HeroId =
   | "Bowguy"
   | "Firemage"
   | "Ink"
@@ -6,8 +19,5 @@ export type HeroName =
   | "Meiko"
   | "Mosse"
   | "Rime"
-  | "TutorialRime"
-  | "TutorialVigor"
-  | "TutorialWarmaster"
   | "Vigor"
   | "Warmaster";

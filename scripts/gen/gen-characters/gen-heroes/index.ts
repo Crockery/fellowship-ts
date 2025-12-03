@@ -1,9 +1,9 @@
 import fs from "fs-extra";
 
-import { DataGenerator } from "../../shared/data-generator";
-import { getImagePathId, resolveAssetPath } from "../../../shared";
+import { DataGenerator } from "../../../shared/data-generator";
 import { HeroMapTable, RawHeroMetaData, RawHeroTalentData } from "./types";
 import { Hero } from "../../../../src/types";
+import { getImagePathId, resolveAssetPath } from "../../../shared";
 
 const getHeroId = (raw_path: string) =>
   raw_path.replace("CharacterID.Hero.", "");
@@ -81,13 +81,15 @@ export const genHeroes = async (generator: DataGenerator) => {
 
   const hero_rows = (info_table as HeroMapTable)[0].Rows;
 
-  const hero_ids = Object.keys(hero_rows).sort((a, b) => {
+  let hero_ids = Object.keys(hero_rows).sort((a, b) => {
     return a.localeCompare(b);
   });
 
   const heroes = hero_ids
     .map((id) => hero_rows[id])
     .filter((hero) => hero.IsLive);
+
+  hero_ids = heroes.map((hero) => getHeroId(hero.HeroID.TagName));
 
   await Promise.all(
     heroes.map(async (hero) => {
@@ -127,18 +129,18 @@ export const genHeroes = async (generator: DataGenerator) => {
   generator.addStaticFileContent({
     file: "constants",
     type: "imports",
-    content: `import type { HeroName } from "../../types";`,
+    content: `import type { HeroId } from "../../types";`,
   });
 
   generator.addStaticFileContent({
     file: "constants",
     type: "body",
-    content: `export const HeroNames: HeroName[] = [${hero_ids.map((id) => `"${id}"`).join(", ")}]`,
+    content: `export const HeroIds: HeroId[] = [${hero_ids.map((id) => `"${id}"`).join(", ")}]`,
   });
 
   generator.addStaticFileContent({
     file: "typings",
     type: "body",
-    content: `export type HeroName = ${hero_ids.map((id) => `"${id}"`).join(" | ")};`,
+    content: `export type HeroId = ${hero_ids.map((id) => `"${id}"`).join(" | ")};`,
   });
 };

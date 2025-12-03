@@ -1,6 +1,6 @@
-import type { HeroName } from "../../types";
+import type { HeroId } from "../../types";
 
-export const HeroNames: HeroName[] = [
+export const HeroIds: HeroId[] = [
   "Bowguy",
   "Firemage",
   "Ink",
@@ -8,9 +8,6 @@ export const HeroNames: HeroName[] = [
   "Meiko",
   "Mosse",
   "Rime",
-  "TutorialRime",
-  "TutorialVigor",
-  "TutorialWarmaster",
   "Vigor",
   "Warmaster",
 ];

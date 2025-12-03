@@ -1,4 +1,4 @@
-import { FSBlueprint, FSObjectDesc, FSTransObj } from "./shared";
+import { FSBlueprint, FSObjectDesc, FSTransObj } from "../../../../shared";
 
 export interface NpcDataRaw extends FSBlueprint {
   Properties: {
