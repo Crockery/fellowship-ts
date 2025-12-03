@@ -19,3 +19,7 @@ export interface FSObjectDesc {
   ObjectName: string;
   ObjectPath: string;
 }
+
+export interface FSAssetDesc {
+  AssetPathName: string;
+}

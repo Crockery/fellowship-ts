@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Tariq: Hero = {
+export const Ink: Hero = {
   class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
   thumbnail: "hero_portrait_Ink_01",
   name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
@@ -18,7 +18,7 @@ export const Tariq: Hero = {
       "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
   },
   difficulty: 4,
-  id: "CharacterID.Hero.Ink",
+  id: "Ink",
   talents: [
     {
       id: "Talent.ID.Talent2",

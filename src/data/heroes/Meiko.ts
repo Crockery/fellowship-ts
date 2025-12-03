@@ -15,7 +15,7 @@ export const Meiko: Hero = {
       "After the fall of the Edosaka Barrier, Meiko was sent away by her mother to survive. She traveled the world learning to channel her turmoil into martial grace as a Twinsoul.\r\n\r\nShe joins the Fellowship to continue her training and seek heroes strong enough to challenge the Demon King that reigns over her homeland.",
   },
   difficulty: 4,
-  id: "CharacterID.Hero.Meiko",
+  id: "Meiko",
   talents: [
     {
       id: "Talent.ID.Talent2",

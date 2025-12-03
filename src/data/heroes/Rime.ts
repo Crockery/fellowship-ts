@@ -18,7 +18,7 @@ export const Rime: Hero = {
       "The last of her tribe, Rime lived in solitude until the rise of new evils forced her from her hermitage.\r\n\r\nThe Harbinger enacts the will of the patron spirit of winter. Rime's power is a cursed gift she uses to cleanse corruption and bring quiet peace to those already fated to die.",
   },
   difficulty: 2,
-  id: "CharacterID.Hero.Rime",
+  id: "Rime",
   talents: [
     {
       id: "Talent.ID.Talent4",

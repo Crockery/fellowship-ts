@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Elarion: Hero = {
+export const Bowguy: Hero = {
   class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
   thumbnail: "hero_portrait_Bowguy_01",
   name: { key: "ADCD24044D572984A7894487022E30B6", default: "Elarion" },
@@ -15,7 +15,7 @@ export const Elarion: Hero = {
       "A sentinel of starlight, Elarion Beau'ghai has walked the world for millenia as the surviving half of an ancient myth that shaped the world.\r\n\r\nHe joins the Fellowship to watch over those who might one day fall to the same corrupting power he is fated to stop.",
   },
   difficulty: 2,
-  id: "CharacterID.Hero.Bowguy",
+  id: "Bowguy",
   talents: [
     {
       id: "Talent.ID.Talent7",

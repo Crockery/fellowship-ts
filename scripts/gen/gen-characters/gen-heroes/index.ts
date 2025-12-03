@@ -94,7 +94,10 @@ const getHeroData = async (data_path: string): Promise<HeroData | null> => {
 
   if (hero_data) {
     return {
-      id: (hero_data as HeroDataRaw).Properties.HeroID.TagName,
+      id: (hero_data as HeroDataRaw).Properties.HeroID.TagName.replace(
+        "CharacterID.Hero.",
+        "",
+      ),
     };
   }
 
@@ -228,16 +231,16 @@ export const genHeroes = async (generator: DataGenerator) => {
 
   all_hero_data.forEach(async (hero) => {
     generator.addWrite({
-      path: `./src/data/heroes/${hero.name.default}.ts`,
+      path: `./src/data/heroes/${hero.id}.ts`,
       content: `
         import type { Hero } from "../../types";
-        export const ${hero.name.default}: Hero = ${JSON.stringify(hero)};
+        export const ${hero.id}: Hero = ${JSON.stringify(hero)};
       `,
     });
   });
 
-  const hero_names = all_hero_data
-    .map((hero) => `"${hero.name.default}"`)
+  const hero_ids = all_hero_data
+    .map((hero) => `${hero.id}`)
     .sort((a, b) => {
       return a.localeCompare(b);
     });
@@ -245,12 +248,7 @@ export const genHeroes = async (generator: DataGenerator) => {
   // Index file to export all the hero data files.
   generator.addWrite({
     path: `./src/data/heroes/index.ts`,
-    content: `${all_hero_data
-      .sort((a, b) => {
-        return a.name.default.localeCompare(b.name.default);
-      })
-      .map((hero) => `export * from "./${hero.name.default}";`)
-      .join("\n")}`,
+    content: `${hero_ids.map((id) => `export * from "./${id}";`).join("\n")}`,
   });
 
   generator.addStaticFileContent({
@@ -262,12 +260,12 @@ export const genHeroes = async (generator: DataGenerator) => {
   generator.addStaticFileContent({
     file: "constants",
     type: "body",
-    content: `export const HeroNames: HeroName[] = [${hero_names}]`,
+    content: `export const HeroNames: HeroName[] = [${hero_ids}]`,
   });
 
   generator.addStaticFileContent({
     file: "typings",
     type: "body",
-    content: `export type HeroName = ${hero_names.join(" | ")};`,
+    content: `export type HeroName = ${hero_ids.join(" | ")};`,
   });
 };

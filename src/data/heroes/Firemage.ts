@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Ardeos: Hero = {
+export const Firemage: Hero = {
   class_color: { R: 235, G: 99, B: 41, A: 255, hex: "#EB6329" },
   thumbnail: "hero_portrait_Firemage_default",
   name: { key: "F66EC284494CA8D94857669F935318CA", default: "Ardeos" },
@@ -15,7 +15,7 @@ export const Ardeos: Hero = {
       "An exceptional pyromancer too powerful for the academies and too reckless to leave to his own devices.\r\n\r\nArdeos joins the Fellowship to prove his flame will forge him into a hero, not an omen of apocalypse.",
   },
   difficulty: 3,
-  id: "CharacterID.Hero.Firemage",
+  id: "Firemage",
   talents: [
     {
       id: "Talent.ID.Talent18",

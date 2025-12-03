@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Sylvie: Hero = {
+export const Mosse: Hero = {
   class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
   thumbnail: "hero_portrait_Mosse_01_default",
   name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
@@ -18,7 +18,7 @@ export const Sylvie: Hero = {
       "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
   },
   difficulty: 3,
-  id: "CharacterID.Hero.Mosse",
+  id: "Mosse",
   talents: [
     {
       id: "Talent.ID.Talent1",

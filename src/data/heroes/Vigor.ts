@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Vigour: Hero = {
+export const Vigor: Hero = {
   class_color: { R: 221, G: 219, B: 197, A: 255, hex: "#DDDBC5" },
   thumbnail: "hero_portrait_vigor_default",
   name: { key: "481F857443DE80D8404C2FA1ABD4B241", default: "Vigour" },
@@ -18,7 +18,7 @@ export const Vigour: Hero = {
       "A dwarf of legend and the first Lightshaper to leave the mountain kingdoms.\r\n\r\nVigour has spent centuries traveling the world, mending wounds, banishing shadow, and gathering champions to his cause. He is the guiding light that unites the disparate heroes of the Fellowship.",
   },
   difficulty: 2,
-  id: "CharacterID.Hero.Vigor",
+  id: "Vigor",
   talents: [
     {
       id: "Talent.ID.Talent7",

@@ -18,7 +18,7 @@ export const Mara: Hero = {
       "Hunted across continents, Mara hides from unseen pursuers who manipulate life and death from the shadows.\r\n\r\nShe joins the Fellowship seeking refuge and vengeance, under a new identity, against those who pull the strings of fate.",
   },
   difficulty: 3,
-  id: "CharacterID.Hero.Mara",
+  id: "Mara",
   talents: [
     {
       id: "Talent.ID.Talent1",

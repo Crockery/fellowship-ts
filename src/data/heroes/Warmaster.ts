@@ -1,5 +1,5 @@
 import type { Hero } from "../../types";
-export const Helena: Hero = {
+export const Warmaster: Hero = {
   class_color: { R: 180, G: 105, B: 50, A: 255, hex: "#B46932" },
   thumbnail: "hero_portrait_warmaster_01",
   name: { key: "146A66FE48F8FA30BF7AABA6210D2A28", default: "Helena" },
@@ -15,7 +15,7 @@ export const Helena: Hero = {
       "Disillusioned after the Twelve Year War, Helena wandered the world fighting back evil where noble apathy or cruelty allowed it to fester.\r\n\r\nThe Warmaster joins the Fellowship to face threats she could not defeat alone. Helena is a stern presence, maintaining a seasoned warrior’s discipline and distance from her comrades lest she suffer the burden of loss again.",
   },
   difficulty: 2,
-  id: "CharacterID.Hero.Warmaster",
+  id: "Warmaster",
   talents: [
     {
       id: "Talent.ID.Talent1",
