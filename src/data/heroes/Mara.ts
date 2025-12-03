@@ -1,5 +1,6 @@
 import type { Hero } from "../../types";
 export const Mara: Hero = {
+  id: "Mara",
   class_color: { R: 111, G: 46, B: 241, A: 255, hex: "#6F2EF1" },
   thumbnail: "hero_portrait_Mara_01",
   name: { key: "04CCDB6C431FAB1E3B51B2B93EADF27A", default: "Mara" },
@@ -18,10 +19,9 @@ export const Mara: Hero = {
       "Hunted across continents, Mara hides from unseen pursuers who manipulate life and death from the shadows.\r\n\r\nShe joins the Fellowship seeking refuge and vengeance, under a new identity, against those who pull the strings of fate.",
   },
   difficulty: 3,
-  id: "Mara",
   talents: [
     {
-      id: "Talent.ID.Talent1",
+      id: "Talent1",
       name: { default: "Red Ledger", key: "6253C6074808A5EFF9C1A2861033A7CF" },
       unlocked_at: 0,
       row: 1,
@@ -31,10 +31,10 @@ export const Mara: Hero = {
           "When your <rt.absorb>Hemorrhaging Strike</> bleed is applied to an enemy you gain <rt.warning>+10% Haste</>.\r\n\r\nYou gain an additional <rt.warning>+2% haste</> for every additional enemy that has your <rt.absorb>Hemorrhaging Strike</> bleed applied, up to a maximum of bonus of <rt.warning>+20% haste</>.",
         key: "861ADDDF48E106AB14B797BD0BDA8767",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Mara/Mara_Bleed.0",
+      thumbnail: "mara_Mara_Bleed",
     },
     {
-      id: "Talent.ID.Talent4",
+      id: "Talent4",
       name: {
         default: "Corrosive Spill",
         key: "041EA46B484A0C89F9723487AA5ABAA8",
@@ -47,11 +47,10 @@ export const Mara: Hero = {
           "Each <rt.meikoability1>Combo Point</> you spend has a 3% chance to cause you to coat the ground in front of you with a <rt.effect>Corrosive Spill</> for 3 seconds.\r\n\r\nEnemies that stand in <rt.effect>Corrosive Spill</> take <rt.warning>90% Agility</> poison damage <rt.bold>every 1.5 seconds</>.",
         key: "296E56914E588BA49052D799BC063FD8",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_01/Textures/T_Icon_Unholy_197.0",
+      thumbnail: "textures_T_Icon_Unholy_197",
     },
     {
-      id: "Talent.ID.Talent13",
+      id: "Talent13",
       name: {
         default: "Assassin's Guile",
         key: "B16292104994A33883DC80AC468E234D",
@@ -64,11 +63,10 @@ export const Mara: Hero = {
           "After attacking from <rt.bold>Stealth</>, you gain <rt.effect>Assassin's Guile</> for 5 seconds, causing your <rt.absorb>Queen's Fang</> & <rt.absorb>Arachnid Assault</> to deal <rt.warning>40% more damage</>.",
         key: "2F2E4AD6467F88B5CEDB9784080FB9F7",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_01/Textures/T_Icon_Shadow_121.0",
+      thumbnail: "textures_T_Icon_Shadow_121",
     },
     {
-      id: "Talent.ID.Talent19",
+      id: "Talent19",
       name: { default: "Bloodrush", key: "579D3D394F011C32BA82A68CAC276D6A" },
       unlocked_at: 0,
       row: 2,
@@ -78,11 +76,10 @@ export const Mara: Hero = {
           "Your <rt.absorb>Hemorrhaging Strike</> bleed <rt.warning>ticks 20% faster</>.",
         key: "A97774DC411028BF3867E6BD7C9B5335",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_BloodCombat_24.0",
+      thumbnail: "textures_T_Nhance_RPG_BloodCombat_24",
     },
     {
-      id: "Talent.ID.Talent5",
+      id: "Talent5",
       name: {
         default: "Venomous Delight",
         key: "19B524164D874CA68EBA60867637669C",
@@ -95,11 +92,10 @@ export const Mara: Hero = {
           "Each time you deal <rt.absorb>Poison Damage</> to an enemy you have a 10% chance to generate <rt.mana>10 Energy</>.",
         key: "8FD2964F4383F5C471D905AED4C0D64D",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_Skill_Icons_Pack/Tex_green_23.0",
+      thumbnail: "tex_skill_icons_pack_Tex_green_23",
     },
     {
-      id: "Talent.ID.Talent6",
+      id: "Talent6",
       name: {
         default: "Efficient Killer",
         key: "DA8F25F04CE68D8A00160782554D9E64",
@@ -112,10 +108,10 @@ export const Mara: Hero = {
           "Each <rt.meikoability1>Combo Point</> you spend causes you to generate <rt.mana>1 Energy</>.",
         key: "BB1E74984BFF28F4D90F6696B751C058",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_ShadowStab.0",
+      thumbnail: "textures_T_ShadowStab",
     },
     {
-      id: "Talent.ID.Talent16",
+      id: "Talent16",
       name: {
         default: "Gushing Blood",
         key: "A0EDB82B4F7B25A0B47843B2F8B65928",
@@ -128,11 +124,10 @@ export const Mara: Hero = {
           "While <rt.absorb>Maiden of Death</> is active, your <rt.absorb>Hemorrhaging Strike</> applies it's bleed to up to 4 additional nearby enemies.",
         key: "827CF026476644E63E768BB41084C7B5",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Berserker/Berserker5.0",
+      thumbnail: "berserker_Berserker5",
     },
     {
-      id: "Talent.ID.Talent15",
+      id: "Talent15",
       name: {
         default: "Feed the Queen",
         key: "EF6F24874DB8701ED7181FB262F25EB7",
@@ -145,11 +140,10 @@ export const Mara: Hero = {
           "Each time your <rt.absorb>Skittering Blades</> deals damage you are granted <rt.effect>Feed the Queen</>, causing the next <rt.absorb>Queen's Fang</> you or your shadowy clones perform to deal <rt.warning>9% more damage</> per stack of <rt.effect>Feed the Queen</>.\r\n\r\n<rt.effect>Feed the Queen</> stacks up to 5 times.",
         key: "2EC65F77455CC13421AF5BA25CBC7F4E",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Shadow_41.0",
+      thumbnail: "textures_T_Nhance_RPG_Shadow_41",
     },
     {
-      id: "Talent.ID.Talent3",
+      id: "Talent3",
       name: {
         default: "Deadly Scheme",
         key: "3EF522F644E55A9F5108D195929838E9",
@@ -162,11 +156,10 @@ export const Mara: Hero = {
           "For every <rt.mana>10 Energy</> you generate you gain 1 stack of <rt.effect>Deadly Scheme</>. At 20 stacks it activates for 12 seconds, causing your next <rt.absorb>Queen's Fang</> or <rt.absorb>Arachnid Assault</> to have <rt.warning>+100% Critical Strike chance</>.\r\n\r\n<rt.absorb>Note:</><rt.mana>Mara has 200 max energy baseline</>.",
         key: "32C68AE84532975A8B478281E18F0A23",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_SpellBookPage08/Tex_SpellBook08_71.0",
+      thumbnail: "tex_spellbookpage08_Tex_SpellBook08_71",
     },
     {
-      id: "Talent.ID.Talent8",
+      id: "Talent8",
       name: {
         default: "Veil of Shadows",
         key: "F0A61E8D436FA8F3211FB5ABC35B6BA6",
@@ -179,10 +172,10 @@ export const Mara: Hero = {
           "Your <rt.absorb>Shadow Protection's</> duration is <rt.bold>increased to 8 seconds</> and reduces <rt.bold>Magic Damage</> you take by another <rt.bold>10%</> while active.",
         key: "C7A6119143A2FA23FA6BDB9B010D9068",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Mara/Mara_Defensive.0",
+      thumbnail: "mara_Mara_Defensive",
     },
     {
-      id: "Talent.ID.Talent9",
+      id: "Talent9",
       name: {
         default: "Maiden's Doom",
         key: "16962D7D4C110F5DB51CEAAE8D485878",
@@ -195,10 +188,10 @@ export const Mara: Hero = {
           "When you deal damage to enemies with 30% or less health, the damage bonus of <rt.absorb>Maiden of Death</> is increased to <rt.warning>40%</>. ",
         key: "7B9856E245125061CF6652B629CE95DE",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Mara/Mara_Maiden.0",
+      thumbnail: "mara_Mara_Maiden",
     },
     {
-      id: "Talent.ID.Talent10",
+      id: "Talent10",
       name: { default: "Magic Ward", key: "A2B3051841478C3F9DF807AC6A781775" },
       unlocked_at: 0,
       row: 4,
@@ -207,10 +200,10 @@ export const Mara: Hero = {
         default: "You take 10% less <bold>Magic damage</>.",
         key: "D74D9E81465DEE8463DB098AFB9B4D04",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_Arcane_Scroll.0",
+      thumbnail: "textures_T_Arcane_Scroll",
     },
     {
-      id: "Talent.ID.Talent12",
+      id: "Talent12",
       name: {
         default: "From the Shadows",
         key: "132D3D874A0F2E6239856EB231E2418C",
@@ -223,11 +216,10 @@ export const Mara: Hero = {
           "Each time you deal damage to an enemy with <rt.absorb>Hemorrhaging Strike's</> bleed effect, you have a <rt.bold>24%</> chance to summon a <rt.effect>Shadowy Clone</> to assault that enemy with a 6 combo point <rt.absorb>Queen's Fang</>.",
         key: "6BDF16BD4E24A3D2CE896E91F588B774",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_BloodCombat_23.0",
+      thumbnail: "textures_T_Nhance_RPG_BloodCombat_23",
     },
     {
-      id: "Talent.ID.Talent14",
+      id: "Talent14",
       name: { default: "Hemotoxin", key: "E2123F8C43D435891B4CE6A9651F815D" },
       unlocked_at: 0,
       row: 5,
@@ -237,10 +229,10 @@ export const Mara: Hero = {
           "Your <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</>, and <rt.bold>Auto Attacks</> have a 6% chance to apply 1 stack of <rt.effect>Hemotoxin</> to the target. causing it to take <rt.warning>20% Agility</> poison damage <rt.bold>every 1.5 seconds over 9 seconds</>.\r\n\r\nUsing <rt.absorb>Hemorrhaging Strike</> on a target afflicted with <rt.effect>Hemotoxin</> consumes 1 stack, instantly dealing <rt.warning>100% of Hemorrhaging Strike's bleed damage</> to the target and <rt.warning>70% of Hemorrhaging Strike's bleed damage</> to other nearby targets as poison damage.\r\n\r\n<rt.absorb>Hemotoxin's</> area damage is reduced beyond 1 target.",
         key: "30259EF8446DC6D1F876C687411E840F",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_PoisonBlister.0",
+      thumbnail: "textures_T_PoisonBlister",
     },
     {
-      id: "Talent.ID.Talent2",
+      id: "Talent2",
       name: { default: "Malevolence", key: "EC6E45734EBC72C787D5E0AFD29F0992" },
       unlocked_at: 0,
       row: 5,
@@ -250,11 +242,10 @@ export const Mara: Hero = {
           "Your <rt.absorb>Queen's Fang</> and <rt.absorb>Arachnid's Assault</> abilities grant you 1 stack of <rt.effect>Malevolence: Arachnid Assault</> or 1 stack of <rt.effect>Malevolence: Queen's Fang</> respectively for 20 seconds.\r\n\r\n<rt.effect>Malevolence</> increases the damage of the matching ability by <rt.warning>100%</>.\r\n\r\nEach <rt.effect>Malevolence</> buff type stacks up to 2 times.",
         key: "AD86954C4094D39CDA1A04AF03A748E6",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_Skill_Icons_Pack/Tex_violet_7.0",
+      thumbnail: "tex_skill_icons_pack_Tex_violet_7",
     },
     {
-      id: "Talent.ID.Talent18",
+      id: "Talent18",
       name: {
         default: "Arachnid Onslaught",
         key: "A28FE959436DBA5DB0E6FBB5C44A4D06",
@@ -267,10 +258,10 @@ export const Mara: Hero = {
           "Your <rt.absorb>Arachnid Assault</> deals <rt.warning>20% more damage</> against enemies that have your <rt.absorb>Hemorrhaging Strike</> bleed active.",
         key: "BAF327DA4A62B291F4C8478AF3160176",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Mara/Mara_SpiderAOE.0",
+      thumbnail: "mara_Mara_SpiderAOE",
     },
     {
-      id: "Talent.ID.Talent11",
+      id: "Talent11",
       name: {
         default: "Spirited Fortitude",
         key: "28373E884FF5F21393C7D695D63B31C9",
@@ -282,11 +273,10 @@ export const Mara: Hero = {
         default: "You take 10% less <bold>Area of Effect damage</>.",
         key: "88294D2F4D92BD1F75AD05BC8DF8AB77",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Barbarian/Barbarian3.0",
+      thumbnail: "barbarian_Barbarian3",
     },
     {
-      id: "Talent.ID.Talent17",
+      id: "Talent17",
       name: { default: "Puncture", key: "6A84766746C38ECEABC3EFA2E0BAD847" },
       unlocked_at: 0,
       row: 6,
@@ -296,7 +286,7 @@ export const Mara: Hero = {
           "Your <rt.absorb>Widow's Bite</> has <rt.warning>+100% increased critical strike chance</>.",
         key: "A8C1A7FA47422EF1676DA19755383135",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Mara/Mara_RegainEnergyHit.0",
+      thumbnail: "mara_Mara_RegainEnergyHit",
     },
   ],
 };

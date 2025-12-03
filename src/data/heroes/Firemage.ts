@@ -1,5 +1,6 @@
 import type { Hero } from "../../types";
 export const Firemage: Hero = {
+  id: "Firemage",
   class_color: { R: 235, G: 99, B: 41, A: 255, hex: "#EB6329" },
   thumbnail: "hero_portrait_Firemage_default",
   name: { key: "F66EC284494CA8D94857669F935318CA", default: "Ardeos" },
@@ -15,10 +16,9 @@ export const Firemage: Hero = {
       "An exceptional pyromancer too powerful for the academies and too reckless to leave to his own devices.\r\n\r\nArdeos joins the Fellowship to prove his flame will forge him into a hero, not an omen of apocalypse.",
   },
   difficulty: 3,
-  id: "Firemage",
   talents: [
     {
-      id: "Talent.ID.Talent18",
+      id: "Talent18",
       name: { default: "Slow Burn", key: "B07FEFEB449ED9D428E952B5892E585C" },
       unlocked_at: 0,
       row: 1,
@@ -28,11 +28,10 @@ export const Firemage: Hero = {
           "Each time your <rt.absorb>Fire Ball</> burns an enemy with its damage over time effect, the duration of your <rt.absorb>Engulfing Flames</> and <rt.absorb>Searing Blaze</> is extended by 0.5 seconds.",
         key: "2089B01E4D403EF81D186AB7B9D2AAD3",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Fire_24.0",
+      thumbnail: "textures_T_Nhance_RPG_Fire_24",
     },
     {
-      id: "Talent.ID.Talent6",
+      id: "Talent6",
       name: { default: "Frog Squad", key: "2B184AD04B7B183E8D5073A4CA3CDEAD" },
       unlocked_at: 0,
       row: 1,
@@ -42,11 +41,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Fire Frogs</> ability conjures 1 additional frog and all your <rt.absorb>Fire Frogs</> now leap on enemies 1 additional time.",
         key: "043070704990A51A98BBAE9B9945E2B6",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_HypnoToad.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_HypnoToad",
     },
     {
-      id: "Talent.ID.Talent16",
+      id: "Talent16",
       name: {
         default: "Great Balls of Fire",
         key: "71FF2CC0432967C9524790A58C8AC048",
@@ -58,11 +56,10 @@ export const Firemage: Hero = {
         default: "Your <rt.absorb>Fire Ball</> deals 60% increased damage.",
         key: "06F9A41C4B154A921AAE77A1A6EEBD5D",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Fire_36.0",
+      thumbnail: "textures_T_Nhance_RPG_Fire_36",
     },
     {
-      id: "Talent.ID.Talent10",
+      id: "Talent10",
       name: {
         default: "Flickering Cinders",
         key: "2C13C2124979B31D4B688FADEC0F3F2A",
@@ -75,10 +72,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Searing Blaze</> and <rt.absorb>Engulfing Flames</> generate 25% more <rt.mana>Cinders</>.",
         key: "71610BB14CFE23A0742012A867740CB2",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Dot_02.0",
+      thumbnail: "firemage_Firemage_Dot_02",
     },
     {
-      id: "Talent.ID.Talent17",
+      id: "Talent17",
       name: { default: "Flare up", key: "26F2C8204D09787F5111F8BB15E69955" },
       unlocked_at: 0,
       row: 2,
@@ -88,11 +85,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Infernal Wave</> hits cause all enemies near the target with <rt.absorb>Searing Blaze</> active on them to flare up, taking 25% of the damage that <rt.absorb>Infernal Wave</> dealt to the initial target.",
         key: "F7455B47466C85AA2C7F70A2ECD5F5CA",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_FireRune.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_FireRune",
     },
     {
-      id: "Talent.ID.Talent12",
+      id: "Talent12",
       name: {
         default: "Undying Flame",
         key: "22850A264389C652307628AC4F2AE17A",
@@ -105,11 +101,10 @@ export const Firemage: Hero = {
           "The duration of your <rt.absorb>Engulfing Flames</> is increased by 3 seconds.",
         key: "10C4BF2C429D04E3880DF1A5EF7852FE",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Pyromancer/Pyromancer5.0",
+      thumbnail: "pyromancer_Pyromancer5",
     },
     {
-      id: "Talent.ID.Talent3",
+      id: "Talent3",
       name: {
         default: "Agonizing Blaze",
         key: "0AF78F6640509855A87E91BEE79994C2",
@@ -122,11 +117,10 @@ export const Firemage: Hero = {
           "Each tick of <rt.absorb>Searing Blaze</> on a target increases the damage it deals by 3% up to a maximum of 30% increased damage at 10 stacks.\r\n\r\nAll stacks are lost when <rt.absorb>Searing Blaze</> is removed from the target.",
         key: "516B7354457034D67E58F8A17E05594E",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Fire_30.0",
+      thumbnail: "textures_T_Nhance_RPG_Fire_30",
     },
     {
-      id: "Talent.ID.Talent11",
+      id: "Talent11",
       name: { default: "Firestarter", key: "DE4D303D4954472683D5D7A2A135D05A" },
       unlocked_at: 0,
       row: 3,
@@ -136,11 +130,10 @@ export const Firemage: Hero = {
           "All <bold>damage over time</> effects applied to enemies by your abilities gain +20% critical strike chance.\r\n\r\n<rt.absorb>Fire Frogs</> and <rt.absorb>Fire Ball</> also gain a 20% chance to critically strike with their damage over time effects.",
         key: "75686C764DB0CA39851F328C3834F9F2",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Pyromancer/Pyromancer20.0",
+      thumbnail: "pyromancer_Pyromancer20",
     },
     {
-      id: "Talent.ID.Talent7",
+      id: "Talent7",
       name: { default: "Ouroboros", key: "578F710E423DFC4821AF5F9BCB8C6661" },
       unlocked_at: 0,
       row: 3,
@@ -150,10 +143,10 @@ export const Firemage: Hero = {
           "Each time your <rt.absorb>Searing Blaze</> deals damage to an enemy, the cooldown of <rt.absorb>Pyromania</> is reduced by 0.15 seconds and by 0.3 seconds if <rt.absorb>Searing Blaze</> critically hits.",
         key: "13774B714414568D789A6F8BF07C2A5E",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Pyromania.0",
+      thumbnail: "firemage_Firemage_Pyromania",
     },
     {
-      id: "Talent.ID.Talent5",
+      id: "Talent5",
       name: {
         default: "Fiery Resilience",
         key: "CD0BCE04418E48AC7D1FD4B74843367F",
@@ -166,11 +159,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Flame Ward's</> duration is <rt.bold>extended to 6 seconds</> and now applies an absorb on you for <rt.heal>30% of your maximum health</> that lasts for 6 seconds.\r\n\r\nThe absorb is applied again when <rt.absorb>Flame Ward</> expires.",
         key: "5E1B22F84FE201E738AF748D34B48620",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Fire_61.0",
+      thumbnail: "textures_T_Nhance_RPG_Fire_61",
     },
     {
-      id: "Talent.ID.Talent13",
+      id: "Talent13",
       name: {
         default: "Crackling Inferno",
         key: "1416B4764C27B0A27B0ECFA2DB5F2E71",
@@ -183,11 +175,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Infernal Wave</> has <rt.warning>+20% increased critical strike chance</> and its critical strikes burn the target for <rt.warning>60% of the damage it dealt</> over 24 seconds.",
         key: "DB6BB0144AE3FC766526FDB1E1FEFF9B",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Pyromancer/Pyromancer15.0",
+      thumbnail: "pyromancer_Pyromancer15",
     },
     {
-      id: "Talent.ID.Talent14",
+      id: "Talent14",
       name: { default: "Magic Ward", key: "DC08607845BFAFA106441FAB12E1430B" },
       unlocked_at: 0,
       row: 4,
@@ -196,10 +187,10 @@ export const Firemage: Hero = {
         default: "You take 10% reduced <bold>Magic Damage</>.",
         key: "549FCFFE4DC4BB09FD57C7A82A5B9B13",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_Arcane_Scroll.0",
+      thumbnail: "textures_T_Arcane_Scroll",
     },
     {
-      id: "Talent.ID.Talent8",
+      id: "Talent8",
       name: {
         default: "Rolling Flames",
         key: "391A6DCC4F10117F7065B0927825CACF",
@@ -212,10 +203,10 @@ export const Firemage: Hero = {
           "The cooldown of your <rt.absorb>Engulfing Flames</> is reduced by 0.5 seconds each time your <rt.absorb>Searing Blaze</> deals damage to an enemy.",
         key: "B834389147B99734548FD1A7965D3545",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Dot_01.0",
+      thumbnail: "firemage_Firemage_Dot_01",
     },
     {
-      id: "Talent.ID.Talent1",
+      id: "Talent1",
       name: {
         default: "Pyrophibian Frenzy",
         key: "A4F9D6A84EB09536894308A654AA5EF4",
@@ -228,10 +219,10 @@ export const Firemage: Hero = {
           "Each time one of your <bold>damage over time</> effects critically strikes, you have a 8% chance to spawn a <rt.absorb>Fire Frog</> to leap toward your enemies.",
         key: "37B490654C0A92CE8ED65C9071F1740B",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Firefrog.0",
+      thumbnail: "firemage_Firemage_Firefrog",
     },
     {
-      id: "Talent.ID.Talent2",
+      id: "Talent2",
       name: {
         default: "Reign of Fire",
         key: "1BEDCF7B400FE7F77B9D4E972EC3314F",
@@ -244,10 +235,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Detonate</> casts have a chance to instantly grant you 1 charge of <rt.absorb>Fire Ball</> and cause your next <rt.absorb>Fire Ball</> to have <rt.warning>+100% critical strike chance</>. (1.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
         key: "5B094BD94903B7B4E6190AB36B13C5E4",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Inferno.0",
+      thumbnail: "firemage_Firemage_Inferno",
     },
     {
-      id: "Talent.ID.Talent4",
+      id: "Talent4",
       name: {
         default: "Intensifying Inferno",
         key: "375B29F9452702174ACF598AA8CE718B",
@@ -260,10 +251,10 @@ export const Firemage: Hero = {
           "Your <rt.absorb>Infernal Wave</> deals <rt.warning>+15% increased damage</> for each of your unique damage over time effects that are active on the target.",
         key: "29EFA8B042F9DC037FDB89AB1437F59F",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Firemage/Firemage_Bolt.0",
+      thumbnail: "firemage_Firemage_Bolt",
     },
     {
-      id: "Talent.ID.Talent15",
+      id: "Talent15",
       name: {
         default: "Spirited Fortitude",
         key: "D76CCA114E0123B511BC47B0A2C9CCC8",
@@ -275,11 +266,10 @@ export const Firemage: Hero = {
         default: "You take 10% reduced <bold>Area of Effect damage</>.",
         key: "2E15AC234013D4A9EE7BBC92F67258B4",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Barbarian/Barbarian3.0",
+      thumbnail: "barbarian_Barbarian3",
     },
     {
-      id: "Talent.ID.Talent9",
+      id: "Talent9",
       name: {
         default: "Spontaneous Combustion",
         key: "D08014B44F3DAB212999EDB8D23AC92E",
@@ -292,8 +282,7 @@ export const Firemage: Hero = {
           "Each tick of <rt.absorb>Searing Blaze</> & <rt.absorb>Engulfing Flames</> has a 4% chance to have <rt.warning>+100% critical strike chance</>.\r\n\r\nThe chance for <rt.effect>Spontaneous Combustion</> to trigger is increased by +1% for every 5% critical strike chance you have.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
         key: "9CA3814D4DB0F696A5874087DF73FC0E",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_SciFiSkillsIcon/Tex_r_02.0",
+      thumbnail: "tex_scifiskillsicon_Tex_r_02",
     },
   ],
 };

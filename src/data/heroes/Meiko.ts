@@ -1,5 +1,6 @@
 import type { Hero } from "../../types";
 export const Meiko: Hero = {
+  id: "Meiko",
   class_color: { R: 40, G: 224, B: 92, A: 255, hex: "#28E05C" },
   thumbnail: "hero_portrait_meiko_default",
   name: { key: "17C34D1C4A98CF5EE2D9C381EB3550B1", default: "Meiko" },
@@ -15,10 +16,9 @@ export const Meiko: Hero = {
       "After the fall of the Edosaka Barrier, Meiko was sent away by her mother to survive. She traveled the world learning to channel her turmoil into martial grace as a Twinsoul.\r\n\r\nShe joins the Fellowship to continue her training and seek heroes strong enough to challenge the Demon King that reigns over her homeland.",
   },
   difficulty: 4,
-  id: "Meiko",
   talents: [
     {
-      id: "Talent.ID.Talent2",
+      id: "Talent2",
       name: {
         default: "Resonance of Earth",
         key: "C6B0C3DB409C3961CD8C38BCA32F209A",
@@ -31,11 +31,10 @@ export const Meiko: Hero = {
           "When you activate <rt.absorb>Stone Shield</> you take <rt.bold>20% reduced damage</> for 8 seconds.",
         key: "9DCC99CE40E77650D6BDD4A2A2334CD7",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Energy_19.0",
+      thumbnail: "textures_T_Nhance_RPG_Energy_19",
     },
     {
-      id: "Talent.ID.Talent3",
+      id: "Talent3",
       name: {
         default: "Perfect Storm",
         key: "74F0B8454F8ABA1E43BE7CB1BF9E567F",
@@ -48,11 +47,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Lashing Stormkick</> has a <rt.bold>50% chance to deal damage an additional time</> for <rt.warning>60% of the initial hit</>.",
         key: "DB11F5734E1C0A37F2DE3A81476821E3",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_Skill_Icons_Pack/Tex_blue_6.0",
+      thumbnail: "tex_skill_icons_pack_Tex_blue_6",
     },
     {
-      id: "Talent.ID.Talent1",
+      id: "Talent1",
       name: { default: "Earthwell", key: "5A48009A4CDE941941BA49874406279C" },
       unlocked_at: 0,
       row: 1,
@@ -62,11 +60,10 @@ export const Meiko: Hero = {
           "Each hit with <rt.absorb>Earthfist Barrage</> adds <rt.bold>1 stack</> to your <rt.absorb>Serenity</> ability.\r\n\r\n<rt.absorb>Serenity</> now prevents your <rt.absorb>Stone Shield</> from losing health for 0.1 seconds per stack of <rt.absorb>Serenity</> consumed.",
         key: "077859D040BC5A9921FC6F8962BFA3C0",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_01/Textures/T_Icon_Cosmic_01.0",
+      thumbnail: "textures_T_Icon_Cosmic_01",
     },
     {
-      id: "Talent.ID.Talent5",
+      id: "Talent5",
       name: {
         default: "Will of Stone",
         key: "9E8B37394C8AB5E8200593A8A1833764",
@@ -79,10 +76,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Shatter Earth</> now also activates your <bold>Spirited Strikes</> and <bold>Spirited Vortex</> buffs.",
         key: "4F1374294A66A02EB937229A110F2290",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/T_Meiko_SlamStun.0",
+      thumbnail: "meiko_T_Meiko_SlamStun",
     },
     {
-      id: "Talent.ID.Talent15",
+      id: "Talent15",
       name: { default: "Harsh Winds", key: "0E8E122E43DEBE2B48D864AE768814B7" },
       unlocked_at: 0,
       row: 2,
@@ -92,11 +89,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Spirited Vortex</> deals <rt.warning>20% more damage</>.\r\n\r\nEach time you perform a finisher ability while <rt.effect>Spirited Vortex</> is active it grants you <rt.bold>+20% dodge chance</>, stacking up to 3 times.\r\n\r\nAll stacks of the <rt.bold>bonus dodge</> are consumed upon successfully dodging an attack.",
         key: "E5D3381B4C8FE3F3DCF4BDA5C3F927A2",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Electromancer/Electromancer5.0",
+      thumbnail: "electromancer_Electromancer5",
     },
     {
-      id: "Talent.ID.Talent14",
+      id: "Talent14",
       name: {
         default: "Rumbling Stone",
         key: "7E27702C4DC04FD839D8A98612FD0E64",
@@ -109,11 +105,10 @@ export const Meiko: Hero = {
           "Your <bold>Earth abilities</> deal <rt.warning>20% more damage</>.",
         key: "9F7C59F84C8DD4A2FB3306BAE0E1DCF2",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_NatureAmbush.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_NatureAmbush",
     },
     {
-      id: "Talent.ID.Talent11",
+      id: "Talent11",
       name: {
         default: "Thundering Kicks",
         key: "EBCA49FD42D5AC58CA1E1EB828D9F024",
@@ -126,10 +121,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Lashing Stormkick</> has <rt.warning>+20% increased critical strike chance</>.",
         key: "913046CC477CC74292F3609F5B6BE833",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_08.0",
+      thumbnail: "meiko_Meiko_AbilityIcon_08",
     },
     {
-      id: "Talent.ID.Talent6",
+      id: "Talent6",
       name: {
         default: "Debilitating Vortex",
         key: "588B03E94BDD61EE74397C9F06060D55",
@@ -142,10 +137,10 @@ export const Meiko: Hero = {
           "Enemies hit by <rt.absorb>Spirited Vortex</> have <rt.effect>20% reduced attack speed</> for 5 seconds.",
         key: "0EF7F6FE4AB100DEF6091DB8C6C57552",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_07.0",
+      thumbnail: "meiko_Meiko_AbilityIcon_07",
     },
     {
-      id: "Talent.ID.Talent17",
+      id: "Talent17",
       name: {
         default: "Guardian's Fluidity",
         key: "429742144D6E6FD8599286BE68416F2B",
@@ -158,11 +153,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Finishing Moves</> reduce the cooldown of your <rt.absorb>Stone Shield</> ability by <rt.bold>1 second</>.",
         key: "A3A3FBCF47ECBB411F88778D2C2D545E",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_NatureStone.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_NatureStone",
     },
     {
-      id: "Talent.ID.Talent4",
+      id: "Talent4",
       name: { default: "Slipstream", key: "6F0D58474D39020DCC3A8A8BD54CAF5A" },
       unlocked_at: 0,
       row: 4,
@@ -172,10 +166,10 @@ export const Meiko: Hero = {
           "Each time you cast <rt.absorb>Gust</> you release a burst of winds at your starting location, causing all enemies within 750 radius to have <rt.effect>50% reduced movement speed</> for 6 seconds.",
         key: "7538702348F395081C5F8DBB16BA466C",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_10.0",
+      thumbnail: "meiko_Meiko_AbilityIcon_10",
     },
     {
-      id: "Talent.ID.Talent12",
+      id: "Talent12",
       name: { default: "Magic Ward", key: "E5D4FD2241264D50495AC095A4F7780A" },
       unlocked_at: 0,
       row: 4,
@@ -184,10 +178,10 @@ export const Meiko: Hero = {
         default: "You take 10% less <bold>Magic damage</>.",
         key: "36CEB1ED47DC3E1BA0646A9488625A1C",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_Arcane_Scroll.0",
+      thumbnail: "textures_T_Arcane_Scroll",
     },
     {
-      id: "Talent.ID.Talent10",
+      id: "Talent10",
       name: {
         default: "Unwavering Spirit",
         key: "BBA9684643195F071E53188BC5C593EC",
@@ -200,10 +194,10 @@ export const Meiko: Hero = {
           "The <rt.effect>Spirit Armor</> buff you gain whenever you trigger a <rt.mana>Spirit Refund</> now also generates <rt.bold>1 stone</> for your <rt.absorb>Stone Shield</>.\r\n\r\nYour <rt.bold>Spirit</> is increased by +3% passively.",
         key: "5621E8CF451F8913A9DA4A96DE5DEF8D",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_TranquilityOrb.0",
+      thumbnail: "textures_T_TranquilityOrb",
     },
     {
-      id: "Talent.ID.Talent7",
+      id: "Talent7",
       name: {
         default: "Warden of the Temple",
         key: "A06934984C2F80BD9A2EBD8F759B3BC7",
@@ -216,10 +210,10 @@ export const Meiko: Hero = {
           "Each time you consume <rt.effect>Earthfall</> or <rt.effect>Stormfall</>, you gain 1 stack of <rt.effect>Warden of the Temple</>. At <rt.bold>3 stacks</>, your next <rt.absorb>Palm Finisher</> is enhanced.\r\n\r\n<rt.absorb>Double Palm Strike:</> Deals <rt.warning>300% increased damage</> and grants <rt.absorb>25 Serenity</> charges.\r\n\r\n<rt.absorb>Spirited Vortex:</> Deals <rt.warning>50% increased damage</> and its <rt.bold>Dodge Bonus</> is increased to <rt.bold>+30%</>.",
         key: "18193A394D0498D19048AA8BDFB3FFFA",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_01.0",
+      thumbnail: "meiko_Meiko_AbilityIcon_01",
     },
     {
-      id: "Talent.ID.Talent8",
+      id: "Talent8",
       name: { default: "Earthbourne", key: "66490E1B41F2A00E13A9FB96BA414B3F" },
       unlocked_at: 0,
       row: 5,
@@ -229,10 +223,10 @@ export const Meiko: Hero = {
           "Each cast of <rt.absorb>Shatter Earth</> reduces the cooldown of <rt.absorb>Twin Souls: Bulwark</> by <rt.bold>30%</>.",
         key: "3860D5214922A62BABB2EEA4F904C173",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/T_Meiko_TauntTotem.0",
+      thumbnail: "meiko_T_Meiko_TauntTotem",
     },
     {
-      id: "Talent.ID.Talent9",
+      id: "Talent9",
       name: {
         default: "Forbidden Technique",
         key: "719B5BB7499C878D7D6CE289D4B63168",
@@ -245,10 +239,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Double Palm Strike</> finisher applies <rt.effect>Forbidden Technique</> to the target for 15 seconds.\r\n\r\n<rt.effect>Forbidden Technique</> accumulates <rt.warning>18% of all damage you deal to the target</>. Once it expires, is removed, or if the enemy dies while it is active -  the accumulated amount explodes on the target and onto nearby enemies. You are <rt.heal>healed for 100% of the damage dealt</> by <rt.effect>Forbidden Technique</>.\r\n\r\nYou can only have one <rt.effect>Forbidden Technique</> active at any time.",
         key: "40EE51E74A3C988480E076BA9CE42591",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Meiko/Meiko_AbilityIcon_04.0",
+      thumbnail: "meiko_Meiko_AbilityIcon_04",
     },
     {
-      id: "Talent.ID.Talent16",
+      id: "Talent16",
       name: { default: "Peacefield", key: "BBE2369D4A857FFF72ABBAA328A66E0E" },
       unlocked_at: 0,
       row: 6,
@@ -258,11 +252,10 @@ export const Meiko: Hero = {
           "Your <rt.absorb>Serenity</> applies <rt.effect>Peacefield</> on you, healing you for <rt.heal>30% of the initial heal's value over 9 seconds</>.",
         key: "F605F23F4D91E6D9AF7F7FA5002B4686",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_01/Textures/T_Icon_Elements_77.0",
+      thumbnail: "textures_T_Icon_Elements_77",
     },
     {
-      id: "Talent.ID.Talent13",
+      id: "Talent13",
       name: { default: "Stone Guard", key: "C804F5FC40D043CD83003492BD01EE99" },
       unlocked_at: 0,
       row: 6,
@@ -272,11 +265,10 @@ export const Meiko: Hero = {
           "Any time you gain health from your self healing abilities, <rt.heal>10% of the healing amount</> also replenishes your <rt.absorb>Stone Shield's</> health.",
         key: "349168264FC84CABD1E7AF945DCAB29A",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_EarthTranquility.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_EarthTranquility",
     },
     {
-      id: "Talent.ID.Talent18",
+      id: "Talent18",
       name: {
         default: "Conclusive Strikes",
         key: "34B8BAEF42785576272BED88699D8E83",
@@ -288,8 +280,7 @@ export const Meiko: Hero = {
         default: "Your <bold>Finishers</> deal <rt.warning>10% more damage</>.",
         key: "CEC92BF14C4B925E3B1F5DA9A8C9197B",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_01/Textures/T_Icon_Elements_71.0",
+      thumbnail: "textures_T_Icon_Elements_71",
     },
   ],
 };

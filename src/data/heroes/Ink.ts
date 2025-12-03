@@ -1,5 +1,6 @@
 import type { Hero } from "../../types";
 export const Ink: Hero = {
+  id: "Ink",
   class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
   thumbnail: "hero_portrait_Ink_01",
   name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
@@ -18,10 +19,9 @@ export const Ink: Hero = {
       "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
   },
   difficulty: 4,
-  id: "Ink",
   talents: [
     {
-      id: "Talent.ID.Talent2",
+      id: "Talent2",
       name: {
         default: "Left Hand Path",
         key: "0F5CE1784BE3FB4A1E0DBC970FB1A734",
@@ -34,10 +34,10 @@ export const Ink: Hero = {
           "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>30%</> of the damage dealt is also dealt to enemies near your target, reduced beyond 5 targets.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
         key: "BF84B21D48AAB7DF2D3B3893771A1DCC",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_Facebreaker.0",
+      thumbnail: "ink_T_Ink_Facebreaker",
     },
     {
-      id: "Talent.ID.Talent11",
+      id: "Talent11",
       name: {
         default: "Concatenation",
         key: "A9DB45EE4A96339650CC8484AC3ECEA0",
@@ -50,11 +50,10 @@ export const Ink: Hero = {
           "Your <rt.bold>Attack Speed</> is increased by <rt.warning>50%</>.",
         key: "7BCD2F644D3BC2BE88CF319B4B7345EB",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Berserker/Berserker6.0",
+      thumbnail: "berserker_Berserker6",
     },
     {
-      id: "Talent.ID.Talent3",
+      id: "Talent3",
       name: {
         default: "Blood & Thunder",
         key: "7E54C35542F76B0CEA9AD897E467899F",
@@ -67,11 +66,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Heavy Strike</> has a chance to cast a free <rt.absorb>Chain Lightning</> at the target.\r\n\r\n(2.0 PPM)",
         key: "AAFC5F514731CF80ECB6319481C2D980",
       },
-      thumbnail:
-        "/Game/ui/icons/SpellBookMegapack/Textures/Tex_SpellBookPage01/Tex_SpellBook01_91.0",
+      thumbnail: "tex_spellbookpage01_Tex_SpellBook01_91",
     },
     {
-      id: "Talent.ID.Talent6",
+      id: "Talent6",
       name: { default: "Bloodline", key: "BE75035D42FB83A521E6619C5DD8EDEF" },
       unlocked_at: 0,
       row: 2,
@@ -81,11 +79,10 @@ export const Ink: Hero = {
           "You generate <rt.mana>1 Fury</> every 1 second.\r\n\r\nYou no longer lose <rt.mana>Fury</> while out of combat.",
         key: "5BDC491341B506270ECBBBAD3A2C2114",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGSpells_02/Textures/T_Icon_BloodCombat_141.0",
+      thumbnail: "textures_T_Icon_BloodCombat_141",
     },
     {
-      id: "Talent.ID.Talent14",
+      id: "Talent14",
       name: { default: "High Road", key: "BCA429A346A256C54AA96DAE02030E78" },
       unlocked_at: 0,
       row: 2,
@@ -95,11 +92,10 @@ export const Ink: Hero = {
           "When your <rt.absorb>Leap Smash</> ability does not hit an enemy, its cooldown is reduced by <rt.bold>14</>  seconds and your movement speed is increased by <rt.bold>50%</> for 4 seconds.\r\n\r\nYour <rt.absorb>Leap Smash</> has <rt.warning>+20% increased critical strike chance</>.\r\n\r\nYou now only generate <rt.mana>Fury</> with <rt.absorb>Leap Smash</> when it deals damage to an enemy.",
         key: "597184C94454FD481FD8B4859E2A0D39",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Barbarian/Barbarian8.0",
+      thumbnail: "barbarian_Barbarian8",
     },
     {
-      id: "Talent.ID.Talent7",
+      id: "Talent7",
       name: {
         default: "Ride the Lightning",
         key: "CF9BD954430236BB653DC3A459851975",
@@ -112,10 +108,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Thunder Call</> generates <rt.mana>60</> Fury over its duration.",
         key: "915F6802419D2CCF4240EB8743DC13DE",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_Selfbuff.0",
+      thumbnail: "ink_T_Ink_Selfbuff",
     },
     {
-      id: "Talent.ID.Talent10",
+      id: "Talent10",
       name: { default: "Them Bones", key: "B60ABA8B4B1DA58798688883BD0ACE56" },
       unlocked_at: 0,
       row: 3,
@@ -125,10 +121,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Skull Crusher</> has a <rt.bold>30%</> chance to have <rt.warning>+100%</> increased critical strike chance.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
         key: "039BC5A741FFCDF2BFE2C1A3EFDB61AB",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_Skullcrusher.0",
+      thumbnail: "ink_T_Ink_Skullcrusher",
     },
     {
-      id: "Talent.ID.Talent18",
+      id: "Talent18",
       name: {
         default: "Kill 'Em All",
         key: "F8DD387F4DF2430AA0B03FBC58FEA5F2",
@@ -141,10 +137,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Hammer Storm</> now spins 3 times per use for the same <rt.mana>Fury</> cost, but each consecutive spin deals <rt.warning>35% more damage</>.",
         key: "0C1B8ECF4CF59415382ABEA44E2E2EDB",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_Hammerstorm.0",
+      thumbnail: "ink_T_Ink_Hammerstorm",
     },
     {
-      id: "Talent.ID.Talent17",
+      id: "Talent17",
       name: {
         default: "Thunderstruck",
         key: "7B19284F4857B452C35A92A2E7D9E729",
@@ -157,11 +153,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Chain Lightning</> bounces <rt.warning>2</> additional times.",
         key: "280663A343A2615B1AFB0DA0B94F78BB",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Electromancer/Electromancer1.0",
+      thumbnail: "electromancer_Electromancer1",
     },
     {
-      id: "Talent.ID.Talent4",
+      id: "Talent4",
       name: { default: "Pneuma", key: "042D1432460604EF9FB759A7F3A5E4FC" },
       unlocked_at: 0,
       row: 4,
@@ -171,11 +166,10 @@ export const Ink: Hero = {
           "While <rt.absorb>Thunder Call</> is active you take <rt.bold>10%</> reduced damage and you passively restore health equal to <rt.heal>5% of any damage you deal</> for the duration.",
         key: "1F659DF546B2CA1B71A7EBAF2A5093C7",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Energy_18.0",
+      thumbnail: "textures_T_Nhance_RPG_Energy_18",
     },
     {
-      id: "Talent.ID.Talent8",
+      id: "Talent8",
       name: {
         default: "Far Beyond Driven",
         key: "80E892D0449360AC688865913C722311",
@@ -188,11 +182,10 @@ export const Ink: Hero = {
           "Each time you use <rt.absorb>Heavy Strike</> you gain 1 stack of <rt.effect>Far Beyond Driven</> for 20 seconds, increasing your Spirit by <rt.warning>+2%</>.\r\n\r\n<rt.effect>Far Beyond Driven</> stacks up to 5 times.",
         key: "2257DF2A4F0871081B2BF180AD5CD127",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceRPGIcons/Textures/T_Nhance_RPG_Energy_13.0",
+      thumbnail: "textures_T_Nhance_RPG_Energy_13",
     },
     {
-      id: "Talent.ID.Talent15",
+      id: "Talent15",
       name: { default: "Magic Ward", key: "C69CC9D5465CC8FBA6F38C8772F3A008" },
       unlocked_at: 0,
       row: 4,
@@ -201,10 +194,10 @@ export const Ink: Hero = {
         default: "You take 10% reduced Magic damage.",
         key: "737CB90C4201EB146F1754BC7B0172DA",
       },
-      thumbnail: "/Game/ui/icons/NhanceIconsBundle/Textures/T_Arcane_Scroll.0",
+      thumbnail: "textures_T_Arcane_Scroll",
     },
     {
-      id: "Talent.ID.Talent5",
+      id: "Talent5",
       name: {
         default: "Mouth for War",
         key: "F6B55C9E4900C82A42F8258F7FC085A8",
@@ -217,10 +210,10 @@ export const Ink: Hero = {
           "When your <rt.absorb>Leap Smash</> ability deals damage, you are granted 1 charge of <rt.absorb>Focused Wrath</>.",
         key: "C6946FDC46205D7CEADF36BEB3404397",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_FocusedWrath.0",
+      thumbnail: "ink_T_Ink_FocusedWrath",
     },
     {
-      id: "Talent.ID.Talent9",
+      id: "Talent9",
       name: { default: "Schism", key: "387DF58445A5443C0772B5AE23838EF7" },
       unlocked_at: 0,
       row: 5,
@@ -230,11 +223,10 @@ export const Ink: Hero = {
           "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
         key: "EAB742B145274F2524AA97BDFB4309F0",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_TwoFace.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
     },
     {
-      id: "Talent.ID.Talent1",
+      id: "Talent1",
       name: {
         default: "Square Hammer",
         key: "8129188741F53DDAB95E8C8ED8DE5F89",
@@ -247,10 +239,10 @@ export const Ink: Hero = {
           "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
         key: "E039BA1C4D9B80B2D6B686B896A5425A",
       },
-      thumbnail: "/Game/ui/icons/hero_abilities/Ink/T_Ink_TimerAbility.0",
+      thumbnail: "ink_T_Ink_TimerAbility",
     },
     {
-      id: "Talent.ID.Talent12",
+      id: "Talent12",
       name: { default: "Spit It Out", key: "1F7DB44C4210EF22D9A5ECBBC61641A6" },
       unlocked_at: 0,
       row: 6,
@@ -259,11 +251,10 @@ export const Ink: Hero = {
         default: "Your Critical Strike Power is increased by 10%.",
         key: "B85C08D94DCD61133A17D39F7FC63AA2",
       },
-      thumbnail:
-        "/Game/ui/icons/NhanceIconsBundle/Textures/T_Nhance_RPG_Icons_FieryHammer.0",
+      thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
     },
     {
-      id: "Talent.ID.Talent13",
+      id: "Talent13",
       name: {
         default: "Spirited Fortitude",
         key: "4ADF4F24459D922719E280AD834B5C81",
@@ -276,11 +267,10 @@ export const Ink: Hero = {
           "You take 10% less damage from <bold>Area of Effect</> attacks.",
         key: "449BEA7646608FB6CB590B88DBB7684E",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Warrior/Barbarian/Barbarian3.0",
+      thumbnail: "barbarian_Barbarian3",
     },
     {
-      id: "Talent.ID.Talent16",
+      id: "Talent16",
       name: {
         default: "Crack the Sky",
         key: "3D806F5640B6C3C98CF1F6B793DD94AE",
@@ -293,8 +283,7 @@ export const Ink: Hero = {
           "Your <bold>Lightning damage</> has <rt.warning>+20%</> increased critical strike chance.",
         key: "0D351A0C45AA82187006AEB872DBEE01",
       },
-      thumbnail:
-        "/Game/ui/icons/Blink_icons/Classes/Elementalist/Electromancer/Electromancer18.0",
+      thumbnail: "electromancer_Electromancer18",
     },
   ],
 };
