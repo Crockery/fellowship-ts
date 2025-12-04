@@ -4,14 +4,44 @@ import { DataGenerator } from "../../../shared/data-generator";
 import { HeroMapTable, RawHeroMetaData, RawHeroTalentData } from "./types";
 import { Hero } from "../../../../src/types";
 import { getImagePathId, resolveAssetPath } from "../../../shared";
+import {
+  ATTRIBUTES_KEY,
+  CharacterAttributeBp,
+  getHeroAttributes,
+} from "../common";
 
 const getHeroId = (raw_path: string) =>
   raw_path.replace("CharacterID.Hero.", "");
+
+// const hero_stat_keys = new Map<string, string[]>();
+
+// const logUniqueStats = () => {
+//   let all_keys = Array.from(hero_stat_keys).flatMap(([, keys]) => {
+//     return keys;
+//   });
+
+//   all_keys = all_keys.filter((value, index, self) => {
+//     return self.indexOf(value) === index;
+//   });
+
+//   console.log("All keys:");
+//   console.log(all_keys);
+//   console.log("---");
+
+//   Array.from(hero_stat_keys).map(([id, keys]) => {
+//     all_keys.forEach((key) => {
+//       if (!keys.includes(key)) {
+//         console.log(`${id} is missing ${key}`);
+//       }
+//     });
+//   });
+// };
 
 const mapRawHeroToHero = (
   raw_metadata: RawHeroMetaData,
   raw_talents: RawHeroTalentData,
   id: string,
+  generator: DataGenerator,
 ): Hero => {
   const talents: Hero["talents"] = raw_talents.Properties.Talents.filter(
     (talent) => !talent.DisabledInGame,
@@ -38,6 +68,14 @@ const mapRawHeroToHero = (
   const { R, G, B, A } = properties.ClassColor;
 
   const thumbnail = properties.PortraitTexture.AssetPathName.split(".")[1];
+
+  const attributes = generator.getFile<CharacterAttributeBp>(ATTRIBUTES_KEY);
+
+  if (!attributes || !attributes[0].Rows) {
+    throw new Error("No attributes");
+  }
+
+  const stats = getHeroAttributes(attributes[0].Rows, id);
 
   return {
     id,
@@ -67,6 +105,7 @@ const mapRawHeroToHero = (
     },
     difficulty: properties.OverallDifficulty,
     talents,
+    stats,
   };
 };
 
@@ -115,7 +154,7 @@ export const genHeroes = async (generator: DataGenerator) => {
         path: `./src/data/heroes/${hero_id}.ts`,
         content: `
             import type { Hero } from "../../types";
-            export const ${hero_id}: Hero = ${JSON.stringify(mapRawHeroToHero(meta_data, talent_data, hero_id))};
+            export const ${hero_id}: Hero = ${JSON.stringify(mapRawHeroToHero(meta_data, talent_data, hero_id, generator))};
           `,
       });
     }),

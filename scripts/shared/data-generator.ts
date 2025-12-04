@@ -43,11 +43,13 @@ export class DataGenerator {
   writes: Write[];
   cleans: string[];
   registry: Registry = [];
+  files: Map<string, unknown>;
 
   constructor() {
     this.typings = { imports: [], body: [], count: 0, key: "typings" };
     this.constants = { imports: [], body: [], count: 0, key: "constants" };
     this.handlers = new Map();
+    this.files = new Map();
     this.writes = [];
     this.cleans = [];
   }
@@ -74,7 +76,7 @@ export class DataGenerator {
     };
   }
 
-  private async setAssetRegistry() {
+  private async setRegistry() {
     const registry_path = `${process.env.FMODEL_OUTPUT}/AssetRegistry.json`;
 
     console.log(`Getting asset registry at ${registry_path}`);
@@ -97,12 +99,21 @@ export class DataGenerator {
     }
   }
 
+  async addFile<T>(key: string, getter: () => Promise<T>) {
+    const value = await getter();
+    this.files.set(key, value);
+  }
+
+  getFile<T>(key: string) {
+    return this.files.get(key) as T | undefined;
+  }
+
   async start() {
     if (!process.env.FMODEL_OUTPUT) {
       throw new Error("FMODEL_OUTPUT path not set in .env");
     }
 
-    await this.setAssetRegistry();
+    await this.setRegistry();
 
     if (!this.registry.length) {
       throw new Error("Stopping data generator: No registry found.");
