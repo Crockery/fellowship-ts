@@ -5,9 +5,7 @@ export interface Translateable {
   default: string;
 }
 
-// HEROES
-
-export interface HeroMetaData {
+export interface Hero {
   class_color: {
     R: number;
     G: number;
@@ -21,31 +19,21 @@ export interface HeroMetaData {
   description: Translateable;
   biography: Translateable;
   difficulty: number;
+  id: string;
+  talents: {
+    id: string;
+    name: Translateable;
+    unlocked_at: number;
+    row: number;
+    cost: number;
+    description: Translateable;
+    thumbnail: string;
+  }[];
 }
 
-export interface HeroData {
-  id: string;
-}
-
-export interface HeroTalentData {
-  id: string;
+export interface Npc {
   name: Translateable;
-  unlocked_at: number;
-  row: number;
-  cost: number;
-  description: Translateable;
-  thumbnail: string;
-}
-
-export interface Hero extends HeroData, HeroMetaData {
-  talents: HeroTalentData[];
-}
-
-// ENEMIES
-
-export interface Enemy {
-  name?: Translateable;
   id: string;
-  thumbnail: string;
+  thumbnail?: string;
   tags: string[];
 }

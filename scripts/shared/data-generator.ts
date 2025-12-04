@@ -1,13 +1,6 @@
 import fs from "fs-extra";
 import { execSync } from "child_process";
-import { clearDirectory } from "./utils";
-
-const chunk = <T>(to_chunk: T[], size: number): T[][] => {
-  const R = [];
-  for (let i = 0; i < to_chunk.length; i += size)
-    R.push(to_chunk.slice(i, i + size));
-  return R;
-};
+import { chunk, clearDirectory } from "./utils";
 
 type StaticFileKey = "typings" | "constants";
 
@@ -16,6 +9,24 @@ interface StaticFileWrite {
   body: string[];
   count: number;
   key: StaticFileKey;
+}
+
+type Registry = {
+  obj_path: string;
+  pkg_name: string;
+  pkg_path: string;
+  asset_name: string;
+  asset_class: string;
+}[];
+
+interface RegistryRaw {
+  PreallocatedAssetDataBuffers: {
+    ObjectPath: string;
+    PackageName: string;
+    PackagePath: string;
+    AssetName: string;
+    AssetClass: string;
+  }[];
 }
 
 type HandlerFn = (generator: DataGenerator) => Promise<void>;
@@ -31,6 +42,7 @@ export class DataGenerator {
   handlers: Map<string, HandlerFn>;
   writes: Write[];
   cleans: string[];
+  registry: Registry = [];
 
   constructor() {
     this.typings = { imports: [], body: [], count: 0, key: "typings" };
@@ -62,9 +74,38 @@ export class DataGenerator {
     };
   }
 
+  private async setAssetRegistry() {
+    const registry_path = `${process.env.FMODEL_OUTPUT}/AssetRegistry.json`;
+
+    console.log(`Getting asset registry at ${registry_path}`);
+
+    const registry_raw = await fs.readJson(registry_path);
+
+    if (
+      registry_raw &&
+      !!(registry_raw as RegistryRaw).PreallocatedAssetDataBuffers?.length
+    ) {
+      this.registry = (
+        registry_raw as RegistryRaw
+      ).PreallocatedAssetDataBuffers.map((asset) => ({
+        obj_path: asset.ObjectPath,
+        pkg_name: asset.PackageName,
+        pkg_path: asset.PackagePath,
+        asset_name: asset.AssetName,
+        asset_class: asset.AssetClass,
+      }));
+    }
+  }
+
   async start() {
     if (!process.env.FMODEL_OUTPUT) {
       throw new Error("FMODEL_OUTPUT path not set in .env");
+    }
+
+    await this.setAssetRegistry();
+
+    if (!this.registry.length) {
+      throw new Error("Stopping data generator: No registry found.");
     }
 
     console.log("Starting data generation!");

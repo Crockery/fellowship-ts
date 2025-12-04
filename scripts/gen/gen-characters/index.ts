@@ -1,7 +1,7 @@
 import { DataGenerator } from "../../shared";
-import { genEnemies } from "./gen-enemies";
 import { genHeroes } from "./gen-heroes";
+import { genNpcs } from "./gen-npcs";
 
 export const genCharacters = async (generator: DataGenerator) => {
-  await Promise.all([genHeroes(generator), genEnemies(generator)]);
+  await Promise.all([genHeroes(generator), genNpcs(generator)]);
 };

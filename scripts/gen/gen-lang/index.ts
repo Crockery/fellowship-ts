@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 
-import { DataGenerator } from "../shared/data-generator";
+import { DataGenerator } from "../../shared";
 
 const copyLocaleJson = async (
   key: string,

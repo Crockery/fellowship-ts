@@ -1,10 +1,15 @@
 import fs from "fs-extra";
 import { FSBlueprint } from "../types";
 
-export const resolveAssetPath = async <T>(
-  asset_path: string,
-  ext: string = "json",
-): Promise<T | undefined> => {
+export const resolveAssetPath = async <T>({
+  asset_path,
+  id_key,
+  ext = "json",
+}: {
+  asset_path: string;
+  id_key?: keyof FSBlueprint;
+  ext?: string;
+}): Promise<T | undefined> => {
   const path_parts = asset_path.split(".");
 
   let id_or_idx: string | undefined = undefined;
@@ -33,7 +38,7 @@ export const resolveAssetPath = async <T>(
   if (id_or_idx) {
     if (isNaN(Number(id_or_idx))) {
       const asset = (json as FSBlueprint[]).find(
-        (potential) => potential.Name === id_or_idx,
+        (potential) => potential[id_key ?? "Name"] === id_or_idx,
       );
 
       if (!asset) {

@@ -95,17 +95,17 @@ export const genHeroes = async (generator: DataGenerator) => {
     heroes.map(async (hero) => {
       const hero_id = getHeroId(hero.HeroID.TagName);
 
-      const meta_data = await resolveAssetPath<RawHeroMetaData>(
-        hero.CharacterMetaData.ObjectPath,
-      );
+      const meta_data = await resolveAssetPath<RawHeroMetaData>({
+        asset_path: hero.CharacterMetaData.ObjectPath,
+      });
 
       if (!meta_data) {
         throw new Error(`Unable to find metadata for hero ${hero_id}`);
       }
 
-      const talent_data = await resolveAssetPath<RawHeroTalentData>(
-        hero.TalentData.AssetPathName,
-      );
+      const talent_data = await resolveAssetPath<RawHeroTalentData>({
+        asset_path: hero.TalentData.AssetPathName,
+      });
 
       if (!talent_data) {
         throw new Error(`Unable to find tale for hero ${hero_id}`);
