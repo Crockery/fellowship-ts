@@ -1,7 +1,37 @@
-import { Hero } from "../../../../src/types";
+import { snakeCaseString } from "../../../shared";
 import { CharacterAttributeRow } from "./types";
 
-const hero_stat_keys: (keyof Hero["stats"])[] = [
+const getStats = <T extends Record<string, number>>(
+  keys: string[],
+  rows: CharacterAttributeRow,
+  id: string,
+) => {
+  const row_keys = Object.keys(rows).filter((attribute_id) => {
+    return attribute_id.startsWith(id);
+  });
+
+  return keys.reduce((prev, curr) => {
+    const row_key = row_keys.find((row_key) => {
+      return row_key.endsWith(curr);
+    });
+
+    if (row_key) {
+      const row = rows[row_key];
+
+      return {
+        [snakeCaseString(curr)]: row.Keys[0].Value,
+        ...prev,
+      };
+    }
+
+    return {
+      [snakeCaseString(curr)]: 0,
+      ...prev,
+    };
+  }, {} as T);
+};
+
+const hero_stat_keys: string[] = [
   "Agility",
   "Armor",
   "BaseHealth",
@@ -52,34 +82,44 @@ const hero_stat_keys: (keyof Hero["stats"])[] = [
   "ResourcesTertiary",
 ];
 
-export const getHeroAttributes = (
+export const getHeroAttributes = <T extends Record<string, number>>(
   rows: CharacterAttributeRow,
   id: string,
-): Hero["stats"] => {
-  const row_keys = Object.keys(rows).filter((attribute_id) => {
-    return attribute_id.startsWith(id);
-  });
+) => {
+  return getStats<T>(hero_stat_keys, rows, id);
+};
 
-  return hero_stat_keys.reduce(
-    (prev, curr) => {
-      const row_key = row_keys.find((row_key) => {
-        return row_key.endsWith(curr);
-      });
+const npc_attribute_keys: string[] = [
+  "Agility",
+  "Armor",
+  "BaseHealth",
+  "BlockChance",
+  "BlockDamageReduction",
+  "BlockDamageReductionMultiplier",
+  "CritChance",
+  "CritMultiplier",
+  "DefaultBaseHealthMultiplier",
+  "DodgeChance",
+  "Haste",
+  "HealthRegenRate",
+  "IncomingDamageMultiplier",
+  "Intellect",
+  "KillScore",
+  "LifeSteal",
+  "Mana",
+  "ManaRegenRate",
+  "MaxMana",
+  "MinHealth",
+  "MoveSpeed",
+  "PassiveMoveSpeed",
+  "Resist",
+  "SpiritPointValue",
+  "Strength",
+];
 
-      if (row_key) {
-        const row = rows[row_key];
-
-        return {
-          [curr]: row.Keys[0].Value,
-          ...prev,
-        };
-      }
-
-      return {
-        [curr]: 0,
-        ...prev,
-      };
-    },
-    {} as Hero["stats"],
-  );
+export const getNpcAttributes = async <T extends Record<string, number>>(
+  rows: CharacterAttributeRow,
+  id: string,
+) => {
+  return getStats<T>(npc_attribute_keys, rows, id);
 };

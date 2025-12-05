@@ -6,9 +6,17 @@ import {
 } from "../../../shared";
 import { Npc } from "../../../../src/types";
 import { NpcDataRaw } from "./types";
+import { getNpcAttributes } from "../common/get-character-attributes";
+import { ATTRIBUTES_KEY, CharacterAttributeBp } from "../common";
 
 export const genNpcs = async (generator: DataGenerator) => {
   const src_root = "./src/data/npcs";
+
+  const attributes = generator.getFile<CharacterAttributeBp>(ATTRIBUTES_KEY);
+
+  if (!attributes || !attributes[0].Rows) {
+    throw new Error("No attributes");
+  }
 
   generator.addClean(src_root);
 
@@ -43,9 +51,15 @@ export const genNpcs = async (generator: DataGenerator) => {
 
           const name_obj = json.Properties.DisplayName;
 
+          const stats = await getNpcAttributes<Npc["stats"]>(
+            attributes[0].Rows,
+            json.Properties.CharacterID,
+          );
+
           npc_data.push({
             id: json.Properties.CharacterID,
             tags: json.Properties.CharacterTags,
+            stats,
             thumbnail: thumbnail_path
               ? getImagePathId(thumbnail_path)
               : undefined,

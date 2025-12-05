@@ -75,7 +75,7 @@ const mapRawHeroToHero = (
     throw new Error("No attributes");
   }
 
-  const stats = getHeroAttributes(attributes[0].Rows, id);
+  const stats = getHeroAttributes<Hero["stats"]>(attributes[0].Rows, id);
 
   return {
     id,
