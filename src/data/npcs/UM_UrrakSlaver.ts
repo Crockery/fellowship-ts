@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const UM_UrrakSlaver: Npc = {
   id: "UM_UrrakSlaver",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_UM_UrrakSlaver_MeleeAutoAttack",
+    "GA_UM_UrrakSlaver_CastedMeleeKnockback",
+    "GA_UM_UrrakSlaver_ProximityChain",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

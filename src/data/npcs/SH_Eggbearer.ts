@@ -2,7 +2,7 @@ import type { Npc } from "../../types";
 export const SH_Eggbearer: Npc = {
   id: "SH_Eggbearer",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
-  abilities: [],
+  abilities: ["GA_SH_Eggbearer_MeleeAutoAttack"],
   stats: {
     strength: 0,
     spirit_point_value: 2,

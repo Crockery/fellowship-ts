@@ -27,7 +27,7 @@ interface RegistryRaw {
     PackagePath: string;
     AssetName: string;
     AssetClass: string;
-    TagsAndValues: {
+    TagsAndValues?: {
       RowStructure: string;
     };
   }[];
@@ -99,7 +99,7 @@ export class DataGenerator {
         pkg_path: asset.PackagePath,
         asset_name: asset.AssetName,
         asset_class: asset.AssetClass,
-        row: asset.TagsAndValues.RowStructure,
+        row: asset.TagsAndValues?.RowStructure ?? "",
       }));
     }
   }

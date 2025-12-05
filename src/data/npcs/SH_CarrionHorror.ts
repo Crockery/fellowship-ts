@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const SH_CarrionHorror: Npc = {
   id: "SH_CarrionHorror",
   tags: ["ActorTypeTags.Elite", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SH_CarrionHorror_MeleeAutoAttack",
+    "GA_SH_CarrionHorror_ExplodeCorpse",
+    "GA_SH_CarrionHorror_OnDeathExplosion",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

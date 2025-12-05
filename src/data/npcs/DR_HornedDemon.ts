@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const DR_HornedDemon: Npc = {
   id: "DR_HornedDemon",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_DR_HornedDemon_MeleeAutoAttack",
+    "GA_DR_HornedDemon_SummonPortal",
+    "GA_DR_HornedDemon_Charge",
+    "GA_DR_HornedDemon_Enrage",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

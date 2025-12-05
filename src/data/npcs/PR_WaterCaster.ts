@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const PR_WaterCaster: Npc = {
   id: "PR_WaterCaster",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_PR_WaterCaster_MeleeAutoAttack",
+    "DT_PR_WaterCaster_CastedRangedProjectile",
+    "DT_PR_WaterCaster_CastedAoeProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

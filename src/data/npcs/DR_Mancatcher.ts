@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const DR_Mancatcher: Npc = {
   id: "DR_Mancatcher",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_DR_Mancatcher_MeleeAutoAttack",
+    "GA_DR_Mancatcher_Grip",
+    "GA_DR_Mancatcher_AOECone",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

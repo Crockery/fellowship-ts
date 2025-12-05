@@ -2,7 +2,16 @@ import type { Npc } from "../../types";
 export const SH_BossSpider: Npc = {
   id: "SH_BossSpider",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SH_BossSpider_MeleeAutoAttack",
+    "GA_SH_BossSpider_TankSlam",
+    "GA_SH_BossSpider_VenomSpray",
+    "GA_SH_BossSpider_TetherAttack",
+    "GA_SH_BossSpider_SpawnAdds",
+    "GA_SH_BossSpider_Tether",
+    "GA_SH_BossSpider_Rope",
+    "GA_SH_BossSpider_AOEDotAndBuff",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

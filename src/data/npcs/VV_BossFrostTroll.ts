@@ -2,7 +2,17 @@ import type { Npc } from "../../types";
 export const VV_BossFrostTroll: Npc = {
   id: "VV_BossFrostTroll",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_VV_BossFrostTroll_MeleeAutoAttack",
+    "GA_VV_BossFrostTroll_SingleTargetDot",
+    "GA_VV_BossFrostTroll_Stomp",
+    "GA_VV_BossFrostTroll_ChangeAura",
+    "GA_VV_BossFrostTroll_IceTomb",
+    "GA_VV_BossFrostTroll_CastStationaryDot",
+    "GA_VV_BossFrostTroll_StationaryDotPassive",
+    "GA_VV_BossFrostTroll_CastDotAura",
+    "GA_VV_BossFrostTroll_DotAuraPassive",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

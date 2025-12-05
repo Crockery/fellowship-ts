@@ -6,7 +6,7 @@ export const MF_Totem: Npc = {
     "CharacterStatus.Immobilized",
     "GameplayEffect.CCImmune",
   ],
-  abilities: [],
+  abilities: ["GA_MF_Totem_AoePulse"],
   stats: {
     strength: 0,
     spirit_point_value: 0,

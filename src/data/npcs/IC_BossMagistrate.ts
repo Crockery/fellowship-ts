@@ -2,7 +2,15 @@ import type { Npc } from "../../types";
 export const IC_BossMagistrate: Npc = {
   id: "IC_BossMagistrate",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
-  abilities: [],
+  abilities: [
+    "GA_IC_BossMagistrate_MeleeAutoAttack",
+    "GA_IC_BossMagistrate_BigStun",
+    "GA_IC_BossMagistrate_Frostbolt",
+    "GA_IC_BossMagistrate_KnockbackCone",
+    "GA_IC_BossMagistrate_IceSpikes",
+    "GA_IC_BossMagistrate_Redemption",
+    "GA_IC_BossMagistrate_FrigidMist",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

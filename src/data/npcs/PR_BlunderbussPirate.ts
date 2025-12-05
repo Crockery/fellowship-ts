@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const PR_BlunderbussPirate: Npc = {
   id: "PR_BlunderbussPirate",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "DT_PR_BlunderbussPirate_RangedAutoAttack",
+    "DT_PR_BlunderbussPirate_RangedDamageDebuff",
+    "DT_PR_BlunderbussPirate_RangedAutoAttack_0",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

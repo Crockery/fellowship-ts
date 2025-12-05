@@ -2,7 +2,17 @@ import type { Npc } from "../../types";
 export const DR_BossCultLeader: Npc = {
   id: "DR_BossCultLeader",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
-  abilities: [],
+  abilities: [
+    "GA_DR_BossCultLeader_MeleeAutoAttack",
+    "GA_DR_BossCultLeader_RandomTargetCone",
+    "GA_DR_BossCultLeader_ChosenForSacrifice",
+    "GA_DR_BossCultLeader_RotatingCrossAbility",
+    "GA_DR_Ritualist_OnDeathAbility",
+    "GA_DR_BossCultLeader_Grip_C",
+    "GA_DR_Ritualist_ResizeAoeCirclesWalk",
+    "GA_DR_BossCultLeader_ResizingAoeCircles",
+    "GA_DR_BossCultLeader_SoakBeam",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

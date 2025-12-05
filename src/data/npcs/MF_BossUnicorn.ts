@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const MF_BossUnicorn: Npc = {
   id: "MF_BossUnicorn",
   tags: ["ActorTypeTags.Beast", "ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_MF_BossUnicorn_MeleeAutoAttack",
+    "GA_MF_BossUnicorn_Charge",
+    "GA_MF_BossUnicorn_Charge_Cooldown",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const SH_RotheartRecluse: Npc = {
   id: "SH_RotheartRecluse",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SH_RotheartRecluse_MeleeAutoAttack",
+    "GA_SH_RotheartRecluse_MeleeDot",
+    "GA_SH_RotheartRecluse_DotProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

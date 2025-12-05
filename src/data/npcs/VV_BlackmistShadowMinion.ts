@@ -6,7 +6,10 @@ export const VV_BlackmistShadowMinion: Npc = {
     "ActorTypeTags.MuteThreatWarnings",
     "GameplayEffect.CCImmune",
   ],
-  abilities: [],
+  abilities: [
+    "GA_BlackmistShadowMinion_Cast",
+    "GA_BlackmistShadowMinion_OnDeathExplosion",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

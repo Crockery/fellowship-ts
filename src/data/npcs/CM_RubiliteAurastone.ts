@@ -6,7 +6,11 @@ export const CM_RubiliteAurastone: Npc = {
     "CharacterStatus.Immobilized",
     "CharacterStatus.IgnoreRotationInput",
   ],
-  abilities: [],
+  abilities: [
+    "GA_CM_RubiliteAurastone_ChasingLaser",
+    "GA_CM_RubiliteAurastone_Vulnerable",
+    "GA_CM_RubiliteAurastone_LockOnLaser",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

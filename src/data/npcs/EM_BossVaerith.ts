@@ -6,7 +6,14 @@ export const EM_BossVaerith: Npc = {
     "ActorTypeTags.Enemy",
     "CharacterStatus.IgnoreOutOfWorldBounds",
   ],
-  abilities: [],
+  abilities: [
+    "GA_EM_BossVaerith_BombDebuff",
+    "GA_EM_BossVaerith_BombDebuff_Granted",
+    "GA_EM_BossVaerith_BuffTroll",
+    "GA_EM_BossVaerith_Reposition",
+    "GA_EM_BossVaerith_PassiveProjectiles",
+    "GA_EM_BossVaerith_OnTrollDeathFlyAway",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

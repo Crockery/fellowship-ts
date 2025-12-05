@@ -2,7 +2,13 @@ import type { Npc } from "../../types";
 export const NP_Stormscreamer: Npc = {
   id: "NP_Stormscreamer",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin", "ActorTypeTags.Elite"],
-  abilities: [],
+  abilities: [
+    "GA_NP_Stormscreamer_MeleeAutoAttack",
+    "GA_NP_Stormscreamer_CastProjectile",
+    "GA_NP_Stormscreamer_CastedAoeProjectile",
+    "GA_NP_Stormscreamer_PeriodicDamage",
+    "GA_NP_Stormscreamer_PeriodicDamage_Granted",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

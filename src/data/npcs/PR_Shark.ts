@@ -6,7 +6,12 @@ export const PR_Shark: Npc = {
     "ActorTypeTags.MuteThreatWarnings",
     "CharacterStatus.IgnoreOutOfWorldBounds",
   ],
-  abilities: [],
+  abilities: [
+    "GA_PR_Shark_BiteAttached",
+    "GA_PR_Shark_JumpAttack",
+    "GA_PR_Shark_JumpAttack_Projectile",
+    "GA_PR_Shark_Projectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

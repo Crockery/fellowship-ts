@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const DR_BloodfangMauler: Npc = {
   id: "DR_BloodfangMauler",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_DR_BloodfangMauler_MeleeAutoAttack",
+    "GA_DR_BloodfangMauler_AOECone",
+    "GA_DR_BloodfangMauler_JumpBehind",
+    "GA_DR_BloodfangMauler_PostJump_AOECone",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

@@ -6,7 +6,10 @@ export const DR_BossSummonedDemon_Portal: Npc = {
     "ActorTypeTags.Elite",
     "ActorTypeTags.MuteThreatWarnings",
   ],
-  abilities: [],
+  abilities: [
+    "GA_DR_BossSummonedDemon_Portal_ShootProjectiles",
+    "GA_DR_BossSummonedDemon_Portal_SummonDemon",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 0,

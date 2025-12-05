@@ -2,7 +2,15 @@ import type { Npc } from "../../types";
 export const DR_BossGateWizard: Npc = {
   id: "DR_BossGateWizard",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
-  abilities: [],
+  abilities: [
+    "GA_DR_BossGateWizard_Football",
+    "GA_DR_BossGateWizard_MeleeAutoAttack",
+    "GA_DR_BossGateWizard_SafeDangerZones",
+    "GA_DR_BossGateWizard_AbsorbDamagePulse",
+    "GA_DR_BossGateWizard_FirePillar",
+    "GA_DR_BossGateWizard_TankDot",
+    "GA_DR_BossGateWizard_FootballHitPulse",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const NP_BullyBasher: Npc = {
   id: "NP_BullyBasher",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
-  abilities: [],
+  abilities: [
+    "GA_NP_BullyBasher_MeleeAutoAttack",
+    "GA_NP_BullyBasher_TankSlam",
+    "GA_NP_BullyBasher_BuffAllies",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

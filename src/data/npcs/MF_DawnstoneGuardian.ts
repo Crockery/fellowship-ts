@@ -6,7 +6,11 @@ export const MF_DawnstoneGuardian: Npc = {
     "ActorTypeTags.Enemy",
     "GameplayEffect.CCImmune",
   ],
-  abilities: [],
+  abilities: [
+    "GA_MF_DawnstoneGuardian_MeleeAutoAttack",
+    "GA_MF_DawnstoneGuardian_Spikes",
+    "GA_MF_DawnstoneGuardian_DamageReflect",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

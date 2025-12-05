@@ -2,7 +2,17 @@ import type { Npc } from "../../types";
 export const SG_BossSiren: Npc = {
   id: "SG_BossSiren",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SG_BossSiren_MeleeAutoAttack",
+    "GA_SG_BossSiren_Bubble",
+    "GA_SG_BossSiren_Interrupt",
+    "GA_SG_BossSiren_MastTether",
+    "GA_SG_BossSiren_WalkOverEdge",
+    "GA_SG_BossSiren_Wave",
+    "GA_SG_BossSiren_Bleed",
+    "GA_SG_BossSiren_Bubble_Granted",
+    "GA_SG_BossSiren_TankSlamAndLink_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

@@ -2,7 +2,14 @@ import type { Npc } from "../../types";
 export const VV_BossKaldursonIce: Npc = {
   id: "VV_BossKaldursonIce",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_VV_BossKaldursonIce_MeleeAutoAttack",
+    "GA_VV_BossKaldursonIce_IceSpikes",
+    "GA_VV_BossKaldursonIce_CastStationaryDot",
+    "GA_VV_BossKaldursonIce_StationaryDotPassive",
+    "GA_VV_BossKaldursonIce_SlowAura",
+    "GA_VV_BossKaldursonIce_IceTomb",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 15,

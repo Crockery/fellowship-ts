@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const DD_WitheringMagi: Npc = {
   id: "DD_WitheringMagi",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_DD_WitheringMagi_MeleeAutoAttack",
+    "GA_DD_WitheringMagi_CastedRangedProjectile",
+    "GA_DD_WitheringMagi_PeriodicDamage",
+    "GA_DD_WitheringMagi_PeriodicDamage_BuffGranted",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

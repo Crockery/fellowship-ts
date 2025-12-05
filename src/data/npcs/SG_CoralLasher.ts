@@ -2,7 +2,10 @@ import type { Npc } from "../../types";
 export const SG_CoralLasher: Npc = {
   id: "SG_CoralLasher",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SG_CoralLasher_MeleeAutoAttack",
+    "GA_SG_CoralLasher_ResizingAoeCircles",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

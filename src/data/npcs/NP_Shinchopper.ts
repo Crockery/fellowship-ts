@@ -2,7 +2,7 @@ import type { Npc } from "../../types";
 export const NP_Shinchopper: Npc = {
   id: "NP_Shinchopper",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
-  abilities: [],
+  abilities: ["GA_NP_Facestabber_MeleeAutoAttack"],
   stats: {
     strength: 0,
     spirit_point_value: 1,

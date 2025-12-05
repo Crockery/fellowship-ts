@@ -2,7 +2,18 @@ import type { Npc } from "../../types";
 export const VV_BossVikingMystic: Npc = {
   id: "VV_BossVikingMystic",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "VV_BossVikingMystic_MeleeAutoAttack",
+    "VV_BossVikingMystic_TeleportAttack",
+    "VV_BossVikingMystic_RunePuzzle",
+    "VV_BossVikingMystic_StartPhase2",
+    "VV_BossVikingMystic_TankNuke",
+    "GA_VV_BossVikingMystic_ChanneledAoeDamage",
+    "GA_VV_BossVikingMystic_ChanneledAoeDamageWithLines",
+    "GA_VV_BossVikingMystic_CrossLines",
+    "VV_BossVikingMystic_GoBackToPhase1",
+    "VV_BossVikingMystic_TransferableDebuff",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

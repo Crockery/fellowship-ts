@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const MF_BlightedMorningGlory: Npc = {
   id: "MF_BlightedMorningGlory",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_MF_BlightedMorningGlory_MeleeAutoAttack",
+    "GA_MF_BlightedMorningGlory_DotProjectile",
+    "GA_MF_BlightedMorningGlory_OnDeathHeal",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

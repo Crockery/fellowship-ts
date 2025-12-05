@@ -2,7 +2,10 @@ import type { Npc } from "../../types";
 export const PR_BarbarousLasher: Npc = {
   id: "PR_BarbarousLasher",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_PR_BarbarousLasher_MeleeAutoAttack",
+    "GA_PR_BarbarousLasher_ShatterAmor",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const DR_CultistMajorCaster: Npc = {
   id: "DR_CultistMajorCaster",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
-  abilities: [],
+  abilities: [
+    "GA_DR_CultistMajorCaster_CastedRangedProjectile",
+    "GA_DR_CultistMajorCaster_GroundAoeUnderPlayer",
+    "GA_DR_CultistMajorCaster_MeleeAutoAttack",
+    "GA_DR_CultistMajorCaster_CastedSingleTargetHeal_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const DR_CultistCaster: Npc = {
   id: "DR_CultistCaster",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_DR_CultistCaster_CastedRangedProjectile",
+    "GA_DR_CultistCaster_CastedRangedProjectileIstantDamage",
+    "GA_DR_CultistCaster_MeleeAutoATtack",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

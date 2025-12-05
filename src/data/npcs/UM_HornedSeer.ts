@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const UM_HornedSeer: Npc = {
   id: "UM_HornedSeer",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_UM_HornedSeer_MeleeAutoAttack",
+    "GA_UM_HornedSeer_OrbProjectile",
+    "GA_UM_HornedSeer_ChanneledOrbProjectiles",
+    "GA_UM_HornedSeer_CastProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

@@ -2,7 +2,7 @@ import type { Npc } from "../../types";
 export const SH_Spiderling: Npc = {
   id: "SH_Spiderling",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: ["GA_SH_Spiderling_MeleeAutoAttack", "GA_SH_Spiderling_Leap"],
   stats: {
     strength: 0,
     spirit_point_value: 0,

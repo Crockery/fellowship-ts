@@ -9,7 +9,13 @@ export const EM_BossGiantTroll: Npc = {
     "CharacterStatus.IgnoreRotationInput",
     "CharacterStatus.AlwaysBehind",
   ],
-  abilities: [],
+  abilities: [
+    "GA_EM_BossGiantTroll_MeleeAutoAttack",
+    "GA_EM_BossGiantTroll_MultiSoak",
+    "GA_EM_BossGiantTroll_ChanneledAoeDamage",
+    "GA_EM_BossGiantTroll_AoeSequence",
+    "GA_EM_BossGiantTroll_SummonAdds",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

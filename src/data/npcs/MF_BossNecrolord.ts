@@ -2,7 +2,19 @@ import type { Npc } from "../../types";
 export const MF_BossNecrolord: Npc = {
   id: "MF_BossNecrolord",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_MF_BossNecrolord_MeleeAutoAttack",
+    "GA_MF_BossNecrolord_ChanneledNova",
+    "GA_MF_BossNecrolord_MultiShot",
+    "GA_MF_BossNecrolord_DeathCast",
+    "GA_MF_BossNecrolord_RangedAutoAttack",
+    "GA_MF_BossNecrolord_SummonTotem",
+    "GA_MF_BossNecrolord_DispellableSoakDot",
+    "GA_MF_BossNecrolord_DispellableSoakDot_Monitor",
+    "GA_MF_BossNecrolord_SummonCrystal",
+    "GA_MF_BossNecrolord_SpreadingDot",
+    "GA_MF_BossNecrolord_ShootDeer",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

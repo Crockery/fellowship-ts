@@ -2,7 +2,10 @@ import type { Npc } from "../../types";
 export const NP_HalfMancatcher: Npc = {
   id: "NP_HalfMancatcher",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_NP_HalfMancatcher_MeleeAutoAttack",
+    "GA_NP_HalfMancatcher_Grip",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

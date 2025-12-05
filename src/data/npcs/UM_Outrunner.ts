@@ -2,7 +2,11 @@ import type { Npc } from "../../types";
 export const UM_Outrunner: Npc = {
   id: "UM_Outrunner",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_UM_Outrunner_MeleeAutoAttack",
+    "GA_UM_Outrunner_RangedSlow",
+    "GA_UM_Outrunner_ChargeTank",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

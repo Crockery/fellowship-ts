@@ -2,7 +2,13 @@ import type { Npc } from "../../types";
 export const MF_FoulTotemic: Npc = {
   id: "MF_FoulTotemic",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
-  abilities: [],
+  abilities: [
+    "GA_MF_FoulTotemic_MeleeAutoAttack",
+    "GA_MF_FoulTotemic_Heal",
+    "GA_MF_FoulTotemic_CastProjectile",
+    "GA_MF_FoulTotemic_SummonTotem",
+    "GA_MF_FoulTotemic_SummonTraps",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

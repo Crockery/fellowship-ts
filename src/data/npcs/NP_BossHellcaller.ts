@@ -6,7 +6,17 @@ export const NP_BossHellcaller: Npc = {
     "ActorTypeTags.Boss",
     "CharacterStatus.IgnoreLeash",
   ],
-  abilities: [],
+  abilities: [
+    "GA_NP_BossHellcaller_MeleeAutoAttack",
+    "GA_NP_BossHellcaller_CastedRangedProjectile",
+    "GA_NP_BossHellcaller_GrowingCircleCast",
+    "GA_NP_BossHellcaller_ChainLightning",
+    "GA_NP_BossHellcaller_SoakDebuff",
+    "GA_NP_BossHellcaller_Summon",
+    "GA_NP_BossHellcaller_Retreat",
+    "GA_NP_BossHellcaller_TankSlamCone",
+    "GA_NP_BossHellcaller_PeriodicDamage",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

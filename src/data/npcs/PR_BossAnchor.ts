@@ -2,7 +2,17 @@ import type { Npc } from "../../types";
 export const PR_BossAnchor: Npc = {
   id: "PR_BossAnchor",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_PR_BossAnchor_MeleeAutoAttack",
+    "GA_PR_BossAnchor_CastedGrowingTankWave",
+    "GA_PR_BossAnchor_HighTideSwitchPhase",
+    "GA_PR_BossAnchor_HighTide",
+    "GA_PR_BossAnchor_Reinforcements",
+    "GA_PR_BossAnchor_CannonBarrage_C",
+    "GA_PR_BossAnchor_HighTideTether",
+    "GA_PR_BossAnchor_MeleeAutoAttack_AreaHit_C",
+    "GA_PR_BossAnchor_PeriodicMultiSoak",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

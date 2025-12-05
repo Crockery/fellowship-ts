@@ -2,7 +2,12 @@ import type { Npc } from "../../types";
 export const UM_Desecrater: Npc = {
   id: "UM_Desecrater",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_UM_Desecrater_MeleeAutoAttack",
+    "GA_UM_Desecrater_RangedAutoAttack",
+    "GA_UM_Desecrater_ChannelRandomTargetAoe",
+    "GA_UM_Desecrater_AOESoak",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

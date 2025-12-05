@@ -2,7 +2,17 @@ import type { Npc } from "../../types";
 export const VV_BossChilgar: Npc = {
   id: "VV_BossChilgar",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
-  abilities: [],
+  abilities: [
+    "GA_VV_BossChilgar_AutoAttack",
+    "GA_VV_BossChilgar_LinearProjectiles",
+    "GA_VV_BossChilgar_SwirlProjectile",
+    "GA_VV_BossChilgar_SpawnAdds",
+    "GA_VV_BossChilgar_TankSoakAoe",
+    "GA_VV_BossChilgar_IceSpike",
+    "GA_NPC_VV_BossChilgar_Shared_Orb_MoveToBoss",
+    "GA_NPC_VV_BossChilgar_Shared_Orb_Explode",
+    "GA_NPC_VV_BossChilgar_Shared_Orb_PulsingDamage",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

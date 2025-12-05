@@ -6,7 +6,12 @@ export const UB_BossSiegeGraveyard: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Boss",
   ],
-  abilities: [],
+  abilities: [
+    "GA_UB_BossSiegeGraveyard_MeleeAutoAttack",
+    "GA_UB_BossSiegeGraveyard_CastHomingProjectileSpawnCorpse",
+    "GA_UB_BossSiegeGraveyard_CrashGate",
+    "GA_UB_BossSiegeGraveyard_TriggerNearbyCorpseAOE",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 30,

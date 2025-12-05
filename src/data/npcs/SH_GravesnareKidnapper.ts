@@ -2,7 +2,13 @@ import type { Npc } from "../../types";
 export const SH_GravesnareKidnapper: Npc = {
   id: "SH_GravesnareKidnapper",
   tags: ["ActorTypeTags.Enemy"],
-  abilities: [],
+  abilities: [
+    "GA_SH_GravesnareKidnapper_MeleeAutoAttack",
+    "GA_SH_GravesnareKidnapper_Kidnap",
+    "GA_SH_GravesnareKidnapper_KidnapBite",
+    "GA_SH_GravesnareKidnapper_ConeAoeProjectiles",
+    "GA_SH_GravesnareKidnapper_SlowCone",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,
