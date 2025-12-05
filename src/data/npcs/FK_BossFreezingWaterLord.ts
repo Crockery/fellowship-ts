@@ -30,5 +30,5 @@ export const FK_BossFreezingWaterLord: Npc = {
     agility: 0,
   },
   thumbnail: "frozenkingdom_T_Portrait_NPC_FK_BossFreezingWaterLord",
-  name: { default: "Ancient Koros", key: "2470F6CE4E07AF16FE9B168019918BE3" },
+  name: { key: "2470F6CE4E07AF16FE9B168019918BE3", default: "Ancient Koros" },
 };

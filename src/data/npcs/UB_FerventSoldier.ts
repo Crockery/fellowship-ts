@@ -30,5 +30,5 @@ export const UB_FerventSoldier: Npc = {
     agility: 0,
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_FerventSoldier",
-  name: { default: "Fervent Soldier", key: "F1FAD8A044BB2D17793A66BE460C8E9C" },
+  name: { key: "F1FAD8A044BB2D17793A66BE460C8E9C", default: "Fervent Soldier" },
 };

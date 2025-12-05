@@ -31,7 +31,7 @@ export const PR_PossessedArmor: Npc = {
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_PossessedArmor",
   name: {
-    default: "Greedspawn Sentinel",
     key: "A3EA05EB4A05E39DA697FCBD819F0702",
+    default: "Greedspawn Sentinel",
   },
 };

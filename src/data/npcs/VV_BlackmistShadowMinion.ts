@@ -34,5 +34,5 @@ export const VV_BlackmistShadowMinion: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_BlackmistShadowMinion",
-  name: { default: "Nightmist Fiend", key: "CDA76DA0489B3925387A89959793849D" },
+  name: { key: "CDA76DA0489B3925387A89959793849D", default: "Nightmist Fiend" },
 };

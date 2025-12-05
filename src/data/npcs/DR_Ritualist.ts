@@ -30,5 +30,5 @@ export const DR_Ritualist: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_Ritualist",
-  name: { default: "Chosen", key: "A99E5C1542EC434A528775885287C154" },
+  name: { key: "A99E5C1542EC434A528775885287C154", default: "Chosen" },
 };

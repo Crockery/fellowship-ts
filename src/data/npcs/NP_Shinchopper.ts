@@ -30,5 +30,5 @@ export const NP_Shinchopper: Npc = {
     agility: 0,
   },
   thumbnail: "nightpatrol_T_NPC_NP_Shinchopper",
-  name: { default: "Shinchopper", key: "61111C9C43788BE86AA757AE40DDADE5" },
+  name: { key: "61111C9C43788BE86AA757AE40DDADE5", default: "Shinchopper" },
 };

@@ -30,5 +30,5 @@ export const JS_NPCRime: Npc = {
     agility: 0,
   },
   thumbnail: "hero_portraits_hero_portrait_rime_default",
-  name: { default: "Rime", key: "8309DBFA43173D2E2805D387E9E058F0" },
+  name: { key: "8309DBFA43173D2E2805D387E9E058F0", default: "Rime" },
 };

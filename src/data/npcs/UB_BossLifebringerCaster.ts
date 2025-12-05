@@ -29,5 +29,5 @@ export const UB_BossLifebringerCaster: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "Caster", key: "C00EEF8C458AE78590128FA0D2CE423C" },
+  name: { key: "C00EEF8C458AE78590128FA0D2CE423C", default: "Caster" },
 };

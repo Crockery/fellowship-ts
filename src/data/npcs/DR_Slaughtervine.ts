@@ -30,5 +30,5 @@ export const DR_Slaughtervine: Npc = {
     agility: 0,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_BarbarousLasher",
-  name: { default: "Slaughtervine", key: "D46466CB4DDD369C2352AD9D27FA288B" },
+  name: { key: "D46466CB4DDD369C2352AD9D27FA288B", default: "Slaughtervine" },
 };

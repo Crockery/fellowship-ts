@@ -29,5 +29,5 @@ export const UB_BossLifebringerLunatic: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "Lunatic", key: "E5EC36AD413C8E9C3DAF0F8E5C86E929" },
+  name: { key: "E5EC36AD413C8E9C3DAF0F8E5C86E929", default: "Lunatic" },
 };

@@ -30,5 +30,5 @@ export const IC_GlacialSprite: Npc = {
     agility: 0,
   },
   thumbnail: "icecave_T_Portrait_NPC_IC_GlacialSprite",
-  name: { default: "Frozen Remnant", key: "27EDDD864016BD51D57363B923DC6A6A" },
+  name: { key: "27EDDD864016BD51D57363B923DC6A6A", default: "Frozen Remnant" },
 };

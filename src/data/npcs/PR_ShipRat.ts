@@ -30,5 +30,5 @@ export const PR_ShipRat: Npc = {
     agility: 0,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_ShipRat",
-  name: { default: "Gunpowder Rat", key: "6DE840C54C9ABD2DCAC4A2B786ABFD6A" },
+  name: { key: "6DE840C54C9ABD2DCAC4A2B786ABFD6A", default: "Gunpowder Rat" },
 };

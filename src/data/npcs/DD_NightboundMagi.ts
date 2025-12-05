@@ -34,5 +34,5 @@ export const DD_NightboundMagi: Npc = {
     agility: 0,
   },
   thumbnail: "desertdunes_T_Portrait_NPC_DD_SoulSpreader",
-  name: { default: "Nightbound Magi", key: "1FC5073440CB40DB02D81EB655BAB933" },
+  name: { key: "1FC5073440CB40DB02D81EB655BAB933", default: "Nightbound Magi" },
 };

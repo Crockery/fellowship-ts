@@ -31,7 +31,7 @@ export const VV_BossKaldursonIce: Npc = {
   },
   thumbnail: "vikingvillageattack_T_Portrait_NPC_VV_BossKaldursonIce",
   name: {
-    default: "Kaldurson Isilagður",
     key: "E9CC2D354FE6C742567435AB57192D54",
+    default: "Kaldurson Isilagður",
   },
 };

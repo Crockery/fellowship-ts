@@ -30,5 +30,5 @@ export const SH_Eggbearer: Npc = {
     agility: 0,
   },
   thumbnail: "spiderforest_T_NPC_SH_Eggbearer",
-  name: { default: "Eggbearer", key: "C94DD5C141951E04E1FA6FAE7148C952" },
+  name: { key: "C94DD5C141951E04E1FA6FAE7148C952", default: "Eggbearer" },
 };

@@ -29,6 +29,7 @@ export interface Hero {
     description: Translateable;
     thumbnail: string;
   }[];
+  abilities: string[];
   stats: {
     agility: number;
     armor: number;

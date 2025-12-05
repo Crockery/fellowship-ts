@@ -29,5 +29,5 @@ export const UB_MinionRepairBot: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "Repair Bot", key: "FE21B36C49C42470E2C1958B53EC063C" },
+  name: { key: "FE21B36C49C42470E2C1958B53EC063C", default: "Repair Bot" },
 };

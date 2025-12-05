@@ -34,5 +34,5 @@ export const EM_BossVaerith: Npc = {
     agility: 0,
   },
   thumbnail: "frozenkingdom_T_Portrait_NPC_FK_Elf_Illusionist",
-  name: { default: "Vaerith Vorn", key: "B88FE6B946884BFF65ECFABEEEBDDD32" },
+  name: { key: "B88FE6B946884BFF65ECFABEEEBDDD32", default: "Vaerith Vorn" },
 };

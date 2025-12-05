@@ -30,5 +30,5 @@ export const VV_IcebitePillager: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_IcebitePillager",
-  name: { default: "Pillager", key: "AC66BA6C43B9F461750337B37A9E9143" },
+  name: { key: "AC66BA6C43B9F461750337B37A9E9143", default: "Pillager" },
 };

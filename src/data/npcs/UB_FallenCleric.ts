@@ -30,5 +30,5 @@ export const UB_FallenCleric: Npc = {
     agility: 100,
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_FallenCleric",
-  name: { default: "Fallen Cleric", key: "C0E405A94460EDA9CB8DB9BA20ED847E" },
+  name: { key: "C0E405A94460EDA9CB8DB9BA20ED847E", default: "Fallen Cleric" },
 };

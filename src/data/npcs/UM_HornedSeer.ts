@@ -30,5 +30,5 @@ export const UM_HornedSeer: Npc = {
     agility: 0,
   },
   thumbnail: "urrakmarkets_T_NPC_UM_HornedSeer",
-  name: { default: "Horned Seer", key: "ABEC9A2B473ED92628A73E92D2E2E8A3" },
+  name: { key: "ABEC9A2B473ED92628A73E92D2E2E8A3", default: "Horned Seer" },
 };

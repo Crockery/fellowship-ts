@@ -34,5 +34,5 @@ export const PR_Shark: Npc = {
     agility: 0,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_Shark",
-  name: { default: "Shark", key: "F01E982841B772DE27059A870FF6B332" },
+  name: { key: "F01E982841B772DE27059A870FF6B332", default: "Shark" },
 };

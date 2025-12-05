@@ -29,5 +29,5 @@ export const DR_WaveSummoner: Npc = {
     armor: 0,
     agility: 0,
   },
-  name: { default: "Demonic Portal", key: "D2B09C9E4ECEEF81384F4FB644E053FD" },
+  name: { key: "D2B09C9E4ECEEF81384F4FB644E053FD", default: "Demonic Portal" },
 };

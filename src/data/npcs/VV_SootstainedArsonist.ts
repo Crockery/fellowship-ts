@@ -30,5 +30,5 @@ export const VV_SootstainedArsonist: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_SootstainedArsonist",
-  name: { default: "Ashen Arsonist", key: "50ADA8C04DF1B0F6D76BA2911E96D182" },
+  name: { key: "50ADA8C04DF1B0F6D76BA2911E96D182", default: "Ashen Arsonist" },
 };

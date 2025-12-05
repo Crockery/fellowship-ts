@@ -30,5 +30,5 @@ export const VV_FrenziedLooter: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_FrenziedLooter",
-  name: { default: "Frenzied Looter", key: "EF198687480212CE709E5DAAAD917EAD" },
+  name: { key: "EF198687480212CE709E5DAAAD917EAD", default: "Frenzied Looter" },
 };

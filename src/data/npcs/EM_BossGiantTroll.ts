@@ -37,5 +37,5 @@ export const EM_BossGiantTroll: Npc = {
     agility: 0,
   },
   thumbnail: "elfmines_T_NPC_EM_BossGiantTroll",
-  name: { default: "Godfall Titan", key: "FF1129C043B3FFAE3DD605A823B21D35" },
+  name: { key: "FF1129C043B3FFAE3DD605A823B21D35", default: "Godfall Titan" },
 };

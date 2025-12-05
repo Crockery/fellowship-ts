@@ -23,274 +23,291 @@ export const Rime: Hero = {
     {
       id: "Talent4",
       name: {
-        default: "Chilling Finesse",
         key: "949BE0244F066E3C248BA786ED4B3AD2",
+        default: "Chilling Finesse",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "E12ED2E248BBF85D112668B9F00453C9",
         default:
           "Each tick of <rt.absorb>Freezing Torrent</> reduces the cooldown of <rt.absorb>Bursting Ice</> by 0.3 seconds.\r\n\r\nEach time you cast <rt.absorb>Cold Snap</> the cooldown of <rt.absorb>Freezing Torrent</> is reduced by 1.5 seconds.",
-        key: "E12ED2E248BBF85D112668B9F00453C9",
       },
       thumbnail: "cryomancer_Cryomancer19",
     },
     {
       id: "Talent11",
       name: {
-        default: "Winter's Embrace",
         key: "5D29775642B2E7B2690C05B4361B2F95",
+        default: "Winter's Embrace",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "FB2C049B41F5205ABB86B382BAB43140",
         default:
           "While <rt.absorb>Bursting Ice</> is active on an enemy you gain <rt.effect>Winter's Embrace</>, causing you to deal <rt.warning>20% more damage</>.\r\n\r\n<rt.effect>Winter's Embrace</> does not affect <rt.absorb>Bursting Ice</>.",
-        key: "FB2C049B41F5205ABB86B382BAB43140",
       },
       thumbnail: "cryomancer_Cryomancer8",
     },
     {
       id: "Talent1",
       name: {
-        default: "Glacial Assault",
         key: "079D978D45668452728221B9C753A3B5",
+        default: "Glacial Assault",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "F50E5E8844302F7BFC5B23B828930184",
         default:
           "Your <rt.absorb>Cold Snap</> ability grants you 1 stack of <rt.effect>Glacial Assault</>. Once you have 4 stacks of <rt.effect>Glacial Assault</>, your next <rt.absorb>Glacial Blast</> is <bold>instant cast</>, deals <rt.warning>40% more damage</> and has <rt.mana>no cost</>.",
-        key: "F50E5E8844302F7BFC5B23B828930184",
       },
       thumbnail: "rime_T_Rime_AnimaBolt",
     },
     {
       id: "Talent2",
-      name: { default: "Burstbolter", key: "2A2E26BE4920D4DFDAA81C81447FBD20" },
+      name: { key: "2A2E26BE4920D4DFDAA81C81447FBD20", default: "Burstbolter" },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
+        key: "DF3AF36040E93666AAA3D38FE12F81D2",
         default:
           "When your <rt.absorb>Frost Bolt</> deals damage to an enemy, it triggers a single pulse of <rt.absorb>Bursting Ice</> and <rt.mana>generates 2 additional Anima</>.",
-        key: "DF3AF36040E93666AAA3D38FE12F81D2",
       },
       thumbnail: "cryomancer_Cryomancer7",
     },
     {
       id: "Talent12",
       name: {
-        default: "Supreme Torrent",
         key: "20BB66E04F660AB89ACDF29E6714F386",
+        default: "Supreme Torrent",
       },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
+        key: "07D7D6804954017AEDE6D8B92B9B2906",
         default:
           "Your <rt.absorb>Freezing Torrent</> duration is increased by 0.8 seconds.",
-        key: "07D7D6804954017AEDE6D8B92B9B2906",
       },
       thumbnail: "textures_T_IceSpikes",
     },
     {
       id: "Talent10",
       name: {
-        default: "Navir's Keeper",
         key: "8A7EE747488499807965678D5F8672AC",
+        default: "Navir's Keeper",
       },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
+        key: "4917FA2747712E9DB5335180B1006F82",
         default:
           "Your <rt.absorb>Flight of the Navir</> ability grants 2 charges of <rt.absorb>Cold Snap</>.",
-        key: "4917FA2747712E9DB5335180B1006F82",
       },
       thumbnail: "rime_T_Rime_BirdCD",
     },
     {
       id: "Talent5",
-      name: { default: "Icy Flow", key: "7C9F74344E50B4652B60F0B47800A464" },
+      name: { key: "7C9F74344E50B4652B60F0B47800A464", default: "Icy Flow" },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "52CB5310419D5D8216A8A3860E42B633",
         default:
           "Your <rt.absorb>Cold Snap</> grants you <rt.effect>Icy Flow</> for 8 seconds, reducing the cast time of your next <rt.absorb>Glacial Blast</> by 0.5 seconds or reducing the impact delay of your next <rt.absorb>Ice Comet</> by 0.5 seconds.\r\n\r\nBoth abilities gain <rt.warning>+25% increased critical strike chance</> when consuming a stack of <rt.effect>Icy Flow</>.\r\n\r\nYou can have up to 2 stacks of <rt.effect>Icy Flow</>.",
-        key: "52CB5310419D5D8216A8A3860E42B633",
       },
       thumbnail: "tex_scifiskillsicon_Tex_b_16",
     },
     {
       id: "Talent6",
-      name: { default: "Avalanche", key: "881F21414098BA84D63CBCB6D5159B9F" },
+      name: { key: "881F21414098BA84D63CBCB6D5159B9F", default: "Avalanche" },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "D2C203D4474FD819643165A3DB7DDFA9",
         default:
           "Your <rt.absorb>Ice Comet</> has a 15% chance to strike twice, and a 7% chance to strike three times.",
-        key: "D2C203D4474FD819643165A3DB7DDFA9",
       },
       thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
     },
     {
       id: "Talent3",
       name: {
-        default: "Coalescing Frost",
         key: "238E4F4B46108FAAA43ADAB9BD7AE6E9",
+        default: "Coalescing Frost",
       },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "8FF29EE0441B84ECB3EB1FB050CA26C3",
         default:
           "Each hit of <rt.absorb>Freezing Torrent</> infuses the target with <rt.effect>Coalescing Frost</> for 3 seconds. Once it expires, the afflicted enemy releases a pulse of frost damage in an area around them, dealing <rt.warning>43% Intellect</> damage for each stack of <rt.effect>Coalescing Frost</> that was infused.\r\n\r\n<rt.absorb>Freezing Torrent</> critical strikes have a 50% chance to apply 2 stacks of <rt.effect>Coalescing Frost</>.",
-        key: "8FF29EE0441B84ECB3EB1FB050CA26C3",
       },
       thumbnail: "cryomancer_Cryomancer9",
     },
     {
       id: "Talent7",
       name: {
-        default: "Tundra Guard",
         key: "13092F6E48254866A4FBF69480186892",
+        default: "Tundra Guard",
       },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
+        key: "441E68914191C173DCA734B6565DCA36",
         default:
           "Your <rt.absorb>Frost Ward</> duration is <rt.bold>increased to 8 seconds</>, and while it is active you <rt.heal>heal for 35% of all damage you deal</>.",
-        key: "441E68914191C173DCA734B6565DCA36",
       },
       thumbnail: "textures_T_Nhance_RPG_Icons_MagicRune_2",
     },
     {
       id: "Talent14",
       name: {
-        default: "Greater Glacial Blast",
         key: "9C81D50D4CB37487B8951B9B2BFE26C0",
+        default: "Greater Glacial Blast",
       },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
+        key: "02792BD9458C0842DF5E7D8865F42626",
         default:
           "Your <rt.absorb>Glacial Blast</> deals <rt.warning>40% more damage</> but its cast time is increased by 0.5 seconds.",
-        key: "02792BD9458C0842DF5E7D8865F42626",
       },
       thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneBolt",
     },
     {
       id: "Talent15",
-      name: { default: "Magic Ward", key: "77186ABC4CC59117B791569AE0C2E569" },
+      name: { key: "77186ABC4CC59117B791569AE0C2E569", default: "Magic Ward" },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
-        default: "You take <rt.bold>10% reduced magic damage</>.",
         key: "11F131414A4F485989C9EDACD4B42DAA",
+        default: "You take <rt.bold>10% reduced magic damage</>.",
       },
       thumbnail: "textures_T_Arcane_Scroll",
     },
     {
       id: "Talent17",
       name: {
-        default: "Cascading Blitz",
         key: "E49AE97A4D1E9B18EE95E396023CA0FD",
+        default: "Cascading Blitz",
       },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "5773500B41B5CACE2445FCA33B9A5441",
         default:
           "For each <rt.mana>Anima</> you generate while your <rt.absorb>Ice Blitz</> is active, you conjure <bold>1 Frost Swallow</> to attack your target.\r\n\r\nThe duration of <rt.absorb>Ice Blitz</> is extended by 0.2 seconds each time a <rt.absorb>Frost Swallow</> hits an enemy.",
-        key: "5773500B41B5CACE2445FCA33B9A5441",
       },
       thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
     },
     {
       id: "Talent18",
       name: {
-        default: "Frostweaver's Wrath",
         key: "5C0161C748ADE179F451198902F0FA65",
+        default: "Frostweaver's Wrath",
       },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "78D3F573453AD355096D669BD3563BB6",
         default:
           "Each time you generate <rt.mana>Winter Orbs</>, you have a 17% chance to gain  <rt.effect>Frostweaver's Wrath</> for 12 seconds, causing the next <rt.absorb>Glacial Blast</> or <rt.absorb>Ice Comet</> that deals damage to have <rt.warning>100% additional critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        key: "78D3F573453AD355096D669BD3563BB6",
       },
       thumbnail: "textures_T_Icon_Frost_115",
     },
     {
       id: "Talent9",
       name: {
-        default: "Soulfrost Torrent",
         key: "125BF59E4288D067B38CDB8F913939EE",
+        default: "Soulfrost Torrent",
       },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "65FFC12C4B6A2FF8471202B166CB4028",
         default:
           "Each time you cast an ability you have a chance to gain <rt.effect>Soulfrost Torrent</> for 18 seconds, causing your next <rt.absorb>Freezing Torrent</> to have 40% increased tick rate and <rt.warning>+100% increased critical strike chance</>. (1.5 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        key: "65FFC12C4B6A2FF8471202B166CB4028",
       },
       thumbnail: "textures_T_Nhance_RPG_Frost_31",
     },
     {
       id: "Talent16",
-      name: { default: "Biting Cold", key: "89C4C09649046F68760C88805A92AB32" },
+      name: { key: "89C4C09649046F68760C88805A92AB32", default: "Biting Cold" },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
+        key: "593123824B19BCA092D1CE8C69885182",
         default:
           "The power of your <rt.warning>critical strikes is increased by 10%</>.",
-        key: "593123824B19BCA092D1CE8C69885182",
       },
       thumbnail: "textures_T_Nhance_RPG_Frost_01",
     },
     {
       id: "Talent13",
       name: {
-        default: "Spirited Fortitude",
         key: "543D2C804D7AB9E1970DD78976357A90",
+        default: "Spirited Fortitude",
       },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
-        default: "You take <rt.bold>10% reduced area of effect damage</>.",
         key: "11CD1A8543A02274679BC489A544777E",
+        default: "You take <rt.bold>10% reduced area of effect damage</>.",
       },
       thumbnail: "barbarian_Barbarian3",
     },
     {
       id: "Talent8",
       name: {
-        default: "Wisdom of the North",
         key: "54311D9C4CE4DDAA6461D09085A16C93",
+        default: "Wisdom of the North",
       },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
+        key: "205E93184F953B269BA6C58B602E9631",
         default:
           "The cooldown of <rt.absorb>Ice Blitz</>, <rt.absorb>Flight of the Navir</> & <rt.absorb>Winter's Blessing</> is reduced by 0.3 seconds for each <rt.mana>Winter's Orb</> you spend.",
-        key: "205E93184F953B269BA6C58B602E9631",
       },
       thumbnail: "textures_T_Nhance_RPG_Frost_04",
     },
+  ],
+  abilities: [
+    "GA_Rime_FullResourcesSelfBuff",
+    "GA_Rime_InstantSingleInterrupt_C",
+    "GA_Rime_DashForward_C",
+    "GA_Rime_CastedProjectileDamageOrbSpender",
+    "GA_Rime_OnTargetPulsatingAoe",
+    "GA_Rime_SelfDefenceBuff_C",
+    "GA_Rime_CastedProjectileDamageFiller",
+    "GA_Rime_InstantSingleDamage",
+    "GA_Rime_ChanneledBeamSingleDamage",
+    "GA_Rime_CastedDebuffAoeDamage",
+    "GA_Rime_InstantConeKnockback_C",
+    "GA_Rime_Helper_AutoDamageProjectile",
+    "GA_Rime_AutoProjectileOnResourceGainBuff",
+    "GA_Rime_TargetedPeriodicProjectileAoe",
+    "GA_Rime_DamageAsAoeHealingBuff",
   ],
   stats: {
     resources_tertiary: 0,

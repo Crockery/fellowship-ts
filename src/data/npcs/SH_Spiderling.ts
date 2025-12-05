@@ -30,5 +30,5 @@ export const SH_Spiderling: Npc = {
     agility: 0,
   },
   thumbnail: "spiderforest_T_NPC_SH_Spiderling",
-  name: { default: "Spiderling", key: "C3E8CAC443BED6CB724004BCD3C97BE8" },
+  name: { key: "C3E8CAC443BED6CB724004BCD3C97BE8", default: "Spiderling" },
 };

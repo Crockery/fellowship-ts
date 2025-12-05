@@ -31,7 +31,7 @@ export const VV_BlackburnMystic: Npc = {
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_BlackburnMystic",
   name: {
-    default: "Bleakfrost Mystic",
     key: "64F10BA64DD9A87B2F6B2AB4728F89D8",
+    default: "Bleakfrost Mystic",
   },
 };

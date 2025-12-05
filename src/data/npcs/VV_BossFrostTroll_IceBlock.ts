@@ -30,5 +30,5 @@ export const VV_BossFrostTroll_IceBlock: Npc = {
     agility: 0,
   },
   thumbnail: "hero_effects_T_Status_Chilled",
-  name: { default: "Ice Tomb", key: "54C929B34E5205216276B091DC193456" },
+  name: { key: "54C929B34E5205216276B091DC193456", default: "Ice Tomb" },
 };

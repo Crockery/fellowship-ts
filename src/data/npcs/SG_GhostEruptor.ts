@@ -34,5 +34,5 @@ export const SG_GhostEruptor: Npc = {
     agility: 0,
   },
   thumbnail: "desertdunes_T_Portrait_NPC_UB_SoulSpreader",
-  name: { default: "Deepbound Magi", key: "16F92C12444D46140FF883A23D70733B" },
+  name: { key: "16F92C12444D46140FF883A23D70733B", default: "Deepbound Magi" },
 };

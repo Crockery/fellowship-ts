@@ -3,7 +3,12 @@ import fs from "fs-extra";
 import { DataGenerator } from "../../../shared/data-generator";
 import { HeroMapTable, RawHeroMetaData, RawHeroTalentData } from "./types";
 import { Hero } from "../../../../src/types";
-import { getImagePathId, resolveAssetPath } from "../../../shared";
+import {
+  AbilityBlueprint,
+  getImagePathId,
+  resolveAssetPath,
+  resolveTranslateable,
+} from "../../../shared";
 import {
   ATTRIBUTES_KEY,
   CharacterAttributeBp,
@@ -13,52 +18,52 @@ import {
 const getHeroId = (raw_path: string) =>
   raw_path.replace("CharacterID.Hero.", "");
 
-// const hero_stat_keys = new Map<string, string[]>();
+const getHeroAbilityIds = async (
+  generator: DataGenerator,
+  id: string,
+): Promise<string[]> => {
+  const abilities_path = generator.registry.filter((row) => {
+    return (
+      row.asset_class === "DataTable" &&
+      row.asset_name.includes("AbilityData") &&
+      row.asset_name.includes(id)
+    );
+  });
 
-// const logUniqueStats = () => {
-//   let all_keys = Array.from(hero_stat_keys).flatMap(([, keys]) => {
-//     return keys;
-//   });
+  if (!abilities_path.length) {
+    throw new Error(`No ability path for hero ${id}`);
+  }
 
-//   all_keys = all_keys.filter((value, index, self) => {
-//     return self.indexOf(value) === index;
-//   });
+  const ability_json = await resolveAssetPath<AbilityBlueprint>({
+    asset_path: abilities_path[0].obj_path,
+  });
 
-//   console.log("All keys:");
-//   console.log(all_keys);
-//   console.log("---");
+  if (!ability_json) {
+    throw new Error(`No ability data found for ${id}`);
+  }
 
-//   Array.from(hero_stat_keys).map(([id, keys]) => {
-//     all_keys.forEach((key) => {
-//       if (!keys.includes(key)) {
-//         console.log(`${id} is missing ${key}`);
-//       }
-//     });
-//   });
-// };
+  return Object.keys(ability_json.Rows).filter((key) => {
+    const data = ability_json.Rows[key];
+    return !!data.EnabledInGame;
+  });
+};
 
-const mapRawHeroToHero = (
+const mapRawHeroToHero = async (
   raw_metadata: RawHeroMetaData,
   raw_talents: RawHeroTalentData,
   id: string,
   generator: DataGenerator,
-): Hero => {
+): Promise<Hero> => {
   const talents: Hero["talents"] = raw_talents.Properties.Talents.filter(
     (talent) => !talent.DisabledInGame,
   ).map((talent) => {
     return {
       id: talent.TalentID.TagName.replace("Talent.ID.", ""),
-      name: {
-        default: talent.Name.SourceString,
-        key: talent.Name.Key,
-      },
+      name: resolveTranslateable(talent.Name),
       unlocked_at: talent.UnlockLevel,
       row: talent.TalentRow,
       cost: talent.TalentPointCost,
-      description: {
-        default: talent.DetailedDescription.SourceString,
-        key: talent.DetailedDescription.Key,
-      },
+      description: resolveTranslateable(talent.DetailedDescription),
       thumbnail: getImagePathId(talent.UIIconTexture.ResourceObject.ObjectPath),
     };
   });
@@ -72,10 +77,10 @@ const mapRawHeroToHero = (
   const attributes = generator.getFile<CharacterAttributeBp>(ATTRIBUTES_KEY);
 
   if (!attributes || !attributes[0].Rows) {
-    throw new Error("No attributes");
+    throw new Error(`No attributes found for ${id}.`);
   }
 
-  const stats = getHeroAttributes<Hero["stats"]>(attributes[0].Rows, id);
+  const abilities = await getHeroAbilityIds(generator, id);
 
   return {
     id,
@@ -87,25 +92,14 @@ const mapRawHeroToHero = (
       hex: `#${properties.ClassColor.Hex}`,
     },
     thumbnail: thumbnail,
-    name: {
-      key: properties.HeroName.Key,
-      default: properties.HeroName.SourceString,
-    },
-    title: {
-      key: properties.HeroTitle.Key,
-      default: properties.HeroTitle.SourceString,
-    },
-    description: {
-      key: properties.HeroDescription.Key,
-      default: properties.HeroDescription.SourceString,
-    },
-    biography: {
-      key: properties.Biography.Key,
-      default: properties.Biography.SourceString,
-    },
+    name: resolveTranslateable(properties.HeroName),
+    title: resolveTranslateable(properties.HeroTitle),
+    description: resolveTranslateable(properties.HeroDescription),
+    biography: resolveTranslateable(properties.Biography),
     difficulty: properties.OverallDifficulty,
     talents,
-    stats,
+    abilities,
+    stats: getHeroAttributes<Hero["stats"]>(attributes[0].Rows, id),
   };
 };
 
@@ -150,11 +144,18 @@ export const genHeroes = async (generator: DataGenerator) => {
         throw new Error(`Unable to find tale for hero ${hero_id}`);
       }
 
+      const to_write = await mapRawHeroToHero(
+        meta_data,
+        talent_data,
+        hero_id,
+        generator,
+      );
+
       generator.addWrite({
         path: `./src/data/heroes/${hero_id}.ts`,
         content: `
             import type { Hero } from "../../types";
-            export const ${hero_id}: Hero = ${JSON.stringify(mapRawHeroToHero(meta_data, talent_data, hero_id, generator))};
+            export const ${hero_id}: Hero = ${JSON.stringify(to_write)};
           `,
       });
     }),

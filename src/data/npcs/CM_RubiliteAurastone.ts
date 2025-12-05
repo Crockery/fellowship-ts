@@ -35,7 +35,7 @@ export const CM_RubiliteAurastone: Npc = {
   },
   thumbnail: "elfmines_T_NPC_CM_RubiliteAurastone",
   name: {
-    default: "Godfall Wardstone",
     key: "52847BF948656BC9ACCC09AD2157D213",
+    default: "Godfall Wardstone",
   },
 };

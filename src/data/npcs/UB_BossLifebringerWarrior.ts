@@ -29,5 +29,5 @@ export const UB_BossLifebringerWarrior: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "Warrior", key: "85B786134472D24CA0BEE38229004BD4" },
+  name: { key: "85B786134472D24CA0BEE38229004BD4", default: "Warrior" },
 };

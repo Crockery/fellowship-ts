@@ -30,5 +30,5 @@ export const UM_SlaveCage: Npc = {
     agility: 0,
   },
   thumbnail: "urrakmarkets_BP_NPC_UM_SlaveCage",
-  name: { default: "Slavebind Totem", key: "5E7DAE964D57B26D880ADC8D92E4E050" },
+  name: { key: "5E7DAE964D57B26D880ADC8D92E4E050", default: "Slavebind Totem" },
 };

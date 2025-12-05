@@ -31,7 +31,7 @@ export const CM_VolatileConstruct: Npc = {
   },
   thumbnail: "crystalmines_T_Portrait_NPC_CM_CrystalConstructVolatile",
   name: {
-    default: "Volatile Rubilite",
     key: "7EEB3AB84288235438F3FCB7CD617134",
+    default: "Volatile Rubilite",
   },
 };

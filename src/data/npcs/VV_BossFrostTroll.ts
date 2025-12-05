@@ -30,5 +30,5 @@ export const VV_BossFrostTroll: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_Portrait_NPC_VV_BossFrostTroll",
-  name: { default: "Fodir Kaldur", key: "547E8593476679567A6B36A01958A8B7" },
+  name: { key: "547E8593476679567A6B36A01958A8B7", default: "Fodir Kaldur" },
 };

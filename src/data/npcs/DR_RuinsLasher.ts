@@ -30,5 +30,5 @@ export const DR_RuinsLasher: Npc = {
     agility: 0,
   },
   thumbnail: "desertdunes_T_NPC_DD_RuinsLasher",
-  name: { default: "Ruins Lasher", key: "16B7D19947C3EA377BEC2ABF75128FF6" },
+  name: { key: "16B7D19947C3EA377BEC2ABF75128FF6", default: "Ruins Lasher" },
 };

@@ -30,5 +30,5 @@ export const UC_RottenWretchHands: Npc = {
     agility: 40,
   },
   thumbnail: "undeadcathedral_T_Portrait_NPC_UC_RottenWretchHands",
-  name: { default: "Rotten Wretch", key: "BB6236374CA2E5D9BB7916A326ABE5C8" },
+  name: { key: "BB6236374CA2E5D9BB7916A326ABE5C8", default: "Rotten Wretch" },
 };

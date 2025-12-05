@@ -34,5 +34,5 @@ export const VV_IcebiteReaver: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_IcebiteReaver",
-  name: { default: "Icebite Reaver", key: "5A0CC686460BEF601DBDB2AE0415B10C" },
+  name: { key: "5A0CC686460BEF601DBDB2AE0415B10C", default: "Icebite Reaver" },
 };

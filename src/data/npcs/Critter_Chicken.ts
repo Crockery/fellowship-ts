@@ -30,5 +30,5 @@ export const Critter_Chicken: Npc = {
     agility: 0,
   },
   thumbnail: "general_T_Portrait_NPC_PolymorphChicken",
-  name: { default: "Chicken", key: "01E2DA574CC599A9610622A6C8802030" },
+  name: { key: "01E2DA574CC599A9610622A6C8802030", default: "Chicken" },
 };

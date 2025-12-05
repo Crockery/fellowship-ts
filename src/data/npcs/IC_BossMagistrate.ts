@@ -30,5 +30,5 @@ export const IC_BossMagistrate: Npc = {
     agility: 0,
   },
   thumbnail: "icecave_T_Portrait_NPC_IC_BossMagistrate",
-  name: { default: "Apostate Veras", key: "57BCDA8B4B30561F36E25983F5AFDB6F" },
+  name: { key: "57BCDA8B4B30561F36E25983F5AFDB6F", default: "Apostate Veras" },
 };

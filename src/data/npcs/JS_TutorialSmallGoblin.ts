@@ -30,5 +30,5 @@ export const JS_TutorialSmallGoblin: Npc = {
     agility: 0,
   },
   thumbnail: "tutorial_T_Portrait_NPC_2A_Peon",
-  name: { default: "Orc Lookout", key: "E9AE00F04BC6B2577ECA6C99A50ECA3B" },
+  name: { key: "E9AE00F04BC6B2577ECA6C99A50ECA3B", default: "Orc Lookout" },
 };

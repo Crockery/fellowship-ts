@@ -30,5 +30,5 @@ export const NP_Facestabber: Npc = {
     agility: 0,
   },
   thumbnail: "nightpatrol_T_NPC_NP_Facestabber",
-  name: { default: "Facestabber", key: "5EA75A6D4F22EBC9DED6B8B76BB01C59" },
+  name: { key: "5EA75A6D4F22EBC9DED6B8B76BB01C59", default: "Facestabber" },
 };

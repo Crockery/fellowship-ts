@@ -30,5 +30,5 @@ export const NP_Stormscreamer: Npc = {
     agility: 0,
   },
   thumbnail: "nightpatrol_T_NPC_NP_Stormscreamer",
-  name: { default: "Stormscreamer", key: "B588CE814A8EA53360BC70A141226F68" },
+  name: { key: "B588CE814A8EA53360BC70A141226F68", default: "Stormscreamer" },
 };

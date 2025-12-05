@@ -30,5 +30,5 @@ export const JS_TutorialOrcCaster: Npc = {
     agility: 0,
   },
   thumbnail: "tutorial_T_Portrait_NPC_2C_Caster",
-  name: { default: "Orc Spellcaster", key: "A525AF1A4750F7FD22AB568C44750F77" },
+  name: { key: "A525AF1A4750F7FD22AB568C44750F77", default: "Orc Spellcaster" },
 };

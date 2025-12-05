@@ -34,5 +34,5 @@ export const DR_BossSummonedDemon_Portal: Npc = {
     agility: 100,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_BossSummonedDemon_Portal",
-  name: { default: "Demonic Portal", key: "36821FA0404CEF6A2982ED9FA76EC841" },
+  name: { key: "36821FA0404CEF6A2982ED9FA76EC841", default: "Demonic Portal" },
 };

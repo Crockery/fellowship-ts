@@ -35,7 +35,7 @@ export const UB_BossSiegeGraveyard: Npc = {
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_CarrionCollector",
   name: {
-    default: "Boss Siege Graveyard",
     key: "402191FD48E34CCC63519CBFAD9D444D",
+    default: "Boss Siege Graveyard",
   },
 };

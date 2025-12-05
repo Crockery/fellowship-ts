@@ -29,5 +29,5 @@ export const UB_BossWarMachine: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "War Machine", key: "340754944B6C2056617594944A515FB4" },
+  name: { key: "340754944B6C2056617594944A515FB4", default: "War Machine" },
 };

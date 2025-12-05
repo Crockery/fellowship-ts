@@ -31,7 +31,7 @@ export const UM_BossSladetraderBrull: Npc = {
   },
   thumbnail: "urrakmarkets_T_NPC_UM_BossSlavetraderBrull",
   name: {
-    default: "Slavetrader Brull",
     key: "92469E524B405E56D4A9359322C9671E",
+    default: "Slavetrader Brull",
   },
 };

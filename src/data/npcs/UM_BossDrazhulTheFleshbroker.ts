@@ -31,7 +31,7 @@ export const UM_BossDrazhulTheFleshbroker: Npc = {
   },
   thumbnail: "urrakmarkets_T_NPC_UM_BossDrazhulTheFleshbroker",
   name: {
-    default: "Drazhul the Fleshbroker",
     key: "EA748E2947152B6AC0886D806C410ED7",
+    default: "Drazhul the Fleshbroker",
   },
 };

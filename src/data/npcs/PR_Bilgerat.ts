@@ -30,5 +30,5 @@ export const PR_Bilgerat: Npc = {
     agility: 0,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_Bilgerat",
-  name: { default: "Bilgerat", key: "D0DC9A5D4FDA2699A8DED0A96F44BFF9" },
+  name: { key: "D0DC9A5D4FDA2699A8DED0A96F44BFF9", default: "Bilgerat" },
 };

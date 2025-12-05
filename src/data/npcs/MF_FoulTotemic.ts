@@ -31,7 +31,7 @@ export const MF_FoulTotemic: Npc = {
   },
   thumbnail: "mythicforest_T_NPC_MF_FoulTotemic",
   name: {
-    default: "Corrupted Totemic",
     key: "FCF882A1451D3380BBD9C38889C93249",
+    default: "Corrupted Totemic",
   },
 };

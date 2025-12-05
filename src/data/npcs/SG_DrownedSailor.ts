@@ -30,5 +30,5 @@ export const SG_DrownedSailor: Npc = {
     agility: 0,
   },
   thumbnail: "shipgraveyard_T_Portrait_NPC_SG_DrownedSailor",
-  name: { default: "Vengeful Shade", key: "CD4722D14AADDFD43F511A9440DA4D91" },
+  name: { key: "CD4722D14AADDFD43F511A9440DA4D91", default: "Vengeful Shade" },
 };

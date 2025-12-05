@@ -35,7 +35,7 @@ export const MF_DawnstoneGuardian: Npc = {
   },
   thumbnail: "mythicforest_T_NPC_MF_DawnstoneGuardian",
   name: {
-    default: "Bloodstone Goliath",
     key: "AB526EF440AC606EF37E7E9C6E3D436A",
+    default: "Bloodstone Goliath",
   },
 };

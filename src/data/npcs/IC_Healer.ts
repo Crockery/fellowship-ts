@@ -35,7 +35,7 @@ export const IC_Healer: Npc = {
   },
   thumbnail: "icecave_T_Portrait_NPC_IC_Healer",
   name: {
-    default: "Eldrin Chronomancer",
     key: "09E9E787469F9CD373652B90955F9D5B",
+    default: "Eldrin Chronomancer",
   },
 };

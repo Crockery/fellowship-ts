@@ -30,5 +30,5 @@ export const FK_ElfGuard: Npc = {
     agility: 0,
   },
   thumbnail: "frozenkingdom_T_Portrait_NPC_FK_Elf_Guard",
-  name: { default: "Eldrin Sentinel", key: "5229AB234EF10CE8961FAEAC7D258139" },
+  name: { key: "5229AB234EF10CE8961FAEAC7D258139", default: "Eldrin Sentinel" },
 };

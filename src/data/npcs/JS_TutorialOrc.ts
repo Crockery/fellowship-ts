@@ -30,5 +30,5 @@ export const JS_TutorialOrc: Npc = {
     agility: 0,
   },
   thumbnail: "tutorial_T_Portrait_NPC_2C_Cultist",
-  name: { default: "Orc Brawler", key: "A321537C47490209607B47B9E47DBD00" },
+  name: { key: "A321537C47490209607B47B9E47DBD00", default: "Orc Brawler" },
 };

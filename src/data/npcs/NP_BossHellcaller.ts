@@ -34,5 +34,5 @@ export const NP_BossHellcaller: Npc = {
     agility: 0,
   },
   thumbnail: "nightpatrol_T_NPC_NP_BossHellcaller",
-  name: { default: "Warlord Brogg", key: "ED24B4EE4FDF15E084706F9911141D28" },
+  name: { key: "ED24B4EE4FDF15E084706F9911141D28", default: "Warlord Brogg" },
 };

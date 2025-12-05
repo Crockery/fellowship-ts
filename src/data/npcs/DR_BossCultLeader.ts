@@ -30,5 +30,5 @@ export const DR_BossCultLeader: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_BossCultLeader",
-  name: { default: "Prophet Ez'rath", key: "94CF6E8E4B6783CD46491C9E394A8C34" },
+  name: { key: "94CF6E8E4B6783CD46491C9E394A8C34", default: "Prophet Ez'rath" },
 };

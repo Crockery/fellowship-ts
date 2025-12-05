@@ -30,5 +30,5 @@ export const UC_EvilSpirit: Npc = {
     agility: 0,
   },
   thumbnail: "animals_T_Portrait_NPC_Rat_Generic",
-  name: { default: "Dire Rat", key: "F2DAEF0345E4445A72A07EB709456C51" },
+  name: { key: "F2DAEF0345E4445A72A07EB709456C51", default: "Dire Rat" },
 };

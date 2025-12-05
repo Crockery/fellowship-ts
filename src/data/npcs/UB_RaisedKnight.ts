@@ -30,5 +30,5 @@ export const UB_RaisedKnight: Npc = {
     agility: 100,
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_RaisedKnight",
-  name: { default: "Raised Knight", key: "FBAB187945DB3FD548A8B0869F95B85E" },
+  name: { key: "FBAB187945DB3FD548A8B0869F95B85E", default: "Raised Knight" },
 };

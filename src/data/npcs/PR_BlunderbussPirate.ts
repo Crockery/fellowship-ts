@@ -31,7 +31,7 @@ export const PR_BlunderbussPirate: Npc = {
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_BlunderbussPirate",
   name: {
-    default: "Soulpowder Buccaneer",
     key: "F2C262654DE1024B09595B8E052B7055",
+    default: "Soulpowder Buccaneer",
   },
 };

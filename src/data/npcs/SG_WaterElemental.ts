@@ -30,5 +30,5 @@ export const SG_WaterElemental: Npc = {
     agility: 0,
   },
   thumbnail: "shipgraveyard_T_Portrait_NPC_SG_WaterElemental",
-  name: { default: "Water Elemental", key: "7B4F895344963B4ACE7B7C9446415F97" },
+  name: { key: "7B4F895344963B4ACE7B7C9446415F97", default: "Water Elemental" },
 };

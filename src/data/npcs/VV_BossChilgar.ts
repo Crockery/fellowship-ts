@@ -31,7 +31,7 @@ export const VV_BossChilgar: Npc = {
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_BossChilgar",
   name: {
-    default: "Chilgar the Drowned",
     key: "BC86981E437620F9F4FB1F88DAFFA270",
+    default: "Chilgar the Drowned",
   },
 };

@@ -30,5 +30,5 @@ export const DR_CultistMajorCaster: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_CultistMajorCaster",
-  name: { default: "Hellcaller", key: "D378B47E4385830D7DD583922C431BAB" },
+  name: { key: "D378B47E4385830D7DD583922C431BAB", default: "Hellcaller" },
 };

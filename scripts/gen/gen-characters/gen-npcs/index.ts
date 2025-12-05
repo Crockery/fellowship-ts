@@ -3,6 +3,7 @@ import {
   DataGenerator,
   getImagePathId,
   resolveAssetPath,
+  resolveTranslateable,
 } from "../../../shared";
 import { Npc } from "../../../../src/types";
 import { NpcDataRaw } from "./types";
@@ -15,7 +16,7 @@ export const genNpcs = async (generator: DataGenerator) => {
   const attributes = generator.getFile<CharacterAttributeBp>(ATTRIBUTES_KEY);
 
   if (!attributes || !attributes[0].Rows) {
-    throw new Error("No attributes");
+    throw new Error("No attributes file.");
   }
 
   generator.addClean(src_root);
@@ -48,12 +49,11 @@ export const genNpcs = async (generator: DataGenerator) => {
 
         if (json) {
           const thumbnail_path = json.Properties.PortraitIcon?.ObjectPath;
-
-          const name_obj = json.Properties.DisplayName;
+          const npc_id = json.Properties.CharacterID;
 
           const stats = await getNpcAttributes<Npc["stats"]>(
             attributes[0].Rows,
-            json.Properties.CharacterID,
+            npc_id,
           );
 
           npc_data.push({
@@ -63,12 +63,7 @@ export const genNpcs = async (generator: DataGenerator) => {
             thumbnail: thumbnail_path
               ? getImagePathId(thumbnail_path)
               : undefined,
-            name: name_obj
-              ? {
-                  default: name_obj.SourceString,
-                  key: name_obj.Key,
-                }
-              : undefined,
+            name: resolveTranslateable(json.Properties.DisplayName),
           });
         }
       }),

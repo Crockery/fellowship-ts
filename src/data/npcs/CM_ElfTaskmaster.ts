@@ -30,5 +30,5 @@ export const CM_ElfTaskmaster: Npc = {
     agility: 0,
   },
   thumbnail: "elfmines_T_NPC_CM_Elf_Taskmaster",
-  name: { default: "Task Master", key: "5A5BFE594569AE0FB9C78C83784C9F84" },
+  name: { key: "5A5BFE594569AE0FB9C78C83784C9F84", default: "Task Master" },
 };

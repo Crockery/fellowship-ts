@@ -30,5 +30,5 @@ export const DR_BarbedRoot: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_BarbedRoot",
-  name: { default: "Twisted Root", key: "9EE61428488309E959155980A7E8C37E" },
+  name: { key: "9EE61428488309E959155980A7E8C37E", default: "Twisted Root" },
 };

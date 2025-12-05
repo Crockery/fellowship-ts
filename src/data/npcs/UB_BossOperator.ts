@@ -29,5 +29,5 @@ export const UB_BossOperator: Npc = {
     armor: 0,
     agility: 100,
   },
-  name: { default: "Operator X", key: "836A4C454E78C47E8EC26D906FB5CB4F" },
+  name: { key: "836A4C454E78C47E8EC26D906FB5CB4F", default: "Operator X" },
 };

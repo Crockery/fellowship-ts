@@ -31,7 +31,7 @@ export const IC_GreaterIceElemental: Npc = {
   },
   thumbnail: "icecave_T_Portrait_NPC_IC_GreaterIceElemental",
   name: {
-    default: "Greater Ice Elemental",
     key: "B61A0E9C46242A0E4669348127072BE2",
+    default: "Greater Ice Elemental",
   },
 };

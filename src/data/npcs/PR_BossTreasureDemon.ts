@@ -30,5 +30,5 @@ export const PR_BossTreasureDemon: Npc = {
     agility: 50,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_BossTreasureDemon",
-  name: { default: "Bael'Aurum", key: "92860E0B40B3C1DF06D00E92F0F590DB" },
+  name: { key: "92860E0B40B3C1DF06D00E92F0F590DB", default: "Bael'Aurum" },
 };

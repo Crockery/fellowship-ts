@@ -30,5 +30,5 @@ export const PR_WaterCaster: Npc = {
     agility: 0,
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_WaterCaster",
-  name: { default: "Tide Witch", key: "DFFE5437433543D538695CB5707DE5B9" },
+  name: { key: "DFFE5437433543D538695CB5707DE5B9", default: "Tide Witch" },
 };

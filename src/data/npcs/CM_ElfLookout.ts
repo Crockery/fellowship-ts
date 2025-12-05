@@ -30,5 +30,5 @@ export const CM_ElfLookout: Npc = {
     agility: 0,
   },
   thumbnail: "elfmines_T_NPC_CM_Elf_Lookout",
-  name: { default: "Nezari Bolter", key: "33BA901E468248140E27EA8BB9B6DF75" },
+  name: { key: "33BA901E468248140E27EA8BB9B6DF75", default: "Nezari Bolter" },
 };

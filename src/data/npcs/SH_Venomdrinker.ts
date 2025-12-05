@@ -30,5 +30,5 @@ export const SH_Venomdrinker: Npc = {
     agility: 0,
   },
   thumbnail: "spiderforest_T_NPC_SH_Venomdrinker",
-  name: { default: "Venomdrinker", key: "22BAF767489D586ABAE523A30DE9E0AE" },
+  name: { key: "22BAF767489D586ABAE523A30DE9E0AE", default: "Venomdrinker" },
 };

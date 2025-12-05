@@ -30,5 +30,5 @@ export const UM_Desecrater: Npc = {
     agility: 0,
   },
   thumbnail: "urrakmarkets_T_NPC_UM_Desecrater",
-  name: { default: "Desecrator", key: "4B694D8A4FC243E1772751B2209BA678" },
+  name: { key: "4B694D8A4FC243E1772751B2209BA678", default: "Desecrator" },
 };

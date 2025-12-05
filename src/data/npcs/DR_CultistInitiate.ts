@@ -30,5 +30,5 @@ export const DR_CultistInitiate: Npc = {
     agility: 50,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_CultistSickle",
-  name: { default: "Initiate", key: "BF5958D54F40AAB6BEDE3780582AD148" },
+  name: { key: "BF5958D54F40AAB6BEDE3780582AD148", default: "Initiate" },
 };

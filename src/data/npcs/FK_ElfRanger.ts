@@ -30,5 +30,5 @@ export const FK_ElfRanger: Npc = {
     agility: 0,
   },
   thumbnail: "frozenkingdom_T_Portrait_NPC_FK_Elf_Ranger",
-  name: { default: "Tundra Stalker", key: "9EA798DD4F180F5973B689894EB9E925" },
+  name: { key: "9EA798DD4F180F5973B689894EB9E925", default: "Tundra Stalker" },
 };

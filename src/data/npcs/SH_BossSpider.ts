@@ -31,7 +31,7 @@ export const SH_BossSpider: Npc = {
   },
   thumbnail: "spiderforest_T_NPC_SH_BossSpider",
   name: {
-    default: "Vexira, Mother of Nightmares",
     key: "E4AC66444A9661A0B4F1A5A7F9042DBA",
+    default: "Vexira, Mother of Nightmares",
   },
 };

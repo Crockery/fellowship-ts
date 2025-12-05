@@ -30,5 +30,5 @@ export const VV_CravenHiisi: Npc = {
     agility: 0,
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_CravenHiisi",
-  name: { default: "Craven Hiisi", key: "31EA50B54F32F8ADD3008D889FC72601" },
+  name: { key: "31EA50B54F32F8ADD3008D889FC72601", default: "Craven Hiisi" },
 };

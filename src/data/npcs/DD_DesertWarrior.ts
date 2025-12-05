@@ -31,7 +31,7 @@ export const DD_DesertWarrior: Npc = {
   },
   thumbnail: "desertdunes_T_NPC_DD_Warrior",
   name: {
-    default: "Tombguard Reaver",
     key: "B80121534607C8BEFBA2CD84DE01417E",
+    default: "Tombguard Reaver",
   },
 };

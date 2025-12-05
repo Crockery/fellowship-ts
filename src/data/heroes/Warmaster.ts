@@ -20,279 +20,298 @@ export const Warmaster: Hero = {
     {
       id: "Talent1",
       name: {
-        default: "The Best Defense",
         key: "EE6BBCDC4BB6FF2F52AE459C395B83CC",
+        default: "The Best Defense",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "A0237FE0438E11D51B1F6980CAC9777A",
         default:
           "Each time you <bold>Block</> an attack with your shield, you have a chance to reset the cooldown of <rt.absorb>Shield Throw</> and cause your next <rt.absorb>Shield Throw</> within 12 seconds to deal <rt.warning>20% increased damage</>.\r\n\r\n(2.0 PPM)",
-        key: "A0237FE0438E11D51B1F6980CAC9777A",
       },
       thumbnail: "deprecatedicons_warmaster_shield_throw_3",
     },
     {
       id: "Talent2",
       name: {
-        default: "Shield Mastery",
         key: "5D8296774A01311E1EEB8D9A9E0CF4B0",
+        default: "Shield Mastery",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "51A8C7644A592BC640BBE0BD9020952B",
         default:
           "The cooldown of your <rt.absorb>Shields Up</> and <rt.absorb>Shield Throw</> abilities are reduced relative to the amount of damage you mitigate with <rt.mana>Toughness</>.",
-        key: "51A8C7644A592BC640BBE0BD9020952B",
       },
       thumbnail: "tex_flatskillsicons_Tex_y_17_layered",
     },
     {
       id: "Talent3",
       name: {
-        default: "Sword & Board",
         key: "522510A34D5726EACED1EDA5A72C0787",
+        default: "Sword & Board",
       },
       unlocked_at: 0,
       row: 1,
       cost: 2,
       description: {
+        key: "68269F3642064234F3F914A5ECCEB537",
         default:
           "Your <rt.absorb>Power Strike</> has a chance to instantly replenish 1 charge of <rt.absorb>Shield Slam</> and grant you <rt.effect>Empowered Shield Slam</> for 12 seconds, causing your next <rt.absorb>Shield Slam</> to apply an <rt.heal>absorb on you equal to 2000% strength</> that lasts for 8 seconds.\r\n\r\n(1.0 PPM)",
-        key: "68269F3642064234F3F914A5ECCEB537",
       },
       thumbnail: "warmaster_T_Warmaster_ShieldSlam",
     },
     {
       id: "Talent12",
       name: {
-        default: "Reinforced Steel",
         key: "169CC5D44A7288E36623DAB3BC0D6E66",
+        default: "Reinforced Steel",
       },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
-        default: "Your <bold>Armor is increased by 20%</>.",
         key: "111EA0C646034C2782AC1CA175723EEB",
+        default: "Your <bold>Armor is increased by 20%</>.",
       },
       thumbnail: "armor_icons_Tex_armor_3_b",
     },
     {
       id: "Talent5",
       name: {
-        default: "Guarded Veteran",
         key: "7C3BE1C9415E5AFF23952B9FAEC0F662",
+        default: "Guarded Veteran",
       },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
-        default: "Your <rt.bold>block chance is increased by 10%</>.",
         key: "CED4642F482652AF79FECEB581F58D04",
+        default: "Your <rt.bold>block chance is increased by 10%</>.",
       },
       thumbnail: "textures_T_Nhance_RPG_Fire_08_Yellow",
     },
     {
       id: "Talent6",
       name: {
-        default: "Punishing Strikes",
         key: "AA4058444A73CDD8264C84AB5027CF9C",
+        default: "Punishing Strikes",
       },
       unlocked_at: 0,
       row: 2,
       cost: 1,
       description: {
+        key: "D5B232F8457C6400D8C28892AE85504D",
         default:
           "Your <rt.absorb>Power Strike</> and <rt.absorb>Shield Slam</> deal <rt.warning>15% more damage</>.",
-        key: "D5B232F8457C6400D8C28892AE85504D",
       },
       thumbnail: "warmaster_T_Warmaster_FatalBlow",
     },
     {
       id: "Talent7",
-      name: { default: "Aftershock", key: "806F3119410F58D9456C2BA58B039713" },
+      name: { key: "806F3119410F58D9456C2BA58B039713", default: "Aftershock" },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "7D9B0826437C748C1E75E389C8F37EE1",
         default:
           "Enemies that take damage from your <rt.absorb>Shockwave</> ability take <rt.warning>30% more damage</> from you for 5 seconds.",
-        key: "7D9B0826437C748C1E75E389C8F37EE1",
       },
       thumbnail: "textures_T_Nhance_RPG_Arcane_36",
     },
     {
       id: "Talent10",
       name: {
-        default: "Sharpened Blade",
         key: "4FB7BDEA47551A6F2A16FC91347FF117",
+        default: "Sharpened Blade",
       },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "5F5EDB9A42915DB3FABB43B246BA1D8B",
         default:
           "Enemies afflicted by your <rt.absorb>Sweeping Strike's</> bleed have <rt.effect>20% reduced attack speed</> and your <rt.absorb>Power Strike</> deals <rt.warning>200% more damage</> to them.",
-        key: "5F5EDB9A42915DB3FABB43B246BA1D8B",
       },
       thumbnail: "warmaster_T_Warmaster_BleedStrike",
     },
     {
       id: "Talent8",
       name: {
-        default: "Razor Shrapnel",
         key: "13A0EBA1481C3C188AD2F5B62556099B",
+        default: "Razor Shrapnel",
       },
       unlocked_at: 0,
       row: 3,
       cost: 2,
       description: {
+        key: "5ECBAD474737AD3A8C02C1A7BF2E593E",
         default:
           "Your <rt.absorb>Shield Throw</> hits have a 20% chance to trigger an explosion of metal, dealing <rt.warning>damage equal to 40% of the Shield Throw hit that triggered the explosion</> to the target and up to 7 additional nearby enemies.",
-        key: "5ECBAD474737AD3A8C02C1A7BF2E593E",
       },
       thumbnail: "tex_spellbookpage06_Tex_SpellBook06_48",
     },
     {
       id: "Talent4",
       name: {
-        default: "High Command",
         key: "5C77E2BD4010891B30880B90F516A2A3",
+        default: "High Command",
       },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
+        key: "1CBBC0F942267D836C64C9955DFCD79E",
         default:
           "Your <rt.absorb>Hold the Line</> cooldown is reduced by 6 seconds each time you use <rt.absorb>Shields Up</>.",
-        key: "1CBBC0F942267D836C64C9955DFCD79E",
       },
       thumbnail: "textures_T_Nhance_RPG_Fire_05",
     },
     {
       id: "Talent11",
-      name: { default: "Magic Ward", key: "0266D3924E5C147B1C13B497DF4577B5" },
+      name: { key: "0266D3924E5C147B1C13B497DF4577B5", default: "Magic Ward" },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
-        default: "You take <rt.bold>10% reduced magic damage</>.",
         key: "C8FD064446A961DA848533AD6D5958C8",
+        default: "You take <rt.bold>10% reduced magic damage</>.",
       },
       thumbnail: "textures_T_Arcane_Scroll",
     },
     {
       id: "Talent9",
       name: {
-        default: "Skull Cracker",
         key: "E56007ED47FF2854C69BDB816693C011",
+        default: "Skull Cracker",
       },
       unlocked_at: 0,
       row: 4,
       cost: 1,
       description: {
+        key: "295DD93D4A00583B59F7CD89F1DA1DDB",
         default:
           "Your <rt.absorb>Shield Throw</> has <rt.warning>+20% additional critical strike chance</> and deals <rt.warning>100% increased damage to the first target it hits</>.",
-        key: "295DD93D4A00583B59F7CD89F1DA1DDB",
       },
       thumbnail: "textures_T_Nhance_RPG_BloodCombat_01",
     },
     {
       id: "Talent14",
-      name: { default: "Second Wind", key: "A39B5DF4439DAF94F28DD8A365CEA963" },
+      name: { key: "A39B5DF4439DAF94F28DD8A365CEA963", default: "Second Wind" },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "DE8CC8424AB03DE2CE37E9BB5772ECE5",
         default:
           "When your <rt.mana>Toughness</> has reduced an amount of damage equal to <rt.bold>30% of your Maximum Health</>, you gain <rt.effect>20% increased Strength</> for 8 sec.",
-        key: "DE8CC8424AB03DE2CE37E9BB5772ECE5",
       },
       thumbnail: "textures_T_Nhance_RPG_Energy_07",
     },
     {
       id: "Talent15",
       name: {
-        default: "Martial Command",
         key: "0952AD8A4338E00493197EB01FF90835",
+        default: "Martial Command",
       },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "5A3452C3469560E12897FA82503B4259",
         default:
           "While <rt.absorb>Siegebreaker</> is active you deal <rt.warning>25% more damage</> and your damage reduction from <rt.mana>Toughness</> is shared with all allies.\r\n\r\nYour <rt.bold>Spirit</> is increased by +5% passively.",
-        key: "5A3452C3469560E12897FA82503B4259",
       },
       thumbnail: "warmaster_T_Warmaster_Ultimate",
     },
     {
       id: "Talent16",
       name: {
-        default: "Gleaming Shield",
         key: "1863ED7546B2510958FCB39DCF72B4C8",
+        default: "Gleaming Shield",
       },
       unlocked_at: 0,
       row: 5,
       cost: 3,
       description: {
+        key: "6CD3667349AA76CB9CA75BAD05569CB9",
         default:
           "While <rt.absorb>Shields up</> is active you gain an additional <rt.bold>+20% chance to block</>, all healing effects on you are <rt.heal>increased by 20%</>, and your <rt.absorb>Shield Slam</> deals <rt.warning>40% increased damage</>.",
-        key: "6CD3667349AA76CB9CA75BAD05569CB9",
       },
       thumbnail: "textures_T_Nhance_RPG_Gold_05",
     },
     {
       id: "Talent17",
       name: {
-        default: "Front Line Defender",
         key: "8AA655A9438D3B9351AB2EB5C6F2D476",
+        default: "Front Line Defender",
       },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
+        key: "283FDFB54A5365F0CF86E0A67F5B5709",
         default:
           "Your <rt.mana>maximum toughness</> and <rt.mana>toughness generation</> is increased by <rt.mana>20%</>.",
-        key: "283FDFB54A5365F0CF86E0A67F5B5709",
       },
       thumbnail: "deprecatedicons_warmaster_shields_up",
     },
     {
       id: "Talent18",
       name: {
-        default: "Master of War",
         key: "7F740CAA4316FE0C8EA566870343E812",
+        default: "Master of War",
       },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
+        key: "BC70D15F4335CB0744AB42B378C619AB",
         default:
           "Your <rt.absorb>Grand Melee</> ability has <rt.bold>20% reduced cooldown</>.",
-        key: "BC70D15F4335CB0744AB42B378C619AB",
       },
       thumbnail: "textures_T_Nhance_RPG_Gold_03",
     },
     {
       id: "Talent19",
       name: {
-        default: "Greater Shockwave",
         key: "CE1DC17242B5E2A5E2CB1CBF856A23FF",
+        default: "Greater Shockwave",
       },
       unlocked_at: 0,
       row: 6,
       cost: 1,
       description: {
+        key: "870FD6A9442AF6B0DD3F7E96E1A8533B",
         default:
           "Your <rt.absorb>Shockwave</> deals <rt.warning>20% more damage</>.",
-        key: "870FD6A9442AF6B0DD3F7E96E1A8533B",
       },
       thumbnail: "warmaster_T_Warmaster_shockwave",
     },
+  ],
+  abilities: [
+    "GA_Warmaster_MoveToTargetStun_C",
+    "GA_Warmaster_MeleeInterrupt_C",
+    "GA_Warmaster_MeleeAoeSlow_C",
+    "GA_Warmaster_DefenceBuff_C",
+    "GA_Warmaster_LightMelee_C",
+    "GA_Warmaster_HeavyMelee_C",
+    "GA_Warmaster_MeleeCleave_C",
+    "GA_Warmaster_BouncyProjectile_C",
+    "GA_Warmaster_RangedTaunt_C",
+    "GA_Warmaster_AoeHealthBuff_C",
+    "GA_Warmaster_FullResourcesSelfBuff",
+    "GA_Warmaster_MeleeAutoAttack_C",
+    "GA_Warmaster_MoveSpeedBuff",
+    "GA_Warmaster_InstantMeleeCleave",
+    "GA_Warmaster_NoResourceLossSelfBuff_C",
+    "GA_Warmaster_AoeIncite",
+    "GA_Warmaster_ShieldSelfBuff",
   ],
   stats: {
     resources_tertiary: 0,

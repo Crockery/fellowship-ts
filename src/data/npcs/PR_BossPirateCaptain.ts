@@ -31,7 +31,7 @@ export const PR_BossPirateCaptain: Npc = {
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_BossPirateCaptain",
   name: {
-    default: "Deathless Katrine",
     key: "098B996444708D0041711793C99EC858",
+    default: "Deathless Katrine",
   },
 };

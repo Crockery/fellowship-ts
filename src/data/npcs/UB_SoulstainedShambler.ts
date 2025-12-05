@@ -30,5 +30,5 @@ export const UB_SoulstainedShambler: Npc = {
     agility: 100,
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_RaisedKnight",
-  name: { default: "Shambler", key: "1F8F60FE4840FA0C138082AAA3C2C4AB" },
+  name: { key: "1F8F60FE4840FA0C138082AAA3C2C4AB", default: "Shambler" },
 };

@@ -30,5 +30,5 @@ export const DR_DangerousBrute: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_Portrait_NPC_DR_DangerousBrute",
-  name: { default: "Executioner", key: "ACCC240847BE43A338A152BFD62EA12E" },
+  name: { key: "ACCC240847BE43A338A152BFD62EA12E", default: "Executioner" },
 };

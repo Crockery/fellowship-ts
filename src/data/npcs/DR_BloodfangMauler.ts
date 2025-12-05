@@ -30,5 +30,5 @@ export const DR_BloodfangMauler: Npc = {
     agility: 0,
   },
   thumbnail: "demonicritual_T_NPC_DR_BloodfangMauler",
-  name: { default: "Bloodfang", key: "F315331648DA881B3CA0E089826E696D" },
+  name: { key: "F315331648DA881B3CA0E089826E696D", default: "Bloodfang" },
 };

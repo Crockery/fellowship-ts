@@ -34,7 +34,7 @@ export const UB_DefendingKnight: Npc = {
   },
   thumbnail: "general_T_NPC_DefendingKnight",
   name: {
-    default: "Defending Knight",
     key: "9151A0904E7214D53E420F81B0FFD24D",
+    default: "Defending Knight",
   },
 };

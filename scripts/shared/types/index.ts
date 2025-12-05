@@ -1,8 +1,14 @@
-export interface FSTransObj {
+export interface FSTranslateable {
   Namespace: string;
   Key: string;
   SourceString: string;
 }
+
+interface FsNotTranslateable {
+  CultureInvariantString: null;
+}
+
+export type FSTransObj = FSTranslateable | FsNotTranslateable;
 
 export interface FSBlueprint extends Record<string, unknown> {
   Type: string;
@@ -27,4 +33,20 @@ export interface FSAssetDesc {
 export enum FileType {
   FILE = "FILE",
   FOLDER = "FOLDER",
+}
+
+export interface AbilityBlueprint extends FSBlueprint {
+  Rows: Record<
+    string,
+    {
+      Name: FSTransObj;
+      DynamicDescription: FSTransObj;
+      DetailedDescription: FSTransObj;
+      EnabledInGame: boolean;
+      UIIconTexture: {
+        ResourceObject: FSObjectDesc;
+      };
+      GameplayAbilityAsset: FSAssetDesc;
+    }
+  >;
 }

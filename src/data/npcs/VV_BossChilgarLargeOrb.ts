@@ -33,5 +33,5 @@ export const VV_BossChilgarLargeOrb: Npc = {
     armor: 0,
     agility: 0,
   },
-  name: { default: "Large Orb", key: "D0E20BE6422CC1E1B4B5AD99A34A9E25" },
+  name: { key: "D0E20BE6422CC1E1B4B5AD99A34A9E25", default: "Large Orb" },
 };

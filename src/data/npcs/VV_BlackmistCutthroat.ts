@@ -31,7 +31,7 @@ export const VV_BlackmistCutthroat: Npc = {
   },
   thumbnail: "vikingvillageattack_T_NPC_VV_BlackmistCutthroat",
   name: {
-    default: "Nightmist Cutthroat",
     key: "28CDD5C2447BDF1AC055FDB5F3507170",
+    default: "Nightmist Cutthroat",
   },
 };

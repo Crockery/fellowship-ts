@@ -30,5 +30,5 @@ export const DD_DesertNomad: Npc = {
     agility: 0,
   },
   thumbnail: "desertdunes_T_NPC_DD_DesertNomad",
-  name: { default: "Sandsworn Husk", key: "FA89D9D14A8096AA7C8E4098354552DD" },
+  name: { key: "FA89D9D14A8096AA7C8E4098354552DD", default: "Sandsworn Husk" },
 };

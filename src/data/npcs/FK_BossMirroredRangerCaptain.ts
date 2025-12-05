@@ -30,7 +30,7 @@ export const FK_BossMirroredRangerCaptain: Npc = {
     agility: 0,
   },
   name: {
-    default: "Mirrored Ranger Captain",
     key: "C9744998428BF9DED6B33BACADF1BE49",
+    default: "Mirrored Ranger Captain",
   },
 };

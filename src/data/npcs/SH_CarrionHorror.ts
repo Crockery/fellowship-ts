@@ -30,5 +30,5 @@ export const SH_CarrionHorror: Npc = {
     agility: 0,
   },
   thumbnail: "spiderforest_T_NPC_SH_CarrionHorror",
-  name: { default: "Carrion Horror", key: "88DC8AD140AACA781D680DBCFD27E18B" },
+  name: { key: "88DC8AD140AACA781D680DBCFD27E18B", default: "Carrion Horror" },
 };

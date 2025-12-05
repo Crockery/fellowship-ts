@@ -31,7 +31,7 @@ export const UB_ReanimatedArcher: Npc = {
   },
   thumbnail: "undeadbattlefield_T_Portrait_NPC_UB_ReanimatedArcher",
   name: {
-    default: "Reanimated Archer",
     key: "D651C5A4493A950FF180C8AD78BEAFA5",
+    default: "Reanimated Archer",
   },
 };

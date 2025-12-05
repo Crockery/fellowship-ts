@@ -30,5 +30,5 @@ export const UC_BossArchbishop: Npc = {
     agility: 0,
   },
   thumbnail: "desertdunes_T_Portrait_BP_NPC_DD_BossLifebringer",
-  name: { default: "Sin-Magir", key: "9A8EFC114ABE01003FEB5D9930EC5749" },
+  name: { key: "9A8EFC114ABE01003FEB5D9930EC5749", default: "Sin-Magir" },
 };

@@ -31,7 +31,7 @@ export const PR_CannonPirate: Npc = {
   },
   thumbnail: "pirateraid_T_Portrait_NPC_PR_CannonPirate",
   name: {
-    default: "Scuttlejack Cannoneer",
     key: "140B7D104B027FABD69ADEA843FA8C8F",
+    default: "Scuttlejack Cannoneer",
   },
 };

@@ -34,5 +34,5 @@ export const Shared_PolymorphChickenMedium: Npc = {
     agility: 0,
   },
   thumbnail: "general_T_Portrait_NPC_PolymorphChicken",
-  name: { default: "Medium Chicken", key: "0E550F9741C579EF01B735AF1D3C636D" },
+  name: { key: "0E550F9741C579EF01B735AF1D3C636D", default: "Medium Chicken" },
 };
