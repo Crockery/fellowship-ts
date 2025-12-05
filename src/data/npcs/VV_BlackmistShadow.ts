@@ -6,6 +6,11 @@ export const VV_BlackmistShadow: Npc = {
     "ActorTypeTags.Elite",
     "GameplayEffect.CCImmune",
   ],
+  abilities: [
+    "GA_VV_BlackmistShadow_AutoAttackMelee_C",
+    "GA_VV_BlackmistShadow_MagicSlam_C",
+    "GA_VV_BlackmistShadow_RunePuzzle",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const VV_CravenHiisi: Npc = {
   id: "VV_CravenHiisi",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_VV_CravenHiisi_AutoAttackMelee_C",
+    "GA_VV_CravenHiisi_AttachedAttack",
+    "GA_VV_CravenHiisi_Bleed",
+    "GA_VV_CravenHiisi_JumpAttack",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

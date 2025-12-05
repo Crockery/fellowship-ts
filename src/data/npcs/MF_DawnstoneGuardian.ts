@@ -6,6 +6,7 @@ export const MF_DawnstoneGuardian: Npc = {
     "ActorTypeTags.Enemy",
     "GameplayEffect.CCImmune",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 5,

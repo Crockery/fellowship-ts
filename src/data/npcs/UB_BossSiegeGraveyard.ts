@@ -6,6 +6,7 @@ export const UB_BossSiegeGraveyard: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Boss",
   ],
+  abilities: [],
   stats: {
     strength: 100,
     spirit_point_value: 30,

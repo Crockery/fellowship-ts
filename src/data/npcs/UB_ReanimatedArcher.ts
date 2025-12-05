@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const UB_ReanimatedArcher: Npc = {
   id: "UB_ReanimatedArcher",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UB_ReanimatedArcher_RangedAutoAttack",
+    "GA_UB_ReanimatedArcher_Volley",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

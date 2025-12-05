@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const PR_BossAnchor: Npc = {
   id: "PR_BossAnchor",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

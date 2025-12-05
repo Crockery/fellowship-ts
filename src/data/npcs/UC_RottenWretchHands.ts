@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const UC_RottenWretchHands: Npc = {
   id: "UC_RottenWretchHands",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UC_RottenWretchHands_AutoAttackMelee_C",
+    "GA_UC_RottenWretchHands_PassiveAOEPools_C",
+  ],
   stats: {
     strength: 40,
     spirit_point_value: 1,

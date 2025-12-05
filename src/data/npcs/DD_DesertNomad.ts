@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DD_DesertNomad: Npc = {
   id: "DD_DesertNomad",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: ["GA_DD_DesertNomad_AutoAttackMelee_C"],
   stats: {
     strength: 0,
     spirit_point_value: 2,

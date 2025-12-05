@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const DD_Arbalist: Npc = {
   id: "DD_Arbalist",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_DD_Arbalist_AutoAttack_C",
+    "GA_DD_Arbalist_IceTrap_C",
+    "GA_DD_Arbalist_LineAttack_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

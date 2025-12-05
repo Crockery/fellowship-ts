@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const DD_DesertWarrior: Npc = {
   id: "DD_DesertWarrior",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_DD_DesertWarrior_AutoAttackMelee_C",
+    "GA_DD_DesertWarrior_ChanneledAOE_C",
+    "GA_DD_DesertWarrior_Charge_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

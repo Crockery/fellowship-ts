@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_PirateGrunt: Npc = {
   id: "PR_PirateGrunt",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "DT_PR_PirateGrunt_MeleeAutoAttack_C",
+    "DT_PR_PirateGrunt_CastedTankAoeDamage_C",
+    "DT_PR_PirateGrunt_ChanneledAoe_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

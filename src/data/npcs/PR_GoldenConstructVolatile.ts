@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const PR_GoldenConstructVolatile: Npc = {
   id: "PR_GoldenConstructVolatile",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 2,

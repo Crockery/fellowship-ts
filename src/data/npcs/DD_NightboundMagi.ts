@@ -6,6 +6,12 @@ export const DD_NightboundMagi: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Elite",
   ],
+  abilities: [
+    "GA_DD_NightboundMagi_MeleeAutoAttack_C",
+    "GA_DD_NightboundMagi_SoakDebuff_C",
+    "GA_DD_NightboundMagi_CastedRangedProjectile_C",
+    "GA_DD_NightboundMagi_MultiAoeSoak_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

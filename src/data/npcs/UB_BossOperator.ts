@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const UB_BossOperator: Npc = {
   id: "UB_BossOperator",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: ["GA_UB_BossOperator_MeleeAutoAttack"],
   stats: {
     strength: 100,
     spirit_point_value: 30,

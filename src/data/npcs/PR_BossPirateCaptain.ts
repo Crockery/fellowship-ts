@@ -2,6 +2,21 @@ import type { Npc } from "../../types";
 export const PR_BossPirateCaptain: Npc = {
   id: "PR_BossPirateCaptain",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
+  abilities: [
+    "GA_PR_BossPirateCaptain_AutoAttackMelee",
+    "GA_PR_BossPirateCaptain_BecomeGhost",
+    "GA_PR_BossPirateCaptain_DonutAoe",
+    "GA_PR_BossPirateCaptain_Spin",
+    "GA_PR_BossPirateCaptain_Split",
+    "GA_PR_BossPirateCaptain_ObstacleCourse",
+    "GA_PR_BossPirateCaptain_ObstacleCourse_All",
+    "GA_PR_BossPirateCaptain_EmptyArenaChannel",
+    "GA_PR_BossPirateCaptain_QuickShots",
+    "GA_PR_BossPirateCaptain_CannonAoe_Passive_C",
+    "GA_PR_BossPirateCaptain_DebuffAoePool",
+    "GA_PR_InteractableCannonShoot",
+    "GA_PR_SpectralSwab_Explode",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 22,

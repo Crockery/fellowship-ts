@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const MF_MangyBrute: Npc = {
   id: "MF_MangyBrute",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 1,

@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const SG_DrownedSailor: Npc = {
   id: "SG_DrownedSailor",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_SG_DrownedSailor_AutoAttack_C",
+    "GA_SG_DrownedSailor_EnrageTarget_C",
+    "GA_SG_DrownedSailor_DaggerThrow_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

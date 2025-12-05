@@ -2,6 +2,13 @@ import type { Npc } from "../../types";
 export const PR_CannonPirate: Npc = {
   id: "PR_CannonPirate",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "DT_PR_CannonPirate_RangedAutoAttack",
+    "DT_PR_CannonPirate_Cannon",
+    "DT_PR_CannonPirate_ChainShot",
+    "DT_PR_CannonPirate_Bombardment",
+    "DT_PR_CannonPirate_RangedAutoAttack_0",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

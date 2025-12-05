@@ -6,6 +6,7 @@ export const UB_BossMarcassCreeMinion: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Beast",
   ],
+  abilities: [],
   stats: {
     strength: 100,
     spirit_point_value: 1,

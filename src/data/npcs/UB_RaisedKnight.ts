@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const UB_RaisedKnight: Npc = {
   id: "UB_RaisedKnight",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UB_RaisedKnight_AutoAttackMelee_C",
+    "UB_RaisedKnight_FrontalCone",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 2,

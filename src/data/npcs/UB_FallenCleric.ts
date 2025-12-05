@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const UB_FallenCleric: Npc = {
   id: "UB_FallenCleric",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UB_FallenCleric_AutoAttackMelee_C",
+    "GA_UB_FallenCleric_HealDebuff",
+    "GA_UB_FallenCleric_CastedProjectile",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 4,

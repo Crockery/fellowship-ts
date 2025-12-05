@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const CM_ElfInterrogator: Npc = {
   id: "CM_ElfInterrogator",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_ElfInterrogator_AutoAttack_C",
+    "GA_CM_ElfInterrogator_DamageTakenIncreaseDebuff_C",
+    "GA_CM_ElfInterrogator_PoisonDagger_C",
+    "GA_CM_ElfInterrogator_WickedStrike_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

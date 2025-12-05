@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_Ritualist: Npc = {
   id: "DR_Ritualist",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.MuteThreatWarnings"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

@@ -2,6 +2,14 @@ import type { Npc } from "../../types";
 export const CM_EarthElemental: Npc = {
   id: "CM_EarthElemental",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_EarthElemental_AutoAttack_C",
+    "GA_CM_EarthElemental_BurrowedStrike_C",
+    "GA_CM_EarthElemental_EarthBreaker_C",
+    "GA_CM_EarthElemental_EarthStomp_C",
+    "GA_CM_EarthElemental_Upheaval_C",
+    "GA_CM_EarthElemental_CastAoeDamage",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 7,

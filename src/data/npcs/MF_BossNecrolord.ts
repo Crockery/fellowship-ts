@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const MF_BossNecrolord: Npc = {
   id: "MF_BossNecrolord",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

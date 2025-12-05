@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SH_Venomdrinker: Npc = {
   id: "SH_Venomdrinker",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 3,

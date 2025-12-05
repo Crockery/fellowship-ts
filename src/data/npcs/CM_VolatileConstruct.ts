@@ -2,6 +2,13 @@ import type { Npc } from "../../types";
 export const CM_VolatileConstruct: Npc = {
   id: "CM_VolatileConstruct",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_VolatileConstruct_AutoAttack_C",
+    "GA_CM_VolatileConstruct_DeathBombs_C",
+    "GA_CM_VolatileConstruct_ExplosiveCrystal_C",
+    "GA_CM_VolatileConstruct_JaggedCrystal_C",
+    "GA_CM_VolatileConstruct_CastProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

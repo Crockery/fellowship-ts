@@ -6,6 +6,7 @@ export const FK_ElfCleric: Npc = {
     "ActorTypeTags.Elite",
     "GameplayCue.Shared.StunImmune",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 5,

@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_FlyingImp: Npc = {
   id: "DR_FlyingImp",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

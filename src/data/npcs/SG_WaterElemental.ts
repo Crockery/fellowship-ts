@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SG_WaterElemental: Npc = {
   id: "SG_WaterElemental",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 3,

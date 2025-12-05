@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const UB_MinionRepairBot: Npc = {
   id: "UB_MinionRepairBot",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 100,
     spirit_point_value: 1,

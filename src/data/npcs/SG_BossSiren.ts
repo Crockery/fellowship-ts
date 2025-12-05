@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SG_BossSiren: Npc = {
   id: "SG_BossSiren",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

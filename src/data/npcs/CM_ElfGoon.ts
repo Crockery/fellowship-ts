@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const CM_ElfGoon: Npc = {
   id: "CM_ElfGoon",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_CM_ElfGoon_RangedSlow_C",
+    "GA_CM_ElfGoon_FirstThreatProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

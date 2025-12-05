@@ -1,6 +1,7 @@
 import {
   chunk,
   DataGenerator,
+  getCharacterAbilityIds,
   getImagePathId,
   resolveAssetPath,
   resolveTranslateable,
@@ -37,7 +38,7 @@ export const genNpcs = async (generator: DataGenerator) => {
 
   const npc_chunks = chunk(npc_paths, 100);
 
-  const npc_data: Partial<Npc>[] = [];
+  const npc_data: Npc[] = [];
 
   for await (const chunk of npc_chunks) {
     await Promise.all(
@@ -56,9 +57,16 @@ export const genNpcs = async (generator: DataGenerator) => {
             npc_id,
           );
 
+          const abilities = await getCharacterAbilityIds(
+            generator,
+            npc_id,
+            true,
+          );
+
           npc_data.push({
             id: json.Properties.CharacterID,
             tags: json.Properties.CharacterTags,
+            abilities,
             stats,
             thumbnail: thumbnail_path
               ? getImagePathId(thumbnail_path)

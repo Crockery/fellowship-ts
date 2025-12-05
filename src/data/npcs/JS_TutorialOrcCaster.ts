@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const JS_TutorialOrcCaster: Npc = {
   id: "JS_TutorialOrcCaster",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_JS_TutorialOrcCaster_AutoAttackMelee_C",
+    "GA_JS_TutorialOrcCaster_Heal",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

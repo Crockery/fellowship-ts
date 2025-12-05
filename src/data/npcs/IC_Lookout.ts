@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const IC_Lookout: Npc = {
   id: "IC_Lookout",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 1,

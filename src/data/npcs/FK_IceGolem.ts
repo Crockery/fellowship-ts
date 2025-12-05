@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const FK_IceGolem: Npc = {
   id: "FK_IceGolem",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_FK_IceGolem_AutoAttack_C",
+    "GA_FK_IceGolem_OnDeathSpawnMobs_C",
+    "GA_FK_IceGolem_SpikeAOE_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

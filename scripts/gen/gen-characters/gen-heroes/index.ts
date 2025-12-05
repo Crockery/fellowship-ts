@@ -4,7 +4,7 @@ import { DataGenerator } from "../../../shared/data-generator";
 import { HeroMapTable, RawHeroMetaData, RawHeroTalentData } from "./types";
 import { Hero } from "../../../../src/types";
 import {
-  AbilityBlueprint,
+  getCharacterAbilityIds,
   getImagePathId,
   resolveAssetPath,
   resolveTranslateable,
@@ -17,36 +17,6 @@ import {
 
 const getHeroId = (raw_path: string) =>
   raw_path.replace("CharacterID.Hero.", "");
-
-const getHeroAbilityIds = async (
-  generator: DataGenerator,
-  id: string,
-): Promise<string[]> => {
-  const abilities_path = generator.registry.filter((row) => {
-    return (
-      row.asset_class === "DataTable" &&
-      row.asset_name.includes("AbilityData") &&
-      row.asset_name.includes(id)
-    );
-  });
-
-  if (!abilities_path.length) {
-    throw new Error(`No ability path for hero ${id}`);
-  }
-
-  const ability_json = await resolveAssetPath<AbilityBlueprint>({
-    asset_path: abilities_path[0].obj_path,
-  });
-
-  if (!ability_json) {
-    throw new Error(`No ability data found for ${id}`);
-  }
-
-  return Object.keys(ability_json.Rows).filter((key) => {
-    const data = ability_json.Rows[key];
-    return !!data.EnabledInGame;
-  });
-};
 
 const mapRawHeroToHero = async (
   raw_metadata: RawHeroMetaData,
@@ -80,7 +50,7 @@ const mapRawHeroToHero = async (
     throw new Error(`No attributes found for ${id}.`);
   }
 
-  const abilities = await getHeroAbilityIds(generator, id);
+  const abilities = await getCharacterAbilityIds(generator, id);
 
   return {
     id,

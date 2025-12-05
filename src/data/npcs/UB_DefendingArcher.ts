@@ -5,6 +5,11 @@ export const UB_DefendingArcher: Npc = {
     "CustomAssetTags.UB.NecroticMass.DiesToSpawnExplosion",
     "ActorTypeTags.FriendlyNPC",
   ],
+  abilities: [
+    "GA_UB_DefendingArcher_RangedAutoAttack_C",
+    "GA_UB_DefendingArcher_Volley",
+    "GA_UB_DefendingArcher_ExitCombatBuff",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 0,

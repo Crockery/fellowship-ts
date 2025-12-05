@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const UB_BossLifebringerCaster: Npc = {
   id: "UB_BossLifebringerCaster",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 100,
     spirit_point_value: 30,

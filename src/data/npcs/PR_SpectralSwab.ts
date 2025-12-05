@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const PR_SpectralSwab: Npc = {
   id: "PR_SpectralSwab",
   tags: ["ActorTypeTags.Enemy", "CharacterStatus.ForceHideOverheadWidget"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

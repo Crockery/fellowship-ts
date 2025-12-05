@@ -6,6 +6,7 @@ export const VV_BossChilgarLargeOrb: Npc = {
     "CharacterStatus.IgnoreLeash",
     "ActorTypeTags.MuteThreatWarnings",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

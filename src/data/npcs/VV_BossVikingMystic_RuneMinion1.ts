@@ -6,6 +6,7 @@ export const VV_BossVikingMystic_RuneMinion1: Npc = {
     "ActorTypeTags.MuteThreatWarnings",
     "GameplayEffect.CCImmune",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 1,

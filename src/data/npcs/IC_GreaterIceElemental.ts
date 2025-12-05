@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const IC_GreaterIceElemental: Npc = {
   id: "IC_GreaterIceElemental",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_IC_GreaterIceElemental_AutoAttack_C",
+    "GA_IC_GreaterIceElemental_EarthBreaker_C",
+    "GA_IC_GreaterIceElemental_EarthStomp_C",
+    "GA_IC_GreaterIceElemental_Upheaval_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 6,

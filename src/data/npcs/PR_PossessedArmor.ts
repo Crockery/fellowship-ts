@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_PossessedArmor: Npc = {
   id: "PR_PossessedArmor",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_PR_PossessedArmor_MeleeAutoAttack_C",
+    "GA_PR_PossessedArmor_RampingDamageDebuff_C",
+    "GA_PR_PossessedArmor_ChanneledSelfBuff_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

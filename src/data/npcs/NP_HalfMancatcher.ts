@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const NP_HalfMancatcher: Npc = {
   id: "NP_HalfMancatcher",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 2,

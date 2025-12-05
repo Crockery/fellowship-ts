@@ -5,6 +5,12 @@ export const UB_DefendingCleric: Npc = {
     "CustomAssetTags.UB.NecroticMass.DiesToSpawnExplosion",
     "ActorTypeTags.FriendlyNPC",
   ],
+  abilities: [
+    "GA_UB_DefendingCleric_MeleeAutoAttack",
+    "GA_UB_DefendingCleric_Heal",
+    "GA_UB_DefendingCleric_CastedProjectile",
+    "GA_UB_DefendingCleric_ExitCombatBuff",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 0,

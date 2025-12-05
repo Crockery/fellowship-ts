@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const VV_SootstainedArsonist: Npc = {
   id: "VV_SootstainedArsonist",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_VV_SoostainedArsonist_AutoAttackMelee_C",
+    "GA_VV_SootstainedArsonist_Cone",
+    "GA_VV_SootstainedArsonist_LobProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const SG_EchoingSpirit: Npc = {
   id: "SG_EchoingSpirit",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_SG_EchoingSpirit_ChainLightning_C",
+    "GA_SG_EchoingSpirit_AutoAttack",
+    "GA_SG_EchoingSpirit_MeleeAutoAttack",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

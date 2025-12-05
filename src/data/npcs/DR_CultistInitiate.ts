@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_CultistInitiate: Npc = {
   id: "DR_CultistInitiate",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 50,
     spirit_point_value: 1,

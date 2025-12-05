@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_Swashbuckler: Npc = {
   id: "PR_Swashbuckler",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "DT_PR_Swashbuckler_MeleeAutoAttack",
+    "DT_PR_Swashbuckler_CastedAoeKnockup",
+    "GA_PR_Swashbuckler_CastedGrowingEarthStomp_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

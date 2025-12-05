@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SG_GhostFerventSoldier: Npc = {
   id: "SG_GhostFerventSoldier",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: ["GA_SG_GhostFerventSoldier_AutoAttackMelee_C"],
   stats: {
     strength: 0,
     spirit_point_value: 2,

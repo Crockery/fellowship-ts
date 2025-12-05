@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const NP_Facestabber: Npc = {
   id: "NP_Facestabber",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 2,

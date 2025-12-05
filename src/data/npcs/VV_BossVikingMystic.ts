@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const VV_BossVikingMystic: Npc = {
   id: "VV_BossVikingMystic",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 1,

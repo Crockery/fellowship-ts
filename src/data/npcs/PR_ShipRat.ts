@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_ShipRat: Npc = {
   id: "PR_ShipRat",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_PR_ShipRat_MeleeAutoAttack",
+    "GA_PR_ShipRat_Passive_OnDeathAoe_C",
+    "GA_PR_ShipRat_MoveToTarget_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

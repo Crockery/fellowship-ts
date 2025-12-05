@@ -6,6 +6,7 @@ export const MF_BossTotem: Npc = {
     "CharacterStatus.Immobilized",
     "GameplayEffect.CCImmune",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

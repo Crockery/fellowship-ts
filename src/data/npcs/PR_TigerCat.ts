@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_TigerCat: Npc = {
   id: "PR_TigerCat",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "DT_PR_TigerCat_MeleeAutoAttack",
+    "DT_PR_TigerCat_SlashClaws",
+    "DT_PR_TigerCat_Bite",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

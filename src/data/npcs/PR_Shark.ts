@@ -6,6 +6,7 @@ export const PR_Shark: Npc = {
     "ActorTypeTags.MuteThreatWarnings",
     "CharacterStatus.IgnoreOutOfWorldBounds",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 1,

@@ -9,6 +9,7 @@ export const EM_BossGiantTroll: Npc = {
     "CharacterStatus.IgnoreRotationInput",
     "CharacterStatus.AlwaysBehind",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const JS_TutorialSmallGoblin: Npc = {
   id: "JS_TutorialSmallGoblin",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: ["GA_JS_TutorialSmallGoblin_AutoAttackMelee_C"],
   stats: {
     strength: 0,
     spirit_point_value: 0,

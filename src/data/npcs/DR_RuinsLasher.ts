@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const DR_RuinsLasher: Npc = {
   id: "DR_RuinsLasher",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_DR_RuinsLasher_AutoAttackMelee_C",
+    "GA_DR_RuinsLasher_PassiveAOEPools_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

@@ -1,6 +1,17 @@
-import type { NpcId } from "../../types";
 import type { HeroId } from "../../types";
+import type { NpcId } from "../../types";
 
+export const HeroIds: HeroId[] = [
+  "Bowguy",
+  "Firemage",
+  "Ink",
+  "Mara",
+  "Meiko",
+  "Mosse",
+  "Rime",
+  "Vigor",
+  "Warmaster",
+];
 export const NpcIds: NpcId[] = [
   "CM_EarthElemental",
   "CM_ElfEnforcer",
@@ -162,15 +173,4 @@ export const NpcIds: NpcId[] = [
   "VV_IcebitePillager",
   "VV_IcebiteReaver",
   "VV_SootstainedArsonist",
-];
-export const HeroIds: HeroId[] = [
-  "Bowguy",
-  "Firemage",
-  "Ink",
-  "Mara",
-  "Meiko",
-  "Mosse",
-  "Rime",
-  "Vigor",
-  "Warmaster",
 ];

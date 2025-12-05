@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const VV_FrenziedLooter: Npc = {
   id: "VV_FrenziedLooter",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Goblin"],
+  abilities: ["GA_VV_FrenziedLooter_AutoAttackMelee_C"],
   stats: {
     strength: 0,
     spirit_point_value: 1,

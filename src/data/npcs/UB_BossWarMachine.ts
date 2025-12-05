@@ -2,6 +2,16 @@ import type { Npc } from "../../types";
 export const UB_BossWarMachine: Npc = {
   id: "UB_BossWarMachine",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss.WarMachine"],
+  abilities: [
+    "GA_UB_BossWarMachine_MeleeAutoAttack",
+    "GA_UB_BossWarMachine_LinkTargets",
+    "GA_UB_BossWarMachine_AoeCircles",
+    "GA_UB_BossWarMachine_MassAoeDot",
+    "GA_UB_BossWarMachine_MeleeRangeAoeExplosion_Monitor",
+    "GA_UB_BossWarMachine_HealingMinion_Spawn",
+    "GA_UB_BossWarMachine_Dismounted",
+    "GA_UB_BossWarMachine_FireSweep",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 30,

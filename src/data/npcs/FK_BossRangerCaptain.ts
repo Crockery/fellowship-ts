@@ -2,6 +2,15 @@ import type { Npc } from "../../types";
 export const FK_BossRangerCaptain: Npc = {
   id: "FK_BossRangerCaptain",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
+  abilities: [
+    "GA_FK_BossRangerCaptain_AutoAttack_C",
+    "GA_FK_BossRangerCaptain_ExplosiveShot_C",
+    "GA_FK_BossRangerCaptain_HailOfArrows_C",
+    "GA_FK_BossRangerCaptain_LeapAndBigCrosses_C",
+    "GA_FK_BossRangerCaptain_SpawnMirror_C",
+    "GA_FK_BossRangerCaptain_IceTrap_C",
+    "GA_FK_BossRangerCaptain_AutoAttackMelee",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

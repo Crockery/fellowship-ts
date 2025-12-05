@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const VV_BlackmistCutthroat: Npc = {
   id: "VV_BlackmistCutthroat",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Orc"],
+  abilities: [
+    "GA_VV_BlackmistCutthroat_AutoAttackMelee_C",
+    "GA_VV_BlackmistCutthroat_Teleport",
+    "GA_VV_BlackmistCutthroat_Backstab",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

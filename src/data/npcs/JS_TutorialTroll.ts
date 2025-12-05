@@ -2,6 +2,14 @@ import type { Npc } from "../../types";
 export const JS_TutorialTroll: Npc = {
   id: "JS_TutorialTroll",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_JS_TutorialTroll_AutoAttackMelee_C",
+    "GA_JS_TutorialTroll_Cone",
+    "GA_JS_TutorialTroll_PassiveAOEPools",
+    "GA_JS_TutorialTroll_SpawnAdds",
+    "GA_JS_TutorialTroll_ThrowRock",
+    "GA_JS_TutorialTroll_RunAway",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const UB_SoulstainedShambler: Npc = {
   id: "UB_SoulstainedShambler",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: ["GA_UB_SoulstainedShambler_AutoAttackMelee_C"],
   stats: {
     strength: 100,
     spirit_point_value: 1,

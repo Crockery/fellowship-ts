@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SG_GhostCorpse: Npc = {
   id: "SG_GhostCorpse",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: ["GA_SG_GhostCorpse_MeleeAutoAttack_C"],
   stats: {
     strength: 0,
     spirit_point_value: 1,

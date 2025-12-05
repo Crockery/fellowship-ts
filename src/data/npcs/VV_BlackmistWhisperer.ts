@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const VV_BlackmistWhisperer: Npc = {
   id: "VV_BlackmistWhisperer",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_VV_BlackmistWhisperer_AutoAttackMelee_C",
+    "GA_VV_BlackmistWhisperer_CastProjectile",
+    "GA_VV_BlackmistWhisperer_Silence",
+    "GA_VV_BlackmistWhisperer_AoeDebuff",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

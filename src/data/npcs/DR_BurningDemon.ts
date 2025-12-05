@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_BurningDemon: Npc = {
   id: "DR_BurningDemon",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 100,
     spirit_point_value: 0,

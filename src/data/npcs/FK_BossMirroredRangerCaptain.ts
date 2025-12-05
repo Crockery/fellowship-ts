@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const FK_BossMirroredRangerCaptain: Npc = {
   id: "FK_BossMirroredRangerCaptain",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 3,

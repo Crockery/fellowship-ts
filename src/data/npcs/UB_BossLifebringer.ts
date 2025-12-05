@@ -7,6 +7,10 @@ export const UB_BossLifebringer: Npc = {
     "ActorTypeTags.Elite",
     "ActorTypeTags.Boss",
   ],
+  abilities: [
+    "GA_UB_BossLifebringer_Resurection",
+    "GA_UB_BossLifebringer_MeleeAutoAttack",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 30,

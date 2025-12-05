@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const IC_GlacialSprite: Npc = {
   id: "IC_GlacialSprite",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_IC_GlacialSprite_AutoAttackMelee_C",
+    "GA_IC_GlacialSprite_PassiveAOEPools_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

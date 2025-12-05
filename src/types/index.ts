@@ -87,6 +87,7 @@ export interface Npc {
   id: string;
   thumbnail?: string;
   tags: string[];
+  abilities: string[];
   stats: {
     default_base_health_multiplier: number;
     strength: number;

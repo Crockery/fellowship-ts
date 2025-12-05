@@ -6,6 +6,11 @@ export const VV_IcebiteReaver: Npc = {
     "GameplayEffect.CCImmune",
     "ActorTypeTags.Elite",
   ],
+  abilities: [
+    "GA_VV_IcebiteReaver_AutoAttackMelee_C",
+    "GA_VV_IcebiteReaver_Slam",
+    "GA_VV_IcebiteReaver_HasteBuff",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const MF_FoulTotemic: Npc = {
   id: "MF_FoulTotemic",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 4,

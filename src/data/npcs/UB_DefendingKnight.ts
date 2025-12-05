@@ -5,6 +5,11 @@ export const UB_DefendingKnight: Npc = {
     "CustomAssetTags.UB.NecroticMass.DiesToSpawnExplosion",
     "ActorTypeTags.FriendlyNPC",
   ],
+  abilities: [
+    "GA_UB_DefendingKnight_AutoAttackMelee_C",
+    "GA_UB_DefendingKnight_FrontalCone",
+    "GA_UB_DefendingKnight_ExitCombatBuff",
+  ],
   stats: {
     strength: 100,
     spirit_point_value: 0,

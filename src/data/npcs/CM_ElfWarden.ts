@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const CM_ElfWarden: Npc = {
   id: "CM_ElfWarden",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_ElfWarden_CastSingleBlast_C",
+    "GA_CM_Elf_Warden_MeleeAutoAttack",
+    "GA_CM_Elf_Warden_DrainMana",
+    "GA_CM_ElfWarden_Fear",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

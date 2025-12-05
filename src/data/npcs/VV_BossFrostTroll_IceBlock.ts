@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const VV_BossFrostTroll_IceBlock: Npc = {
   id: "VV_BossFrostTroll_IceBlock",
   tags: ["CustomAssetTags.VV.IceBlock"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

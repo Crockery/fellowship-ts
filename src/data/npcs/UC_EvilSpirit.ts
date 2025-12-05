@@ -2,6 +2,10 @@ import type { Npc } from "../../types";
 export const UC_EvilSpirit: Npc = {
   id: "UC_EvilSpirit",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UC_EvilSpirit_AutoAttackMelee_C",
+    "GA_UC_EvilSpirit_PassiveFixate_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 1,

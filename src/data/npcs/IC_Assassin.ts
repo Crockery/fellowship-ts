@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const IC_Assassin: Npc = {
   id: "IC_Assassin",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_IC_Assassin_AutoAttack_C",
+    "GA_IC_Assassin_PoisonDagger_C",
+    "GA_IC_Assassin_WickedStrike_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

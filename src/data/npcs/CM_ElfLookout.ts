@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const CM_ElfLookout: Npc = {
   id: "CM_ElfLookout",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_ElfLookout_AutoAttack_C",
+    "GA_CM_ElfLookout_QuickShots",
+    "GA_CM_ElfLookout_MeleeAutoAttack",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 2,

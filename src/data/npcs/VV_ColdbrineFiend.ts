@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const VV_ColdbrineFiend: Npc = {
   id: "VV_ColdbrineFiend",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_VV_ColdbrineFiend_AutoAttackMelee_C",
+    "GA_VV_ColdbrineFiend_CastProjectile",
+    "GA_VV_ColdbrineFiend_CastBigProjectile",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

@@ -17,6 +17,7 @@ type Registry = {
   pkg_path: string;
   asset_name: string;
   asset_class: string;
+  row: string;
 }[];
 
 interface RegistryRaw {
@@ -26,6 +27,9 @@ interface RegistryRaw {
     PackagePath: string;
     AssetName: string;
     AssetClass: string;
+    TagsAndValues: {
+      RowStructure: string;
+    };
   }[];
 }
 
@@ -95,6 +99,7 @@ export class DataGenerator {
         pkg_path: asset.PackagePath,
         asset_name: asset.AssetName,
         asset_class: asset.AssetClass,
+        row: asset.TagsAndValues.RowStructure,
       }));
     }
   }

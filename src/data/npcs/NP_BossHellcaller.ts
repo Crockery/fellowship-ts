@@ -6,6 +6,7 @@ export const NP_BossHellcaller: Npc = {
     "ActorTypeTags.Boss",
     "CharacterStatus.IgnoreLeash",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

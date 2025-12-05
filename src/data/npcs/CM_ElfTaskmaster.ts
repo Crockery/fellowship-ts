@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const CM_ElfTaskmaster: Npc = {
   id: "CM_ElfTaskmaster",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_ElfTaskmaster_ChainHook_C",
+    "GA_CM_ElfTaskmaster_RandomForceThreat_C",
+    "GA_CM_Elf_Taskmaster_MeanCleave_0",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

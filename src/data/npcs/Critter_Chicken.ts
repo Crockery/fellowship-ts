@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const Critter_Chicken: Npc = {
   id: "Critter_Chicken",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 20,
     spirit_point_value: 0,

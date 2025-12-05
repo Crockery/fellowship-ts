@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const DD_DesertBrute: Npc = {
   id: "DD_DesertBrute",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "DT_DD_DesertBrute_MeleeAutoAttack",
+    "GA_DD_DesertBrute_CastedGrowingEarthStomp_C",
+    "GA_DD_DesertBrute_AoePulse",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

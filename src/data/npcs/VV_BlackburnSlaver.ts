@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const VV_BlackburnSlaver: Npc = {
   id: "VV_BlackburnSlaver",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_VV_BlackburnSlaver_AutoAttackMelee",
+    "GA_VV_BlackburnSlaver_CastedMeleeKnockback",
+    "GA_VV_BlackburnSlaver_ProximityChain",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 3,

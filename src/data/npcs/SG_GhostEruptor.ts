@@ -6,6 +6,12 @@ export const SG_GhostEruptor: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Elite",
   ],
+  abilities: [
+    "GA_SG_GhostEruptor_CastedPartyAoeDebuff_C",
+    "GA_SG_GhostEruptor_MeleeAutoAttack_C",
+    "GA_SG_GhostEruptor_CastedPartyAoeDebuff_C_0",
+    "GA_SG_GhostEruptor_SoakDebuff_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

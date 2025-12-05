@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const PR_Scallywag: Npc = {
   id: "PR_Scallywag",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 2,

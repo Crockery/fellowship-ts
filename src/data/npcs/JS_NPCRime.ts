@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const JS_NPCRime: Npc = {
   id: "JS_NPCRime",
   tags: ["ActorTypeTags.Undead.Skeleton.Goon", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_JS_NPCRime_AutoAttackMelee_C",
+    "GA_JS_NPCRime_CastProjectile",
+    "GA_JS_NPCRime_ChanneledDamageBeam",
+    "GA_JS_NPCRime_OnTargetPulsatingAoe",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 0,

@@ -6,6 +6,7 @@ export const EM_BossVaerith: Npc = {
     "ActorTypeTags.Enemy",
     "CharacterStatus.IgnoreOutOfWorldBounds",
   ],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 3,

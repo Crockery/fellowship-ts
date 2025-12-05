@@ -6,6 +6,12 @@ export const IC_Healer: Npc = {
     "ActorTypeTags.Enemy",
     "ActorTypeTags.Elite",
   ],
+  abilities: [
+    "GA_IC_Healer_AutoAttackMelee_C",
+    "GA_IC_Healer_ChanneledMultiTargetHeal_C",
+    "GA_IC_Healer_HighThreatChannel_C",
+    "GA_IC_Healer_TwoTargetDot_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

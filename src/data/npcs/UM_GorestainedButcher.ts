@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const UM_GorestainedButcher: Npc = {
   id: "UM_GorestainedButcher",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 5,

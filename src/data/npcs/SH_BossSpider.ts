@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const SH_BossSpider: Npc = {
   id: "SH_BossSpider",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 45,

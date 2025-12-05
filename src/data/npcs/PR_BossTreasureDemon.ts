@@ -2,6 +2,18 @@ import type { Npc } from "../../types";
 export const PR_BossTreasureDemon: Npc = {
   id: "PR_BossTreasureDemon",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite", "ActorTypeTags.Boss"],
+  abilities: [
+    "GA_PR_BossTreasureDemon_AutoAttackMelee",
+    "GA_PR_BossTreasureDemon_Nova",
+    "GA_PR_BossTreasureDemon_SuckInCoins",
+    "GA_PR_BossTreasureDemon_SummonBall",
+    "GA_PR_BossTreasureDemon_Ball_Knockback",
+    "GA_PR_BossTreasureDemon_ScatterCoins",
+    "GA_PR_BossTreasureDemon_CastedRangedProjectile_C",
+    "GA_PR_BossTreasureDemon_Cone_C",
+    "GA_PR_BossTreasureDemon_Tornado_C",
+    "GA_PR_BossTreasureDemon_SelectBallMoverPassive",
+  ],
   stats: {
     strength: 50,
     spirit_point_value: 45,

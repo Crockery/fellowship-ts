@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_BarbedRoot: Npc = {
   id: "DR_BarbedRoot",
   tags: ["ActorTypeTags.Enemy", "CharacterStatus.IgnorePush"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 0,

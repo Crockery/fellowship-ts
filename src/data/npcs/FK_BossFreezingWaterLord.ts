@@ -2,6 +2,14 @@ import type { Npc } from "../../types";
 export const FK_BossFreezingWaterLord: Npc = {
   id: "FK_BossFreezingWaterLord",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Boss"],
+  abilities: [
+    "GA_FK_BossFreezingWaterLord_AutoAttack_C",
+    "GA_FK_BossFreezingWaterLord_ExplosiveOrb_C",
+    "GA_FK_BossFreezingWaterLord_FreezingCone_C",
+    "GA_FK_BossFreezingWaterLord_GreaterWaterNova_C",
+    "GA_FK_BossFreezingWaterLord_IceSoak_C",
+    "GA_FK_BossFreezingWaterLord_ExplodePuddles_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 45,

@@ -2,6 +2,11 @@ import type { Npc } from "../../types";
 export const PR_Bilgerat: Npc = {
   id: "PR_Bilgerat",
   tags: ["ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_PR_Bilgerat_MeleeAutoAttack_C",
+    "GA_PR_Bilgerat_ChanneledActorSpawner_C",
+    "GA_PR_Bilgerat_MoveAwayDestroy_C",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 4,

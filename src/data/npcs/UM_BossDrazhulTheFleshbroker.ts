@@ -2,6 +2,14 @@ import type { Npc } from "../../types";
 export const UM_BossDrazhulTheFleshbroker: Npc = {
   id: "UM_BossDrazhulTheFleshbroker",
   tags: ["ActorTypeTags.Boss", "ActorTypeTags.Enemy"],
+  abilities: [
+    "GA_UM_BossDrazhulTheFleshbroker_AutoAttack_C",
+    "GA_UM_BossDrazhulTheFleshbroker_AoEDamageSlow_C",
+    "GA_UM_BossDrazhulTheFleshbroker_ConjureScythe_C",
+    "GA_UM_BossDrazhulTheFleshbroker_AOESoak",
+    "GA_UM_BossDrazhulTheFleshbroker_Aina_Shared_EnragePassive",
+    "GA_UM_BossDrazhulTheFleshbroker_ChanneledAoeDamage",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 23,

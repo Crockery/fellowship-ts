@@ -1,3 +1,13 @@
+export type HeroId =
+  | "Bowguy"
+  | "Firemage"
+  | "Ink"
+  | "Mara"
+  | "Meiko"
+  | "Mosse"
+  | "Rime"
+  | "Vigor"
+  | "Warmaster";
 export type NpcId =
   | "CM_EarthElemental"
   | "CM_ElfEnforcer"
@@ -159,13 +169,3 @@ export type NpcId =
   | "VV_IcebitePillager"
   | "VV_IcebiteReaver"
   | "VV_SootstainedArsonist";
-export type HeroId =
-  | "Bowguy"
-  | "Firemage"
-  | "Ink"
-  | "Mara"
-  | "Meiko"
-  | "Mosse"
-  | "Rime"
-  | "Vigor"
-  | "Warmaster";

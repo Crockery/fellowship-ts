@@ -6,6 +6,7 @@ export const Shared_PolymorphChickenMedium: Npc = {
     "ActorTypeTags.Elite",
     "CharacterStatus.Polymorphed",
   ],
+  abilities: [],
   stats: {
     strength: 130,
     spirit_point_value: 0,

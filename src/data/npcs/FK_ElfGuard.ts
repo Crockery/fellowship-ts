@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const FK_ElfGuard: Npc = {
   id: "FK_ElfGuard",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 3,

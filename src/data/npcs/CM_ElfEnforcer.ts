@@ -2,6 +2,12 @@ import type { Npc } from "../../types";
 export const CM_ElfEnforcer: Npc = {
   id: "CM_ElfEnforcer",
   tags: ["ActorTypeTags.Beast", "ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [
+    "GA_CM_ElfEnforcer_AutoAttack_C",
+    "GA_CM_ElfEnforcer_Protect",
+    "GA_CM_ElfEnforcer_TankSlam",
+    "GA_CM_ElfEnforcer_ProtectHalfCircle",
+  ],
   stats: {
     strength: 0,
     spirit_point_value: 5,

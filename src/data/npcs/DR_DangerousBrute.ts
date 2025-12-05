@@ -2,6 +2,7 @@ import type { Npc } from "../../types";
 export const DR_DangerousBrute: Npc = {
   id: "DR_DangerousBrute",
   tags: ["ActorTypeTags.Enemy", "ActorTypeTags.Elite"],
+  abilities: [],
   stats: {
     strength: 0,
     spirit_point_value: 5,
