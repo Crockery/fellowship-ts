@@ -1,14 +1,28 @@
-import { FSAssetDesc, FSObjectDesc, FSTransObj } from "../../../shared";
+import {
+  FSAssetDesc,
+  FSBlueprint,
+  FSObjectDesc,
+  FSTransObj,
+} from "../../../shared";
 
 export interface RawItem {
   DisplayName: FSTransObj;
   HeroItemType: string;
+  DefaultItemForHeroes:
+    | [
+        {
+          Key: {
+            TagName: string;
+          };
+        },
+      ]
+    | [];
   ItemExclusiveForHeroes: string[];
   EnabledInGame: boolean;
   GrantedAbilities: FSAssetDesc;
   ItemIconTexture: FSAssetDesc;
-  PrimaryStatsWeightsTemplate: FSObjectDesc;
-  SecondaryStatsWeightsTemplate: FSObjectDesc;
+  PrimaryStatsWeightsTemplate: FSObjectDesc | null;
+  SecondaryStatsWeightsTemplate: FSObjectDesc | null;
   OverrideRarity: boolean;
   ItemRarityOverride: string;
   IsUniqueEquippable: boolean;
@@ -20,7 +34,7 @@ export interface RawItem {
 }
 
 export type ItemTable = [
-  {
+  FSBlueprint & {
     Rows: Record<string, RawItem>;
   },
 ];

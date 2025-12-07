@@ -159,11 +159,11 @@ export class DataGenerator {
         }),
       );
     }
-    console.log("Writing static files.");
-    await Promise.all([
-      this.writeFile(this.getStaticWrite(this.typings)),
-      this.writeFile(this.getStaticWrite(this.constants)),
-    ]);
+    // console.log("Writing static files.");
+    // await Promise.all([
+    //   this.writeFile(this.getStaticWrite(this.typings)),
+    //   this.writeFile(this.getStaticWrite(this.constants)),
+    // ]);
 
     console.log("Formatting files.");
 
