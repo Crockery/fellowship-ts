@@ -38,12 +38,6 @@ const mapDToAbility = (raw_ability: AbilityRaw & { id: string }) => {
 };
 
 export const genAbilities = async (generator: DataGenerator) => {
-  const dest = "./src/data/abilities";
-
-  console.group("Generating abilities.");
-
-  generator.addClean(dest);
-
   const ability_collection = await getAbilityCollection({ generator });
 
   const ability_data = ability_collection
@@ -55,34 +49,10 @@ export const genAbilities = async (generator: DataGenerator) => {
     .filter((ability) => !!ability.EnabledInGame)
     .filter((ability, index, self) => {
       return index === self.findIndex((_ability) => _ability.id === ability.id);
-    });
+    })
+    .map(mapDToAbility);
 
-  console.log(`Found ${ability_data.length} abilities. Adding write.`);
+  console.log(`Generated ${ability_data.length} abilities.`);
 
-  const ability_ids = ability_data.map((ability) => ability.id);
-
-  generator.addWrite({
-    path: `${dest}/index.ts`,
-    content: `
-      import { Translateable } from "./"
-
-      export interface Ability {
-        name: Translateable;
-        id: string;
-        description?: Translateable;
-        thumbnail?: string;
-      }
-      export type AbilityId = ${ability_ids.map((a) => `"${a}"`).join(" | ")};
-
-      export const ABILITY_DATA: Record<AbilityId, Ability> = {
-        ${ability_data.map(
-          (ability) => `
-          ${ability.id}: ${JSON.stringify(mapDToAbility(ability))}
-        `,
-        )}
-      };
-    `,
-  });
-
-  console.groupEnd();
+  return ability_data;
 };

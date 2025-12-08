@@ -2,6 +2,11 @@ import fs from "fs-extra";
 import path from "path";
 import { FileType } from "../types";
 
+export const deleteFile = async (path: string) => {
+  await fs.ensureFile(path);
+  await fs.unlink(path);
+};
+
 export const clearDirectory = async (dir: string) => {
   const files = await fs.readdir(dir, { withFileTypes: true });
 

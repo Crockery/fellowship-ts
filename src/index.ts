@@ -3,19 +3,31 @@ import * as AllHeroData from "./data/heroes";
 import * as AllNpcData from "./data/npcs";
 import { HeroIds, NpcIds } from "./constants";
 
-import { ABILITY_DATA } from "./data/abilities";
+import ABILITY_DATA, { type Ability } from "./data/abilities";
 
-export type AbilityId = keyof typeof ABILITY_DATA;
+interface Args {
+  should_throw?: boolean;
+}
 
 export class FellowshipTs {
   private heroes_map: Map<HeroId, Hero>;
   private npc_map: Map<NpcId, Npc>;
+  private ability_map: Map<string, Ability>;
+
+  should_throw: boolean;
 
   heroes: Hero[];
   npcs: Npc[];
-  constructor() {
+  constructor({ should_throw }: Args) {
+    this.should_throw = !!should_throw;
+
     this.heroes_map = new Map();
     this.npc_map = new Map();
+    this.ability_map = new Map();
+
+    ABILITY_DATA.forEach((ability) => {
+      this.ability_map.set(ability.id, ability);
+    });
 
     HeroIds.forEach((hero_id) => {
       this.heroes_map.set(hero_id, AllHeroData[hero_id]);
@@ -30,8 +42,12 @@ export class FellowshipTs {
     this.npcs = Array.from(this.npc_map.values());
   }
 
-  getAbility(id: AbilityId) {
-    return ABILITY_DATA[id];
+  getAbility(id: string) {
+    return this.ability_map.get(id);
+  }
+
+  getAbilities(filter: (ability: Ability) => boolean) {
+    return ABILITY_DATA.filter(filter);
   }
 
   getHero(id: HeroId) {

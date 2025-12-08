@@ -1,15 +1,9 @@
 import fs from "fs-extra";
 import { execSync } from "child_process";
-import { chunk, clearDirectory } from "./utils";
-
-type StaticFileKey = "typings" | "constants";
-
-interface StaticFileWrite {
-  imports: string[];
-  body: string[];
-  count: number;
-  key: StaticFileKey;
-}
+import { createCompoundSchema } from "genson-js";
+import path from "path";
+import { compile } from "json-schema-to-typescript";
+import { deleteFile } from "./utils";
 
 export type Registry = {
   obj_path: string;
@@ -33,7 +27,9 @@ interface RegistryRaw {
   }[];
 }
 
-type HandlerFn = (generator: DataGenerator) => Promise<void>;
+type GeneratedData = Record<string, unknown>[];
+
+type GeneratorFn = (generator: DataGenerator) => Promise<GeneratedData>;
 
 interface Write {
   path: string;
@@ -41,43 +37,17 @@ interface Write {
 }
 
 export class DataGenerator {
-  typings: StaticFileWrite;
-  constants: StaticFileWrite;
-  handlers: Map<string, HandlerFn>;
-  writes: Write[];
-  cleans: string[];
+  generators: Map<string, { type_name: string; generator: GeneratorFn }>;
   registry: Registry = [];
   files: Map<string, unknown>;
 
   constructor() {
-    this.typings = { imports: [], body: [], count: 0, key: "typings" };
-    this.constants = { imports: [], body: [], count: 0, key: "constants" };
-    this.handlers = new Map();
+    this.generators = new Map();
     this.files = new Map();
-    this.writes = [];
-    this.cleans = [];
   }
 
   private async writeFile(to_write: Write) {
     await fs.writeFile(to_write.path, to_write.content);
-  }
-
-  private getStaticWrite(static_to_write: StaticFileWrite): Write {
-    const path =
-      static_to_write.key === "constants"
-        ? "./src/constants/generated/index.ts"
-        : "./src/types/generated/index.ts";
-
-    const content = `
-      ${static_to_write.imports.join("\n")}
-
-      ${static_to_write.body.join("\n")}
-    `;
-
-    return {
-      path,
-      content,
-    };
   }
 
   private async setRegistry() {
@@ -113,6 +83,10 @@ export class DataGenerator {
     return this.files.get(key) as T | undefined;
   }
 
+  private async generate() {
+    console.log("Done!");
+  }
+
   async start() {
     if (!process.env.FMODEL_OUTPUT) {
       throw new Error("FMODEL_OUTPUT path not set in .env");
@@ -124,78 +98,128 @@ export class DataGenerator {
       throw new Error("Stopping data generator: No registry found.");
     }
 
-    console.log("Starting data generation!");
-    console.group(`Running ${this.handlers.size} handlers to generate writes.`);
+    const data_root = `./src/data/`;
+
+    const generated = new Map<
+      string,
+      { data: Record<string, unknown>[]; type_name: string }
+    >();
+
+    console.log("Generating and writing data.");
+
     await Promise.all(
-      [...this.handlers.entries()].map(async (entry) => {
-        console.log(`Running ${entry[0]}`);
-        await entry[1](this);
-        console.log(`${entry[0]} finished.`);
+      Array.from(this.generators).map(
+        async ([key, { generator, type_name }]) => {
+          console.group(`Generating data for "${key}".`);
+
+          const data = await generator(this);
+
+          generated.set(key, { data, type_name });
+
+          console.groupEnd();
+
+          console.log(`Finished generating data for "${key}".`);
+        },
+      ),
+    );
+
+    await Promise.all(
+      Array.from(generated).map(async ([key, { data, type_name }]) => {
+        console.group(`Writing data & types for "${key}".`);
+
+        // First clean out the old type & data files.
+        const dest = path.join(data_root, `${key}.ts`);
+
+        console.log(`Cleaning ${dest}.`);
+
+        await deleteFile(dest);
+
+        // Generate a JSON schema from the collection, then an interface string
+        // from that schema.
+        const schema = createCompoundSchema(data);
+        const type_string = await compile(schema, type_name, {
+          additionalProperties: false,
+        });
+
+        console.log(`Writing ${key} data & types to ${dest}.`);
+
+        await this.writeFile({
+          content: `${type_string}\n\nexport default ${JSON.stringify(data)}`,
+          path: dest,
+        });
+
+        console.groupEnd();
       }),
     );
-    console.groupEnd();
-    console.log("Handlers finished.");
-    console.log(`${this.cleans.length} directories to clean.`);
-    console.group("Files to write:");
-    console.log(`${this.writes.length} writes pending.`);
-    console.log(`${this.typings.count} typings pending.`);
-    console.log(`${this.constants.count} constants pending.`);
-    console.groupEnd();
 
-    console.log("Cleaning directories.");
-    await Promise.all(
-      this.cleans.map(async (path) => {
-        return clearDirectory(path);
-      }),
-    );
+    // console.group(`Running ${this.handlers.size} handlers to generate writes.`);
+    // await Promise.all(
+    //   [...this.handlers.entries()].map(async (entry) => {
+    //     console.log(`Running ${entry[0]}`);
+    //     await entry[1](this);
+    //     console.log(`${entry[0]} finished.`);
+    //   }),
+    // );
+    // console.groupEnd();
+    // console.log("Handlers finished.");
+    // console.log(`${this.cleans.length} directories to clean.`);
+    // console.group("Files to write:");
+    // console.log(`${this.writes.length} writes pending.`);
+    // console.log(`${this.typings.count} typings pending.`);
+    // console.log(`${this.constants.count} constants pending.`);
+    // console.groupEnd();
 
-    console.log("Writing writes.");
-    const write_chunks = chunk(this.writes, 100);
+    // console.log("Cleaning directories.");
+    // await Promise.all(
+    //   this.cleans.map(async (path) => {
+    //     return clearDirectory(path);
+    //   }),
+    // );
 
-    for await (const chunk of write_chunks) {
-      await Promise.all(
-        chunk.map(async (to_write) => {
-          return this.writeFile(to_write);
-        }),
-      );
-    }
-    // console.log("Writing static files.");
-    // await Promise.all([
-    //   this.writeFile(this.getStaticWrite(this.typings)),
-    //   this.writeFile(this.getStaticWrite(this.constants)),
-    // ]);
+    // console.log("Writing writes.");
+    // const write_chunks = chunk(this.writes, 100);
+
+    // for await (const chunk of write_chunks) {
+    //   await Promise.all(
+    //     chunk.map(async (to_write) => {
+    //       return this.writeFile(to_write);
+    //     }),
+    //   );
+    // }
+    // // console.log("Writing static files.");
+    // // await Promise.all([
+    // //   this.writeFile(this.getStaticWrite(this.typings)),
+    // //   this.writeFile(this.getStaticWrite(this.constants)),
+    // // ]);
+
+    // await this.generate();
+
+    // console.log("Formatting files.");
 
     console.log("Formatting files.");
 
-    execSync("npm run format");
+    await execSync("npm run format");
 
     console.log("Done!");
   }
 
-  addClean(path: string) {
-    this.cleans.push(path);
-  }
+  // addClean(path: string) {
+  //   this.cleans.push(path);
+  // }
 
-  addWrite(write: Write) {
-    this.writes.push(write);
-  }
+  // addWrite(write: Write) {
+  //   this.writes.push(write);
+  // }
 
-  addHandler(key: string, handler: HandlerFn) {
-    if (!this.handlers.has(key)) {
-      this.handlers.set(key, handler);
+  // addHandler(key: string, handler: HandlerFn) {
+  //   if (!this.handlers.has(key)) {
+  //     this.handlers.set(key, handler);
+  //   }
+  // }
+
+  addGenerator(key: string, type_name: string, generator: GeneratorFn) {
+    if (!this.generators.has(key)) {
+      this.generators.set(key, { generator, type_name });
     }
-  }
-
-  addStaticFileContent({
-    file,
-    type,
-    content,
-  }: {
-    file: StaticFileKey;
-    type: "imports" | "body";
-    content: string;
-  }) {
-    this[file][type].push(content);
-    this[file].count = this[file].count + 1;
   }
 }

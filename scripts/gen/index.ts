@@ -15,7 +15,7 @@ try {
 const generator = new DataGenerator();
 
 // generator.addHandler("characters", genCharacters);
-generator.addHandler("abilities", genAbilities);
+generator.addGenerator("abilities", "Ability", genAbilities);
 // generator.addHandler("items", genItems);
 // generator.addHandler("localization", genLang);
 
