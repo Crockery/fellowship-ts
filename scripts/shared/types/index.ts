@@ -35,18 +35,19 @@ export enum FileType {
   FOLDER = "FOLDER",
 }
 
+export interface AbilityRaw {
+  Name: FSTransObj;
+  DynamicDescription: {
+    Text: FSTransObj;
+  };
+  DetailedDescription: FSTransObj;
+  EnabledInGame: boolean;
+  UIIconTexture: {
+    ResourceObject?: FSObjectDesc;
+  };
+  GameplayAbilityAsset: FSAssetDesc;
+}
+
 export interface AbilityBlueprint extends FSBlueprint {
-  Rows: Record<
-    string,
-    {
-      Name: FSTransObj;
-      DynamicDescription: FSTransObj;
-      DetailedDescription: FSTransObj;
-      EnabledInGame: boolean;
-      UIIconTexture: {
-        ResourceObject: FSObjectDesc;
-      };
-      GameplayAbilityAsset: FSAssetDesc;
-    }
-  >;
+  Rows: Record<string, AbilityRaw>;
 }

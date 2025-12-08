@@ -3,9 +3,14 @@ import * as AllHeroData from "./data/heroes";
 import * as AllNpcData from "./data/npcs";
 import { HeroIds, NpcIds } from "./constants";
 
+import { ABILITY_DATA } from "./data/abilities";
+
+export type AbilityId = keyof typeof ABILITY_DATA;
+
 export class FellowshipTs {
   private heroes_map: Map<HeroId, Hero>;
   private npc_map: Map<NpcId, Npc>;
+
   heroes: Hero[];
   npcs: Npc[];
   constructor() {
@@ -23,6 +28,10 @@ export class FellowshipTs {
     });
 
     this.npcs = Array.from(this.npc_map.values());
+  }
+
+  getAbility(id: AbilityId) {
+    return ABILITY_DATA[id];
   }
 
   getHero(id: HeroId) {

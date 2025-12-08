@@ -1,8 +1,9 @@
 import { loadEnvFile } from "node:process";
 import { DataGenerator } from "../shared";
 
-import { genCharacters } from "./gen-characters";
-import { genLang } from "./gen-lang";
+// import { genCharacters } from "./gen-characters";
+// import { genLang } from "./gen-lang";
+import { genAbilities } from "./gen-abilities";
 // import { genItems } from "./gen-items";
 
 try {
@@ -13,8 +14,9 @@ try {
 
 const generator = new DataGenerator();
 
-generator.addHandler("characters", genCharacters);
+// generator.addHandler("characters", genCharacters);
+generator.addHandler("abilities", genAbilities);
 // generator.addHandler("items", genItems);
-generator.addHandler("localization", genLang);
+// generator.addHandler("localization", genLang);
 
 generator.start();

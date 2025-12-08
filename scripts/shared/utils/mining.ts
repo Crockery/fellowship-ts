@@ -4,7 +4,7 @@ import { Translateable } from "../../../src/types";
 
 // Takes the raw paths found in the data, and converts it
 // to an output consistent accross data types.
-export const getImagePathId = (raw_path: string) => {
+export const resolveImageId = (raw_path: string) => {
   const corrected = raw_path.split(".")[0];
 
   const path_parts = corrected.split("/");
@@ -86,7 +86,7 @@ export const resolveAssetPath = async <T>({
   return undefined;
 };
 
-const isTranslateable = (
+export const isTranslateable = (
   to_translate: FSTransObj,
 ): to_translate is FSTranslateable => {
   return (to_translate as FSTranslateable)["SourceString"] !== undefined;

@@ -2,7 +2,7 @@ import {
   chunk,
   DataGenerator,
   getCharacterAbilityIds,
-  getImagePathId,
+  resolveImageId,
   resolveAssetPath,
   resolveTranslateable,
 } from "../../../shared";
@@ -69,7 +69,7 @@ export const genNpcs = async (generator: DataGenerator) => {
             abilities,
             stats,
             thumbnail: thumbnail_path
-              ? getImagePathId(thumbnail_path)
+              ? resolveImageId(thumbnail_path)
               : undefined,
             name: resolveTranslateable(json.Properties.DisplayName),
           });

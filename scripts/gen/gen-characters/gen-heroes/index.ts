@@ -5,7 +5,7 @@ import { HeroMapTable, RawHeroMetaData, RawHeroTalentData } from "./types";
 import { Hero } from "../../../../src/types";
 import {
   getCharacterAbilityIds,
-  getImagePathId,
+  resolveImageId,
   resolveAssetPath,
   resolveTranslateable,
 } from "../../../shared";
@@ -34,7 +34,7 @@ const mapRawHeroToHero = async (
       row: talent.TalentRow,
       cost: talent.TalentPointCost,
       description: resolveTranslateable(talent.DetailedDescription),
-      thumbnail: getImagePathId(talent.UIIconTexture.ResourceObject.ObjectPath),
+      thumbnail: resolveImageId(talent.UIIconTexture.ResourceObject.ObjectPath),
     };
   });
 

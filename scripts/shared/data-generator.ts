@@ -11,7 +11,7 @@ interface StaticFileWrite {
   key: StaticFileKey;
 }
 
-type Registry = {
+export type Registry = {
   obj_path: string;
   pkg_name: string;
   pkg_path: string;
