@@ -62,9 +62,10 @@ export interface Hero {
     life_steal?: number;
     haste: number;
     dodge_chance: number;
+    parry_chance?: number;
     incoming_damage_multiplier: number;
-    mana: number;
     max_mana: number;
+    mana: number;
     move_speed: number;
     passive_move_speed: number;
     resist: number;
@@ -78,7 +79,6 @@ export interface Hero {
     damage_threat_multiplier: number;
     heal_threat_multiplier: number;
     stamina_to_max_health_multiplier: number;
-    expertise?: number;
     resources: number;
     max_resources: number;
     resources_second?: number;
@@ -94,7 +94,7 @@ export interface Hero {
     spirit_generation_heal: number;
     cooldown_recovery: number;
     spirit_refund_chance_scale: number;
-    parry_chance?: number;
+    expertise?: number;
     resources_tertiary?: number;
     max_resources_tertiary?: number;
   };
@@ -102,337 +102,327 @@ export interface Hero {
 
 export default [
   {
-    id: "Bowguy",
-    class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
-    thumbnail: "hero_portrait_Bowguy_01",
-    name: { key: "ADCD24044D572984A7894487022E30B6", default: "Elarion" },
+    id: "Ink",
+    class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
+    thumbnail: "hero_portrait_Ink_01",
+    name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
     title: {
-      key: "4AC02F244CC10CFDA70D2081ABEB3736",
-      default: "The Skystrider",
+      key: "6595FCFC41B2AFCA2FDC578D9B0AA6E2",
+      default: "The Thunderlord",
     },
     description: {
-      key: "5B977E8F4089D531E062AB83F16AFB5D",
+      key: "47BAFD3D4120589C81BF1C8A2AA1DD6A",
       default:
-        "The Skystrider moves about the battlefield with the grace of a trained marksman.\r\n\r\nElarion is a Ranged Damage Dealer that builds and spends Focus to perform powerful abilities.\r\n\r\nAs an mythic bowman, Elarion has access to powerful buffs and debuffs that empower his shots and manipulate the battlefield.",
+        "Tariq channels storm and fury to deal immense damage to his enemies.\r\n\r\nTariq is a Melee Damage Dealer that uses Builder/Spender and Timing Mechanics. He excels in the front lines to flank his enemies while they face the Tank.\r\n\r\nTiming his abilities around his Swing Timer will maximize his damage and Fury generation.\r\n\r\nFury is required for Tariq to perform powerful attacks.",
     },
     biography: {
-      key: "1D4C959D4F2EDBC9285435917EE8A2E9",
+      key: "EE05B267473AD55F82CA52A2B63DF218",
       default:
-        "A sentinel of starlight, Elarion Beau'ghai has walked the world for millenia as the surviving half of an ancient myth that shaped the world.\r\n\r\nHe joins the Fellowship to watch over those who might one day fall to the same corrupting power he is fated to stop.",
+        "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
     },
-    difficulty: 2,
+    difficulty: 4,
     talents: [
-      {
-        id: "Talent7",
-        name: {
-          key: "70C6E0AE45B0ACA1F77797820E5D1F01",
-          default: "Focused Expanse",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "EF40FA9C45DA1B5368F8848324B29F25",
-          default:
-            "Your <rt.absorb>Focused Shot</> has a 20% chance to generate <rt.effect>1 Empowered Multishot</> and all your <rt.effect>Empowered Multishots</> deal <rt.warning>+25% increased damage</>.\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\nYour next <rt.absorb>Multishot</> has <rt.mana>50% reduced Focus cost</> and always fires at least 3 arrow regardelss of how many targets are in range.",
-        },
-        thumbnail: "bowguy_Bowguy_Multishot",
-      },
-      {
-        id: "Talent5",
-        name: { key: "48499EF5491C8BFEC003078933BC80C2", default: "Fusillade" },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "38219E1941A33B829C38628CA29F74D1",
-          default:
-            "Your <rt.absorb>Heartseeker Barrage</> channel time is increased by 0.5 seconds and its <rt.warning>critical strike chance is increased by +20%</>.",
-        },
-        thumbnail: "textures_T_Icon_Energy_106",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "C96A63A04C9AFEE71E1386AC3053DD93",
-          default: "Final Crescendo",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "82D2D61E430FC99B93CEB18EFF9D55F6",
-          default:
-            "Each time you cast <rt.absorb>Highwind Arrow</>, you gain 1 stack of <rt.effect>Final Crescendo</>. At 3 stacks, your next <rt.absorb>Highwind Arrow</> consumes all stacks, causing it to deal <rt.warning>+100% increased damage</> and increasing the maximum number of ricochets up to 7.",
-        },
-        thumbnail: "bowguy_Bowguy_Ricochet",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "85311458452E428B8C9B1882BDFF16F0",
-          default: "Skylit Grace",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "CFC140E74C0EE534926B208893A39A75",
-          default:
-            "While <rt.absorb>Starfall Volley</> is active, your <rt.absorb>Skystrider's Grace</> has 100% increased cooldown recovery.",
-        },
-        thumbnail: "tex_scifiskillsicon_Tex_b_03",
-      },
       {
         id: "Talent2",
         name: {
-          key: "68099F78451CE715688D4DA1E8FCDDA5",
-          default: "Piercing Seekers",
+          key: "0F5CE1784BE3FB4A1E0DBC970FB1A734",
+          default: "Left Hand Path",
         },
         unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "92772EF84049DD49EA5EFAB77078E0DB",
-          default:
-            "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>70% of the power of the initial hit</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_SoulArrow",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "EB5331824B861DFB763C91B8C9403231",
-          default: "Skyward Munitions",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "2614115E4E31EE2C4FB26F8EB7ABCACD",
-          default:
-            "Each time you cast <rt.absorb>Celestial Shot</> or <rt.absorb>Multishot</> the cooldown of <rt.absorb>Highwind Arrow</> & <rt.absorb>Heartseeker Barrage</> is reduced by 1 second.",
-        },
-        thumbnail: "bowguy_Bowguy_Shot",
-      },
-      {
-        id: "Talent1",
-        name: {
-          key: "18116CCE44856C4234B45F844BD0CF97",
-          default: "Repeating Stars",
-        },
-        unlocked_at: 0,
-        row: 3,
+        row: 1,
         cost: 2,
         description: {
-          key: "8A8C29164F7FBCE40DFE2CA8665DEBBC",
+          key: "BF84B21D48AAB7DF2D3B3893771A1DCC",
           default:
-            "Each time your <rt.absorb>Multshot</> deals damage to an enemy, the cooldown of your <rt.absorb>Starfall Volley</> is reduced by 0.3 seconds.",
+            "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>30%</> of the damage dealt is also dealt to enemies near your target, reduced beyond 5 targets.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
         },
-        thumbnail: "bowguy_Bowguy_Rain",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "4A9E58EA4DB60BEC53144FB9352F0A20",
-          default: "Lunarlight Affinity",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "4942EB534D4596F3EA42FAB4381775EB",
-          default:
-            "Your <rt.absorb>Starfall Volley</> hits have twice the chance to trigger <rt.effect>Lunarlight Salvo</> when dealing damage to enemies with <rt.absorb>Lunarlight Mark</> active.\r\n\r\nAdditionally, your <rt.effect>Lunarlight Salvo</> has <rt.warning>+40% increased critical strike chance</>.",
-        },
-        thumbnail: "textures_T_Icon_Energy_108",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "B4FB01E44DE4B543A0E4838248D8C648",
-          default: "Lethal Shots",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "086FD59D4A3575CEF8BE1B86374DA233",
-          default:
-            "Your <rt.absorb>Highwind Arrow</> has a 30% chance to have <rt.warning>+100% increased critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "tex_strategyicons_Tex_arrow",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "592D9EB74AE17D1ABA5D529690988033",
-          default: "Path of Twilight",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "15BFB41B4AD9FD456D8E0B85FB60937A",
-          default:
-            "The duration of <rt.absorb>Pathfinder's Resilience</> is <rt.bold>increased to 8 seconds</> and all <rt.effect>dispellable harmful magic effects</> are instantly removed from you and again upon expiration. ",
-        },
-        thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "BC0D26C34B2099344A9115A5AEF096E8",
-          default: "Lunar Fury",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "398E0AC94A36BF9ADE30BCBF7BA5A8DC",
-          default:
-            "<rt.effect>Lunarlight Salvo</> deals <rt.warning>+30% increased damage</>.",
-        },
-        thumbnail: "bowguy_Bowguy_Mark",
+        thumbnail: "ink_T_Ink_Facebreaker",
       },
       {
         id: "Talent11",
         name: {
-          key: "CB6E72D2463EA99CA599C9A89F6B347A",
+          key: "A9DB45EE4A96339650CC8484AC3ECEA0",
+          default: "Concatenation",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "7BCD2F644D3BC2BE88CF319B4B7345EB",
+          default:
+            "Your <rt.bold>Attack Speed</> is increased by <rt.warning>50%</>.",
+        },
+        thumbnail: "berserker_Berserker6",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "7E54C35542F76B0CEA9AD897E467899F",
+          default: "Blood & Thunder",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "AAFC5F514731CF80ECB6319481C2D980",
+          default:
+            "Your <rt.absorb>Heavy Strike</> has a chance to cast a free <rt.absorb>Chain Lightning</> at the target.\r\n\r\n(2.0 PPM)",
+        },
+        thumbnail: "tex_spellbookpage01_Tex_SpellBook01_91",
+      },
+      {
+        id: "Talent6",
+        name: { key: "BE75035D42FB83A521E6619C5DD8EDEF", default: "Bloodline" },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "5BDC491341B506270ECBBBAD3A2C2114",
+          default:
+            "You generate <rt.mana>1 Fury</> every 1 second.\r\n\r\nYou no longer lose <rt.mana>Fury</> while out of combat.",
+        },
+        thumbnail: "textures_T_Icon_BloodCombat_141",
+      },
+      {
+        id: "Talent14",
+        name: { key: "BCA429A346A256C54AA96DAE02030E78", default: "High Road" },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "597184C94454FD481FD8B4859E2A0D39",
+          default:
+            "When your <rt.absorb>Leap Smash</> ability does not hit an enemy, its cooldown is reduced by <rt.bold>14</>  seconds and your movement speed is increased by <rt.bold>50%</> for 4 seconds.\r\n\r\nYour <rt.absorb>Leap Smash</> has <rt.warning>+20% increased critical strike chance</>.\r\n\r\nYou now only generate <rt.mana>Fury</> with <rt.absorb>Leap Smash</> when it deals damage to an enemy.",
+        },
+        thumbnail: "barbarian_Barbarian8",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "CF9BD954430236BB653DC3A459851975",
+          default: "Ride the Lightning",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "915F6802419D2CCF4240EB8743DC13DE",
+          default:
+            "Your <rt.absorb>Thunder Call</> generates <rt.mana>60</> Fury over its duration.",
+        },
+        thumbnail: "ink_T_Ink_Selfbuff",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "B60ABA8B4B1DA58798688883BD0ACE56",
+          default: "Them Bones",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "039BC5A741FFCDF2BFE2C1A3EFDB61AB",
+          default:
+            "Your <rt.absorb>Skull Crusher</> has a <rt.bold>30%</> chance to have <rt.warning>+100%</> increased critical strike chance.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "ink_T_Ink_Skullcrusher",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "F8DD387F4DF2430AA0B03FBC58FEA5F2",
+          default: "Kill 'Em All",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "0C1B8ECF4CF59415382ABEA44E2E2EDB",
+          default:
+            "Your <rt.absorb>Hammer Storm</> now spins 3 times per use for the same <rt.mana>Fury</> cost, but each consecutive spin deals <rt.warning>35% more damage</>.",
+        },
+        thumbnail: "ink_T_Ink_Hammerstorm",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "7B19284F4857B452C35A92A2E7D9E729",
+          default: "Thunderstruck",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "280663A343A2615B1AFB0DA0B94F78BB",
+          default:
+            "Your <rt.absorb>Chain Lightning</> bounces <rt.warning>2</> additional times.",
+        },
+        thumbnail: "electromancer_Electromancer1",
+      },
+      {
+        id: "Talent4",
+        name: { key: "042D1432460604EF9FB759A7F3A5E4FC", default: "Pneuma" },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "1F659DF546B2CA1B71A7EBAF2A5093C7",
+          default:
+            "While <rt.absorb>Thunder Call</> is active you take <rt.bold>10%</> reduced damage and you passively restore health equal to <rt.heal>5% of any damage you deal</> for the duration.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Energy_18",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "80E892D0449360AC688865913C722311",
+          default: "Far Beyond Driven",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "2257DF2A4F0871081B2BF180AD5CD127",
+          default:
+            "Each time you use <rt.absorb>Heavy Strike</> you gain 1 stack of <rt.effect>Far Beyond Driven</> for 20 seconds, increasing your Spirit by <rt.warning>+2%</>.\r\n\r\n<rt.effect>Far Beyond Driven</> stacks up to 5 times.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Energy_13",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "C69CC9D5465CC8FBA6F38C8772F3A008",
           default: "Magic Ward",
         },
         unlocked_at: 0,
         row: 4,
         cost: 1,
         description: {
-          key: "1315000D4041D18E426B8882F1EC6D8D",
-          default: "You take 10% less <bold>Magic damage</>.",
+          key: "737CB90C4201EB146F1754BC7B0172DA",
+          default: "You take 10% reduced Magic damage.",
         },
         thumbnail: "textures_T_Arcane_Scroll",
       },
       {
-        id: "Talent13",
+        id: "Talent5",
         name: {
-          key: "CF5320B5494870509EFCA0BEF2EB4BD4",
-          default: "Fervent Supremacy",
+          key: "F6B55C9E4900C82A42F8258F7FC085A8",
+          default: "Mouth for War",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "5F07F2F945BF12A7403308B4AF8423B9",
+          key: "C6946FDC46205D7CEADF36BEB3404397",
           default:
-            "Your <rt.absorb>Skystrider's Supremacy's</> cooldown is reduced by 20 seconds and grants 4 charges of <rt.absorb>Empowered Multishot</> that last for up to 15 seconds.\r\n\r\nWhile <rt.effect>Fervant Supremacy</> is active, your <rt.absorb>Multishot</> deals <rt.warning>+50% increased damage</>.",
+            "When your <rt.absorb>Leap Smash</> ability deals damage, you are granted 1 charge of <rt.absorb>Focused Wrath</>.",
         },
-        thumbnail: "bowguy_Bowguy_Supremacy",
+        thumbnail: "ink_T_Ink_FocusedWrath",
       },
       {
-        id: "Talent14",
+        id: "Talent9",
+        name: { key: "387DF58445A5443C0772B5AE23838EF7", default: "Schism" },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "EAB742B145274F2524AA97BDFB4309F0",
+          default:
+            "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
+      },
+      {
+        id: "Talent1",
         name: {
-          key: "FF16F8B346E9E8A186E4039CA5BF8E40",
-          default: "Impending Heartseeker",
+          key: "8129188741F53DDAB95E8C8ED8DE5F89",
+          default: "Square Hammer",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "7A942CED43BFE73F69E40DACA57F1CDF",
+          key: "E039BA1C4D9B80B2D6B686B896A5425A",
           default:
-            "When your <rt.absorb>Celestial Shot</> consumes <rt.effect>Celestial Impetus</> the cooldown of your <rt.absorb>Heartseeker Barrage</> is reset and you gain <rt.effect>Impending Heartseeker</>.\r\n\r\n<rt.effect>IMPENDING HEARTSEEKER</>\r\nYour <rt.absorb>Heartseeker Barrage</> deals <rt.warning>+10% increased damage</> with each arrow during its channel.",
+            "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
         },
-        thumbnail: "bowguy_Bowguy_Spray",
+        thumbnail: "ink_T_Ink_TimerAbility",
       },
       {
-        id: "Talent3",
+        id: "Talent12",
         name: {
-          key: "07DE1BDF49B00066DADB238E62437E92",
-          default: "Resurgent Winds",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "6E62CA7C4706FCCFD9C7229DDDF176F8",
-          default:
-            "Your <rt.absorb>Lunarlight Mark</> ability grants you <rt.effect>Resurgent Winds</> for 15 seconds, causing your next <rt.absorb>Highwind Arrow</> to be instant cast, <rt.mana>cost no Focus</>, require no charge, and deal <rt.warning>50% more damage</> against targets with <rt.absorb>Lunarlight Mark</> active.",
-        },
-        thumbnail: "textures_T_Icon_Tech_40",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "FC06586842A3AFDBDE11C7A32E2E0EB7",
-          default: " Last Lights",
+          key: "1F7DB44C4210EF22D9A5ECBBC61641A6",
+          default: "Spit It Out",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "424E4D044B8858E2400A199EFB3D5CFC",
-          default:
-            "Your attacks and abilities have <rt.warning>+30% additional critical strike chance</> when striking targets below 30% health.",
+          key: "B85C08D94DCD61133A17D39F7FC63AA2",
+          default: "Your Critical Strike Power is increased by 10%.",
         },
-        thumbnail: "tex_scifiskillsicon_Tex_b_24",
+        thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
       },
       {
-        id: "Talent12",
+        id: "Talent13",
         name: {
-          key: "1D89A7B84D67C4F18D44C4B5D78A2442",
+          key: "4ADF4F24459D922719E280AD834B5C81",
           default: "Spirited Fortitude",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "7B2552C54785C86EEACDDC9D82007127",
-          default: "You take 10% less <bold>Area of Effect damage</>.",
+          key: "449BEA7646608FB6CB590B88DBB7684E",
+          default:
+            "You take 10% less damage from <bold>Area of Effect</> attacks.",
         },
         thumbnail: "barbarian_Barbarian3",
       },
       {
-        id: "Talent17",
+        id: "Talent16",
         name: {
-          key: "E60648314803697330FA369D42C75135",
-          default: "The Weight of Gravity",
+          key: "3D806F5640B6C3C98CF1F6B793DD94AE",
+          default: "Crack the Sky",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "25D1E40A48653761B3D76B8A5481DE12",
+          key: "0D351A0C45AA82187006AEB872DBEE01",
           default:
-            "Your <rt.absorb>Grappling Arrow</> now has 2 charges, but its recharge time is increased to 120 seconds.\r\n\r\n<rt.absorb>Grappling Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+            "Your <bold>Lightning damage</> has <rt.warning>+20%</> increased critical strike chance.",
         },
-        thumbnail: "bowguy_Bowguy_GrappleShot",
+        thumbnail: "electromancer_Electromancer18",
       },
     ],
     abilities: [
-      "GA_Bowguy_RangedAutoAttack_C",
-      "GA_Bowguy_ChargedMoveWithDirection_C",
-      "GA_Bowguy_SingleProjectileDamage_C",
-      "GA_Bowguy_AoeProjectileDamage_C",
-      "GA_Bowguy_CastedBouncyProjectileDamage_C",
-      "GA_Bowguy_CastedProjectileHeavyDamage_C",
-      "GA_Bowguy_ProcHasteBuff_C",
-      "GA_Bowguy_InstantSingleInterrupt_C",
-      "GA_Bowguy_CastedProjectileDamage_C",
-      "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
-      "GA_Bowguy_TargetedAoePull_C",
-      "GA_Bowguy_SelfDefenceBuff_C",
-      "GA_Bowguy_InstantMarkTarget_C",
-      "GA_Bowguy_TargetedAoeDamage_C",
-      "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
-      "GA_Bowguy_SelfBuffForAoeProjectile_C",
-      "GA_Bowguy_DurationalAoeDamage_C",
-      "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
+      "GA_Ink_MeleeInterrupt_C",
+      "GA_Ink_MeleeAutoAttack_C",
+      "GA_Ink_MoveToLocationAoeDamage_C",
+      "GA_Ink_HeavySingleTargetAttack_C",
+      "GA_Ink_AoeAttack_C",
+      "GA_Ink_AutoAttackBuff_C",
+      "GA_Ink_AutoAttackBuff_Attack_C",
+      "GA_Ink_SecondChanceSingleTargetAttack_C",
+      "GA_Ink_CleaveAttack_C",
+      "GA_Ink_ChargedBuff_C",
+      "GA_Ink_BouncyProjectile_C",
+      "GA_Ink_EnhancedChargedBuff",
+      "GA_Ink_LowHealthSingleTargetResourceDamage_C",
+      "GA_Ink_AoeFear_C",
+      "GA_Ink_CostReductionBuff_C",
+      "GA_Ink_SelfDefenceBuff_C",
+      "GA_Ink_Taunt_C",
     ],
     stats: {
       armor: 0,
       power: 0,
-      base_health: 17135,
+      base_health: 18113,
       stamina: 1000,
-      strength: 0,
-      agility: 1000,
+      strength: 1000,
+      agility: 0,
       intellect: 0,
       block_chance: 0,
       crit_chance: 0.05,
@@ -440,9 +430,10 @@ export default [
       life_steal: 0,
       haste: 1,
       dodge_chance: 0.05,
+      parry_chance: 0.05,
       incoming_damage_multiplier: 1,
-      mana: 0,
       max_mana: 0,
+      mana: 0,
       move_speed: 1,
       passive_move_speed: 1,
       resist: 0,
@@ -455,12 +446,11 @@ export default [
       mana_regen_tick_time: 0,
       damage_threat_multiplier: 1,
       heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 39.081,
-      expertise: 0,
-      resources: 100,
+      stamina_to_max_health_multiplier: 43.567,
+      resources: 0,
       max_resources: 100,
       resources_second: 0,
-      max_resources_second: 0,
+      max_resources_second: 100,
       out_of_combat_health_regen_rate: 0.01,
       out_of_combat_health_regen_tick_time: 0.5,
       out_of_combat_mana_regen_rate: 0,
@@ -468,8 +458,8 @@ export default [
       spirit: 0,
       spirit_points: 0,
       max_spirit_points: 100,
-      spirit_generation_damage: 0.3,
-      spirit_generation_heal: 0.3,
+      spirit_generation_damage: 0.08,
+      spirit_generation_heal: 0.08,
       cooldown_recovery: 1,
       spirit_refund_chance_scale: 1,
     },
@@ -844,6 +834,379 @@ export default [
     },
   },
   {
+    id: "Bowguy",
+    class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
+    thumbnail: "hero_portrait_Bowguy_01",
+    name: { key: "ADCD24044D572984A7894487022E30B6", default: "Elarion" },
+    title: {
+      key: "4AC02F244CC10CFDA70D2081ABEB3736",
+      default: "The Skystrider",
+    },
+    description: {
+      key: "5B977E8F4089D531E062AB83F16AFB5D",
+      default:
+        "The Skystrider moves about the battlefield with the grace of a trained marksman.\r\n\r\nElarion is a Ranged Damage Dealer that builds and spends Focus to perform powerful abilities.\r\n\r\nAs an mythic bowman, Elarion has access to powerful buffs and debuffs that empower his shots and manipulate the battlefield.",
+    },
+    biography: {
+      key: "1D4C959D4F2EDBC9285435917EE8A2E9",
+      default:
+        "A sentinel of starlight, Elarion Beau'ghai has walked the world for millenia as the surviving half of an ancient myth that shaped the world.\r\n\r\nHe joins the Fellowship to watch over those who might one day fall to the same corrupting power he is fated to stop.",
+    },
+    difficulty: 2,
+    talents: [
+      {
+        id: "Talent7",
+        name: {
+          key: "70C6E0AE45B0ACA1F77797820E5D1F01",
+          default: "Focused Expanse",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "EF40FA9C45DA1B5368F8848324B29F25",
+          default:
+            "Your <rt.absorb>Focused Shot</> has a 20% chance to generate <rt.effect>1 Empowered Multishot</> and all your <rt.effect>Empowered Multishots</> deal <rt.warning>+25% increased damage</>.\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\nYour next <rt.absorb>Multishot</> has <rt.mana>50% reduced Focus cost</> and always fires at least 3 arrow regardelss of how many targets are in range.",
+        },
+        thumbnail: "bowguy_Bowguy_Multishot",
+      },
+      {
+        id: "Talent5",
+        name: { key: "48499EF5491C8BFEC003078933BC80C2", default: "Fusillade" },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "38219E1941A33B829C38628CA29F74D1",
+          default:
+            "Your <rt.absorb>Heartseeker Barrage</> channel time is increased by 0.5 seconds and its <rt.warning>critical strike chance is increased by +20%</>.",
+        },
+        thumbnail: "textures_T_Icon_Energy_106",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "C96A63A04C9AFEE71E1386AC3053DD93",
+          default: "Final Crescendo",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "82D2D61E430FC99B93CEB18EFF9D55F6",
+          default:
+            "Each time you cast <rt.absorb>Highwind Arrow</>, you gain 1 stack of <rt.effect>Final Crescendo</>. At 3 stacks, your next <rt.absorb>Highwind Arrow</> consumes all stacks, causing it to deal <rt.warning>+100% increased damage</> and increasing the maximum number of ricochets up to 7.",
+        },
+        thumbnail: "bowguy_Bowguy_Ricochet",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "85311458452E428B8C9B1882BDFF16F0",
+          default: "Skylit Grace",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "CFC140E74C0EE534926B208893A39A75",
+          default:
+            "While <rt.absorb>Starfall Volley</> is active, your <rt.absorb>Skystrider's Grace</> has 100% increased cooldown recovery.",
+        },
+        thumbnail: "tex_scifiskillsicon_Tex_b_03",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "68099F78451CE715688D4DA1E8FCDDA5",
+          default: "Piercing Seekers",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "92772EF84049DD49EA5EFAB77078E0DB",
+          default:
+            "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>70% of the power of the initial hit</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_SoulArrow",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "EB5331824B861DFB763C91B8C9403231",
+          default: "Skyward Munitions",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "2614115E4E31EE2C4FB26F8EB7ABCACD",
+          default:
+            "Each time you cast <rt.absorb>Celestial Shot</> or <rt.absorb>Multishot</> the cooldown of <rt.absorb>Highwind Arrow</> & <rt.absorb>Heartseeker Barrage</> is reduced by 1 second.",
+        },
+        thumbnail: "bowguy_Bowguy_Shot",
+      },
+      {
+        id: "Talent1",
+        name: {
+          key: "18116CCE44856C4234B45F844BD0CF97",
+          default: "Repeating Stars",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "8A8C29164F7FBCE40DFE2CA8665DEBBC",
+          default:
+            "Each time your <rt.absorb>Multshot</> deals damage to an enemy, the cooldown of your <rt.absorb>Starfall Volley</> is reduced by 0.3 seconds.",
+        },
+        thumbnail: "bowguy_Bowguy_Rain",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "4A9E58EA4DB60BEC53144FB9352F0A20",
+          default: "Lunarlight Affinity",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "4942EB534D4596F3EA42FAB4381775EB",
+          default:
+            "Your <rt.absorb>Starfall Volley</> hits have twice the chance to trigger <rt.effect>Lunarlight Salvo</> when dealing damage to enemies with <rt.absorb>Lunarlight Mark</> active.\r\n\r\nAdditionally, your <rt.effect>Lunarlight Salvo</> has <rt.warning>+40% increased critical strike chance</>.",
+        },
+        thumbnail: "textures_T_Icon_Energy_108",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "B4FB01E44DE4B543A0E4838248D8C648",
+          default: "Lethal Shots",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "086FD59D4A3575CEF8BE1B86374DA233",
+          default:
+            "Your <rt.absorb>Highwind Arrow</> has a 30% chance to have <rt.warning>+100% increased critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "tex_strategyicons_Tex_arrow",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "592D9EB74AE17D1ABA5D529690988033",
+          default: "Path of Twilight",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "15BFB41B4AD9FD456D8E0B85FB60937A",
+          default:
+            "The duration of <rt.absorb>Pathfinder's Resilience</> is <rt.bold>increased to 8 seconds</> and all <rt.effect>dispellable harmful magic effects</> are instantly removed from you and again upon expiration. ",
+        },
+        thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "BC0D26C34B2099344A9115A5AEF096E8",
+          default: "Lunar Fury",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "398E0AC94A36BF9ADE30BCBF7BA5A8DC",
+          default:
+            "<rt.effect>Lunarlight Salvo</> deals <rt.warning>+30% increased damage</>.",
+        },
+        thumbnail: "bowguy_Bowguy_Mark",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "CB6E72D2463EA99CA599C9A89F6B347A",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "1315000D4041D18E426B8882F1EC6D8D",
+          default: "You take 10% less <bold>Magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent13",
+        name: {
+          key: "CF5320B5494870509EFCA0BEF2EB4BD4",
+          default: "Fervent Supremacy",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "5F07F2F945BF12A7403308B4AF8423B9",
+          default:
+            "Your <rt.absorb>Skystrider's Supremacy's</> cooldown is reduced by 20 seconds and grants 4 charges of <rt.absorb>Empowered Multishot</> that last for up to 15 seconds.\r\n\r\nWhile <rt.effect>Fervant Supremacy</> is active, your <rt.absorb>Multishot</> deals <rt.warning>+50% increased damage</>.",
+        },
+        thumbnail: "bowguy_Bowguy_Supremacy",
+      },
+      {
+        id: "Talent14",
+        name: {
+          key: "FF16F8B346E9E8A186E4039CA5BF8E40",
+          default: "Impending Heartseeker",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "7A942CED43BFE73F69E40DACA57F1CDF",
+          default:
+            "When your <rt.absorb>Celestial Shot</> consumes <rt.effect>Celestial Impetus</> the cooldown of your <rt.absorb>Heartseeker Barrage</> is reset and you gain <rt.effect>Impending Heartseeker</>.\r\n\r\n<rt.effect>IMPENDING HEARTSEEKER</>\r\nYour <rt.absorb>Heartseeker Barrage</> deals <rt.warning>+10% increased damage</> with each arrow during its channel.",
+        },
+        thumbnail: "bowguy_Bowguy_Spray",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "07DE1BDF49B00066DADB238E62437E92",
+          default: "Resurgent Winds",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "6E62CA7C4706FCCFD9C7229DDDF176F8",
+          default:
+            "Your <rt.absorb>Lunarlight Mark</> ability grants you <rt.effect>Resurgent Winds</> for 15 seconds, causing your next <rt.absorb>Highwind Arrow</> to be instant cast, <rt.mana>cost no Focus</>, require no charge, and deal <rt.warning>50% more damage</> against targets with <rt.absorb>Lunarlight Mark</> active.",
+        },
+        thumbnail: "textures_T_Icon_Tech_40",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "FC06586842A3AFDBDE11C7A32E2E0EB7",
+          default: " Last Lights",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "424E4D044B8858E2400A199EFB3D5CFC",
+          default:
+            "Your attacks and abilities have <rt.warning>+30% additional critical strike chance</> when striking targets below 30% health.",
+        },
+        thumbnail: "tex_scifiskillsicon_Tex_b_24",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "1D89A7B84D67C4F18D44C4B5D78A2442",
+          default: "Spirited Fortitude",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "7B2552C54785C86EEACDDC9D82007127",
+          default: "You take 10% less <bold>Area of Effect damage</>.",
+        },
+        thumbnail: "barbarian_Barbarian3",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "E60648314803697330FA369D42C75135",
+          default: "The Weight of Gravity",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "25D1E40A48653761B3D76B8A5481DE12",
+          default:
+            "Your <rt.absorb>Grappling Arrow</> now has 2 charges, but its recharge time is increased to 120 seconds.\r\n\r\n<rt.absorb>Grappling Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+        },
+        thumbnail: "bowguy_Bowguy_GrappleShot",
+      },
+    ],
+    abilities: [
+      "GA_Bowguy_RangedAutoAttack_C",
+      "GA_Bowguy_ChargedMoveWithDirection_C",
+      "GA_Bowguy_SingleProjectileDamage_C",
+      "GA_Bowguy_AoeProjectileDamage_C",
+      "GA_Bowguy_CastedBouncyProjectileDamage_C",
+      "GA_Bowguy_CastedProjectileHeavyDamage_C",
+      "GA_Bowguy_ProcHasteBuff_C",
+      "GA_Bowguy_InstantSingleInterrupt_C",
+      "GA_Bowguy_CastedProjectileDamage_C",
+      "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
+      "GA_Bowguy_TargetedAoePull_C",
+      "GA_Bowguy_SelfDefenceBuff_C",
+      "GA_Bowguy_InstantMarkTarget_C",
+      "GA_Bowguy_TargetedAoeDamage_C",
+      "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
+      "GA_Bowguy_SelfBuffForAoeProjectile_C",
+      "GA_Bowguy_DurationalAoeDamage_C",
+      "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 17135,
+      stamina: 1000,
+      strength: 0,
+      agility: 1000,
+      intellect: 0,
+      block_chance: 0,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      life_steal: 0,
+      haste: 1,
+      dodge_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      mana: 0,
+      max_mana: 0,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0,
+      mana_regen_tick_time: 0,
+      damage_threat_multiplier: 1,
+      heal_threat_multiplier: 0.5,
+      stamina_to_max_health_multiplier: 39.081,
+      expertise: 0,
+      resources: 100,
+      max_resources: 100,
+      resources_second: 0,
+      max_resources_second: 0,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0,
+      out_of_combat_mana_regen_tick_time: 0,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.3,
+      spirit_generation_heal: 0.3,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
     id: "Vigor",
     class_color: { R: 221, G: 219, B: 197, A: 255, hex: "#DDDBC5" },
     thumbnail: "hero_portrait_vigor_default",
@@ -1206,6 +1569,379 @@ export default [
       max_spirit_points: 100,
       spirit_generation_damage: 0.08,
       spirit_generation_heal: 0.08,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
+    id: "Mosse",
+    class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
+    thumbnail: "hero_portrait_Mosse_01_default",
+    name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
+    title: {
+      key: "05ED62E745B745321C6806A5B84DF699",
+      default: "The Daughter of the Forest",
+    },
+    description: {
+      key: "46A8A058428C2AC7BD2D1F8F98E00CD9",
+      default:
+        "Sylvie is a healer who uses her innate connection to nature and its many friends to heal her allies and harm her foes.\r\n\r\nSylvie is a Healer that uses Pet Management Mechanics. She excels at sending her pets to heal her allies over time and attack her enemies.\r\n\r\nShe commands her Flutterflies and Plants to heal allies and attack enemies.\r\n\r\nHer powerful Heal over Time spells allow her to prepare for battle and endure long and sustained fights.",
+    },
+    biography: {
+      key: "08DADB074F7EED9DD6725A84AB7DA20D",
+      default:
+        "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
+    },
+    difficulty: 3,
+    talents: [
+      {
+        id: "Talent1",
+        name: {
+          key: "3A75326140BFA7C6290F3BA1B0398991",
+          default: "Nettle to the Petal",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "2BBC59F945C6A5243533B39211A3B271",
+          default:
+            "Each time you deal damage with <rt.absorb>Nettlebolt</>, your <rt.absorb>Life Petal</> triggers an additional tick of its healing.",
+        },
+        thumbnail: "sylvie_T_Mosse_Lifepetal",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "EFB88164466E2D34A2EE388E16793033",
+          default: "Synchronized Fluttering",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "8C2E90E545B7B7D35D66CCB72DCE2A14",
+          default:
+            "Hold down <rt.absorb>Fluttercall: Heal</> for 2 seconds to overcharge it, causing the ability to be cast on up to 4 allies within 4000 range in one cast. The mana cost is increased by 100% when cast in this way.\r\n\r\n<bold>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the overcharged version of the ability will trigger.",
+        },
+        thumbnail: "sylvie_Sylvie_AbilityIcon_03",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "3249BF6548400871C589E3BCA409C976",
+          default: "Verdant Restoration",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "1BE7FFA54B34176844B493920F64AE4E",
+          default:
+            "The initial heal of your <rt.absorb>Fluttercall: Restore Life</> has +50% increased critical strike chance.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Shadow_58",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "2C60A9454A47B9F806D9408C282A8CCD",
+          default: "Sprouting Nettles",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "FCA8E9ED47BDCFC1EAC0FAB4EC7EBA42",
+          default:
+            "Each tick of <rt.meikoability1>Flutterfly Healing</> has a chance to make your next <rt.absorb>Nettlebolt</> <rt.bold>instant cast</> and have <rt.warning>+400% critical strike chance</>.\r\n\r\n(2.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "sylvie_Sylvie_AbilityIcon_02",
+      },
+      {
+        id: "Talent5",
+        name: {
+          key: "065769AD4EA82D9C3CF87383C9BE582C",
+          default: "Natural Knowledge",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "5565A2D344A18E7D5400ED89BD4C5801",
+          default:
+            "Each time your Nettlebolt deals damage, you replenish 1% mana.",
+        },
+        thumbnail: "tex_skill_icons_pack_Tex_blue_9",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "BAD9E98A46A79C13E848AAAE3F8E4B07",
+          default: "Trailing Restoration",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "A6B1BA8442DA9368B91EDFA6CB556FCC",
+          default:
+            "The duration of your <rt.absorb>Fluttercall: Restore Life</> is increased by 9 seconds.",
+        },
+        thumbnail: "textures_T_ArcaneAid",
+      },
+      {
+        id: "Talent18",
+        name: { key: "23B77C43410F3C625BC77B9C86118B39", default: "Symbiosis" },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "E8087CEC4011198023BFA5BA7CDF5093",
+          default:
+            "Your <rt.absorb>Prickly Vines</> deal <rt.warning>12% more damage</> for each player that has a <rt.effect>Pink Flutterfly</>.",
+        },
+        thumbnail: "sylvie_T_Mosse_Vine",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "4D2A346D4EE8D944D9BBF3A08A51E06D",
+          default: "Will of Nature",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "4DF530204A7E808B8244D0935DBB044D",
+          default:
+            "Your healing is increased by 25% on players with <bold>30% or less health</>.\r\n",
+        },
+        thumbnail: "textures_T_Icon_Fel_07",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "8A6FDA13410372F10178D8930646AECB",
+          default: "Rowdy Rootsap",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "CC7C78D846BB2DABAA7A58A4ACCDAF7A",
+          default:
+            "Your <rt.absorb>Enfeebling Rootsap</> causes the target and all enemies within a 700 radius of the target to have 20% reduced attack speed and 50% reduced movement speed while active.",
+        },
+        thumbnail: "sylvie_T_Mosse_Rootheal",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "7463AAFD4EA1ADF20A5265888783FCB6",
+          default: "Nurtured Haven",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "40968DBD426F60FD404E51A224B78980",
+          default:
+            "The cooldown of your <rt.absorb>Safe Haven</> is reduced each time one of your plants wither.\r\n\r\n<rt.absorb>Prickly Vine</> - 1 second\r\n<rt.absorb>Life Petal</> - 2 seconds\r\n<rt.absorb>Heart Bloom</> - 3 seconds",
+        },
+        thumbnail: "sylvie_T_Mosse_LinkCD",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "5C172D0E449591E02B05898263F37FA6",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "2592EF3C4EA009BAAC1B969CA0275794",
+          default: "You take <rt.bold>10% less magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "48A5848F43DB11543AF94B8B2726D0EE",
+          default: "Bluey's Gambit",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "EF9A18864B3AEDE66C5626B0CB4A484D",
+          default:
+            "While your <bold>Blue Flutterfly</> is following you, you take 5% reduced damage.\r\n\r\nWhile your <bold>Blue Flutterfly</> is following another player, they take 5% reduced damage.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Elements_32",
+      },
+      {
+        id: "Talent13",
+        name: {
+          key: "1ED4858E45F8BA172C288CB6263F1A62",
+          default: "Natural Protector",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "C5CA6B9E43AC73F6FD3DBFBF9FCCA165",
+          default:
+            "Your <rt.absorb>Ironleaf Ward</> and <rt.absorb>Safe Haven</> abilities shield players for 15 seconds, absorbing up to <rt.heal>4263% intellect</> damage.",
+        },
+        thumbnail: "druid_Druid17",
+      },
+      {
+        id: "Talent14",
+        name: {
+          key: "96E3640C456437149CD081999AEEF28E",
+          default: "Flutterswift",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "53DF8E464CF32486EF8450BFAC8173EE",
+          default:
+            "Your <rt.absorb>Fluttercall: Heal</> ticks 100% faster for the first 12 seconds each time it begins healing a player.",
+        },
+        thumbnail: "textures_T_ArcaneWhirl",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "DF99486A4609DD215A5505B5B1528B90",
+          default: "Flower Power",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "E4E95D924704DF7E01CC0C849C8A7725",
+          default:
+            "Your <rt.absorb>Heart Bloom</> has 2 charges but only accumulates 8% of all <rt.meikoability1>Flutterfly Healing</>.\r\n\r\n<rt.absorb>Heart Bloom</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+        },
+        thumbnail: "sylvie_T_Mosse_Bigheal",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "069A560441E7058DFF18A1A804FE490B",
+          default: "Elusive Wildling",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "C7CA0E0746EDD1EE6D7AEBA7233E2885",
+          default:
+            "You take <rt.bold>20% reduced damage</> while <rt.absorb>Hidden Trail</> is active.",
+        },
+        thumbnail: "sylvie_T_Mosse_Hide",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "2DC8302C4E61C3F357D06D892053DFD6",
+          default: "Spirited Fortitude",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "5C29F7F7472F394E4E32138404381645",
+          default: "You take <rt.bold>10% less Area of effect damage</>.",
+        },
+        thumbnail: "barbarian_Barbarian3",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "B218768B47A062019532709E1956C305",
+          default: "Bloomin' Boomshrooms",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "B6B6BFD6471169D0F439FCA01321066D",
+          default:
+            "Your <rt.absorb>Shroomsplosion</> ability can now target allies, sending up to 5 <bold>Boomshrooms</> to detonate on them, instantly healing them for <rt.heal>308% Intellect</> each.\r\n\r\nWhen targeting allies in this way, the <bold>Boomshroom</> still deals its normal damage to nearby enemies.",
+        },
+        thumbnail: "sylvie_T_Mosse_Boomshroom",
+      },
+    ],
+    abilities: [
+      "GA_Mosse_DurationalAoeHealPlacement_C",
+      "GA_Mosse_CastedSingleTargetHeal_C",
+      "GA_Mosse_SingleTargetDispel_C",
+      "GA_Mosse_CastedSingleTargetProjectile_C",
+      "GA_Mosse_SingleTargetDot_C",
+      "GA_Mosse_BlueButterfly_SendOut",
+      "GA_Mosse_BlueButterfly_Recall",
+      "GA_Mosse_PinkButterfly_Simple",
+      "GA_Mosse_PinkButterfly_Double",
+      "GA_Mosse_ProjectileTurrets",
+      "GA_Mosse_SharedHealthBuff_C",
+      "GA_Mosse_Passive_HealingMushroomPlacement_C",
+      "GA_Mosse_PlacedAoeBuff",
+      "GA_Mosse_InstantSelfEscapeBuff",
+      "GA_Mosse_HealingAoeTotem",
+      "GA_Mosse_SingleTargetCastedDamageReduction",
+      "GA_Mosse_ExplosiveMinion_C",
+      "GA_Mosse_TurretChannelHeal",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 16433,
+      stamina: 1000,
+      strength: 0,
+      agility: 0,
+      intellect: 1000,
+      block_chance: 0,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      expertise: 0,
+      life_steal: 0,
+      haste: 1,
+      dodge_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      max_mana: 1440,
+      mana: 1440,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0.0005,
+      mana_regen_tick_time: 0.1,
+      damage_threat_multiplier: 1,
+      heal_threat_multiplier: 0.5,
+      stamina_to_max_health_multiplier: 39.978,
+      resources: 100,
+      max_resources: 100,
+      resources_tertiary: 4,
+      max_resources_tertiary: 4,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0.0036,
+      out_of_combat_mana_regen_tick_time: 0.1,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.04,
+      spirit_generation_heal: 0.04,
       cooldown_recovery: 1,
       spirit_refund_chance_scale: 1,
     },
@@ -1953,738 +2689,6 @@ export default [
     },
   },
   {
-    id: "Ink",
-    class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
-    thumbnail: "hero_portrait_Ink_01",
-    name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
-    title: {
-      key: "6595FCFC41B2AFCA2FDC578D9B0AA6E2",
-      default: "The Thunderlord",
-    },
-    description: {
-      key: "47BAFD3D4120589C81BF1C8A2AA1DD6A",
-      default:
-        "Tariq channels storm and fury to deal immense damage to his enemies.\r\n\r\nTariq is a Melee Damage Dealer that uses Builder/Spender and Timing Mechanics. He excels in the front lines to flank his enemies while they face the Tank.\r\n\r\nTiming his abilities around his Swing Timer will maximize his damage and Fury generation.\r\n\r\nFury is required for Tariq to perform powerful attacks.",
-    },
-    biography: {
-      key: "EE05B267473AD55F82CA52A2B63DF218",
-      default:
-        "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
-    },
-    difficulty: 4,
-    talents: [
-      {
-        id: "Talent2",
-        name: {
-          key: "0F5CE1784BE3FB4A1E0DBC970FB1A734",
-          default: "Left Hand Path",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "BF84B21D48AAB7DF2D3B3893771A1DCC",
-          default:
-            "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>30%</> of the damage dealt is also dealt to enemies near your target, reduced beyond 5 targets.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
-        },
-        thumbnail: "ink_T_Ink_Facebreaker",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "A9DB45EE4A96339650CC8484AC3ECEA0",
-          default: "Concatenation",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "7BCD2F644D3BC2BE88CF319B4B7345EB",
-          default:
-            "Your <rt.bold>Attack Speed</> is increased by <rt.warning>50%</>.",
-        },
-        thumbnail: "berserker_Berserker6",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "7E54C35542F76B0CEA9AD897E467899F",
-          default: "Blood & Thunder",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "AAFC5F514731CF80ECB6319481C2D980",
-          default:
-            "Your <rt.absorb>Heavy Strike</> has a chance to cast a free <rt.absorb>Chain Lightning</> at the target.\r\n\r\n(2.0 PPM)",
-        },
-        thumbnail: "tex_spellbookpage01_Tex_SpellBook01_91",
-      },
-      {
-        id: "Talent6",
-        name: { key: "BE75035D42FB83A521E6619C5DD8EDEF", default: "Bloodline" },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "5BDC491341B506270ECBBBAD3A2C2114",
-          default:
-            "You generate <rt.mana>1 Fury</> every 1 second.\r\n\r\nYou no longer lose <rt.mana>Fury</> while out of combat.",
-        },
-        thumbnail: "textures_T_Icon_BloodCombat_141",
-      },
-      {
-        id: "Talent14",
-        name: { key: "BCA429A346A256C54AA96DAE02030E78", default: "High Road" },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "597184C94454FD481FD8B4859E2A0D39",
-          default:
-            "When your <rt.absorb>Leap Smash</> ability does not hit an enemy, its cooldown is reduced by <rt.bold>14</>  seconds and your movement speed is increased by <rt.bold>50%</> for 4 seconds.\r\n\r\nYour <rt.absorb>Leap Smash</> has <rt.warning>+20% increased critical strike chance</>.\r\n\r\nYou now only generate <rt.mana>Fury</> with <rt.absorb>Leap Smash</> when it deals damage to an enemy.",
-        },
-        thumbnail: "barbarian_Barbarian8",
-      },
-      {
-        id: "Talent7",
-        name: {
-          key: "CF9BD954430236BB653DC3A459851975",
-          default: "Ride the Lightning",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "915F6802419D2CCF4240EB8743DC13DE",
-          default:
-            "Your <rt.absorb>Thunder Call</> generates <rt.mana>60</> Fury over its duration.",
-        },
-        thumbnail: "ink_T_Ink_Selfbuff",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "B60ABA8B4B1DA58798688883BD0ACE56",
-          default: "Them Bones",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "039BC5A741FFCDF2BFE2C1A3EFDB61AB",
-          default:
-            "Your <rt.absorb>Skull Crusher</> has a <rt.bold>30%</> chance to have <rt.warning>+100%</> increased critical strike chance.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "ink_T_Ink_Skullcrusher",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "F8DD387F4DF2430AA0B03FBC58FEA5F2",
-          default: "Kill 'Em All",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "0C1B8ECF4CF59415382ABEA44E2E2EDB",
-          default:
-            "Your <rt.absorb>Hammer Storm</> now spins 3 times per use for the same <rt.mana>Fury</> cost, but each consecutive spin deals <rt.warning>35% more damage</>.",
-        },
-        thumbnail: "ink_T_Ink_Hammerstorm",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "7B19284F4857B452C35A92A2E7D9E729",
-          default: "Thunderstruck",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "280663A343A2615B1AFB0DA0B94F78BB",
-          default:
-            "Your <rt.absorb>Chain Lightning</> bounces <rt.warning>2</> additional times.",
-        },
-        thumbnail: "electromancer_Electromancer1",
-      },
-      {
-        id: "Talent4",
-        name: { key: "042D1432460604EF9FB759A7F3A5E4FC", default: "Pneuma" },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "1F659DF546B2CA1B71A7EBAF2A5093C7",
-          default:
-            "While <rt.absorb>Thunder Call</> is active you take <rt.bold>10%</> reduced damage and you passively restore health equal to <rt.heal>5% of any damage you deal</> for the duration.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Energy_18",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "80E892D0449360AC688865913C722311",
-          default: "Far Beyond Driven",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "2257DF2A4F0871081B2BF180AD5CD127",
-          default:
-            "Each time you use <rt.absorb>Heavy Strike</> you gain 1 stack of <rt.effect>Far Beyond Driven</> for 20 seconds, increasing your Spirit by <rt.warning>+2%</>.\r\n\r\n<rt.effect>Far Beyond Driven</> stacks up to 5 times.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Energy_13",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "C69CC9D5465CC8FBA6F38C8772F3A008",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "737CB90C4201EB146F1754BC7B0172DA",
-          default: "You take 10% reduced Magic damage.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent5",
-        name: {
-          key: "F6B55C9E4900C82A42F8258F7FC085A8",
-          default: "Mouth for War",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "C6946FDC46205D7CEADF36BEB3404397",
-          default:
-            "When your <rt.absorb>Leap Smash</> ability deals damage, you are granted 1 charge of <rt.absorb>Focused Wrath</>.",
-        },
-        thumbnail: "ink_T_Ink_FocusedWrath",
-      },
-      {
-        id: "Talent9",
-        name: { key: "387DF58445A5443C0772B5AE23838EF7", default: "Schism" },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "EAB742B145274F2524AA97BDFB4309F0",
-          default:
-            "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
-      },
-      {
-        id: "Talent1",
-        name: {
-          key: "8129188741F53DDAB95E8C8ED8DE5F89",
-          default: "Square Hammer",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "E039BA1C4D9B80B2D6B686B896A5425A",
-          default:
-            "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
-        },
-        thumbnail: "ink_T_Ink_TimerAbility",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "1F7DB44C4210EF22D9A5ECBBC61641A6",
-          default: "Spit It Out",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "B85C08D94DCD61133A17D39F7FC63AA2",
-          default: "Your Critical Strike Power is increased by 10%.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "4ADF4F24459D922719E280AD834B5C81",
-          default: "Spirited Fortitude",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "449BEA7646608FB6CB590B88DBB7684E",
-          default:
-            "You take 10% less damage from <bold>Area of Effect</> attacks.",
-        },
-        thumbnail: "barbarian_Barbarian3",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "3D806F5640B6C3C98CF1F6B793DD94AE",
-          default: "Crack the Sky",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "0D351A0C45AA82187006AEB872DBEE01",
-          default:
-            "Your <bold>Lightning damage</> has <rt.warning>+20%</> increased critical strike chance.",
-        },
-        thumbnail: "electromancer_Electromancer18",
-      },
-    ],
-    abilities: [
-      "GA_Ink_MeleeInterrupt_C",
-      "GA_Ink_MeleeAutoAttack_C",
-      "GA_Ink_MoveToLocationAoeDamage_C",
-      "GA_Ink_HeavySingleTargetAttack_C",
-      "GA_Ink_AoeAttack_C",
-      "GA_Ink_AutoAttackBuff_C",
-      "GA_Ink_AutoAttackBuff_Attack_C",
-      "GA_Ink_SecondChanceSingleTargetAttack_C",
-      "GA_Ink_CleaveAttack_C",
-      "GA_Ink_ChargedBuff_C",
-      "GA_Ink_BouncyProjectile_C",
-      "GA_Ink_EnhancedChargedBuff",
-      "GA_Ink_LowHealthSingleTargetResourceDamage_C",
-      "GA_Ink_AoeFear_C",
-      "GA_Ink_CostReductionBuff_C",
-      "GA_Ink_SelfDefenceBuff_C",
-      "GA_Ink_Taunt_C",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 18113,
-      stamina: 1000,
-      strength: 1000,
-      agility: 0,
-      intellect: 0,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      life_steal: 0,
-      haste: 1,
-      dodge_chance: 0.05,
-      parry_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      max_mana: 0,
-      mana: 0,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0,
-      mana_regen_tick_time: 0,
-      damage_threat_multiplier: 1,
-      heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 43.567,
-      resources: 0,
-      max_resources: 100,
-      resources_second: 0,
-      max_resources_second: 100,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0,
-      out_of_combat_mana_regen_tick_time: 0,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.08,
-      spirit_generation_heal: 0.08,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
-    id: "Rime",
-    class_color: { R: 30, G: 163, B: 238, A: 255, hex: "#1EA3EE" },
-    thumbnail: "hero_portrait_rime_default",
-    name: { key: "3825535A4AE809A565D55684CD35A14B", default: "Rime" },
-    title: {
-      key: "738D46D649E714DCBCA2439781F52FA9",
-      default: "The Harbinger of Winter",
-    },
-    description: {
-      key: "4746B3AE4F74321F890DA28560AAE86C",
-      default:
-        "Channelling the forces of spirit and ice, Rime conjures powerful spells to decimate her foes.\r\n\r\nRime is a Spellcasting Damage Dealer with Builder/Spender Mechanics. She excels at focusing down the biggest threat from a distance.\r\n\r\nMany of Rime’s abilities fill an Anima Bar to deal spikes of damage and generate Winter Orbs.\r\n\r\nShe uses Winter Orbs to cast dangerous spells.",
-    },
-    biography: {
-      key: "AEB262EE417EF0F418BE6B8ADB8892C0",
-      default:
-        "The last of her tribe, Rime lived in solitude until the rise of new evils forced her from her hermitage.\r\n\r\nThe Harbinger enacts the will of the patron spirit of winter. Rime's power is a cursed gift she uses to cleanse corruption and bring quiet peace to those already fated to die.",
-    },
-    difficulty: 2,
-    talents: [
-      {
-        id: "Talent4",
-        name: {
-          key: "949BE0244F066E3C248BA786ED4B3AD2",
-          default: "Chilling Finesse",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "E12ED2E248BBF85D112668B9F00453C9",
-          default:
-            "Each tick of <rt.absorb>Freezing Torrent</> reduces the cooldown of <rt.absorb>Bursting Ice</> by 0.3 seconds.\r\n\r\nEach time you cast <rt.absorb>Cold Snap</> the cooldown of <rt.absorb>Freezing Torrent</> is reduced by 1.5 seconds.",
-        },
-        thumbnail: "cryomancer_Cryomancer19",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "5D29775642B2E7B2690C05B4361B2F95",
-          default: "Winter's Embrace",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "FB2C049B41F5205ABB86B382BAB43140",
-          default:
-            "While <rt.absorb>Bursting Ice</> is active on an enemy you gain <rt.effect>Winter's Embrace</>, causing you to deal <rt.warning>20% more damage</>.\r\n\r\n<rt.effect>Winter's Embrace</> does not affect <rt.absorb>Bursting Ice</>.",
-        },
-        thumbnail: "cryomancer_Cryomancer8",
-      },
-      {
-        id: "Talent1",
-        name: {
-          key: "079D978D45668452728221B9C753A3B5",
-          default: "Glacial Assault",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "F50E5E8844302F7BFC5B23B828930184",
-          default:
-            "Your <rt.absorb>Cold Snap</> ability grants you 1 stack of <rt.effect>Glacial Assault</>. Once you have 4 stacks of <rt.effect>Glacial Assault</>, your next <rt.absorb>Glacial Blast</> is <bold>instant cast</>, deals <rt.warning>40% more damage</> and has <rt.mana>no cost</>.",
-        },
-        thumbnail: "rime_T_Rime_AnimaBolt",
-      },
-      {
-        id: "Talent2",
-        name: {
-          key: "2A2E26BE4920D4DFDAA81C81447FBD20",
-          default: "Burstbolter",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "DF3AF36040E93666AAA3D38FE12F81D2",
-          default:
-            "When your <rt.absorb>Frost Bolt</> deals damage to an enemy, it triggers a single pulse of <rt.absorb>Bursting Ice</> and <rt.mana>generates 2 additional Anima</>.",
-        },
-        thumbnail: "cryomancer_Cryomancer7",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "20BB66E04F660AB89ACDF29E6714F386",
-          default: "Supreme Torrent",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "07D7D6804954017AEDE6D8B92B9B2906",
-          default:
-            "Your <rt.absorb>Freezing Torrent</> duration is increased by 0.8 seconds.",
-        },
-        thumbnail: "textures_T_IceSpikes",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "8A7EE747488499807965678D5F8672AC",
-          default: "Navir's Keeper",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "4917FA2747712E9DB5335180B1006F82",
-          default:
-            "Your <rt.absorb>Flight of the Navir</> ability grants 2 charges of <rt.absorb>Cold Snap</>.",
-        },
-        thumbnail: "rime_T_Rime_BirdCD",
-      },
-      {
-        id: "Talent5",
-        name: { key: "7C9F74344E50B4652B60F0B47800A464", default: "Icy Flow" },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "52CB5310419D5D8216A8A3860E42B633",
-          default:
-            "Your <rt.absorb>Cold Snap</> grants you <rt.effect>Icy Flow</> for 8 seconds, reducing the cast time of your next <rt.absorb>Glacial Blast</> by 0.5 seconds or reducing the impact delay of your next <rt.absorb>Ice Comet</> by 0.5 seconds.\r\n\r\nBoth abilities gain <rt.warning>+25% increased critical strike chance</> when consuming a stack of <rt.effect>Icy Flow</>.\r\n\r\nYou can have up to 2 stacks of <rt.effect>Icy Flow</>.",
-        },
-        thumbnail: "tex_scifiskillsicon_Tex_b_16",
-      },
-      {
-        id: "Talent6",
-        name: { key: "881F21414098BA84D63CBCB6D5159B9F", default: "Avalanche" },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "D2C203D4474FD819643165A3DB7DDFA9",
-          default:
-            "Your <rt.absorb>Ice Comet</> has a 15% chance to strike twice, and a 7% chance to strike three times.",
-        },
-        thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "238E4F4B46108FAAA43ADAB9BD7AE6E9",
-          default: "Coalescing Frost",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "8FF29EE0441B84ECB3EB1FB050CA26C3",
-          default:
-            "Each hit of <rt.absorb>Freezing Torrent</> infuses the target with <rt.effect>Coalescing Frost</> for 3 seconds. Once it expires, the afflicted enemy releases a pulse of frost damage in an area around them, dealing <rt.warning>43% Intellect</> damage for each stack of <rt.effect>Coalescing Frost</> that was infused.\r\n\r\n<rt.absorb>Freezing Torrent</> critical strikes have a 50% chance to apply 2 stacks of <rt.effect>Coalescing Frost</>.",
-        },
-        thumbnail: "cryomancer_Cryomancer9",
-      },
-      {
-        id: "Talent7",
-        name: {
-          key: "13092F6E48254866A4FBF69480186892",
-          default: "Tundra Guard",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "441E68914191C173DCA734B6565DCA36",
-          default:
-            "Your <rt.absorb>Frost Ward</> duration is <rt.bold>increased to 8 seconds</>, and while it is active you <rt.heal>heal for 35% of all damage you deal</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_MagicRune_2",
-      },
-      {
-        id: "Talent14",
-        name: {
-          key: "9C81D50D4CB37487B8951B9B2BFE26C0",
-          default: "Greater Glacial Blast",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "02792BD9458C0842DF5E7D8865F42626",
-          default:
-            "Your <rt.absorb>Glacial Blast</> deals <rt.warning>40% more damage</> but its cast time is increased by 0.5 seconds.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneBolt",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "77186ABC4CC59117B791569AE0C2E569",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "11F131414A4F485989C9EDACD4B42DAA",
-          default: "You take <rt.bold>10% reduced magic damage</>.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "E49AE97A4D1E9B18EE95E396023CA0FD",
-          default: "Cascading Blitz",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "5773500B41B5CACE2445FCA33B9A5441",
-          default:
-            "For each <rt.mana>Anima</> you generate while your <rt.absorb>Ice Blitz</> is active, you conjure <bold>1 Frost Swallow</> to attack your target.\r\n\r\nThe duration of <rt.absorb>Ice Blitz</> is extended by 0.2 seconds each time a <rt.absorb>Frost Swallow</> hits an enemy.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "5C0161C748ADE179F451198902F0FA65",
-          default: "Frostweaver's Wrath",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "78D3F573453AD355096D669BD3563BB6",
-          default:
-            "Each time you generate <rt.mana>Winter Orbs</>, you have a 17% chance to gain  <rt.effect>Frostweaver's Wrath</> for 12 seconds, causing the next <rt.absorb>Glacial Blast</> or <rt.absorb>Ice Comet</> that deals damage to have <rt.warning>100% additional critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "textures_T_Icon_Frost_115",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "125BF59E4288D067B38CDB8F913939EE",
-          default: "Soulfrost Torrent",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "65FFC12C4B6A2FF8471202B166CB4028",
-          default:
-            "Each time you cast an ability you have a chance to gain <rt.effect>Soulfrost Torrent</> for 18 seconds, causing your next <rt.absorb>Freezing Torrent</> to have 40% increased tick rate and <rt.warning>+100% increased critical strike chance</>. (1.5 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Frost_31",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "89C4C09649046F68760C88805A92AB32",
-          default: "Biting Cold",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "593123824B19BCA092D1CE8C69885182",
-          default:
-            "The power of your <rt.warning>critical strikes is increased by 10%</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Frost_01",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "543D2C804D7AB9E1970DD78976357A90",
-          default: "Spirited Fortitude",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "11CD1A8543A02274679BC489A544777E",
-          default: "You take <rt.bold>10% reduced area of effect damage</>.",
-        },
-        thumbnail: "barbarian_Barbarian3",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "54311D9C4CE4DDAA6461D09085A16C93",
-          default: "Wisdom of the North",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "205E93184F953B269BA6C58B602E9631",
-          default:
-            "The cooldown of <rt.absorb>Ice Blitz</>, <rt.absorb>Flight of the Navir</> & <rt.absorb>Winter's Blessing</> is reduced by 0.3 seconds for each <rt.mana>Winter's Orb</> you spend.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Frost_04",
-      },
-    ],
-    abilities: [
-      "GA_Rime_FullResourcesSelfBuff",
-      "GA_Rime_InstantSingleInterrupt_C",
-      "GA_Rime_DashForward_C",
-      "GA_Rime_CastedProjectileDamageOrbSpender",
-      "GA_Rime_OnTargetPulsatingAoe",
-      "GA_Rime_SelfDefenceBuff_C",
-      "GA_Rime_CastedProjectileDamageFiller",
-      "GA_Rime_InstantSingleDamage",
-      "GA_Rime_ChanneledBeamSingleDamage",
-      "GA_Rime_CastedDebuffAoeDamage",
-      "GA_Rime_InstantConeKnockback_C",
-      "GA_Rime_Helper_AutoDamageProjectile",
-      "GA_Rime_AutoProjectileOnResourceGainBuff",
-      "GA_Rime_TargetedPeriodicProjectileAoe",
-      "GA_Rime_DamageAsAoeHealingBuff",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 16180,
-      stamina: 1000,
-      strength: 0,
-      agility: 0,
-      intellect: 1000,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      life_steal: 0,
-      haste: 1,
-      dodge_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      mana: 0,
-      max_mana: 0,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0,
-      mana_regen_tick_time: 0,
-      damage_threat_multiplier: 1,
-      heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 38.005,
-      expertise: 0,
-      resources: 0,
-      max_resources: 9,
-      resources_second: 0,
-      max_resources_second: 6,
-      resources_tertiary: 0,
-      max_resources_tertiary: 5,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0,
-      out_of_combat_mana_regen_tick_time: 0,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.08,
-      spirit_generation_heal: 0.08,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
     id: "Meiko",
     class_color: { R: 40, G: 224, B: 92, A: 255, hex: "#28E05C" },
     thumbnail: "hero_portrait_meiko_default",
@@ -3063,334 +3067,317 @@ export default [
     },
   },
   {
-    id: "Mosse",
-    class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
-    thumbnail: "hero_portrait_Mosse_01_default",
-    name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
+    id: "Rime",
+    class_color: { R: 30, G: 163, B: 238, A: 255, hex: "#1EA3EE" },
+    thumbnail: "hero_portrait_rime_default",
+    name: { key: "3825535A4AE809A565D55684CD35A14B", default: "Rime" },
     title: {
-      key: "05ED62E745B745321C6806A5B84DF699",
-      default: "The Daughter of the Forest",
+      key: "738D46D649E714DCBCA2439781F52FA9",
+      default: "The Harbinger of Winter",
     },
     description: {
-      key: "46A8A058428C2AC7BD2D1F8F98E00CD9",
+      key: "4746B3AE4F74321F890DA28560AAE86C",
       default:
-        "Sylvie is a healer who uses her innate connection to nature and its many friends to heal her allies and harm her foes.\r\n\r\nSylvie is a Healer that uses Pet Management Mechanics. She excels at sending her pets to heal her allies over time and attack her enemies.\r\n\r\nShe commands her Flutterflies and Plants to heal allies and attack enemies.\r\n\r\nHer powerful Heal over Time spells allow her to prepare for battle and endure long and sustained fights.",
+        "Channelling the forces of spirit and ice, Rime conjures powerful spells to decimate her foes.\r\n\r\nRime is a Spellcasting Damage Dealer with Builder/Spender Mechanics. She excels at focusing down the biggest threat from a distance.\r\n\r\nMany of Rime’s abilities fill an Anima Bar to deal spikes of damage and generate Winter Orbs.\r\n\r\nShe uses Winter Orbs to cast dangerous spells.",
     },
     biography: {
-      key: "08DADB074F7EED9DD6725A84AB7DA20D",
+      key: "AEB262EE417EF0F418BE6B8ADB8892C0",
       default:
-        "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
+        "The last of her tribe, Rime lived in solitude until the rise of new evils forced her from her hermitage.\r\n\r\nThe Harbinger enacts the will of the patron spirit of winter. Rime's power is a cursed gift she uses to cleanse corruption and bring quiet peace to those already fated to die.",
     },
-    difficulty: 3,
+    difficulty: 2,
     talents: [
       {
-        id: "Talent1",
+        id: "Talent4",
         name: {
-          key: "3A75326140BFA7C6290F3BA1B0398991",
-          default: "Nettle to the Petal",
+          key: "949BE0244F066E3C248BA786ED4B3AD2",
+          default: "Chilling Finesse",
         },
         unlocked_at: 0,
         row: 1,
         cost: 2,
         description: {
-          key: "2BBC59F945C6A5243533B39211A3B271",
+          key: "E12ED2E248BBF85D112668B9F00453C9",
           default:
-            "Each time you deal damage with <rt.absorb>Nettlebolt</>, your <rt.absorb>Life Petal</> triggers an additional tick of its healing.",
+            "Each tick of <rt.absorb>Freezing Torrent</> reduces the cooldown of <rt.absorb>Bursting Ice</> by 0.3 seconds.\r\n\r\nEach time you cast <rt.absorb>Cold Snap</> the cooldown of <rt.absorb>Freezing Torrent</> is reduced by 1.5 seconds.",
         },
-        thumbnail: "sylvie_T_Mosse_Lifepetal",
+        thumbnail: "cryomancer_Cryomancer19",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "5D29775642B2E7B2690C05B4361B2F95",
+          default: "Winter's Embrace",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "FB2C049B41F5205ABB86B382BAB43140",
+          default:
+            "While <rt.absorb>Bursting Ice</> is active on an enemy you gain <rt.effect>Winter's Embrace</>, causing you to deal <rt.warning>20% more damage</>.\r\n\r\n<rt.effect>Winter's Embrace</> does not affect <rt.absorb>Bursting Ice</>.",
+        },
+        thumbnail: "cryomancer_Cryomancer8",
+      },
+      {
+        id: "Talent1",
+        name: {
+          key: "079D978D45668452728221B9C753A3B5",
+          default: "Glacial Assault",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "F50E5E8844302F7BFC5B23B828930184",
+          default:
+            "Your <rt.absorb>Cold Snap</> ability grants you 1 stack of <rt.effect>Glacial Assault</>. Once you have 4 stacks of <rt.effect>Glacial Assault</>, your next <rt.absorb>Glacial Blast</> is <bold>instant cast</>, deals <rt.warning>40% more damage</> and has <rt.mana>no cost</>.",
+        },
+        thumbnail: "rime_T_Rime_AnimaBolt",
       },
       {
         id: "Talent2",
         name: {
-          key: "EFB88164466E2D34A2EE388E16793033",
-          default: "Synchronized Fluttering",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "8C2E90E545B7B7D35D66CCB72DCE2A14",
-          default:
-            "Hold down <rt.absorb>Fluttercall: Heal</> for 2 seconds to overcharge it, causing the ability to be cast on up to 4 allies within 4000 range in one cast. The mana cost is increased by 100% when cast in this way.\r\n\r\n<bold>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the overcharged version of the ability will trigger.",
-        },
-        thumbnail: "sylvie_Sylvie_AbilityIcon_03",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "3249BF6548400871C589E3BCA409C976",
-          default: "Verdant Restoration",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "1BE7FFA54B34176844B493920F64AE4E",
-          default:
-            "The initial heal of your <rt.absorb>Fluttercall: Restore Life</> has +50% increased critical strike chance.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Shadow_58",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "2C60A9454A47B9F806D9408C282A8CCD",
-          default: "Sprouting Nettles",
+          key: "2A2E26BE4920D4DFDAA81C81447FBD20",
+          default: "Burstbolter",
         },
         unlocked_at: 0,
         row: 2,
         cost: 1,
         description: {
-          key: "FCA8E9ED47BDCFC1EAC0FAB4EC7EBA42",
+          key: "DF3AF36040E93666AAA3D38FE12F81D2",
           default:
-            "Each tick of <rt.meikoability1>Flutterfly Healing</> has a chance to make your next <rt.absorb>Nettlebolt</> <rt.bold>instant cast</> and have <rt.warning>+400% critical strike chance</>.\r\n\r\n(2.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+            "When your <rt.absorb>Frost Bolt</> deals damage to an enemy, it triggers a single pulse of <rt.absorb>Bursting Ice</> and <rt.mana>generates 2 additional Anima</>.",
         },
-        thumbnail: "sylvie_Sylvie_AbilityIcon_02",
+        thumbnail: "cryomancer_Cryomancer7",
       },
       {
-        id: "Talent5",
+        id: "Talent12",
         name: {
-          key: "065769AD4EA82D9C3CF87383C9BE582C",
-          default: "Natural Knowledge",
+          key: "20BB66E04F660AB89ACDF29E6714F386",
+          default: "Supreme Torrent",
         },
         unlocked_at: 0,
         row: 2,
         cost: 1,
         description: {
-          key: "5565A2D344A18E7D5400ED89BD4C5801",
+          key: "07D7D6804954017AEDE6D8B92B9B2906",
           default:
-            "Each time your Nettlebolt deals damage, you replenish 1% mana.",
+            "Your <rt.absorb>Freezing Torrent</> duration is increased by 0.8 seconds.",
         },
-        thumbnail: "tex_skill_icons_pack_Tex_blue_9",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "BAD9E98A46A79C13E848AAAE3F8E4B07",
-          default: "Trailing Restoration",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "A6B1BA8442DA9368B91EDFA6CB556FCC",
-          default:
-            "The duration of your <rt.absorb>Fluttercall: Restore Life</> is increased by 9 seconds.",
-        },
-        thumbnail: "textures_T_ArcaneAid",
-      },
-      {
-        id: "Talent18",
-        name: { key: "23B77C43410F3C625BC77B9C86118B39", default: "Symbiosis" },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "E8087CEC4011198023BFA5BA7CDF5093",
-          default:
-            "Your <rt.absorb>Prickly Vines</> deal <rt.warning>12% more damage</> for each player that has a <rt.effect>Pink Flutterfly</>.",
-        },
-        thumbnail: "sylvie_T_Mosse_Vine",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "4D2A346D4EE8D944D9BBF3A08A51E06D",
-          default: "Will of Nature",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "4DF530204A7E808B8244D0935DBB044D",
-          default:
-            "Your healing is increased by 25% on players with <bold>30% or less health</>.\r\n",
-        },
-        thumbnail: "textures_T_Icon_Fel_07",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "8A6FDA13410372F10178D8930646AECB",
-          default: "Rowdy Rootsap",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "CC7C78D846BB2DABAA7A58A4ACCDAF7A",
-          default:
-            "Your <rt.absorb>Enfeebling Rootsap</> causes the target and all enemies within a 700 radius of the target to have 20% reduced attack speed and 50% reduced movement speed while active.",
-        },
-        thumbnail: "sylvie_T_Mosse_Rootheal",
+        thumbnail: "textures_T_IceSpikes",
       },
       {
         id: "Talent10",
         name: {
-          key: "7463AAFD4EA1ADF20A5265888783FCB6",
-          default: "Nurtured Haven",
+          key: "8A7EE747488499807965678D5F8672AC",
+          default: "Navir's Keeper",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "4917FA2747712E9DB5335180B1006F82",
+          default:
+            "Your <rt.absorb>Flight of the Navir</> ability grants 2 charges of <rt.absorb>Cold Snap</>.",
+        },
+        thumbnail: "rime_T_Rime_BirdCD",
+      },
+      {
+        id: "Talent5",
+        name: { key: "7C9F74344E50B4652B60F0B47800A464", default: "Icy Flow" },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "52CB5310419D5D8216A8A3860E42B633",
+          default:
+            "Your <rt.absorb>Cold Snap</> grants you <rt.effect>Icy Flow</> for 8 seconds, reducing the cast time of your next <rt.absorb>Glacial Blast</> by 0.5 seconds or reducing the impact delay of your next <rt.absorb>Ice Comet</> by 0.5 seconds.\r\n\r\nBoth abilities gain <rt.warning>+25% increased critical strike chance</> when consuming a stack of <rt.effect>Icy Flow</>.\r\n\r\nYou can have up to 2 stacks of <rt.effect>Icy Flow</>.",
+        },
+        thumbnail: "tex_scifiskillsicon_Tex_b_16",
+      },
+      {
+        id: "Talent6",
+        name: { key: "881F21414098BA84D63CBCB6D5159B9F", default: "Avalanche" },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "D2C203D4474FD819643165A3DB7DDFA9",
+          default:
+            "Your <rt.absorb>Ice Comet</> has a 15% chance to strike twice, and a 7% chance to strike three times.",
+        },
+        thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "238E4F4B46108FAAA43ADAB9BD7AE6E9",
+          default: "Coalescing Frost",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "8FF29EE0441B84ECB3EB1FB050CA26C3",
+          default:
+            "Each hit of <rt.absorb>Freezing Torrent</> infuses the target with <rt.effect>Coalescing Frost</> for 3 seconds. Once it expires, the afflicted enemy releases a pulse of frost damage in an area around them, dealing <rt.warning>43% Intellect</> damage for each stack of <rt.effect>Coalescing Frost</> that was infused.\r\n\r\n<rt.absorb>Freezing Torrent</> critical strikes have a 50% chance to apply 2 stacks of <rt.effect>Coalescing Frost</>.",
+        },
+        thumbnail: "cryomancer_Cryomancer9",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "13092F6E48254866A4FBF69480186892",
+          default: "Tundra Guard",
         },
         unlocked_at: 0,
         row: 4,
         cost: 1,
         description: {
-          key: "40968DBD426F60FD404E51A224B78980",
+          key: "441E68914191C173DCA734B6565DCA36",
           default:
-            "The cooldown of your <rt.absorb>Safe Haven</> is reduced each time one of your plants wither.\r\n\r\n<rt.absorb>Prickly Vine</> - 1 second\r\n<rt.absorb>Life Petal</> - 2 seconds\r\n<rt.absorb>Heart Bloom</> - 3 seconds",
+            "Your <rt.absorb>Frost Ward</> duration is <rt.bold>increased to 8 seconds</>, and while it is active you <rt.heal>heal for 35% of all damage you deal</>.",
         },
-        thumbnail: "sylvie_T_Mosse_LinkCD",
+        thumbnail: "textures_T_Nhance_RPG_Icons_MagicRune_2",
       },
       {
-        id: "Talent11",
+        id: "Talent14",
         name: {
-          key: "5C172D0E449591E02B05898263F37FA6",
+          key: "9C81D50D4CB37487B8951B9B2BFE26C0",
+          default: "Greater Glacial Blast",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "02792BD9458C0842DF5E7D8865F42626",
+          default:
+            "Your <rt.absorb>Glacial Blast</> deals <rt.warning>40% more damage</> but its cast time is increased by 0.5 seconds.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneBolt",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "77186ABC4CC59117B791569AE0C2E569",
           default: "Magic Ward",
         },
         unlocked_at: 0,
         row: 4,
         cost: 1,
         description: {
-          key: "2592EF3C4EA009BAAC1B969CA0275794",
-          default: "You take <rt.bold>10% less magic damage</>.",
+          key: "11F131414A4F485989C9EDACD4B42DAA",
+          default: "You take <rt.bold>10% reduced magic damage</>.",
         },
         thumbnail: "textures_T_Arcane_Scroll",
       },
       {
+        id: "Talent17",
+        name: {
+          key: "E49AE97A4D1E9B18EE95E396023CA0FD",
+          default: "Cascading Blitz",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "5773500B41B5CACE2445FCA33B9A5441",
+          default:
+            "For each <rt.mana>Anima</> you generate while your <rt.absorb>Ice Blitz</> is active, you conjure <bold>1 Frost Swallow</> to attack your target.\r\n\r\nThe duration of <rt.absorb>Ice Blitz</> is extended by 0.2 seconds each time a <rt.absorb>Frost Swallow</> hits an enemy.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "5C0161C748ADE179F451198902F0FA65",
+          default: "Frostweaver's Wrath",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "78D3F573453AD355096D669BD3563BB6",
+          default:
+            "Each time you generate <rt.mana>Winter Orbs</>, you have a 17% chance to gain  <rt.effect>Frostweaver's Wrath</> for 12 seconds, causing the next <rt.absorb>Glacial Blast</> or <rt.absorb>Ice Comet</> that deals damage to have <rt.warning>100% additional critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "textures_T_Icon_Frost_115",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "125BF59E4288D067B38CDB8F913939EE",
+          default: "Soulfrost Torrent",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "65FFC12C4B6A2FF8471202B166CB4028",
+          default:
+            "Each time you cast an ability you have a chance to gain <rt.effect>Soulfrost Torrent</> for 18 seconds, causing your next <rt.absorb>Freezing Torrent</> to have 40% increased tick rate and <rt.warning>+100% increased critical strike chance</>. (1.5 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Frost_31",
+      },
+      {
         id: "Talent16",
         name: {
-          key: "48A5848F43DB11543AF94B8B2726D0EE",
-          default: "Bluey's Gambit",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "EF9A18864B3AEDE66C5626B0CB4A484D",
-          default:
-            "While your <bold>Blue Flutterfly</> is following you, you take 5% reduced damage.\r\n\r\nWhile your <bold>Blue Flutterfly</> is following another player, they take 5% reduced damage.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Elements_32",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "1ED4858E45F8BA172C288CB6263F1A62",
-          default: "Natural Protector",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "C5CA6B9E43AC73F6FD3DBFBF9FCCA165",
-          default:
-            "Your <rt.absorb>Ironleaf Ward</> and <rt.absorb>Safe Haven</> abilities shield players for 15 seconds, absorbing up to <rt.heal>4263% intellect</> damage.",
-        },
-        thumbnail: "druid_Druid17",
-      },
-      {
-        id: "Talent14",
-        name: {
-          key: "96E3640C456437149CD081999AEEF28E",
-          default: "Flutterswift",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "53DF8E464CF32486EF8450BFAC8173EE",
-          default:
-            "Your <rt.absorb>Fluttercall: Heal</> ticks 100% faster for the first 12 seconds each time it begins healing a player.",
-        },
-        thumbnail: "textures_T_ArcaneWhirl",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "DF99486A4609DD215A5505B5B1528B90",
-          default: "Flower Power",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "E4E95D924704DF7E01CC0C849C8A7725",
-          default:
-            "Your <rt.absorb>Heart Bloom</> has 2 charges but only accumulates 8% of all <rt.meikoability1>Flutterfly Healing</>.\r\n\r\n<rt.absorb>Heart Bloom</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
-        },
-        thumbnail: "sylvie_T_Mosse_Bigheal",
-      },
-      {
-        id: "Talent7",
-        name: {
-          key: "069A560441E7058DFF18A1A804FE490B",
-          default: "Elusive Wildling",
+          key: "89C4C09649046F68760C88805A92AB32",
+          default: "Biting Cold",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "C7CA0E0746EDD1EE6D7AEBA7233E2885",
+          key: "593123824B19BCA092D1CE8C69885182",
           default:
-            "You take <rt.bold>20% reduced damage</> while <rt.absorb>Hidden Trail</> is active.",
+            "The power of your <rt.warning>critical strikes is increased by 10%</>.",
         },
-        thumbnail: "sylvie_T_Mosse_Hide",
+        thumbnail: "textures_T_Nhance_RPG_Frost_01",
       },
       {
-        id: "Talent12",
+        id: "Talent13",
         name: {
-          key: "2DC8302C4E61C3F357D06D892053DFD6",
+          key: "543D2C804D7AB9E1970DD78976357A90",
           default: "Spirited Fortitude",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "5C29F7F7472F394E4E32138404381645",
-          default: "You take <rt.bold>10% less Area of effect damage</>.",
+          key: "11CD1A8543A02274679BC489A544777E",
+          default: "You take <rt.bold>10% reduced area of effect damage</>.",
         },
         thumbnail: "barbarian_Barbarian3",
       },
       {
-        id: "Talent17",
+        id: "Talent8",
         name: {
-          key: "B218768B47A062019532709E1956C305",
-          default: "Bloomin' Boomshrooms",
+          key: "54311D9C4CE4DDAA6461D09085A16C93",
+          default: "Wisdom of the North",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "B6B6BFD6471169D0F439FCA01321066D",
+          key: "205E93184F953B269BA6C58B602E9631",
           default:
-            "Your <rt.absorb>Shroomsplosion</> ability can now target allies, sending up to 5 <bold>Boomshrooms</> to detonate on them, instantly healing them for <rt.heal>308% Intellect</> each.\r\n\r\nWhen targeting allies in this way, the <bold>Boomshroom</> still deals its normal damage to nearby enemies.",
+            "The cooldown of <rt.absorb>Ice Blitz</>, <rt.absorb>Flight of the Navir</> & <rt.absorb>Winter's Blessing</> is reduced by 0.3 seconds for each <rt.mana>Winter's Orb</> you spend.",
         },
-        thumbnail: "sylvie_T_Mosse_Boomshroom",
+        thumbnail: "textures_T_Nhance_RPG_Frost_04",
       },
     ],
     abilities: [
-      "GA_Mosse_DurationalAoeHealPlacement_C",
-      "GA_Mosse_CastedSingleTargetHeal_C",
-      "GA_Mosse_SingleTargetDispel_C",
-      "GA_Mosse_CastedSingleTargetProjectile_C",
-      "GA_Mosse_SingleTargetDot_C",
-      "GA_Mosse_BlueButterfly_SendOut",
-      "GA_Mosse_BlueButterfly_Recall",
-      "GA_Mosse_PinkButterfly_Simple",
-      "GA_Mosse_PinkButterfly_Double",
-      "GA_Mosse_ProjectileTurrets",
-      "GA_Mosse_SharedHealthBuff_C",
-      "GA_Mosse_Passive_HealingMushroomPlacement_C",
-      "GA_Mosse_PlacedAoeBuff",
-      "GA_Mosse_InstantSelfEscapeBuff",
-      "GA_Mosse_HealingAoeTotem",
-      "GA_Mosse_SingleTargetCastedDamageReduction",
-      "GA_Mosse_ExplosiveMinion_C",
-      "GA_Mosse_TurretChannelHeal",
+      "GA_JS_NPCRime_AutoAttackMelee_C",
+      "GA_JS_NPCRime_CastProjectile",
+      "GA_JS_NPCRime_ChanneledDamageBeam",
+      "GA_JS_NPCRime_OnTargetPulsatingAoe",
     ],
     stats: {
       armor: 0,
       power: 0,
-      base_health: 16433,
+      base_health: 16180,
       stamina: 1000,
       strength: 0,
       agility: 0,
@@ -3398,13 +3385,12 @@ export default [
       block_chance: 0,
       crit_chance: 0.05,
       crit_multiplier: 2,
-      expertise: 0,
       life_steal: 0,
       haste: 1,
       dodge_chance: 0.05,
       incoming_damage_multiplier: 1,
-      max_mana: 1440,
-      mana: 1440,
+      mana: 0,
+      max_mana: 0,
       move_speed: 1,
       passive_move_speed: 1,
       resist: 0,
@@ -3413,24 +3399,27 @@ export default [
       weapon_damage_min: 0,
       health_regen_rate: 0,
       health_regen_tick_time: 5,
-      mana_regen_rate: 0.0005,
-      mana_regen_tick_time: 0.1,
+      mana_regen_rate: 0,
+      mana_regen_tick_time: 0,
       damage_threat_multiplier: 1,
       heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 39.978,
-      resources: 100,
-      max_resources: 100,
-      resources_tertiary: 4,
-      max_resources_tertiary: 4,
+      stamina_to_max_health_multiplier: 38.005,
+      expertise: 0,
+      resources: 0,
+      max_resources: 9,
+      resources_second: 0,
+      max_resources_second: 6,
+      resources_tertiary: 0,
+      max_resources_tertiary: 5,
       out_of_combat_health_regen_rate: 0.01,
       out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0.0036,
-      out_of_combat_mana_regen_tick_time: 0.1,
+      out_of_combat_mana_regen_rate: 0,
+      out_of_combat_mana_regen_tick_time: 0,
       spirit: 0,
       spirit_points: 0,
       max_spirit_points: 100,
-      spirit_generation_damage: 0.04,
-      spirit_generation_heal: 0.04,
+      spirit_generation_damage: 0.08,
+      spirit_generation_heal: 0.08,
       cooldown_recovery: 1,
       spirit_refund_chance_scale: 1,
     },
