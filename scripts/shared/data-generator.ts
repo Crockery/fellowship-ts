@@ -27,9 +27,19 @@ interface RegistryRaw {
   }[];
 }
 
-type GeneratedData = Record<string, unknown>[];
+type GeneratedData = Record<string, unknown> | GeneratedData[];
 
-type GeneratorFn = (generator: DataGenerator) => Promise<GeneratedData>;
+type GeneratorFn = (
+  generator: DataGenerator,
+  key: string,
+) => Promise<GeneratedData>;
+
+type Generator = {
+  type_name?: string;
+  generator: GeneratorFn;
+  dir?: string;
+  cast?: string;
+};
 
 interface Write {
   path: string;
@@ -37,7 +47,7 @@ interface Write {
 }
 
 export class DataGenerator {
-  generators: Map<string, { type_name: string; generator: GeneratorFn }>;
+  generators: Map<string, Generator>;
   registry: Registry = [];
   files: Map<string, unknown>;
 
@@ -83,10 +93,6 @@ export class DataGenerator {
     return this.files.get(key) as T | undefined;
   }
 
-  private async generate() {
-    console.log("Done!");
-  }
-
   async start() {
     if (!process.env.FMODEL_OUTPUT) {
       throw new Error("FMODEL_OUTPUT path not set in .env");
@@ -102,124 +108,71 @@ export class DataGenerator {
 
     const generated = new Map<
       string,
-      { data: Record<string, unknown>[]; type_name: string }
+      Omit<Generator, "generator"> & { data: GeneratedData }
     >();
 
     console.log("Generating and writing data.");
 
     await Promise.all(
-      Array.from(this.generators).map(
-        async ([key, { generator, type_name }]) => {
-          console.group(`Generating data for "${key}".`);
+      Array.from(this.generators).map(async ([key, { generator, ...rest }]) => {
+        console.log(`Generating data for "${key}".`);
 
-          const data = await generator(this);
+        const data = await generator(this, key);
 
-          generated.set(key, { data, type_name });
+        generated.set(key, { data, ...rest });
 
-          console.groupEnd();
+        console.log(`Finished generating data for "${key}".`);
+      }),
+    );
 
-          console.log(`Finished generating data for "${key}".`);
+    await Promise.all(
+      Array.from(generated).map(
+        async ([key, { data, type_name, dir, cast }]) => {
+          console.log(`Writing data & types for "${key}".`);
+
+          // First clean out the old type & data files.
+          const dest = path.join(dir ?? data_root, `${key}.ts`);
+
+          console.log(`Cleaning ${dest}.`);
+
+          await deleteFile(dest);
+
+          if (!type_name) {
+            await this.writeFile({
+              content: `export default ${JSON.stringify(data)}${cast ?? ""};`,
+              path: dest,
+            });
+          } else {
+            // Generate a JSON schema from the collection, then an interface string
+            // from that schema.
+            const schema = createCompoundSchema(
+              Array.isArray(data) ? data : [data],
+            );
+            const type_string = await compile(schema, type_name, {
+              additionalProperties: false,
+            });
+
+            console.log(`Writing ${key} data & types to ${dest}.`);
+
+            await this.writeFile({
+              content: `${type_string}\n\nexport default ${JSON.stringify(data)}${cast ?? ""};`,
+              path: dest,
+            });
+          }
         },
       ),
     );
 
-    await Promise.all(
-      Array.from(generated).map(async ([key, { data, type_name }]) => {
-        console.group(`Writing data & types for "${key}".`);
-
-        // First clean out the old type & data files.
-        const dest = path.join(data_root, `${key}.ts`);
-
-        console.log(`Cleaning ${dest}.`);
-
-        await deleteFile(dest);
-
-        // Generate a JSON schema from the collection, then an interface string
-        // from that schema.
-        const schema = createCompoundSchema(data);
-        const type_string = await compile(schema, type_name, {
-          additionalProperties: false,
-        });
-
-        console.log(`Writing ${key} data & types to ${dest}.`);
-
-        await this.writeFile({
-          content: `${type_string}\n\nexport default ${JSON.stringify(data)}`,
-          path: dest,
-        });
-
-        console.groupEnd();
-      }),
-    );
-
-    // console.group(`Running ${this.handlers.size} handlers to generate writes.`);
-    // await Promise.all(
-    //   [...this.handlers.entries()].map(async (entry) => {
-    //     console.log(`Running ${entry[0]}`);
-    //     await entry[1](this);
-    //     console.log(`${entry[0]} finished.`);
-    //   }),
-    // );
-    // console.groupEnd();
-    // console.log("Handlers finished.");
-    // console.log(`${this.cleans.length} directories to clean.`);
-    // console.group("Files to write:");
-    // console.log(`${this.writes.length} writes pending.`);
-    // console.log(`${this.typings.count} typings pending.`);
-    // console.log(`${this.constants.count} constants pending.`);
-    // console.groupEnd();
-
-    // console.log("Cleaning directories.");
-    // await Promise.all(
-    //   this.cleans.map(async (path) => {
-    //     return clearDirectory(path);
-    //   }),
-    // );
-
-    // console.log("Writing writes.");
-    // const write_chunks = chunk(this.writes, 100);
-
-    // for await (const chunk of write_chunks) {
-    //   await Promise.all(
-    //     chunk.map(async (to_write) => {
-    //       return this.writeFile(to_write);
-    //     }),
-    //   );
-    // }
-    // // console.log("Writing static files.");
-    // // await Promise.all([
-    // //   this.writeFile(this.getStaticWrite(this.typings)),
-    // //   this.writeFile(this.getStaticWrite(this.constants)),
-    // // ]);
-
-    // await this.generate();
-
-    // console.log("Formatting files.");
-
     console.log("Formatting files.");
 
-    await execSync("npm run format");
+    execSync("npm run format");
 
     console.log("Done!");
   }
 
-  // addClean(path: string) {
-  //   this.cleans.push(path);
-  // }
-
-  // addWrite(write: Write) {
-  //   this.writes.push(write);
-  // }
-
-  // addHandler(key: string, handler: HandlerFn) {
-  //   if (!this.handlers.has(key)) {
-  //     this.handlers.set(key, handler);
-  //   }
-  // }
-
-  addGenerator(key: string, type_name: string, generator: GeneratorFn) {
+  addGenerator({ key, ...genetator }: Generator & { key: string }) {
     if (!this.generators.has(key)) {
-      this.generators.set(key, { generator, type_name });
+      this.generators.set(key, genetator);
     }
   }
 }

@@ -1,4 +1,4 @@
-import { FSBlueprint } from "../../../shared";
+import { FSBlueprint } from "../../shared";
 
 export type CharacterAttributeRow = Record<
   string,

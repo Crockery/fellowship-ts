@@ -1,60 +1,105 @@
-import type { Hero, Npc, NpcId, HeroId } from "./types";
-import * as AllHeroData from "./data/heroes";
-import * as AllNpcData from "./data/npcs";
-import { HeroIds, NpcIds } from "./constants";
-
 import ABILITY_DATA, { type Ability } from "./data/abilities";
+import LOCALES from "./data/localization/locales";
+
+import DE_LOC from "./data/localization/de";
+import EN_LOC from "./data/localization/en";
+import ES_LOC from "./data/localization/es";
+import FR_LOC from "./data/localization/fr";
+import IT_LOC from "./data/localization/it";
+import JA_LOC from "./data/localization/ja";
+import KO_LOC from "./data/localization/ko";
+import PT_LOC from "./data/localization/pt-BR";
+import RU_LOC from "./data/localization/ru";
+import ZH_CN_LOC from "./data/localization/zh-CN";
+import ZH_HANT_LOC from "./data/localization/zh-Hant";
+
+type LocaleKey = (typeof LOCALES)["keys"][number];
 
 interface Args {
-  should_throw?: boolean;
+  locale?: LocaleKey;
 }
 
 export class FellowshipTs {
-  private heroes_map: Map<HeroId, Hero>;
-  private npc_map: Map<NpcId, Npc>;
+  // Ability to ability id map.
   private ability_map: Map<string, Ability>;
 
-  should_throw: boolean;
+  locale: LocaleKey;
 
-  heroes: Hero[];
-  npcs: Npc[];
-  constructor({ should_throw }: Args) {
-    this.should_throw = !!should_throw;
+  constructor({ locale }: Args) {
+    this.locale = locale ?? "en";
 
-    this.heroes_map = new Map();
-    this.npc_map = new Map();
     this.ability_map = new Map();
 
     ABILITY_DATA.forEach((ability) => {
       this.ability_map.set(ability.id, ability);
     });
-
-    HeroIds.forEach((hero_id) => {
-      this.heroes_map.set(hero_id, AllHeroData[hero_id]);
-    });
-
-    this.heroes = Array.from(this.heroes_map.values());
-
-    NpcIds.forEach((npc_id) => {
-      this.npc_map.set(npc_id, AllNpcData[npc_id]);
-    });
-
-    this.npcs = Array.from(this.npc_map.values());
   }
 
+  // ABILITIES
   getAbility(id: string) {
     return this.ability_map.get(id);
   }
-
   getAbilities(filter: (ability: Ability) => boolean) {
     return ABILITY_DATA.filter(filter);
   }
 
-  getHero(id: HeroId) {
-    return this.heroes_map.get(id);
+  // LOCALES
+  translate(key: string) {
+    let translation = key;
+    switch (this.locale) {
+      case "de": {
+        translation = DE_LOC[key];
+        break;
+      }
+      case "en": {
+        translation = EN_LOC[key];
+        break;
+      }
+      case "es": {
+        translation = ES_LOC[key];
+        break;
+      }
+      case "fr": {
+        translation = FR_LOC[key];
+        break;
+      }
+      case "it": {
+        translation = IT_LOC[key];
+        break;
+      }
+      case "ja": {
+        translation = JA_LOC[key];
+        break;
+      }
+      case "ko": {
+        translation = KO_LOC[key];
+        break;
+      }
+      case "pt-BR": {
+        translation = PT_LOC[key];
+        break;
+      }
+      case "ru": {
+        translation = RU_LOC[key];
+        break;
+      }
+      case "zh-CN": {
+        translation = ZH_CN_LOC[key];
+        break;
+      }
+      case "zh-Hant": {
+        translation = ZH_HANT_LOC[key];
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+
+    return translation;
   }
 
-  getNpc(id: NpcId) {
-    return this.npc_map.get(id);
+  changeLocale(new_locale: LocaleKey) {
+    this.locale = new_locale;
   }
 }

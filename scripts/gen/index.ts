@@ -1,9 +1,11 @@
 import { loadEnvFile } from "node:process";
 import { DataGenerator } from "../shared";
-
+import fs from "fs-extra";
 // import { genCharacters } from "./gen-characters";
-// import { genLang } from "./gen-lang";
+import { genLangKeys, addLocaleGenerators } from "./gen-lang";
 import { genAbilities } from "./gen-abilities";
+import { genHeroes } from "./gen-heroes";
+import { CharacterAttributeBp } from "./common";
 // import { genItems } from "./gen-items";
 
 try {
@@ -14,9 +16,39 @@ try {
 
 const generator = new DataGenerator();
 
-// generator.addHandler("characters", genCharacters);
-generator.addGenerator("abilities", "Ability", genAbilities);
-// generator.addHandler("items", genItems);
-// generator.addHandler("localization", genLang);
+const gen = async () => {
+  // Add the attributes data table to the generator.
+  // Used by genHeroes and genNpcs
+  await generator.addFile("attributes", async () => {
+    return (await fs.readJSON(
+      `${process.env.FMODEL_OUTPUT}/Content/Abilities/DataTables/CT_CharacterBaseAttributes.json`,
+    )) as CharacterAttributeBp;
+  });
 
-generator.start();
+  generator.addGenerator({
+    key: "abilities",
+    generator: genAbilities,
+    type_name: "Ability",
+    cast: "as const",
+  });
+
+  generator.addGenerator({
+    key: "locales",
+    generator: genLangKeys,
+    dir: "./src/data/localization",
+    cast: "as const",
+  });
+
+  generator.addGenerator({
+    key: "heroes",
+    type_name: "Hero",
+    generator: genHeroes,
+    cast: "as const",
+  });
+
+  await addLocaleGenerators(generator);
+
+  generator.start();
+};
+
+gen();

@@ -2,52 +2,39 @@ import fs from "fs-extra";
 
 import { DataGenerator } from "../../shared";
 
-const copyLocaleJson = async (
-  key: string,
-  root: string,
-  dest: string,
-  generator: DataGenerator,
-) => {
-  const base_json = await fs.readJson(`${root}/${key}/Game.json`);
-
-  if (base_json && base_json[""]) {
-    const actual_json = base_json[""];
-
-    generator.addWrite({
-      path: `${dest}/${key}/${key}.json`,
-      content: JSON.stringify(actual_json, null, 2),
-    });
-  }
-};
-
-export const genLang = async (generator: DataGenerator) => {
+const getLocaleKeys = async () => {
   const root = `${process.env.FMODEL_OUTPUT}/Content/Localization/Game`;
-
-  const dest = "./src/localization";
-
-  generator.addClean(`${dest}/locales`);
-
-  const rootJson = await fs.readJson(`${root}/Game.json`);
-
+  const json = await fs.readJson(`${root}/Game.json`);
   let keys: string[] = [];
 
-  if (rootJson && rootJson["CompiledCultures"]) {
-    keys = rootJson["CompiledCultures"];
+  if (json && json["CompiledCultures"]) {
+    keys = json["CompiledCultures"];
   }
 
-  if (keys.length) {
-    keys = keys.sort((a, b) => a.localeCompare(b));
+  return keys;
+};
 
-    await Promise.all(
-      keys.map((key) =>
-        copyLocaleJson(key, root, `${dest}/locales`, generator),
-      ),
-    );
+export const addLocaleGenerators = async (generator: DataGenerator) => {
+  const keys = await getLocaleKeys();
 
-    generator.addStaticFileContent({
-      file: "typings",
-      type: "body",
-      content: `export const LangKeys = [${keys.map((key) => `"${key}"`)}];`,
+  keys.forEach((key) => {
+    generator.addGenerator({
+      key,
+      generator: async (_, key) => {
+        const base_json = await fs.readJson(
+          `${process.env.FMODEL_OUTPUT}/Content/Localization/Game/${key}/Game.json`,
+        );
+
+        return base_json && base_json[""] ? base_json[""] : {};
+      },
+      dir: "./src/data/localization",
+      cast: "as Record<string, string>",
     });
-  }
+  });
+};
+
+export const genLangKeys = async () => {
+  const keys = await getLocaleKeys();
+
+  return { keys };
 };
