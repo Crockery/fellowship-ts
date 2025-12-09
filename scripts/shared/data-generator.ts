@@ -148,9 +148,13 @@ export class DataGenerator {
             const schema = createCompoundSchema(
               Array.isArray(data) ? data : [data],
             );
-            const type_string = await compile(schema, type_name, {
-              additionalProperties: false,
-            });
+            const type_string = await compile(
+              schema,
+              `${type_name}_DO_NOT_IMPORT`,
+              {
+                additionalProperties: false,
+              },
+            );
 
             console.log(`Writing ${key} data & types to ${dest}.`);
 

@@ -5,8 +5,8 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Ability {
-  name: {
+export interface Ability_DO_NOT_IMPORT {
+  name?: {
     key: string;
     default: string;
   };
@@ -244,6 +244,216 @@ export default [
         "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>50%</> of the damage dealt is also dealt to enemies near your target.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
     },
     thumbnail: "ink_T_Ink_Facebreaker",
+  },
+  {
+    name: { key: "4D0A401A4AA6590167AC07879C5BBCF6", default: "Shoot" },
+    id: "GA_Bowguy_RangedAutoAttack_C",
+    thumbnail: "bowguy_Bowguy_FocusShot",
+  },
+  {
+    name: { key: "EFF635B843323D33F552CBA12586415A", default: "Roll" },
+    id: "GA_Bowguy_ChargedMoveWithDirection_C",
+    description: {
+      key: "24B18439428AED97B25A149635A60D1F",
+      default:
+        "Swiftly <rt.absorb>Roll</> in the direction you are moving. <rt.absorb>Roll</> does not cancel casting or channeling abilities.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting</>",
+    },
+    thumbnail: "bowguy_Bowguy_Abilityicon_Roll",
+  },
+  {
+    name: {
+      key: "4585298646FE832CED3D86B53F93E294",
+      default: "Celestial Shot",
+    },
+    id: "GA_Bowguy_SingleProjectileDamage_C",
+    description: {
+      key: "16BD7BC34C61F0BDB23743B32C7AACD5",
+      default:
+        "Fire a magical arrow at target enemy , dealing <rt.warning>{CelestShot}</> magic damage to it.",
+    },
+    thumbnail: "bowguy_Bowguy_Shot",
+  },
+  {
+    name: { key: "AA4C1C5B41C844633C94B39A42389E02", default: "Multishot" },
+    id: "GA_Bowguy_AoeProjectileDamage_C",
+    description: {
+      key: "820DBE474162689D0ADBBD9B78132CA7",
+      default:
+        "Fire multiple arrows at your enemies, each dealing <rt.warning>{Multishot}</> physical damage to them.\r\n\r\nWhen your <rt.absorb>Highwind Arrow</> ricochets to at least 3 enemies, you gain 1 charge of <rt.absorb>Multishot</>.",
+    },
+    thumbnail: "bowguy_Bowguy_Multishot",
+  },
+  {
+    name: {
+      key: "512213034440714EFABF10A6445C565C",
+      default: "Deadly Shot (old)",
+    },
+    id: "GA_Bowguy_CastedBouncyProjectileDamage_C",
+    description: {
+      key: "DDE648F84AAF8832EDDCEFAEF8EF0233",
+      default:
+        'Deals 275% Agility damage to target.\r\n\r\nDeadly Shot riccochets to all targets with "Marked".\r\n\r\nDeals 100% increased damage against targets that have "Exposed Weakness".\r\n\r\nRiccochets include damage bonus if the initial target had "Exposed Weakness".',
+    },
+    thumbnail: "tex_spellbookpage05_Tex_SpellBook05_98",
+  },
+  {
+    name: {
+      key: "2753641243415A0882FC178F42D5A316",
+      default: "Highwind Arrow",
+    },
+    id: "GA_Bowguy_CastedProjectileHeavyDamage_C",
+    description: {
+      key: "1140E0A94C8F8AF5D72CCE8A1ED13209",
+      default:
+        "Fire a <rt.absorb>Highwind Arrow</>, dealing <rt.warning>{Highwind}</> physical damage to target enemy. <rt.absorb>Highwind Arrow</> ricochets to up to 2 additional enemies near your target, dealing <rt.warning>{HighwindBounceDmg}</> physical damage to them.\r\n\r\n<rt.absorb>Highwind Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+    },
+    thumbnail: "bowguy_Bowguy_Ricochet",
+  },
+  {
+    name: {
+      key: "7C88A38D472829B1162F1B80427E996C",
+      default: "Skystrider's Grace",
+    },
+    id: "GA_Bowguy_ProcHasteBuff_C",
+    description: {
+      key: "CE06E71F441F39EDED1001ADF4578DB7",
+      default:
+        "Your <rt.absorb>Haste</> is increased by +30% for 20 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting or Channeling</>",
+    },
+    thumbnail: "bowguy_Bowguy_HasteBuff",
+  },
+  {
+    name: { key: "6060A0284C352A34478CDA8C7ADB6AAC", default: "Disrupt" },
+    id: "GA_Bowguy_InstantSingleInterrupt_C",
+    description: {
+      key: "A5C4613F4597DD5382BCF8B893EC1700",
+      default:
+        "Instantly <rt.absorb>Interrupt</> target casting enemy and prevent them from casting for 4 seconds. Must interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "bowguy_Bowguy_Interrupt",
+  },
+  {
+    name: { key: "C8C38C3A449780012B2BF49CF239A2E4", default: "Focused Shot" },
+    id: "GA_Bowguy_CastedProjectileDamage_C",
+    description: {
+      key: "3092DD9947AE2DE7FA0F18942F6436A1",
+      default:
+        "Fire a well-aimed arrow at target enemy, dealing <rt.warning>{FocusedShot}</> physical damage.\r\n\r\n<rt.effect>CELESTIAL IMPETUS</>\r\nYour <rt.absorb>Focused Shot</> hits have a chance to grant you <rt.effect>Celestial Impetus</> for 15 seconds, causing your next <rt.absorb>Celestial Shot</> to apply 3 stacks of <rt.absorb>Lunarlight Mark</> to the target. You can have up to 2 charges of <rt.effect>Celestial Impetus</> at any one time. (2.0 PPM)\r\n\r\n<rt.mana>Generates 20 Focus</>\r\n\r\n<rt.mana>FOCUS</>\r\n<rt.mana>Focus</> is a resource shown on the UI under your hero as a bar of celestial energy. Many of your abilities require <rt.mana>Focus</> to use. <rt.mana>Focus</> is passively generated over time. The generation rate is affected by your haste.",
+    },
+    thumbnail: "bowguy_Bowguy_FocusShot",
+  },
+  {
+    name: {
+      key: "516B88B449DF75F1EF2248957B3D6E48",
+      default: "Heartseeker Barrage",
+    },
+    id: "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
+    description: {
+      key: "20F60B0D4FE9C69CC30E03B1B2FBF799",
+      default:
+        "Let loose a barrage of arrows in quick succession at your target, dealing <rt.warning>{HeartSeekDmg}</> physical damage <rt.bold>every</> <rt.warning>{HeartSeekPeriod}</> <rt.bold>seconds for 2 seconds while channeling</>.\r\n\r\n<rt.meikoability2>Can not be used while rolling</>",
+    },
+    thumbnail: "bowguy_Bowguy_Spray",
+  },
+  {
+    name: {
+      key: "FBD1C49245A6F5890A5C71BFB369946B",
+      default: "Grappling Arrow",
+    },
+    id: "GA_Bowguy_TargetedAoePull_C",
+    description: {
+      key: "B6371BC04B18AD0734B20B84D805CE92",
+      default:
+        "Fire a <rt.absorb>Grappling Arrow</> at the targeted area. Once the arrow lands, it grapples and <rt.meikoability1>pulls all enemies within 800 radius</> to the arrow's location and reduces their movement speed by 65% for 8 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "bowguy_Bowguy_GrappleShot",
+  },
+  {
+    name: {
+      key: "DBA2010748A87067EA6DE2B24D69ED05",
+      default: "Pathfinder's Resillience",
+    },
+    id: "GA_Bowguy_SelfDefenceBuff_C",
+    description: {
+      key: "9438B328400321CDD1D35A8A08D1277E",
+      default:
+        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
+  },
+  {
+    name: {
+      key: "1EEBCF4249AED7F5FDDC2ABAE7CF6709",
+      default: "Lunarlight Mark",
+    },
+    id: "GA_Bowguy_InstantMarkTarget_C",
+    description: {
+      key: "881C3DC64A657C37757691BD94D639CB",
+      default:
+        "Instantly apply 3 stacks of <rt.absorb>Lunarlight Mark</> that lasts for 15 seconds to target enemy and up to 11 additional enemies near your target.\r\n\r\nAbility damage you deal to enemies with <rt.absorb>Lunarlight Mark</> has a 25% chance to trigger <rt.effect>Lunarlight Salvo</>, causing a beam of celestial energy to strike them from above, dealing <rt.warning>{LunarSalvoDmg}</> magic damage. Critical strikes have a 50% chance to trigger <rt.effect>Lunarlight Salvo</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "bowguy_Bowguy_Mark",
+  },
+  {
+    name: {
+      key: "61D08CD64F4E949B23E3F4B5C3E840A8",
+      default: "Starfall Volley",
+    },
+    id: "GA_Bowguy_TargetedAoeDamage_C",
+    description: {
+      key: "5578B6CE4F1044B73A1BC2A33BEE1566",
+      default:
+        "Fire a volley of celestial arrows into the sky that pelt the area around target enemy for 8 seconds, dealing <rt.warning>{StarfallDmg}</> magic damage <rt.bold>every</> <rt.warning>{StarfallPeriod}</> <rt.bold>seconds</> to the target and any nearby enemies.\r\n\r\n<rt.absorb>Starfall Volley</> follows the target for its duration.",
+    },
+    thumbnail: "bowguy_Bowguy_Rain",
+  },
+  {
+    name: {
+      key: "32246B4946C913A1028B44BF74F3AA2E",
+      default: "Lunarlight Salvo",
+    },
+    id: "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
+    description: {
+      key: "368F3BA5463CD1709A4193AEE2729649",
+      default: "Lunarlight Mark triggered.",
+    },
+    thumbnail: "bowguy_Bowguy_Mark",
+  },
+  {
+    name: {
+      key: "62107B5E4AC4A5C73E7B49B429103DE6",
+      default: "Skystrider's Supremacy",
+    },
+    id: "GA_Bowguy_SelfBuffForAoeProjectile_C",
+    description: {
+      key: "6886F6314017113739C4AA8197E59975",
+      default:
+        "For the next 4 seconds you are enraptured in celestial energy, causing your <rt.absorb>Multishot</> ability to shoot <rt.effect>Empowered Multishot</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\n<rt.effect>Empowered Multishots</> always fire at least 3 arrows regardless of how many targets are in range, costs <rt.mana>50% less Focus</>, and deals magic damage.",
+    },
+    thumbnail: "bowguy_Bowguy_Supremacy",
+  },
+  {
+    name: {
+      key: "73C39B414E035A330BB6119A521B0B39",
+      default: "Event Horizon (old)",
+    },
+    id: "GA_Bowguy_DurationalAoeDamage_C",
+    description: {
+      key: "A3BE7A3C40B8E39EF07714A6A00A5D65",
+      default:
+        "The wrath of the stars rains down on your enemies for 12 seconds, causing <rt.absorb>Lunarlight Salvo's</> to hit up to 5 enemies in combat with you every 2 seconds, each dealing <rt.warning>211% Agility</> arcane damage.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
+    },
+    thumbnail: "bowguy_Bowguy_Spirit",
+  },
+  {
+    name: { key: "4050E8344313948656D505B96B9F029F", default: "Event Horizon" },
+    id: "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
+    description: {
+      key: "CE8D2C6A450014DE5B1BE0A3B8FF0C47",
+      default:
+        "The power of the stars flow through you as you prepare to decimate your foes. For the next 20 seconds, you deal <rt.warning>20% more damage</>, gain <rt.meikoability2>Cooldown Acceleration</> equal to your Haste and all <rt.mana>Focus costs are reduced by 50%</>.\r\n\r\nWhile <rt.absorb>Event Horizon</> is active, your <rt.absorb>Highwind Arrow</> reduces the cooldown of <rt.absorb>Heartseeker Barrage</> by 0.5 seconds, and every hit from your <rt.absorb>Heartseeker Barrage</> reduces the cooldown of <rt.absorb>Starfall Volley</> by 1 second.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.effect> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
+    },
+    thumbnail: "bowguy_Bowguy_Spirit",
   },
   {
     name: { key: "A286DAD245F4BAFDBFF421995A35642D", default: "Auto Attack" },
@@ -493,335 +703,6 @@ export default [
       default: "Keep target in focus.",
     },
     thumbnail: "textures_Tex_eye_b_01",
-  },
-  {
-    name: { key: "75572F44492BECF15548429127820772", default: "Rejuvenate" },
-    id: "GA_Relic_Potion_Health",
-    description: {
-      key: "85ED57804CB9AA8C4B4B06A8344BF1B6",
-      default:
-        "Instantly replenish <rt.heal>40% of your maximum health</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_HealingPotion",
-  },
-  {
-    name: { key: "D7D063DC428BCAEB8376B5B96DF41164", default: "Restore Mana" },
-    id: "GA_RelicPower_ManaPotion",
-    description: {
-      key: "72413CD44045F97AC05195AF3EBA0264",
-      default:
-        "Instantly restore <rt.mana>30% of your maximum mana</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_Mana",
-  },
-  {
-    name: {
-      key: "198921814748783EA0950ABDBE6B0BA8",
-      default: "(CUT) Elemental Empowerment",
-    },
-    id: "GA_RelicPower_DamagePotion",
-    description: {
-      key: "779760AB445B849170180BB4068C4E88",
-      default:
-        "+20 Bonus Main Stat. This is increased by 2.75 for every 15 item levels your item has.\r\n\r\nMain stats are Strength, Agility and Intellect.",
-    },
-  },
-  {
-    name: {
-      key: "7A3B0E5A4E18618370DD86ACA18766B1",
-      default: "Bloodrite Fervor",
-    },
-    id: "GA_RelicPower_PartyMoveSpeedBuff",
-    description: {
-      key: "2B7D954A4A48F9DEFA6E0785A8D294DF",
-      default:
-        "You and nearby allies gain <rt.absorb>50% increased Movement Speed</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_Drums",
-  },
-  {
-    name: { key: "D03090D7443E9034F5795AB6D98A2AF5", default: "Major Dispel" },
-    id: "GA_RelicPower_MassDispel",
-    description: {
-      key: "F359C83D4B64668F41C6B28555FBA007",
-      default:
-        "Instantly <rt.heal>Dispel all harmful magic effects</> from you and your allies in a large radius around you.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_DispelRune",
-  },
-  {
-    name: { key: "D7E33F1E4E8E7D214C8BBCA779479E29", default: "Sanctuary" },
-    id: "GA_RelicPower_PartyDamageReductionBuff",
-    description: {
-      key: "CA09101C40E8694A2C835CA09A16DB16",
-      default:
-        "Grants <rt.heal>15% Damage Reduction</> to yourself and nearby allies for 15 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_DamageReduction",
-  },
-  {
-    name: { key: "1E635A25476C20640964BB895009AAA0", default: "Revive" },
-    id: "GA_RelicPower_CastedSingleTargetRevive",
-    description: {
-      key: "3D641E7340FD478D516B85987CBF3CBF",
-      default:
-        "<rt.absorb>Revive</> target dead ally.\r\n\r\n<rt.meikoability2>Can be used in combat</>",
-    },
-    thumbnail: "relicicons_T_Relic_CombatRess",
-  },
-  {
-    name: { key: "E34FD95C4CF86FA1D86FE290369BD582", default: "Chickenize!" },
-    id: "GA_RelicPower_PolymorphTargetWithSharedCharges",
-    description: {
-      key: "CD1A1D9A47B68B483F6491A6340549C9",
-      default:
-        "Instantly turn your target into a chicken.\r\n\r\n<rt.absorb>Chickenize!</> can only be used a limited amount of times per dungeon. The charges are shared by everyone in the party.\r\n\r\n<rt.effect>Chickenized</> enemies <rt.warning>do not give Kill Score.</>\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "relicicons_T_Relic_Chicken",
-  },
-  {
-    name: {
-      key: "23A3812141EEB7F8836938AB5645E582",
-      default: "Major Invisibility",
-    },
-    id: "GA_RelicPower_PartyInvisibility",
-    description: {
-      key: "74CBE1D044F05EA2CF6BDA947B41569E",
-      default:
-        "Instantly conceal yourself all nearby allies, granting <rt.effect>Major Invisiblilty</> for 15 seconds.\r\n\r\n<rt.meikoability2>Can only be used out of combat.</>",
-    },
-    thumbnail: "relicicons_T_Relic_Orb",
-  },
-  {
-    name: {
-      key: "9B34532A450E4066A41E7981D3C18D78",
-      default: "Conjure Portal",
-    },
-    id: "GA_RelicPower_Portal",
-    description: {
-      key: "5D6395D34855DFD4AAF1BD9385DFDFEF",
-      default:
-        "Conjures two interactable <rt.absorb>Portals</> that you and your allies can use to safely travel between two points.\r\n\r\n<rt.meikoability2>Can only have 1 active portal at a time.</>",
-    },
-    thumbnail: "relicicons_T_Relic_Portal",
-  },
-  {
-    name: {
-      key: "D59301FF465FC94AF4A9319B4BFDF59C",
-      default: "Relic Teleport",
-    },
-    id: "GA_RelicPower_Portal_Interact",
-    thumbnail: "relicicons_T_Relic_Portal",
-  },
-  {
-    name: { key: "4D0A401A4AA6590167AC07879C5BBCF6", default: "Shoot" },
-    id: "GA_Bowguy_RangedAutoAttack_C",
-    thumbnail: "bowguy_Bowguy_FocusShot",
-  },
-  {
-    name: { key: "EFF635B843323D33F552CBA12586415A", default: "Roll" },
-    id: "GA_Bowguy_ChargedMoveWithDirection_C",
-    description: {
-      key: "24B18439428AED97B25A149635A60D1F",
-      default:
-        "Swiftly <rt.absorb>Roll</> in the direction you are moving. <rt.absorb>Roll</> does not cancel casting or channeling abilities.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting</>",
-    },
-    thumbnail: "bowguy_Bowguy_Abilityicon_Roll",
-  },
-  {
-    name: {
-      key: "4585298646FE832CED3D86B53F93E294",
-      default: "Celestial Shot",
-    },
-    id: "GA_Bowguy_SingleProjectileDamage_C",
-    description: {
-      key: "16BD7BC34C61F0BDB23743B32C7AACD5",
-      default:
-        "Fire a magical arrow at target enemy , dealing <rt.warning>{CelestShot}</> magic damage to it.",
-    },
-    thumbnail: "bowguy_Bowguy_Shot",
-  },
-  {
-    name: { key: "AA4C1C5B41C844633C94B39A42389E02", default: "Multishot" },
-    id: "GA_Bowguy_AoeProjectileDamage_C",
-    description: {
-      key: "820DBE474162689D0ADBBD9B78132CA7",
-      default:
-        "Fire multiple arrows at your enemies, each dealing <rt.warning>{Multishot}</> physical damage to them.\r\n\r\nWhen your <rt.absorb>Highwind Arrow</> ricochets to at least 3 enemies, you gain 1 charge of <rt.absorb>Multishot</>.",
-    },
-    thumbnail: "bowguy_Bowguy_Multishot",
-  },
-  {
-    name: {
-      key: "512213034440714EFABF10A6445C565C",
-      default: "Deadly Shot (old)",
-    },
-    id: "GA_Bowguy_CastedBouncyProjectileDamage_C",
-    description: {
-      key: "DDE648F84AAF8832EDDCEFAEF8EF0233",
-      default:
-        'Deals 275% Agility damage to target.\r\n\r\nDeadly Shot riccochets to all targets with "Marked".\r\n\r\nDeals 100% increased damage against targets that have "Exposed Weakness".\r\n\r\nRiccochets include damage bonus if the initial target had "Exposed Weakness".',
-    },
-    thumbnail: "tex_spellbookpage05_Tex_SpellBook05_98",
-  },
-  {
-    name: {
-      key: "2753641243415A0882FC178F42D5A316",
-      default: "Highwind Arrow",
-    },
-    id: "GA_Bowguy_CastedProjectileHeavyDamage_C",
-    description: {
-      key: "1140E0A94C8F8AF5D72CCE8A1ED13209",
-      default:
-        "Fire a <rt.absorb>Highwind Arrow</>, dealing <rt.warning>{Highwind}</> physical damage to target enemy. <rt.absorb>Highwind Arrow</> ricochets to up to 2 additional enemies near your target, dealing <rt.warning>{HighwindBounceDmg}</> physical damage to them.\r\n\r\n<rt.absorb>Highwind Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
-    },
-    thumbnail: "bowguy_Bowguy_Ricochet",
-  },
-  {
-    name: {
-      key: "7C88A38D472829B1162F1B80427E996C",
-      default: "Skystrider's Grace",
-    },
-    id: "GA_Bowguy_ProcHasteBuff_C",
-    description: {
-      key: "CE06E71F441F39EDED1001ADF4578DB7",
-      default:
-        "Your <rt.absorb>Haste</> is increased by +30% for 20 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting or Channeling</>",
-    },
-    thumbnail: "bowguy_Bowguy_HasteBuff",
-  },
-  {
-    name: { key: "6060A0284C352A34478CDA8C7ADB6AAC", default: "Disrupt" },
-    id: "GA_Bowguy_InstantSingleInterrupt_C",
-    description: {
-      key: "A5C4613F4597DD5382BCF8B893EC1700",
-      default:
-        "Instantly <rt.absorb>Interrupt</> target casting enemy and prevent them from casting for 4 seconds. Must interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "bowguy_Bowguy_Interrupt",
-  },
-  {
-    name: { key: "C8C38C3A449780012B2BF49CF239A2E4", default: "Focused Shot" },
-    id: "GA_Bowguy_CastedProjectileDamage_C",
-    description: {
-      key: "3092DD9947AE2DE7FA0F18942F6436A1",
-      default:
-        "Fire a well-aimed arrow at target enemy, dealing <rt.warning>{FocusedShot}</> physical damage.\r\n\r\n<rt.effect>CELESTIAL IMPETUS</>\r\nYour <rt.absorb>Focused Shot</> hits have a chance to grant you <rt.effect>Celestial Impetus</> for 15 seconds, causing your next <rt.absorb>Celestial Shot</> to apply 3 stacks of <rt.absorb>Lunarlight Mark</> to the target. You can have up to 2 charges of <rt.effect>Celestial Impetus</> at any one time. (2.0 PPM)\r\n\r\n<rt.mana>Generates 20 Focus</>\r\n\r\n<rt.mana>FOCUS</>\r\n<rt.mana>Focus</> is a resource shown on the UI under your hero as a bar of celestial energy. Many of your abilities require <rt.mana>Focus</> to use. <rt.mana>Focus</> is passively generated over time. The generation rate is affected by your haste.",
-    },
-    thumbnail: "bowguy_Bowguy_FocusShot",
-  },
-  {
-    name: {
-      key: "516B88B449DF75F1EF2248957B3D6E48",
-      default: "Heartseeker Barrage",
-    },
-    id: "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
-    description: {
-      key: "20F60B0D4FE9C69CC30E03B1B2FBF799",
-      default:
-        "Let loose a barrage of arrows in quick succession at your target, dealing <rt.warning>{HeartSeekDmg}</> physical damage <rt.bold>every</> <rt.warning>{HeartSeekPeriod}</> <rt.bold>seconds for 2 seconds while channeling</>.\r\n\r\n<rt.meikoability2>Can not be used while rolling</>",
-    },
-    thumbnail: "bowguy_Bowguy_Spray",
-  },
-  {
-    name: {
-      key: "FBD1C49245A6F5890A5C71BFB369946B",
-      default: "Grappling Arrow",
-    },
-    id: "GA_Bowguy_TargetedAoePull_C",
-    description: {
-      key: "B6371BC04B18AD0734B20B84D805CE92",
-      default:
-        "Fire a <rt.absorb>Grappling Arrow</> at the targeted area. Once the arrow lands, it grapples and <rt.meikoability1>pulls all enemies within 800 radius</> to the arrow's location and reduces their movement speed by 65% for 8 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "bowguy_Bowguy_GrappleShot",
-  },
-  {
-    name: {
-      key: "DBA2010748A87067EA6DE2B24D69ED05",
-      default: "Pathfinder's Resillience",
-    },
-    id: "GA_Bowguy_SelfDefenceBuff_C",
-    description: {
-      key: "9438B328400321CDD1D35A8A08D1277E",
-      default:
-        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
-  },
-  {
-    name: {
-      key: "1EEBCF4249AED7F5FDDC2ABAE7CF6709",
-      default: "Lunarlight Mark",
-    },
-    id: "GA_Bowguy_InstantMarkTarget_C",
-    description: {
-      key: "881C3DC64A657C37757691BD94D639CB",
-      default:
-        "Instantly apply 3 stacks of <rt.absorb>Lunarlight Mark</> that lasts for 15 seconds to target enemy and up to 11 additional enemies near your target.\r\n\r\nAbility damage you deal to enemies with <rt.absorb>Lunarlight Mark</> has a 25% chance to trigger <rt.effect>Lunarlight Salvo</>, causing a beam of celestial energy to strike them from above, dealing <rt.warning>{LunarSalvoDmg}</> magic damage. Critical strikes have a 50% chance to trigger <rt.effect>Lunarlight Salvo</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "bowguy_Bowguy_Mark",
-  },
-  {
-    name: {
-      key: "61D08CD64F4E949B23E3F4B5C3E840A8",
-      default: "Starfall Volley",
-    },
-    id: "GA_Bowguy_TargetedAoeDamage_C",
-    description: {
-      key: "5578B6CE4F1044B73A1BC2A33BEE1566",
-      default:
-        "Fire a volley of celestial arrows into the sky that pelt the area around target enemy for 8 seconds, dealing <rt.warning>{StarfallDmg}</> magic damage <rt.bold>every</> <rt.warning>{StarfallPeriod}</> <rt.bold>seconds</> to the target and any nearby enemies.\r\n\r\n<rt.absorb>Starfall Volley</> follows the target for its duration.",
-    },
-    thumbnail: "bowguy_Bowguy_Rain",
-  },
-  {
-    name: {
-      key: "32246B4946C913A1028B44BF74F3AA2E",
-      default: "Lunarlight Salvo",
-    },
-    id: "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
-    description: {
-      key: "368F3BA5463CD1709A4193AEE2729649",
-      default: "Lunarlight Mark triggered.",
-    },
-    thumbnail: "bowguy_Bowguy_Mark",
-  },
-  {
-    name: {
-      key: "62107B5E4AC4A5C73E7B49B429103DE6",
-      default: "Skystrider's Supremacy",
-    },
-    id: "GA_Bowguy_SelfBuffForAoeProjectile_C",
-    description: {
-      key: "6886F6314017113739C4AA8197E59975",
-      default:
-        "For the next 4 seconds you are enraptured in celestial energy, causing your <rt.absorb>Multishot</> ability to shoot <rt.effect>Empowered Multishot</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\n<rt.effect>Empowered Multishots</> always fire at least 3 arrows regardless of how many targets are in range, costs <rt.mana>50% less Focus</>, and deals magic damage.",
-    },
-    thumbnail: "bowguy_Bowguy_Supremacy",
-  },
-  {
-    name: {
-      key: "73C39B414E035A330BB6119A521B0B39",
-      default: "Event Horizon (old)",
-    },
-    id: "GA_Bowguy_DurationalAoeDamage_C",
-    description: {
-      key: "A3BE7A3C40B8E39EF07714A6A00A5D65",
-      default:
-        "The wrath of the stars rains down on your enemies for 12 seconds, causing <rt.absorb>Lunarlight Salvo's</> to hit up to 5 enemies in combat with you every 2 seconds, each dealing <rt.warning>211% Agility</> arcane damage.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "bowguy_Bowguy_Spirit",
-  },
-  {
-    name: { key: "4050E8344313948656D505B96B9F029F", default: "Event Horizon" },
-    id: "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
-    description: {
-      key: "CE8D2C6A450014DE5B1BE0A3B8FF0C47",
-      default:
-        "The power of the stars flow through you as you prepare to decimate your foes. For the next 20 seconds, you deal <rt.warning>20% more damage</>, gain <rt.meikoability2>Cooldown Acceleration</> equal to your Haste and all <rt.mana>Focus costs are reduced by 50%</>.\r\n\r\nWhile <rt.absorb>Event Horizon</> is active, your <rt.absorb>Highwind Arrow</> reduces the cooldown of <rt.absorb>Heartseeker Barrage</> by 0.5 seconds, and every hit from your <rt.absorb>Heartseeker Barrage</> reduces the cooldown of <rt.absorb>Starfall Volley</> by 1 second.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.effect> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "bowguy_Bowguy_Spirit",
   },
   {
     name: {
@@ -1216,121 +1097,123 @@ export default [
     thumbnail: "ink_T_Ink_Taunt",
   },
   {
-    name: {
-      key: "3535C7714B97DDC9EF27CEA9C044C501",
-      default: "Torment of Bael'Aurum",
-    },
-    id: "SetC_Proc_Bonus",
+    name: { key: "75572F44492BECF15548429127820772", default: "Rejuvenate" },
+    id: "GA_Relic_Potion_Health",
     description: {
-      key: "8DDD11014AB2BF786C01C5B3E0847DC8",
+      key: "85ED57804CB9AA8C4B4B06A8344BF1B6",
       default:
-        "When dipping below 20% Health, you are instantly healed for 35% of your maximum health. This can occur once every 90 seconds.",
+        "Instantly replenish <rt.heal>40% of your maximum health</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
     },
-    thumbnail: "setbonus_T_Icon_Gold_147_BetaCropped",
+    thumbnail: "relicicons_T_Relic_HealingPotion",
   },
   {
-    name: {
-      key: "754FDE2043C827ECB503FE8EBA9EFD1D",
-      default: "Sentinel's Bastion II",
-    },
-    id: "GA_GemBonus_ApplyPeriodicAbsorb_Medium",
+    name: { key: "D7D063DC428BCAEB8376B5B96DF41164", default: "Restore Mana" },
+    id: "GA_RelicPower_ManaPotion",
     description: {
-      key: "087F61524AB8AF91D1BA4DB3A3EDCAA6",
+      key: "72413CD44045F97AC05195AF3EBA0264",
       default:
-        "Every 60 seconds, you gain an absorb equal to 40% Max Health that lasts for 60 seconds.",
+        "Instantly restore <rt.mana>30% of your maximum mana</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
     },
-    thumbnail: "textures_T_Nhance_RPG_Icons_SpiritAmulet_SentinelBastion",
+    thumbnail: "relicicons_T_Relic_Mana",
   },
   {
     name: {
-      key: "0E81F6144903AC52CB25138388646D87",
-      default: "Sentinel's Bastion",
+      key: "198921814748783EA0950ABDBE6B0BA8",
+      default: "(CUT) Elemental Empowerment",
     },
-    id: "GA_GemBonus_ApplyPeriodicAbsorb_Small",
+    id: "GA_RelicPower_DamagePotion",
     description: {
-      key: "31ECED76493A8E8A420D5EBE35D4A2C7",
+      key: "779760AB445B849170180BB4068C4E88",
       default:
-        "Every 60 seconds, you gain an absorb equal to 20% Max Health that lasts for 60 seconds.",
+        "+20 Bonus Main Stat. This is increased by 2.75 for every 15 item levels your item has.\r\n\r\nMain stats are Strength, Agility and Intellect.",
     },
-    thumbnail: "textures_T_Nhance_RPG_Icons_SpiritAmulet_SentinelBastion",
   },
   {
-    name: { key: "63E7689C4938E4C40CBB01829FEDAA8D", default: "Absorb Shield" },
-    id: "GA_GemBonus_HealthPercentageAsAbsorbBonusBase",
+    name: {
+      key: "7A3B0E5A4E18618370DD86ACA18766B1",
+      default: "Bloodrite Fervor",
+    },
+    id: "GA_RelicPower_PartyMoveSpeedBuff",
     description: {
-      key: "702B96E14C2303FD61FA7C8341452E8B",
-      default: "Absorbs damage taken.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Icons_CorruptionShield_Yellow",
-  },
-  {
-    name: { key: "3A59408A4F38BC54AD46D085A0B75E7A", default: "Ruby Storm" },
-    id: "GA_Trait_GemWhirlwindProc",
-  },
-  {
-    name: {
-      key: "00F6161D42AD23131B8AA1A3F69D19B7",
-      default: "Amethyst Splinters",
-    },
-    id: "GA_Trait_GemDotHotOnCrit",
-  },
-  {
-    name: { key: "5F293E3C4F23324F4043E6A15764C43F", default: "Topaz Winds" },
-    id: "GA_Trait_GemCooldownRecoveryOnAbilityProc",
-  },
-  {
-    name: {
-      key: "FBEE703849FB11F3844753BC36DEF9AB",
-      default: "Emerald Judgement",
-    },
-    id: "GA_Trait_GemTargetedSpikeProc",
-  },
-  {
-    name: {
-      key: "5BADCEEA41FC54D9CF2B62AEB3AEC6BD",
-      default: "Diamond Strike",
-    },
-    id: "GA_Trait_GemSingleTargetProcOnDamageHeal",
-  },
-  {
-    name: {
-      key: "84DD63FA4239B9D6CC82748EA32D2E91",
-      default: "Sapphire Aurastone",
-    },
-    id: "GA_Trait_GemPulsatingOnAbilityTotemProc",
-  },
-  {
-    name: {
-      key: "51A77D2248CAD1F8628081BCA4115C42",
-      default: "Divine Mediation",
-    },
-    id: "GA_Trait_Passive_IncomingDamageToHotAndAbsorb",
-    description: {
-      key: "5E9362BA4600705F2A4109AE2058A1A6",
-      default: "Absorbs incoming damage.",
-    },
-    thumbnail: "priest_Priest12",
-  },
-  {
-    name: {
-      key: "ABF46E0C4B08294E68D9D5831A82F1D0",
-      default: "Unyielding Bloom",
-    },
-    id: "GA_Mosse_Talent_Passive_DurationalAoeHealPlacement_OverhealGivesAbsorb_Monitor",
-    description: {
-      key: "8B6E40184E84EF05961427A62180A8C6",
+      key: "2B7D954A4A48F9DEFA6E0785A8D294DF",
       default:
-        "75% of any overhealing done to a player by your <rt.absorb>Heartbloom</> is applied as an <rt.heal>Absorb</> to that player for up to 15 seconds.\r\n\r\nThe <rt.effect>Absorb</> generated by <rt.absorb>Unyielding Bloom</> can not exceed a value of 1232% Intellect.",
+        "You and nearby allies gain <rt.absorb>50% increased Movement Speed</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
     },
+    thumbnail: "relicicons_T_Relic_Drums",
   },
   {
-    name: { key: "6BCE2B9446E6CC98AA55EA8268C20585", default: "Kindling" },
-    id: "GA_Trait_ExtraDotHotOnEffectApplicationProc",
+    name: { key: "D03090D7443E9034F5795AB6D98A2AF5", default: "Major Dispel" },
+    id: "GA_RelicPower_MassDispel",
     description: {
-      key: "AFC9A8C64E7DA1A7AF5986A930874744",
+      key: "F359C83D4B64668F41C6B28555FBA007",
       default:
-        "Your damage effects apply a Damage over Time to the target, dealing fire damage equal to 66% / 79% / 92% / 106% of your primary stat every 1.5 seconds over 9 seconds.\r\n\r\nYour healing effects apply a Heal over Time to the target, healing them for 66% / 79% / 92% / 106% of your primary stat every 1.5 seconds over 9 seconds.\r\n\r\n(1.5 PPM)",
+        "Instantly <rt.heal>Dispel all harmful magic effects</> from you and your allies in a large radius around you.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
     },
+    thumbnail: "relicicons_T_Relic_DispelRune",
+  },
+  {
+    name: { key: "D7E33F1E4E8E7D214C8BBCA779479E29", default: "Sanctuary" },
+    id: "GA_RelicPower_PartyDamageReductionBuff",
+    description: {
+      key: "CA09101C40E8694A2C835CA09A16DB16",
+      default:
+        "Grants <rt.heal>15% Damage Reduction</> to yourself and nearby allies for 15 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "relicicons_T_Relic_DamageReduction",
+  },
+  {
+    name: { key: "1E635A25476C20640964BB895009AAA0", default: "Revive" },
+    id: "GA_RelicPower_CastedSingleTargetRevive",
+    description: {
+      key: "3D641E7340FD478D516B85987CBF3CBF",
+      default:
+        "<rt.absorb>Revive</> target dead ally.\r\n\r\n<rt.meikoability2>Can be used in combat</>",
+    },
+    thumbnail: "relicicons_T_Relic_CombatRess",
+  },
+  {
+    name: { key: "E34FD95C4CF86FA1D86FE290369BD582", default: "Chickenize!" },
+    id: "GA_RelicPower_PolymorphTargetWithSharedCharges",
+    description: {
+      key: "CD1A1D9A47B68B483F6491A6340549C9",
+      default:
+        "Instantly turn your target into a chicken.\r\n\r\n<rt.absorb>Chickenize!</> can only be used a limited amount of times per dungeon. The charges are shared by everyone in the party.\r\n\r\n<rt.effect>Chickenized</> enemies <rt.warning>do not give Kill Score.</>\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "relicicons_T_Relic_Chicken",
+  },
+  {
+    name: {
+      key: "23A3812141EEB7F8836938AB5645E582",
+      default: "Major Invisibility",
+    },
+    id: "GA_RelicPower_PartyInvisibility",
+    description: {
+      key: "74CBE1D044F05EA2CF6BDA947B41569E",
+      default:
+        "Instantly conceal yourself all nearby allies, granting <rt.effect>Major Invisiblilty</> for 15 seconds.\r\n\r\n<rt.meikoability2>Can only be used out of combat.</>",
+    },
+    thumbnail: "relicicons_T_Relic_Orb",
+  },
+  {
+    name: {
+      key: "9B34532A450E4066A41E7981D3C18D78",
+      default: "Conjure Portal",
+    },
+    id: "GA_RelicPower_Portal",
+    description: {
+      key: "5D6395D34855DFD4AAF1BD9385DFDFEF",
+      default:
+        "Conjures two interactable <rt.absorb>Portals</> that you and your allies can use to safely travel between two points.\r\n\r\n<rt.meikoability2>Can only have 1 active portal at a time.</>",
+    },
+    thumbnail: "relicicons_T_Relic_Portal",
+  },
+  {
+    name: {
+      key: "D59301FF465FC94AF4A9319B4BFDF59C",
+      default: "Relic Teleport",
+    },
+    id: "GA_RelicPower_Portal_Interact",
+    thumbnail: "relicicons_T_Relic_Portal",
   },
   {
     name: { key: "F2C4099C4EBFAD0D118C3184E8490093", default: "Stagger" },
@@ -1582,147 +1465,1073 @@ export default [
   },
   {
     name: {
-      key: "6E7E8D734302B95C3477C6B111C4B765",
-      default: "Sahril's Aegis",
+      key: "54FF362B4351ED62F0A1F396C01A9DF2",
+      default: "Wrath of Winter",
     },
-    id: "GA_Weapon_AbsorbDelayedAoeDamage",
+    id: "GA_Rime_FullResourcesSelfBuff",
     description: {
-      key: "471FFC284F04D2DC5505EC82D99AFCAA",
+      key: "F0753CDF4F22B5560B0AB296856BD067",
       default:
-        "You are protected by the divine flame of Sahril, granting you a shield for up to 18 seconds that absorbs up to <rt.heal>{SahrAegisAbsorb}</> damage.\r\n\r\nWhen the shield expires it explodes on to enemies within a 1000 radius, dealing <rt.warning>{SahrAegisDmg}</> fire damage to them.",
+        "Invoke the spirits of the frozen tundra for 20 seconds, granting you <rt.mana>1 Winter Orb</> every 4 seconds. You deal <rt.warning>+20% increased damage</> and your <rt.absorb>Glacial Blast</> ability is instant cast while <rt.absorb>Wrath of Winter</> is active.\r\n\r\n<rt.mana>WINTER ORBS</>\r\n<rt.mana>Winter Orbs</> are required to cast your powerful spender abilities; <rt.absorb>Glacial Blast</> and <rt.absorb>Ice Comet</>.\r\n\r\n<rt.effect>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_VoidBarrier",
+    thumbnail: "rime_T_Rime_SpiritAbility",
+  },
+  {
+    name: { key: "80AAB2F542A8BFE9756F8A8F4CB43C64", default: "Brain Freeze" },
+    id: "GA_Rime_InstantSingleInterrupt_C",
+    description: {
+      key: "DBC3EA7548B922A724759381ECBB6E80",
+      default:
+        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "rime_T_RimeIcon_Interrupt",
+  },
+  {
+    name: { key: "DC8674804DBA0B4C64B2B8896413DBEF", default: "Ice Dash" },
+    id: "GA_Rime_DashForward_C",
+    description: {
+      key: "163FEE1240E6740CC276BCB58C300486",
+      default:
+        "Quickly travel forward a short distance.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "rime_T_Rime_Dash",
+  },
+  {
+    name: { key: "D2DE1F6449CC9A77267A21AE18470348", default: "Glacial Blast" },
+    id: "GA_Rime_CastedProjectileDamageOrbSpender",
+    description: {
+      key: "921BCFB14DF558CF862D779EB9F6A286",
+      default:
+        "Hurl a mass of ice at target enemy, dealing <rt.warning>{GlacialBlast}</> damage.",
+    },
+    thumbnail: "rime_T_Rime_AnimaBolt",
+  },
+  {
+    name: { key: "674E49AF4214EDCD4F3CB6B42B368C6F", default: "Ice Comet" },
+    id: "GA_Rime_OnTargetPulsatingAoe",
+    description: {
+      key: "8E4545094915A0AA5F44959FADE15E45",
+      default:
+        "Unleash a large <rt.absorb>Ice Comet</> from above target enemy to crash down on them, dealing <rt.warning>{IceComet}</> damage to all enemies caught in the impact radius.",
+    },
+    thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
+  },
+  {
+    name: { key: "DD5F59F8480B193F5D9D429ACACCD458", default: "Frost Ward" },
+    id: "GA_Rime_SelfDefenceBuff_C",
+    description: {
+      key: "6A1ACEE34FFDBB8D8BB9A1AF5A0C5946",
+      default:
+        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "rime_T_Rime_SelfDefenceBuff",
+  },
+  {
+    name: { key: "E27036C748DFA573FA6E2D944025D74E", default: "Frost Bolt" },
+    id: "GA_Rime_CastedProjectileDamageFiller",
+    description: {
+      key: "53B4592441D928CBB66AA2BB762962FA",
+      default:
+        "Hurl a bolt of frost magic at target enemy, dealing <rt.warning>{FrostBolt}</> damage.\r\n\r\n<rt.mana>Generates 1 Anima</> \r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
+    },
+    thumbnail: "rime_T_Rime_SingleTargetBolt",
+  },
+  {
+    name: { key: "D62F5D0946EBCE9CA555F8971D4A3F4A", default: "Cold Snap" },
+    id: "GA_Rime_InstantSingleDamage",
+    description: {
+      key: "A878C64A4706B87CCC16C1B7FE71D862",
+      default:
+        "Assault the target with extreme cold, dealing <rt.warning>{ColdSnap}</> damage. \r\n\r\n<rt.absorb>Cold Snap</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.mana>Generates 1 Winter Orb</>\r\n\r\n<rt.mana>WINTER ORBS</>\r\n<rt.mana>Winter Orbs</> are required to cast your powerful spender abilities; <rt.absorb>Glacial Blast</>, <rt.absorb>Ice Comet</>, and <rt.absorb>Dance of Swallows</>.",
+    },
+    thumbnail: "rime_T_Rime_InstantHit",
   },
   {
     name: {
-      key: "C782C09C4004045D23E07CB6764E7AFA",
-      default: "Twilight Skybolt",
+      key: "FD43123C453898DBEFDF88BE9853C614",
+      default: "Freezing Torrent",
     },
-    id: "GA_Weapon_InstantChargedProjectileHealOrDamage",
+    id: "GA_Rime_ChanneledBeamSingleDamage",
     description: {
-      key: "4E28DE154891F0A50F8F5EA2DBAAF252",
+      key: "9BA8CB3542B862FBDBC5F0AB9646C583",
       default:
-        "Deals <rt.warning>{TwilSkyDmg}</> damage to target enemy or <rt.heal>{TwilSkyHeal}</> healing to target ally. Each time <rt.absorb>Twilight Skybolt</> is cast, you gain 1 stack of <rt.effect>Eclipse</>, causing the next <rt.absorb>Twilight Skybolt</> to deal <rt.warning>100% more damage</> or <rt.heal>100% more healing</> for each stack you have.\r\n\r\n<rt.absorb>Twilight Skybolt</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.effect>Eclipse</> stacks reset every 3 casts.",
+        "Flay your target with a beam of frost energy, dealing <rt.warning>{FreezeTorrTickDmg}</> damage <rt.bold>every</> <rt.warning>{FreezeTorrPeriod}</> <rt.bold>seconds for 2 seconds</> while channeling. \r\n\r\n<rt.mana>Generates 1 Anima per tick</>\r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_Skybolt",
+    thumbnail: "rime_T_Rime_ChanneledBeam",
+  },
+  {
+    name: { key: "B82BC95F4E9BB38DC88084BCE3564952", default: "Bursting Ice" },
+    id: "GA_Rime_CastedDebuffAoeDamage",
+    description: {
+      key: "029C069A4E2A534A82BD769521DBFB28",
+      default:
+        "Conjures an icy crystal inside a target that pulses frost damage, dealing <rt.warning>{BurstIceTickDmg}</> <rt.bold>every</> <rt.warning>{BurstIcePeriod}</> <rt.bold>seconds for 3 seconds</> to the target and nearby enemies.\r\n\r\n<rt.mana>Generates 1 Anima each time it pulses</>\r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
+    },
+    thumbnail: "rime_T_Rime_CastedDebuffAOEdamage",
+  },
+  {
+    name: { key: "B31D7B5D49F4BF75C8C4DF84E0C5431B", default: "Frigid Winds" },
+    id: "GA_Rime_InstantConeKnockback_C",
+    description: {
+      key: "E1E0727448C5593D39368095D3BDF609",
+      default:
+        "Blast enemies in front of you with arctic winds, <rt.absorb>Knocking Back</> enemies and <rt.absorb>Slowing</> them by 50% for 12 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "rime_T_Rime_Knockback",
   },
   {
     name: {
-      key: "950024EF4761F5FD26CE36B711445B75",
-      default: "Sahril's Wrath",
+      key: "9C4066AB411671C0D0E3C39A18623ACC",
+      default: "Frost Swallows",
     },
-    id: "GA_Weapon_InstantAoeDamageBuff",
+    id: "GA_Rime_Helper_AutoDamageProjectile",
     description: {
-      key: "895916ED4A66E2DB02C88995E03F2264",
-      default:
-        "Instantly deal <rt.warning>{SahrilWrathDmg}</> fire damage to all enemies within a 1000 radius.\r\n\r\nYou gain 1 stack of <rt.effect>Sundering Wrath</> for each enemy hit up to a maximum of 5 stacks, grating you <rt.warning>+6% additional critical strike chance per stack</> for 20 seconds.",
+      key: "FD2E726F4DB064472DF73FA278D033F9",
+      default: "Rime commands Frost Swallows to attack her target.",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_CritAOE",
+    thumbnail: "rime_T_Rime_BirdCD",
   },
   {
-    name: { key: "595A0EC8413259B09E3BFAA8EE4F6A9B", default: "Nature's Fury" },
-    id: "GA_Weapon_CastedChainHealDamage",
+    name: { key: "A40889F04092609DC139B89210078FBC", default: "Ice Blitz" },
+    id: "GA_Rime_AutoProjectileOnResourceGainBuff",
     description: {
-      key: "C39E812348AE9BAD789510B5A4362A2F",
+      key: "D4801C1A4EB7B3DF5AC2B780BA330C5B",
       default:
-        "Conjure the forces of nature to bounce between <rt.warning>up to 4 enemies</>, dealing <rt.warning>{NatFuryDmg}</> nature damage to each one, and <rt.heal>up to 4 allies</>, healing each one for {NatFuryHeal} health.\r\n\r\n<rt.absorb>Nature's Fury</> has an additional <rt.warning>+30% Critical Strike chance</>.",
+        "You enter a state of focused casting for 20 seconds, causing you to deal <rt.warning>20% more damage</> for the duration.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while casting</>",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_NatureBolt",
-  },
-  {
-    name: {
-      key: "3E58BE7E4118FCB2569F62B551B222FD",
-      default: "Voidbringer's Touch",
-    },
-    id: "GA_Weapon_InstantDamageAccumulativeDebuff",
-    description: {
-      key: "1A1E9E4B4047620608E7CD8664A6E03E",
-      default:
-        "Apply <rt.effect>Voidbringer's Touch</> to target enemy for 15 seconds, causing <rt.warning>{VoidTouchAccum}</> of all damage you deal to any enemy to be replicated and stored in the effect.\r\n\r\nOnce <rt.effect>Voidbringer's Touch</> expires, or a total of <rt.warning>{VoidTouchDmg}</> damage has been accumulated, the effect erupts in a shadowy explosion, <rt.warning>instantly dealing the accumulated damage to the target</>.\r\n\r\n<rt.effect>Voidbringer's Touch</> has <rt.warning>+100% critical strike chance</>.\r\n\r\n<rt.effect>Voidbringer's Touch</> always triggers if the damage it holds is greater than the remaining health of the enemy it is applied to.",
-    },
-    thumbnail: "weaponabilityicons_T_Weapon_VoidTouch",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
   },
   {
     name: {
-      key: "C00FCF274D2E4C2E9A02A7A21759D905",
-      default: "Zeraleth's Hunger",
+      key: "67440B1D4C44F700D6E44A86711F9AA5",
+      default: "Flight of the Navir",
     },
-    id: "GA_Weapon_CastedHealAndDamageChannel",
+    id: "GA_Rime_TargetedPeriodicProjectileAoe",
     description: {
-      key: "30277B7A4813160F40C252A6FDA31912",
+      key: "5AAD68A74F93F06096CCF28970D5BE8B",
       default:
-        "Deal <rt.warning>{ZeralethTickDmg}</> magic damage <rt.bold>every</> <rt.warning>{ZeralethTickPeriod}</> <rt.bold>seconds for 3 seconds</> to target enemy <rt.bold>while channeling</>. You are <rt.heal>healed for 100% of the damage dealt</>.\r\n\r\nAny amount of <rt.heal>overhealing on you</> from <rt.absorb>Zarelth's Hunger</> is projected to up to 3 allies within 3000 radius of you, <rt.heal>healing those players for the overhealing amount, evenly divided</>.",
+        'Summon <rt.effect>5 Frost Swallows</> to circle above Rime for 20 seconds. Your <rt.absorb>Cold Snap</> and <rt.absorb>Freezing Torrent</> command the frost swallows to swoop down on enemies, each dealing <rt.warning>{FrostSwallDmg}</> damage to their target.\r\n\r\n<rt.greyitalic>"She needed only whisper, and the Navir appeared."</>',
     },
-    thumbnail: "weaponabilityicons_T_Weapon_Vampiric",
+    thumbnail: "rime_T_Rime_BirdCD",
   },
   {
     name: {
-      key: "9ECFE0FF422AFC2AD598F8BBF31835A6",
-      default: "Repository of Frozen Light",
+      key: "BB45FDB94A076E2A1C69F6853522CB07",
+      default: "Winter's Blessing",
     },
-    id: "GA_Weapon_CastedBuffStacksHealOnDamage",
+    id: "GA_Rime_DamageAsAoeHealingBuff",
     description: {
-      key: "3D7EE66249D0697FA09896A9EDBBA920",
+      key: "76D832244A8D7C0324A1F6A13FF03165",
       default:
-        "Applies up to 60 stacks of <rt.effect>Frozen Light</> evenly divided between all players within 6000 radius for 21 seconds. Each time a player with <rt.effect>Frozen Light</> takes damage, 1 stack is consumed and the player is healed for {RepLivLightHeal}. The stack count can not exceed 20 per player.\r\n\r\nUpon expiration, each remaining stack of  <rt.effect>Frozen Light</> causes <rt.absorb>Repository of Frozen Light's</> cooldown to be reduced by 0.3 seconds.",
+        "Your <rt.absorb>Spirit is increased by 20%</> for 20 seconds and <rt.heal>30% of all damage you deal is replicated as healing</> divided equally between all allies.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_FrostLightRepository",
+    thumbnail: "rime_T_Rime_HealingBuff",
   },
   {
-    name: { key: "DFAE6B414D86950833E704938D43A3CC", default: "Fated Strike" },
-    id: "GA_Weapon_CleaveDamageBuffCooldownReduction",
-    description: {
-      key: "8D65B24943379958E03AF4A18449D9A3",
-      default:
-        "Strike target enemy, dealing <rt.warning>{FatedStrkDirectDmg}</> damage to it and cleaving for <rt.warning>{FatedStrkCleaveDmg}</> damage to nearby enemies.\r\n\r\n<rt.absorb>Fated Strike</> applies <rt.effect>Glorious Purpose</> to you for <rt.bold>6 seconds</>, increasing your <rt.warning>Expertise by +20%</> and granting you <rt.meikoability2>+{CDR} increased Cooldown Acceleration</> for the duration.\r\n\r\nIf used at range, <rt.absorb>Fated Strike</> will cause you to charge to your target.",
-    },
-    thumbnail: "weaponabilityicons_T_Weapon_CDstrike",
+    name: { key: "544A760E48F9E3C00A9426A67B48C868", default: "Attack" },
+    id: "GA_Mara_AutoAttack_C",
+    thumbnail: "textures_Tex_swords_05_bg",
   },
   {
-    name: {
-      key: "1E498BCB470C042C2E328390CE9B6E07",
-      default: "Al'zerac's Shackle",
-    },
-    id: "GA_Weapon_StunDotAoeDamageSlow",
+    name: { key: "DCDBEB5B494C6090DDA88494AB3FFD32", default: "Backstab" },
+    id: "GA_Mara_StrongerBehindAttackBuilder_C",
     description: {
-      key: "5487EFEC4CC49846A09E318589C4A724",
+      key: "EEBA54A147BB411774166D939B26C9E5",
       default:
-        "Instantly <rt.effect>Freeze</> target enemy in a block of ice for <rt.effect>3 seconds</>, incapacitating them for the duration. While frozen, the target takes <rt.warning>{AlzeracMainTargetDotDmg}</> frost damage <rt.bold>every</> <rt.warning>{AlzeracMainTargetDotPeriod}</> <rt.bold>seconds for the duration</>.\r\n\r\nUpon Expiration, the target erupts in an explosion of frost magic, instantly dealing <rt.warning>{AlzeracAoeDamage}</> frost damage to all enemies in an 800 radius and <rt.effect>Chilling</> them, reducing their <rt.effect>Movement Speed by 65%</> and their <rt.effect>Attack Speed by 40%</> for 12 seconds.\r\n\r\nWhile <rt.effect>Chilled</>, the afflicted enemies take <rt.warning>{AlzeracAoeDotDmg}</> frost damage <rt.bold>every</> <rt.warning>{AlzeracAoeDotPeriod}</> <rt.bold>seconds for the duration</>.",
+        "Deals <rt.warning>{BackstabDmg}</> damage to target enemy. Deals <rt.warning>40% more damage when attacking from behind</>.\r\n\r\n<rt.meikoability1>Generates 2 Combo Points. Critical Strikes generate 3 Combo Points.</>",
     },
-    thumbnail: "weaponabilityicons_T_Weapon_IceShackle",
+    thumbnail: "mara_Mara_backstab",
   },
   {
-    name: { key: "7FD76E1A4EA6F41B958E3BB1C203900D", default: "Chronoshift" },
-    id: "GA_Weapon_ChanneledCooldownReducer",
+    name: { key: "8D47636E4009E90A4D21CD9EB8669886", default: "Widow's Bite" },
+    id: "GA_Mara_ChargedDoubleAttackBuilder_C",
     description: {
-      key: "99A6E1884ABC3F82D5674CBE08545D14",
+      key: "5EE740E440A7783909A4C19BF56FAD72",
       default:
-        "Create an arcane anomaly <rt.bold>while channeling up to 3 seconds</>, causing you to pulse <rt.warning>{AshaTickDmg}</> <rt.bold>every</> <rt.warning>{AshaTickPeriod}</> <rt.bold>seconds</> to all enemies in a large radius around you.\r\n\r\nWhile channeling <rt.absorb>Chronoshift</> you gain <rt.meikoability2>800% increased cooldown recovery</> and are protected by a temporal barrier, causing you to take <rt.bold>50% reduced damage</>.",
+        "Plunges both daggers into single target, dealing <rt.warning>{WidowBiteDmg1}</> with the right hand and <rt.warning>{WidowBiteDmg2}</> with the left hand.\r\n\r\n<rt.absorb>Widow's Bite</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.meikoability1>Generates 2 Combo Points with each strike. Critical Strikes generate 3 Combo Points.</>\r\n\r\n<rt.mana>Generates 30 Energy</>",
     },
-    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLoad",
-  },
-  {
-    name: { key: "D71493F74E02DF16107F5C916F27CECB", default: "Earthbreaker" },
-    id: "GA_Weapon_FrontalAOEConeRepeatingStunDamage",
-    description: {
-      key: "483832BA4230DBA86BDCC4829B13B1FE",
-      default:
-        "Conjure the <rt.absorb>Earthbreaker</> into your hands and instantly slam it into the ground, causing the ground to erupt with natural magic in a cone in front of you, dealing <rt.warning>{EarthBrkrInitialDmg}</> nature damage to all enemies in it and <rt.effect>Stunning</> them for 1.5 seconds.\r\n\r\nThe area continues to rupture for <rt.bold>10 seconds</>, dealing <rt.warning>{EarthBrkrTickDmg}</> <rt.bold>every</> <rt.warning>{EarthBrkrTickPeriod}</> <rt.bold>seconds</> to enemies in standing in it.\r\n\r\nAfter 10 seconds, the area erupts a 2nd time, dealing <rt.warning>{EarthBrkrFinalDmg}</> to all enemies in it and <rt.effect>stunning</> them for 1.5 seconds.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Icons_NatureWave",
+    thumbnail: "mara_Mara_RegainEnergyHit",
   },
   {
     name: {
-      key: "946DE2BA47DED539FA6A158E3B139D13",
-      default: "Icicles of An'zhyr",
+      key: "166FBB4D49E6EB4518D7B38D1DA3AC6D",
+      default: "Skittering Blades",
     },
-    id: "GA_Weapon_CastedRepetitivelyAOEDamageDebuff",
+    id: "GA_Mara_AoeAttackBuilder_C",
     description: {
-      key: "6D8143F5459F2B0A4C125DBF83FD75A7",
+      key: "B4DE41834286A97D1C55BD8A30AC2882",
       default:
-        "Conjure <rt.warning>3 waves</> of icicles to pelt the target area, dealing <rt.warning>{IcicleAnDirectDmg}</> frost damage to all enemies in the area with each wave.\r\n\r\nEnemies hit by the final wave of <rt.absorb>Icicles of An'zhyrz</> are afflicted by <rt.effect>Curse of An'zhyr</> permanently, taking <rt.warning>{IcicleAnTickDmg}</> frost damage <rt.bold>every</> <rt.warning>{IcicleAnTickPeriod}</> <rt.bold>seconds</>.\r\n\r\nEnemies afflicted by <rt.effect>Curse of An'zhyr</> take <rt.warning>+200% increased direct damage</> from <rt.absorb>Icicles of An'zhyr</>.",
+        "Spins and throws daggers in all direction, dealing <rt.warning>{SkitterDmg}</> to all nearby enemies.\r\n\r\n<rt.meikoability1>Generates 1 Combo Point for each enemy hit. Critical Strikes generate 2 Combo Points.</>",
     },
-    thumbnail: "textures_T_Nhance_RPG_Icons_FrostRain",
+    thumbnail: "mara_Mara_AOEBuilder",
+  },
+  {
+    name: { key: "0240DA2C4B3635AED1A86EBC0C8A7D74", default: "Stalker Step" },
+    id: "GA_Mara_ChargedTeleportBehindTarget_C",
+    description: {
+      key: "7B3521F248D51B7080FA9DAF7944EED4",
+      default:
+        "Instantly teleport behind target enemy or player and increase your movement speed by <rt.bold>50%</> for 4 seconds.\r\n\r\n<rt.absorb>Stalker Step</> does not break <rt.effect>Stealth</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "mara_Mara_Stalkerstep",
+  },
+  {
+    name: { key: "FA96019642F6A8776075708D24FC03AB", default: "Queen's Fang" },
+    id: "GA_Mara_HeavyAttackSpender_C",
+    description: {
+      key: "AEEC9B3942C49C6F9C5AB9B58270334B",
+      default:
+        "Deals <rt.warning>{QueenFangDmg}</> to target enemy. Damage increased for each combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: +20% damage</>\r\n<rt.meikoability1>2 Combo Points: +40% damage</>\r\n<rt.meikoability1>3 Combo Points: +60% damage</>\r\n<rt.meikoability1>4 Combo Points: +80% damage</>\r\n<rt.meikoability1>5 Combo Points: +100% damage</>\r\n<rt.meikoability1>6 Combo Points: +120% damage</>",
+    },
+    thumbnail: "mara_Mara_SingleTargetFinisher",
+  },
+  {
+    name: { key: "A4E0701B479EC42A4B1533A905AF5098", default: "Kick" },
+    id: "GA_Mara_MeleeInterrupt_C",
+    description: {
+      key: "6FD0B33048E85610D7040792EA1C0327",
+      default:
+        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "mara_Mara_Kick",
+  },
+  {
+    name: {
+      key: "8D57F0694E8D79EBD850C593538A9E9F",
+      default: "Maiden of Death",
+    },
+    id: "GA_Mara_ChargedResourceRefillSelfBuff_C",
+    description: {
+      key: "9EC0A4914AD3B075E55D74830AD44C42",
+      default:
+        "For the next 10 seconds, you deal <rt.warning>20% more damage</> and all combo point generating abilities generate <rt.meikoability1>6 Combo Points</>.\r\n\r\nAdditionally, your <rt.mana>Energy Generation is increased by 20%</> while <rt.absorb>Maiden of Death</> is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "mara_Mara_Maiden",
+  },
+  {
+    name: {
+      key: "519B2613432B18B23E758A89121F63B9",
+      default: "Arachnid Assault",
+    },
+    id: "GA_Mara_AoeAttackSpender_C",
+    description: {
+      key: "F23F3ECA4FC1636E76E9618B509A8D12",
+      default:
+        "Deal <rt.warning>{ArachniedDmg}</> to all targets in a radius around Mara. The damage is increased per combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: +20% damage</>\r\n<rt.meikoability1>2 Combo Points: +40% damage</>\r\n<rt.meikoability1>3 Combo Points: +60% damage</>\r\n<rt.meikoability1>4 Combo Points: +80% damage</>\r\n<rt.meikoability1>5 Combo Points: +100% damage</>\r\n<rt.meikoability1>6 Combo Points: +120% damage</>",
+    },
+    thumbnail: "mara_Mara_SpiderAOE",
+  },
+  {
+    name: {
+      key: "EFA8864B4A567B0B8AA2D9B7EE050B2E",
+      default: "Hunter's Ferocity",
+    },
+    id: "GA_Mara_EnergyDamageSelfBuff_C",
+    description: {
+      key: "A0553811419C4A4A83CCE0B7E4A36715",
+      default:
+        "Your energy regeneration is increased by 50% for 12 seconds and all damage you deal is increased by 20%.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareAura",
+  },
+  {
+    name: { key: "83F17A174C06EACBD6316BA65CCF3AE1", default: "Stealth (OLD)" },
+    id: "GA_Mara_ApplyPoisonSelfBuff_C",
+    description: {
+      key: "DAAD28D04077E154164D7B8AA22B4A22",
+      default:
+        "Instantly enter stealth, becoming more difficulty for enemies to detect you. When used in combat, Stealth triggers a 15 second cooldown.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\nYour <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</> or <rt.absorb>Skittering Blades</> apply various poisons when used from stealth.\r\n\r\n<rt.absorb>Backstab - Caustic Poison:</>\r\nInstantly deals <rt.warning>397% Agility</> poison damage to the target and generates <rt.meikoability1>6 Combo Points</>.\r\n\r\n<rt.absorb>Widow's Bite - Seething Poison:</>\r\nApplies Seething Poison to target enemy that deals <rt.warning>53% Agility</> damage every 2 seconds for 60 seconds. While Seething Poison is active on any enemy, you gain 25% increased Attack Speed and <rt.mana>25% Energy Regeneration</>. Seething Poison can only be active on 1 target at any time.\r\n\r\n<rt.absorb>Skittering Blades - Volatile Poison:</>\r\nApplies Volatile Poison to all enemies hit, dealing <rt.warning>20% Agility</> poison damage every 2s over 6 seconds. Upon expiration, Volatile Poison erupts dealing <rt.warning>40% Agility</> poison damage to the target and nearby enemies within 700 range.",
+    },
+    thumbnail: "textures_T_Icon_Shadow_120",
+  },
+  {
+    name: {
+      key: "2D55F6084624724D93027B8C1F285469",
+      default: "Hemorrhaging Strike",
+    },
+    id: "GA_Mara_BleedAttackSpender_C",
+    description: {
+      key: "4289F9BD404B3208E1F7A08CCCB72884",
+      default:
+        "Strike the target dealing <rt.warning>{HemoStrikeDirect}</> damage and apply a bleed dealing <rt.warning>{HemoStrikeTickDmg}</> <rt.bold>every</> <rt.warning>{HemoStrikePeriod}</> <rt.bold>seconds for 12 seconds</>. The bleed's duration is increased per combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: 15 seconds</>\r\n<rt.meikoability1>2 Combo Points: 18 seconds</>\r\n<rt.meikoability1>3 Combo Points: 21 seconds</>\r\n<rt.meikoability1>4 Combo Points: 24 seconds</>\r\n<rt.meikoability1>5 Combo Points: 27 seconds</>\r\n<rt.meikoability1>6 Combo Points: 30 seconds</>\r\n\r\n<rt.mana>Each tick of Hemorrhaging Strike's bleed replenishes 3 energy.</>",
+    },
+    thumbnail: "mara_Mara_Bleed",
+  },
+  {
+    name: {
+      key: "CD5A9EA44E725282A69C55B7AF04B45F",
+      default: "Predator's Rush",
+    },
+    id: "GA_Mara_EnergyAutoAttackSelfBuffSpender_C",
+    description: {
+      key: "C5EAE7774B3D17873CE8A7BF78C1967D",
+      default:
+        "Increases Energy Regeneration and Auto-attack speed by 20%.\r\n\r\n<rt.meikoability1>1 Combo Point: 5 second duration</>\r\n<rt.meikoability1>2 Combo Points: 10 second duration</>\r\n<rt.meikoability1>3 Combo Points: 15 second duration</>\r\n<rt.meikoability1>4 Combo Points: 20 second duration</>\r\n<rt.meikoability1>5 Combo Points: 25 second duration</>\r\n<rt.meikoability1>6 Combo Points: 30 second duration</>\r\n",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Shadow_44",
+  },
+  {
+    name: {
+      key: "6CAEE9D64DF2B2E2105523939441DCCB",
+      default: "Brooding Shadows",
+    },
+    id: "GA_Mara_Stealth_C",
+    description: {
+      key: "23690FC64FA741E50D07C3AF928148E0",
+      default:
+        "Instantly enter <rt.absorb>Stealth</>, becoming more difficulty for enemies to detect you. When used in combat, <rt.absorb>Brooding Shadows</> triggers a 15 seconds cooldown.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\n<rt.absorb>Brooding Shadows</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\nYour <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</> and <rt.absorb>Skittering Blades</> abilities each apply poison when used from stealth.\r\n\r\n<rt.absorb>Backstab - Caustic Poison:</>\r\nInstantly deal <rt.warning>{CausticDmg}</> poison damage and generate <rt.meikoability1>6 Combo Points</>.\r\n\r\n<rt.absorb>Widow's Bite - Seething Poison:</>\r\nApplies Seething Poison to the target, dealing <rt.warning>{SeethingDmg}</> poison damage <rt.bold>every</> <rt.warning>{SeetingPeriod}</> <rt.bold>seconds for 60 seconds</>. While Seething Poison is active on any enemy, you gain <rt.effect>Predator's Rush</>, granting you <rt.mana>40% increased Energy Regeneration</>. Seething Poison <rt.bold>can only be active on 1 target at a time</>.\r\n\r\n<rt.absorb>Skittering Blades - Volatile Poison</>:\r\nApplies Volatile Poison to all enemies hit by your Skittering Blades, dealing <rt.warning>{VolatileTotalDmg}</> poison damage over 6 seconds. Upon expiration, Volatile Poison erupts dealing <rt.warning>{VolatileAoeDmg}</> poison damage to the target and nearby enemies within a 500 radius.",
+    },
+    thumbnail: "mara_Mara_stealth",
+  },
+  {
+    name: {
+      key: "67FFD9304781BC97161404AEA8E036AD",
+      default: "Enveloping Web",
+    },
+    id: "GA_Mara_StunSpender_C",
+    description: {
+      key: "4F163E0A44B49F23B66DBAA32898570F",
+      default:
+        "Instantly <rt.effect>Stun</> target enemy for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>",
+    },
+    thumbnail: "mara_Mara_Stun",
+  },
+  {
+    name: { key: "995218504D213A6C1876E0970D8D9975", default: "Spider's Grip" },
+    id: "GA_Mara_Disorient_C",
+    description: {
+      key: "A8A41B5240A11E7874161B9CDEC96FBD",
+      default:
+        "Instantly <rt.absorb>Disorient</> target enemy within 3000 range for 20 seconds. Casting Spider's Grip causes you to stop Auto-attacking the target. Any damage dealt to the target breaks the disorient effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\n<rt.mana>Generates 1 Combo Point</>",
+    },
+    thumbnail: "mara_Mara_Stun",
+  },
+  {
+    name: {
+      key: "C508EACD466FD9CBBE311D9B4354B997",
+      default: "Shadow Protection",
+    },
+    id: "GA_Mara_SelfDefenceBuff_C",
+    description: {
+      key: "280A4EFE4C001689960CD88D007B824E",
+      default:
+        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "mara_Mara_Defensive",
+  },
+  {
+    name: {
+      key: "CD9833E74D0065E6A43E50AC89697672",
+      default: "Matriarch Macabre",
+    },
+    id: "GA_Mara_CopyCharacterDamage_C",
+    description: {
+      key: "0C04DEFE432E9C2A5031F994357ADA70",
+      default:
+        "For the next 20 seconds, you deal <rt.warning>20% more damage</> and your <rt.absorb>Queen's Fang</> and <rt.absorb>Arachnid Assault</> abilities summon two shadowy clones that both imitate the attack for 50% of your power.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
+    },
+    thumbnail: "mara_Mara_Spirit",
+  },
+  {
+    name: {
+      key: "0754414F4352648FDBE8B19AF1C1004E",
+      default: "Final Stratagem",
+    },
+    id: "GA_Mara_ResetCooldownRefillResouces_C",
+    description: {
+      key: "40DCF6304BDB6FB5D82E4795CFCBCB1E",
+      default:
+        "Your <rt.mana>Energy</> and <rt.mana>Combo Points</> are instantly refilled and all your <rt.absorb>Hero Ability</> cooldowns are reset.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>",
+    },
+    thumbnail: "mara_Mara_Strategem",
+  },
+  {
+    name: { key: "0FC57F78421675D5B948778B49C425D6", default: "Heart Bloom" },
+    id: "GA_Mosse_DurationalAoeHealPlacement_C",
+    description: {
+      key: "C6B18C9046A4375EB04B8D80A1B130BD",
+      default:
+        "Conjure a <rt.absorb>Heart Bloom</> at your side that stores <rt.meikoability1>12% of all Flutterfly healing</> you do inside it.\r\n\r\nEvery 3 seconds, the <rt.absorb>Heart Bloom</> releases a pulse, healing all allies within 4000 radius for an amount equal to the healing it has stored. Lasts 15 seconds.\r\n\r\n<rt.absorb>Heart Bloom</> spawns <rt.effect>3 Boomshrooms</> when it withers.",
+    },
+    thumbnail: "sylvie_T_Mosse_Bigheal",
+  },
+  {
+    name: {
+      key: "9F2720E845C929E11A6B5FBBEC225E2F",
+      default: "Soothing Touch (old)",
+    },
+    id: "GA_Mosse_CastedSingleTargetHeal_C",
+    description: {
+      key: "AC79A79F49980681DC12EDB55A59179F",
+      default: "Heal target ally for <rt.heal>518% Intellect</>.",
+    },
+    thumbnail: "sylvie_Sylvie_AbilityIcon_01",
+  },
+  {
+    name: { key: "3E392365419399A4BFA374B55F7A24CD", default: "Cure Ailment" },
+    id: "GA_Mosse_SingleTargetDispel_C",
+    description: {
+      key: "934830034980F993316A5DA6D955A23A",
+      default:
+        "Remove all <rt.debuff>Harmful</> <rt.bold>Magic Effects</> from target ally. ",
+    },
+    thumbnail: "sylvie_T_Mosse_Dispel",
+  },
+  {
+    name: { key: "7973A7F64FE05CB092F43AAFDFDFED44", default: "Nettlebolt" },
+    id: "GA_Mosse_CastedSingleTargetProjectile_C",
+    description: {
+      key: "C2E0B7DC461E0912B25D5DB98600268E",
+      default:
+        "Cast a bolt of nettles at target enemy, dealing <rt.warning>{NettleDmg}</> damage to them.\r\n\r\n<rt.absorb>Nettlebolt</> replenishes the <rt.mana>Mana Cost</> it spends once it deals damage to an enemy.\r\n\r\n<rt.Absorb>Petal Germination</>\r\nThe cooldown of your <rt.absorb>Life Petal</> is reduced by 1.5 seconds each time you deal damage with <rt.absorb>Nettlebolt</> and 3 seconds if it critically strikes.",
+    },
+    thumbnail: "sylvie_Sylvie_AbilityIcon_02",
+  },
+  {
+    name: {
+      key: "BF2236814FF3F1AFFF963BBEC2F35C90",
+      default: "Vicious Spores (old)",
+    },
+    id: "GA_Mosse_SingleTargetDot_C",
+    description: {
+      key: "4B0746B44B19AC793F6375825DA45771",
+      default:
+        "Conjure dangerous spores to assault the target enemy, dealing <rt.warning>656% Intellect</> damage over 18 sec.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Nature_04",
+  },
+  {
+    name: {
+      key: "BB159D074075691633423A87F4A2591C",
+      default: "Fluttercall: Protect",
+    },
+    id: "GA_Mosse_BlueButterfly_SendOut",
+    description: {
+      key: "4E6731FF4CE6332D1F28A3A96C2222C1",
+      default:
+        "Send your <rt.mana>Blue Flutterfly</> to protect target ally.\r\n\r\nWhile your <rt.bold>Blue Flutterfly</> is attached to an ally, that player receives <rt.heal>100% increased healing</> from your <rt.meikoability1>Flutterfly Healing</> effects.\r\n\r\nWhile the <rt.bold>Blue Flutterfly</> is on you, Your <rt.meikoability1>Flutterfly Healing</> on all allies is <rt.heal>increased by 50%</> and all your abilities have <rt.mana>20% reduced mana cost</>.",
+    },
+    thumbnail: "sylvie_T_Mosse_BlueButterfly",
+  },
+  {
+    name: {
+      key: "8A9A6E644D8BAC76DD6BDFAB10076963",
+      default: "Fluttercall: Embrace",
+    },
+    id: "GA_Mosse_BlueButterfly_Recall",
+    description: {
+      key: "BA68108A47E0D10F6CCAD9AE8036868E",
+      default:
+        "Recall your <rt.bold>Blue Flutterfly</> to you.\r\n\r\nWhile the <rt.bold>Blue Flutterfly</> is on you, Your <rt.meikoability1>Flutterfly Healing</> on all allies is <rt.heal>increased by 50%</> and all your abilities have <rt.mana>20% reduced mana cost</>.\r\n\r\nWhile your <rt.bold>Blue Flutterfly</> is attached to an ally, that player receives <rt.heal>100% increased healing</> from your <rt.meikoability1>Flutterfly Healing</> effects.",
+    },
+    thumbnail: "sylvie_T_Mosse_BlueButterfly",
+  },
+  {
+    name: {
+      key: "6B8DBEB54EE50B913F60B7937F490769",
+      default: "Fluttercall: Heal",
+    },
+    id: "GA_Mosse_PinkButterfly_Simple",
+    description: {
+      key: "EC0B204C42619D1CAB7D649DF27724FA",
+      default:
+        "Assign one of your <rt.meikoability1>Pink Flutterflies</> to an ally, healing them for {FlutterHeal} <rt.bold>every</> <rt.heal>{FlutterHealPeriod}</> <rt.bold>seconds</> until it is called away.\r\n\r\nAll healing done by <rt.absorb>Fluttercall: Heal</> counts as <rt.meikoability1>Flutterfly Healing</>.",
+    },
+    thumbnail: "sylvie_Sylvie_AbilityIcon_03",
+  },
+  {
+    name: {
+      key: "090567BD4FB3B2ACDB552A9D983B8BFB",
+      default: "Fluttercall: Restore Life",
+    },
+    id: "GA_Mosse_PinkButterfly_Double",
+    description: {
+      key: "E02B6BE14C1FD75305E3AF9D5DA71753",
+      default:
+        "Beckon two <rt.meikoability1>Pink Flutterflies</> to dance around target ally. <rt.bold>After</> <rt.heal>{RestoreLifeDelay}</> <rt.bold>seconds</>, the target is instantly healed for {RestoreLifeDirectHeal} plus an additional {RestoreLifeHotHeal} <rt.bold>every</> <rt.heal>{RestoreLifeHotPeriod}</> <rt.bold>seconds</> for 15 seconds.\r\n\r\nAll healing done by <rt.absorb>Fluttercall: Restore Life</> counts as <rt.meikoability1>Flutterfly Healing</>.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Shadow_58",
+  },
+  {
+    name: { key: "BAB5B0684D2F4414981F64B53C650A44", default: "Prickly Vine" },
+    id: "GA_Mosse_ProjectileTurrets",
+    description: {
+      key: "C3ABFDB54A16376FC3C5A6B6A3072384",
+      default:
+        "Summon a <rt.absorb>Prickly Vine</> for 27 seconds to continuously fling thorns at target enemy, dealing <rt.warning>{PricklyVineDmg}</> magic damage <rt.bold>every</> <rt.warning>{PricklyVinePeriod}</> <rt.bold>seconds</>.\r\n\r\nFor each <rt.absorb>Prickly Vine</> you have active, all <rt.meikoability1>Flutterfly Healing</> is <rt.heal>increased by 3%</>.\r\n\r\nEach <rt.absorb>Prickly Vine</> spawns <rt.effect>1 Boomshroom</> when it withers.",
+    },
+    thumbnail: "sylvie_T_Mosse_Vine",
+  },
+  {
+    name: {
+      key: "D63FF48A41C29F71D6E52EAC65378818",
+      default: "Fluttercall: Jubilee",
+    },
+    id: "GA_Mosse_SharedHealthBuff_C",
+    description: {
+      key: "4FA419764D27C614CC8514A550D89D4F",
+      default:
+        "Call upon <rt.bold>Dream Flutterflies</> to protect up to 4 players by evenly distributing all health between them every 1.5 seconds over 12 sec.\r\n\r\nUpon arriving, the <rt.bold>Dream Flutterflies</> cause <rt.absorb>6 Prickly Vines</> to spontaneously  spawn near you.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste and +600% Mana Recovery for 20 sec.</>",
+    },
+    thumbnail: "sylvie_T_Mosse_Ultimate",
+  },
+  {
+    name: {
+      key: "36B65FF14FA2A0D3B3CC88A477FE87EE",
+      default: "Life Petal: Yellow Flutterfly",
+    },
+    id: "GA_Mosse_Passive_HealingMushroomPlacement_C",
+    description: {
+      key: "09EA2AD341C889199A9CF7817C74F50B",
+      default: "Heals you every 2 sec, for 16 sec.",
+    },
+  },
+  {
+    name: { key: "7EFC4DAA4D24223A0B4161B83A6A51E2", default: "Safe Haven" },
+    id: "GA_Mosse_PlacedAoeBuff",
+    description: {
+      key: "891FDA684302DF53DA08F09A404E31A2",
+      default:
+        "Place a <rt.absorb>Safe Haven</> in target location. For the next 15 seconds, all allies standing within the radius have <rt.absorb>40% increased healing taken</>.",
+    },
+    thumbnail: "sylvie_T_Mosse_LinkCD",
+  },
+  {
+    name: { key: "630F05A4405B762D9078D8830806B2D7", default: "Hidden Trail" },
+    id: "GA_Mosse_InstantSelfEscapeBuff",
+    description: {
+      key: "13F040714C09F8538AD5DAAF1405487E",
+      default:
+        "Your Movement Speed is increased by 50% for 6 seconds.\r\n\r\n<rt.absorb>Demure</>\r\nUpon activating <rt.absorb>Hidden Trail</> your threat is reduced by 50% with all enemies.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "sylvie_T_Mosse_Hide",
+  },
+  {
+    name: { key: "3E56552243CE8775523181AFCC21F11E", default: "Life Petal" },
+    id: "GA_Mosse_HealingAoeTotem",
+    description: {
+      key: "3FF030E045A4F77D52336DB7122D9077",
+      default:
+        "A <rt.absorb>Life Petal</> sprouts up near you, healing one ally for {LifePetalTickHeal} <rt.bold>every</> <rt.heal>{LifePetalPeriod}</> <rt.bold>seconds</> for 14 seconds, preferring the ally with the lowest health.\r\n\r\n<rt.absorb>Life Petal's</> healing wanes over time, healing for less the longer it has been active.\r\n\r\n<rt.absorb>Life Petal</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.absorb>Life Petal</> spawns <rt.effect>2 Boomshrooms</> when it withers.",
+    },
+    thumbnail: "sylvie_T_Mosse_Lifepetal",
+  },
+  {
+    name: { key: "0499C0C94E7FA57D54A45398DBB41B4D", default: "Ironleaf Ward" },
+    id: "GA_Mosse_SingleTargetCastedDamageReduction",
+    description: {
+      key: "64F0E46647DEE862FD8C64B680081797",
+      default:
+        "Target ally takes <rt.absorb>20% reduced damage</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "sylvie_T_Mosse_DR",
+  },
+  {
+    name: {
+      key: "FE2C621D4B617C6BB0D58F9CFACEC97B",
+      default: "Shroomsplosion",
+    },
+    id: "GA_Mosse_ExplosiveMinion_C",
+    description: {
+      key: "4D0E870A4539E13BD63EB38F8E330A76",
+      default:
+        "Command all mature <rt.absorb>Boomshrooms</> to attack causing them to leap at target enemy and explode, dealing <rt.warning>{ShroomSplDmg}</> magic damage to the target and nearby enemies.\r\n\r\n<rt.absorb>Boomshrooms</>\r\nEach time one of your plants expire, budding <rt.absorb>Boomshrooms</> start growing in that location. After 3 seconds, the <rt.absorb>Boomshroom</> has reached full maturity and is ready to be called into battle.",
+    },
+    thumbnail: "sylvie_T_Mosse_Boomshroom",
+  },
+  {
+    name: {
+      key: "183A415C43738AD19C40C3A123430A1D",
+      default: "Enfeebling Rootsap",
+    },
+    id: "GA_Mosse_TurretChannelHeal",
+    description: {
+      key: "2DA033644591843564B0C9BB588C81C7",
+      default:
+        "Command one of your <rt.absorb>Prickly Vines</> to <rt.effect>Enfeeble</> target enemy, reducing all damage that enemy deals by 20% for 10 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>\r\n\r\nThe <rt.absorb>Prickly Vine</> withers upon completing it's cast of <rt.absorb>Enfeebling Rootsap</>.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Nature_04",
+  },
+  {
+    name: { key: "C43D29AB4C27B1367F71A5A03F1F64A1", default: "Charge" },
+    id: "GA_Warmaster_MoveToTargetStun_C",
+    description: {
+      key: "53A014F741494303BE533692C88C2622",
+      default:
+        "Charge at target enemy, dealing <rt.warning>{ChargeDirect}</> physical damage and <rt.effect>Stunning</> them for 2 seconds.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Charge</> reduces the cooldown of your <rt.absorb>Shield Slam</>, <rt.absorb>Shield Throw</>, <rt.absorb>Shields Up</>, and <rt.absorb>Shockwave</> abilities by 6 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_Charge",
+  },
+  {
+    name: { key: "1EA663FA4822329CD8164B98377974AF", default: "Bash" },
+    id: "GA_Warmaster_MeleeInterrupt_C",
+    description: {
+      key: "48E57AD14CA59E5536F5E2AEAAAC22F1",
+      default:
+        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_Warmaster_Interrupt",
+  },
+  {
+    name: { key: "35BFFAB348D156B296D608B9B5990429", default: "Shockwave" },
+    id: "GA_Warmaster_MeleeAoeSlow_C",
+    description: {
+      key: "217C9ED14918B49AD44B078DE51FFD4A",
+      default:
+        "Slam sword and shield together creating a forceful explosion, dealing <rt.warning>{ShockwaveDirect}</> physical damage to enemies in a large radius.\r\n\r\nEnemies that take damage from <rt.absorb>Shockwave</> have <rt.effect>reduced movement speed</> for 5 seconds, starting at 90% and dimishing by 10% every 0.5 seconds.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shockwave</> reduces the cooldown of your <rt.absorb>Shields Up</> ability by 6 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_shockwave",
+  },
+  {
+    name: { key: "C0311D9F48117829DE1039BCC2E3D861", default: "Shields Up" },
+    id: "GA_Warmaster_DefenceBuff_C",
+    description: {
+      key: "F6E6FAF44AEC40891B3399BC795E6F55",
+      default:
+        "Raise your shield, increasing your <rt.mana>Toughness by 60%</> and increasing your <rt.meikoability1>Block chance by 25%</> for 12 sec.\r\n\r\n<rt.absorb>Shields Up</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.meikoability1>Each time you succesfully Block an attack, you generate</> <rt.mana>3% Toughness</>.\r\n\r\n<rt.mana>TOUGHNESS</>\r\n<rt.mana>Toughness</> is displayed as a bar to the right of your character. The more Toughness you have, the less damage Helena takes. Your <rt.mana>maximum Toughness value (</><rt.heal>{MaxToughness}</><rt.mana>) is equal to {StrCoefficient} strength. Every 1% of Critical Strike, Haste, Expertise, and Spirit you have further increases the final amount by 2%</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_Warmaster_Shieldsup",
+  },
+  {
+    name: {
+      key: "6EF1C18E4C93C8966CEFF19565E52E14",
+      default: "Measured Strike",
+    },
+    id: "GA_Warmaster_LightMelee_C",
+    description: {
+      key: "F291BECC49DB7001253316B66C6390BA",
+      default:
+        "Strike target enemy with your sword, dealing <rt.warning>{MeaStrikeDirect}</> physical damage to them and nearby enemies.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Measured Strike</> reduces the cooldown of your <rt.absorb>Shield Slam</> and <rt.absorb>Shield Throw</> abilities by 1.5 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_BasicStrike",
+  },
+  {
+    name: { key: "FFEDE56F41EF9FC47CCE4C8F281DE1A8", default: "Power Strike" },
+    id: "GA_Warmaster_HeavyMelee_C",
+    description: {
+      key: "E6982FFD48E45843C0C0868727522008",
+      default:
+        "Perform a heavy strike, dealing <rt.warning>{PwrStrkDirect}</> physical damage to target.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Power Strike</> reduces the cooldown of your <rt.absorb>Shield Slam</> and <rt.absorb>Shield Throw</> abilities by 1.5 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_FatalBlow",
+  },
+  {
+    name: { key: "E5C2CC0B445045831DD5A6B38861A905", default: "Shield Slam" },
+    id: "GA_Warmaster_MeleeCleave_C",
+    description: {
+      key: "68ED0D7C4E6199B8D5797087ED1AAD15",
+      default:
+        "Deals <rt.warning>{ShieldSlamDirect}</> physical damage to your target and <rt.warning>{ShieldSlamCleave}</> physical damage to other enemies near your target.\r\n\r\n<rt.absorb>Shield Slam</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.absorb>Shield Slam</> generates <rt.mana>20% Toughness</>.\r\n\r\n<rt.effect>LINGERING CONCUSSION</>\r\n<rt.absorb>Shield Slam</> applies <rt.effect>Lingering Concussion</> to your main target, causing them to deal <rt.heal>3% reduced damage to you for 12 seconds</>. <rt.effect>Lingering Concussion</> stacks up to 5 times.\r\n\r\n<rt.mana>TOUGHNESS</>\r\n<rt.mana>Toughness</> is displayed as a bar to the right of your character. The more Toughness you have, the less damage Helena takes. Your <rt.mana>maximum Toughness value (</><rt.heal>{MaxToughness}</><rt.mana>) is equal to {StrCoefficient} strength. Every 1% of Critical Strike, Haste, Expertise, and Spirit you have further increases the final amount by 2%</>.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shield Slam</> reduces the cooldown of your <rt.absorb>Shockwave</> ability by 3.0 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_ShieldSlam",
+  },
+  {
+    name: { key: "73B69DC74B38BC077596E197D1842DBE", default: "Shield Throw" },
+    id: "GA_Warmaster_BouncyProjectile_C",
+    description: {
+      key: "4E4F7CF9458FD615CF72C48BC7F3EDB5",
+      default:
+        "Throw your shield at target enemy dealing <rt.warning>{ShieldThrwDirect}</> physical damage. The shield bounces to up to 5 additional nearby enemies.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shield Throw</> reduces the cooldown of your <rt.absorb>Shockwave</> ability by 3.0 seconds.",
+    },
+    thumbnail: "warmaster_T_Warmaster_Shieldthrow",
+  },
+  {
+    name: { key: "D4A5B8FB4CD9F77DB8C454BCD6A67257", default: "Taunt" },
+    id: "GA_Warmaster_RangedTaunt_C",
+    description: {
+      key: "43EC4EDD43E2F44F50F5EA906A8579BA",
+      default:
+        "<rt.absorb>Taunt</> the target, forcing it to attack you for 6 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_warmaster_Taunt",
+  },
+  {
+    name: {
+      key: "6EB82D2549ABE592E49D15B9790013BF",
+      default: "Banner of Hope",
+    },
+    id: "GA_Warmaster_AoeHealthBuff_C",
+    description: {
+      key: "C84926F04A401A7CBEA6CE8934648F79",
+      default:
+        "Increase all party members <rt.absorb>Maximum Health</> by <rt.heal>20%</> for 15 sec.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_MagicBanner",
+  },
+  {
+    name: {
+      key: "086D142D444816A089F713A669D2AEB6",
+      default: "Leader's Conviction",
+    },
+    id: "GA_Warmaster_FullResourcesSelfBuff",
+    description: {
+      key: "09A11CD541EF3CEA918485906BACDFF6",
+      default:
+        "Your damage reduction from <rt.absorb>Toughness</> is shared with all allies for 12 seconds. \r\n\r\nWhile <rt.absorb>Leader's Conviction</> is active you deal <rt.warning>15% increased damage</>.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
+    },
+    thumbnail: "warmaster_T_Warmaster_Ultimate",
+  },
+  {
+    name: { key: "85C1EAEB47BC530655C690899BF1BF8A", default: "Attack" },
+    id: "GA_Warmaster_MeleeAutoAttack_C",
+    thumbnail: "textures_Tex_swords_01_bg",
+  },
+  {
+    name: { key: "2E8B946D417C88B191A117B6DC2527D1", default: "Hold the Line" },
+    id: "GA_Warmaster_MoveSpeedBuff",
+    description: {
+      key: "BAD27F754A1887128AA792A7AFB65360",
+      default:
+        "Instantly resets the cooldown of your <rt.absorb>Shield Slam</> ability and causes your next <rt.absorb>Shield Slam</> within 12 seconds to be <rt.effect>Empowered</>.\r\n\r\n<rt.effect>Empowered Shield Slam</>\r\nYour next <rt.absorb>Shield Slam</> applies a barrier on you, absorbing up to <rt.heal>{ShieldSlamAbsrb}</> damage taken for 8 seconds. Your <rt.mana>Toughness</> is not reduced while the barrier is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_WM_HoldTheLine",
+  },
+  {
+    name: {
+      key: "0C7A025644F1635BE8620AB09EF00E1B",
+      default: "Sweeping Strike",
+    },
+    id: "GA_Warmaster_InstantMeleeCleave",
+    description: {
+      key: "EE0C79CB4CF306145507278078FD4653",
+      default:
+        "Deals <rt.warning>{SweepStrkDirect}</> physical damage to your target and other nearby enemies.\r\n\r\nEnemies hit by <rt.absorb>Sweeping Strike</> bleed for <rt.warning>{SweepStrikDot}</> physical damage <rt.bold>every</> <rt.warning>{SweepStrikePeriod}</> <rt.bold> seconds for 12 seconds</> and <rt.heal>deal 10% reduced damage for the duration</>.",
+    },
+    thumbnail: "warmaster_T_Warmaster_BleedStrike",
+  },
+  {
+    name: { key: "8A6AE8844A573FA37F2271AF7ECB0F47", default: "Iron Wall" },
+    id: "GA_Warmaster_NoResourceLossSelfBuff_C",
+    description: {
+      key: "A2F2131A482582FF9D88AAB59EE087FD",
+      default:
+        "Your <rt.mana>Toughness</> can not be reduced for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_Warmaster_IronWall",
+  },
+  {
+    name: { key: "FB9E2F934006E07D24E0AB929E4F5865", default: "Grand Melee" },
+    id: "GA_Warmaster_AoeIncite",
+    description: {
+      key: "02C3CFC94ED3AACEACB3709CC0625790",
+      default:
+        "For the next 10 seconds, <rt.effect>Incite</> all enemies in a large radius around you, forcing them to only use <bold>Auto Attacks</> and only attack you.\r\n\r\nAll allies within the radius of <rt.absorb>Grand Melee</> take <rt.effect>20% reduced magic damage</> while it is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "warmaster_T_WM_Incite",
+  },
+  {
+    name: { key: "98D70AA942E318135E0492AEB16450B8", default: "Siegebreaker" },
+    id: "GA_Warmaster_ShieldSelfBuff",
+    description: {
+      key: "0FCEB8AE4D99F99E3EEC7B8CA5CD79B1",
+      default:
+        "For the next 20 seconds, the cooldown reduction granted by your <rt.effect>Veteran of War</> is doubled.\r\n\r\nWhile <rt.absorb>Siegebreaker</>is active, you take 25% reduced damage and your <rt.absorb>Shield Slam</>, <rt.absorb>Shield Throw</> and <rt.absorb>Shockwave</> abilities deal 25% increased damage.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
+    },
+    thumbnail: "warmaster_T_Warmaster_Ultimate",
+  },
+  {
+    name: {
+      key: "3535C7714B97DDC9EF27CEA9C044C501",
+      default: "Torment of Bael'Aurum",
+    },
+    id: "SetC_Proc_Bonus",
+    description: {
+      key: "8DDD11014AB2BF786C01C5B3E0847DC8",
+      default:
+        "When dipping below 20% Health, you are instantly healed for 35% of your maximum health. This can occur once every 90 seconds.",
+    },
+    thumbnail: "setbonus_T_Icon_Gold_147_BetaCropped",
+  },
+  {
+    name: { key: "C6188AD1435C7577DD60E08444AD813D", default: "Remove Magic" },
+    id: "GA_Vigor_SingleAllyDispel_C",
+    description: {
+      key: "5D0010FF4987481FABA440ADE2EEB6B0",
+      default:
+        "Remove all <rt.debuff>Harmful</> <rt.bold>Magic Effects</> from target ally. ",
+    },
+    thumbnail: "vigor_T_Vigor_Dispel",
+  },
+  {
+    name: { key: "9F60DD314D7083CF5EDF9EAF52CB29A6", default: "Soulbrand" },
+    id: "GA_Vigor_SingleTargetDot_C",
+    description: {
+      key: "5119C75D4DA1C7CE5A62C198DDF028F0",
+      default:
+        "Apply a searing rune to target enemy, dealing <rt.warning>{SoulbrandTickDmg}</> magic damage <rt.bold>every</> <rt.warning>{SoulbrandPeriod}</> <rt.bold>seconds for 24 seconds</>.\r\n\r\nWhen <rt.absorb>Soulbrand</> is applied to an enemy that already has the effect applied it triggers <rt.effect>Soulbrand: Remnant</>, instantly dealing an additional <rt.warning>{RemnantDamage}</> to them.\r\n\r\n<rt.absorb>Soulbrand</> generates <rt.mana>30% of a Radiant Rune</> over its duration.\r\n\r\n<rt.greyitalic>Vigour inscribes a searing rune onto the soul of his enemy, infusing it with radiant energy. The rune pulses painfully, steadily draining their life force while fueling Vigour’s power.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Soulbrand",
+  },
+  {
+    name: {
+      key: "F555D7CF4102FA0E58BB5FBD597D33C8",
+      default: "Rune of Renewal",
+    },
+    id: "GA_Vigor_SingleTargetChargedHot_C",
+    description: {
+      key: "FDE384614C16F1D1020D1C89DBC99DEF",
+      default:
+        "Instantly heal target ally for {RenewalHealDirect} and apply <rt.absorb>Rune of Renewal</> on them for 30 seconds, causing all your direct healing effects on that ally to echo for an additional <rt.heal>25% of the initial heal's value</>.\r\n\r\n<rt.absorb>Rune of Renewal's</> <rt.heal>initial heal is increased by 200%</> when cast on a target that already has <rt.effect>Rune of Renewal</> active.\r\n\r\nThe bonus healing generated by <rt.absorb>Rune of Renewal</> generates <rt.mana>Radiant Rune power</> relative to the value of the heal.\r\n\r\n<rt.greyitalic>Vigour inscribes a resonating rune onto the spirit of an ally. When Vigor heals that ally, the rune pulses gently, further mending any wounds that linger as its light nourishes the body and spirit.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Rune",
+  },
+  {
+    name: {
+      key: "7F62234D40025BC91046A69C0FB6A19A",
+      default: "Luminous Barrier",
+    },
+    id: "GA_Vigor_SingleTargetAbsorb",
+    description: {
+      key: "B12AC07B4CA3D93ABD9DB6A56B67680E",
+      default:
+        "Apply a shield to target ally that absorbs up to <rt.heal>{LuminousAbsorb}</> damage while it persists. The shield lasts for 8 sec.\r\n\r\n<rt.greyitalic>Vigour inscribes a rune of protection onto an ally, causing light to be woven around them into a barrier of divine energy. The barrier stops all forms of attack, whether forged by steel or conjured by magic.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Shield",
+  },
+  {
+    name: {
+      key: "80CEC4FE4D7835ACF0A4D7BB1BBCD63F",
+      default: "Lightshaper's Ward",
+    },
+    id: "GA_Vigor_DamageReductionAndImmunityBuff_C",
+    description: {
+      key: "052D43344F351D90E2F9E88A0A2C3E67",
+      default:
+        "Target ally takes <rt.absorb>20% reduced damage</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "vigor_T_Vigor_Ward",
+  },
+  {
+    name: { key: "1684B4F84BBD385C17440C99A6AA00D0", default: "Dawnflare" },
+    id: "GA_Vigor_CastedSingleTargetDamage_C",
+    description: {
+      key: "0C3742454F9D59C39770ED8198B92B1B",
+      default:
+        "Deals <rt.warning>{DawnflareDmg}</> magic damage to target enemy.\r\n\r\nEach cast of <rt.absorb>Dawnflare</> generates <rt.mana>20% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour can call upon the light to unleash a flare of divine light from above. This flash of radiant energy strikes the enemy with a sharp but controlled force.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Bolt",
+  },
+  {
+    name: { key: "38981D3C459751B5DA0C6BA0F0641FA9", default: "Radiant Blast" },
+    id: "GA_Vigor_InstantFrontalConeDamageHeal_C",
+    description: {
+      key: "3337E6384B29BBE44F5BC1A8E9F09988",
+      default:
+        "Within a cone in front of you, allies are healed for {RadiantBlastHeal} and enemies take <rt.warning>{RadiantBlastDmg}</> magic damage.\r\n\r\nWhen <rt.absorb>Radiant Blast</> deals damage to any number of enemies, it generates <rt.mana>30% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour expels an explosive flash of divine light from his outstretched hand, healing allies in its path, while searing enemies with its blinding brilliance.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Cone",
+  },
+  {
+    name: { key: "486797D649946FF6E9E62BBC1962AF69", default: "Greater Heal" },
+    id: "GA_Vigor_CastedSingleTargetHeal_C",
+    description: {
+      key: "380172DC48791AD2FE55A4BE084646EB",
+      default:
+        "Heal target ally for {GreaterHeal}.\r\n\r\n<rt.greyitalic>Vigour opens his sacred tome, drawing forth radiant power inscribed within its pages. With a solemn gesture, he calls forth a burst of healing energy to mend even the deepest wounds.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Heal",
+  },
+  {
+    name: {
+      key: "06D6D7794CCD83E83D3DDFAFFC99146B",
+      default: "Circle of Light",
+    },
+    id: "GA_Vigor_InstantAoeHeal_C",
+    description: {
+      key: "3FCDC39E45CB3F2220E95181877E699B",
+      default:
+        "Place a <rt.bold>Circle of Light</> on the ground, instantly healing all allies within its radius for {CircLightHeal}.\r\n\r\n<rt.greyitalic>Vigour calls upon the power of light to create a circle of divine healing on the ground. Allies within its boundaries are restored in a sudden flash, as the light pours into them, mending their wounds.</>",
+    },
+    thumbnail: "vigor_T_Vigor_AoEHeal",
+  },
+  {
+    name: { key: "D8B68FC3449010C70C9CE7BB8F4FD00E", default: "Throw Book" },
+    id: "GA_Vigor_SIngleTargetProjectileStun_C",
+    description: {
+      key: "3D890BEF4E26C533E4A599844FABDFEC",
+      default:
+        "Educate a target, <rt.absorb>Stunning</> them for 2 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "vigor_T_Vigor_Book",
+  },
+  {
+    name: {
+      key: "1130F1414A5D37C6C6C1D79404DD24B6",
+      default: "Avatar of Light",
+    },
+    id: "GA_Vigor_PartyHealAndSelfBuff_C",
+    description: {
+      key: "567D0B0642A15BA47D59F5AEE8620897",
+      default:
+        "Instantly heal all allies within a large radius of you for {AvatarDirectHeal} and enter an enlightened state for 9 sec, enhancing your abilities.\r\n\r\n<rt.absorb>Radiant Blast</>\r\nDeals <rt.warning>50% increased damage</> and has no <bold>Cooldown</>.\r\n\r\n<rt.absorb>Heal</>\r\nCosts <rt.mana>50% less Mana</> and is <rt.bold>Instant Cast</>.\r\n\r\n<rt.absorb>Circle of Light</>\r\nCosts <rt.mana>50% less Mana</> and has no <bold>Cooldown</>.\r\n\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste and +600% Mana Recovery for 20 sec.</>",
+    },
+    thumbnail: "vigor_T_Vigor_Spirit",
+  },
+  {
+    name: {
+      key: "3C75DF0D4D60F04013D79891A1DE4BDA",
+      default: "Dawnbreaker Orb",
+    },
+    id: "GA_Vigor_SkillshotAoeProjectile",
+    description: {
+      key: "97B0DD144F7FA0CE7DEBE6841952DE80",
+      default:
+        "Conjure an orb of light that slowly travels forward, healing all allies it touches for {DawnOrbHeal} and damaging enemies for <rt.warning>{DawnOrbDmg}</>.\r\n\r\nEach ally and enemy touched by <rt.absorb>Dawnbreaker Orb</> generates <rt.mana>10% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour conjures an orb of intricate runes, humming with radiant power. The orb shines brilliantly as it slowly drifts forward, burning all darkness from its path and bolstering the lifeforce of Vigour's allies.</>",
+    },
+    thumbnail: "vigor_T_Vigor_DawnSphere",
+  },
+  {
+    name: {
+      key: "1E1072B64A446B5AA90C57A70DFB40E5",
+      default: "Runic Proliferation",
+    },
+    id: "GA_Vigor_InstantResourceGain",
+    description: {
+      key: "BD42BA2D4F9EF863A63AAFAE35A7C93E",
+      default:
+        "Instantly generate <rt.mana>3 Radiant Runes</>. For the next 8 seconds, any <rt.absorb>Rune Abilities</> you cast are empowered, increasing their effectiveness by 20%.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
+    },
+    thumbnail: "vigor_T_Vigor_HealRune",
+  },
+  {
+    name: { key: "7309A25A4F0EE90223905EA0CB76F88F", default: "Levitate" },
+    id: "GA_Vigor_ChargedMovementSpeedSelfBuff_C",
+    description: {
+      key: "26DBB369417F70FA49DCA8A7DB61CC20",
+      default:
+        "Your movement speed is increased by 50% for 6 seconds and you take <rt.bold>20% reduced Area of Effect damage</> for the duration.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting or Channeling</>",
+    },
+    thumbnail: "vigor_T_Vigor_Levitate",
+  },
+  {
+    name: {
+      key: "44779978484A81045E6B7189D03883FD",
+      default: "Rune of Renewal",
+    },
+    id: "GA_Vigor_Passive_Echo_Monitor_C",
+  },
+  {
+    name: {
+      key: "754FDE2043C827ECB503FE8EBA9EFD1D",
+      default: "Sentinel's Bastion II",
+    },
+    id: "GA_GemBonus_ApplyPeriodicAbsorb_Medium",
+    description: {
+      key: "087F61524AB8AF91D1BA4DB3A3EDCAA6",
+      default:
+        "Every 60 seconds, you gain an absorb equal to 40% Max Health that lasts for 60 seconds.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_SpiritAmulet_SentinelBastion",
+  },
+  {
+    name: {
+      key: "0E81F6144903AC52CB25138388646D87",
+      default: "Sentinel's Bastion",
+    },
+    id: "GA_GemBonus_ApplyPeriodicAbsorb_Small",
+    description: {
+      key: "31ECED76493A8E8A420D5EBE35D4A2C7",
+      default:
+        "Every 60 seconds, you gain an absorb equal to 20% Max Health that lasts for 60 seconds.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_SpiritAmulet_SentinelBastion",
+  },
+  {
+    name: { key: "63E7689C4938E4C40CBB01829FEDAA8D", default: "Absorb Shield" },
+    id: "GA_GemBonus_HealthPercentageAsAbsorbBonusBase",
+    description: {
+      key: "702B96E14C2303FD61FA7C8341452E8B",
+      default: "Absorbs damage taken.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_CorruptionShield_Yellow",
+  },
+  {
+    name: { key: "3A59408A4F38BC54AD46D085A0B75E7A", default: "Ruby Storm" },
+    id: "GA_Trait_GemWhirlwindProc",
+  },
+  {
+    name: {
+      key: "00F6161D42AD23131B8AA1A3F69D19B7",
+      default: "Amethyst Splinters",
+    },
+    id: "GA_Trait_GemDotHotOnCrit",
+  },
+  {
+    name: { key: "5F293E3C4F23324F4043E6A15764C43F", default: "Topaz Winds" },
+    id: "GA_Trait_GemCooldownRecoveryOnAbilityProc",
+  },
+  {
+    name: {
+      key: "FBEE703849FB11F3844753BC36DEF9AB",
+      default: "Emerald Judgement",
+    },
+    id: "GA_Trait_GemTargetedSpikeProc",
+  },
+  {
+    name: {
+      key: "5BADCEEA41FC54D9CF2B62AEB3AEC6BD",
+      default: "Diamond Strike",
+    },
+    id: "GA_Trait_GemSingleTargetProcOnDamageHeal",
+  },
+  {
+    name: {
+      key: "84DD63FA4239B9D6CC82748EA32D2E91",
+      default: "Sapphire Aurastone",
+    },
+    id: "GA_Trait_GemPulsatingOnAbilityTotemProc",
+  },
+  {
+    name: {
+      key: "51A77D2248CAD1F8628081BCA4115C42",
+      default: "Divine Mediation",
+    },
+    id: "GA_Trait_Passive_IncomingDamageToHotAndAbsorb",
+    description: {
+      key: "5E9362BA4600705F2A4109AE2058A1A6",
+      default: "Absorbs incoming damage.",
+    },
+    thumbnail: "priest_Priest12",
+  },
+  {
+    name: {
+      key: "ABF46E0C4B08294E68D9D5831A82F1D0",
+      default: "Unyielding Bloom",
+    },
+    id: "GA_Mosse_Talent_Passive_DurationalAoeHealPlacement_OverhealGivesAbsorb_Monitor",
+    description: {
+      key: "8B6E40184E84EF05961427A62180A8C6",
+      default:
+        "75% of any overhealing done to a player by your <rt.absorb>Heartbloom</> is applied as an <rt.heal>Absorb</> to that player for up to 15 seconds.\r\n\r\nThe <rt.effect>Absorb</> generated by <rt.absorb>Unyielding Bloom</> can not exceed a value of 1232% Intellect.",
+    },
+  },
+  {
+    name: { key: "6BCE2B9446E6CC98AA55EA8268C20585", default: "Kindling" },
+    id: "GA_Trait_ExtraDotHotOnEffectApplicationProc",
+    description: {
+      key: "AFC9A8C64E7DA1A7AF5986A930874744",
+      default:
+        "Your damage effects apply a Damage over Time to the target, dealing fire damage equal to 66% / 79% / 92% / 106% of your primary stat every 1.5 seconds over 9 seconds.\r\n\r\nYour healing effects apply a Heal over Time to the target, healing them for 66% / 79% / 92% / 106% of your primary stat every 1.5 seconds over 9 seconds.\r\n\r\n(1.5 PPM)",
+    },
+  },
+  {
+    name: { key: "A312345946B39DDAECCB26ADC543820E", default: "Attack" },
+    id: "GA_CM_BlackbrunMantrader_AutoAttackMelee_C",
+  },
+  {
+    name: { key: "066F679747402BA6A331C6AD282B0DAA", default: "Frost Bolt" },
+    id: "GA_CM_BlackburnMantrader_CastedRangedProjectile",
+  },
+  {
+    name: { key: "48CFD08342D12EA4EF022EA7ED1BC5C4", default: "Icy Death" },
+    id: "GA_CM_BlackburnMantrader_LargeCastedRangedProjectile",
+  },
+  {
+    name: {
+      key: "255E395A43F80F1D84C7B5BF8F7745E8",
+      default: "Freezing Grasp",
+    },
+    id: "GA_CM_BlackburnMantrader_CastedRoot",
   },
   {
     name: {
@@ -2492,41 +3301,12 @@ export default [
     thumbnail: "mounts_T_Portrait_Mount_Broom_CauldronPurpleOrange",
   },
   {
-    name: { key: "A312345946B39DDAECCB26ADC543820E", default: "Attack" },
-    id: "GA_CM_BlackbrunMantrader_AutoAttackMelee_C",
-  },
-  {
-    name: { key: "066F679747402BA6A331C6AD282B0DAA", default: "Frost Bolt" },
-    id: "GA_CM_BlackburnMantrader_CastedRangedProjectile",
-  },
-  {
-    name: { key: "48CFD08342D12EA4EF022EA7ED1BC5C4", default: "Icy Death" },
-    id: "GA_CM_BlackburnMantrader_LargeCastedRangedProjectile",
-  },
-  {
     name: {
-      key: "255E395A43F80F1D84C7B5BF8F7745E8",
-      default: "Freezing Grasp",
+      key: "E6A311FA44CD859F0EF77EB4B9D52718",
+      default: "Bursting Barrier",
     },
-    id: "GA_CM_BlackburnMantrader_CastedRoot",
+    id: "GA_CM_Elf_Warden_BurstingBarrier_C",
   },
-  {
-    name: {
-      key: "C5D084254D0989D3962091B099062707",
-      default: "Chain Refraction",
-    },
-    id: "GA_CM_CrystalConstructCharged_ChainLightning_C",
-  },
-  {
-    name: { key: "A7AFF2A548854404AD30A3BBFAF4D18A", default: "Refraction" },
-    id: "GA_CM_CrystalConstructCharged_RotatingBeam",
-  },
-  {
-    name: { key: "74DE80B54C9C62043B25958CFFB80757", default: "Auto Attack" },
-    id: "GA_CM_Construct_Charged_AutoAttack_C",
-  },
-  { name: { key: "", default: "" }, id: "GA_CM_Construct_Charged_Ghost_C" },
-  { name: { key: "", default: "" }, id: "GA_CM_Construct_Ghost_AutoAttack_C" },
   {
     name: { key: "C07423DC4BBA1CD35B602B86D5DFC933", default: "Attack" },
     id: "GA_CM_EarthElemental_AutoAttack_C",
@@ -2558,10 +3338,189 @@ export default [
   },
   {
     name: {
-      key: "E6A311FA44CD859F0EF77EB4B9D52718",
-      default: "Bursting Barrier",
+      key: "C5D084254D0989D3962091B099062707",
+      default: "Chain Refraction",
     },
-    id: "GA_CM_Elf_Warden_BurstingBarrier_C",
+    id: "GA_CM_CrystalConstructCharged_ChainLightning_C",
+  },
+  {
+    name: { key: "A7AFF2A548854404AD30A3BBFAF4D18A", default: "Refraction" },
+    id: "GA_CM_CrystalConstructCharged_RotatingBeam",
+  },
+  {
+    name: { key: "0A986E3342713FACD72FFD8F4CF12EBE", default: "Attack" },
+    id: "GA_CM_ElfGoon_RangedSlow_C",
+    thumbnail: "weapon_icons_Tex_axe_06_bg",
+  },
+  {
+    name: { key: "1A82668B47A518F5C03C07B50BCDD15A", default: "Throw Stone" },
+    id: "GA_CM_ElfGoon_FirstThreatProjectile",
+    thumbnail: "geomancer_Geomancer1",
+  },
+  {
+    name: { key: "74DE80B54C9C62043B25958CFFB80757", default: "Auto Attack" },
+    id: "GA_CM_Construct_Charged_AutoAttack_C",
+  },
+  { id: "GA_CM_Construct_Charged_Ghost_C" },
+  { id: "GA_CM_Construct_Ghost_AutoAttack_C" },
+  {
+    name: {
+      key: "6E7E8D734302B95C3477C6B111C4B765",
+      default: "Sahril's Aegis",
+    },
+    id: "GA_Weapon_AbsorbDelayedAoeDamage",
+    description: {
+      key: "471FFC284F04D2DC5505EC82D99AFCAA",
+      default:
+        "You are protected by the divine flame of Sahril, granting you a shield for up to 18 seconds that absorbs up to <rt.heal>{SahrAegisAbsorb}</> damage.\r\n\r\nWhen the shield expires it explodes on to enemies within a 1000 radius, dealing <rt.warning>{SahrAegisDmg}</> fire damage to them.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_VoidBarrier",
+  },
+  {
+    name: {
+      key: "C782C09C4004045D23E07CB6764E7AFA",
+      default: "Twilight Skybolt",
+    },
+    id: "GA_Weapon_InstantChargedProjectileHealOrDamage",
+    description: {
+      key: "4E28DE154891F0A50F8F5EA2DBAAF252",
+      default:
+        "Deals <rt.warning>{TwilSkyDmg}</> damage to target enemy or <rt.heal>{TwilSkyHeal}</> healing to target ally. Each time <rt.absorb>Twilight Skybolt</> is cast, you gain 1 stack of <rt.effect>Eclipse</>, causing the next <rt.absorb>Twilight Skybolt</> to deal <rt.warning>100% more damage</> or <rt.heal>100% more healing</> for each stack you have.\r\n\r\n<rt.absorb>Twilight Skybolt</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.effect>Eclipse</> stacks reset every 3 casts.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_Skybolt",
+  },
+  {
+    name: {
+      key: "950024EF4761F5FD26CE36B711445B75",
+      default: "Sahril's Wrath",
+    },
+    id: "GA_Weapon_InstantAoeDamageBuff",
+    description: {
+      key: "895916ED4A66E2DB02C88995E03F2264",
+      default:
+        "Instantly deal <rt.warning>{SahrilWrathDmg}</> fire damage to all enemies within a 1000 radius.\r\n\r\nYou gain 1 stack of <rt.effect>Sundering Wrath</> for each enemy hit up to a maximum of 5 stacks, grating you <rt.warning>+6% additional critical strike chance per stack</> for 20 seconds.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_CritAOE",
+  },
+  {
+    name: { key: "595A0EC8413259B09E3BFAA8EE4F6A9B", default: "Nature's Fury" },
+    id: "GA_Weapon_CastedChainHealDamage",
+    description: {
+      key: "C39E812348AE9BAD789510B5A4362A2F",
+      default:
+        "Conjure the forces of nature to bounce between <rt.warning>up to 4 enemies</>, dealing <rt.warning>{NatFuryDmg}</> nature damage to each one, and <rt.heal>up to 4 allies</>, healing each one for {NatFuryHeal} health.\r\n\r\n<rt.absorb>Nature's Fury</> has an additional <rt.warning>+30% Critical Strike chance</>.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_NatureBolt",
+  },
+  {
+    name: {
+      key: "3E58BE7E4118FCB2569F62B551B222FD",
+      default: "Voidbringer's Touch",
+    },
+    id: "GA_Weapon_InstantDamageAccumulativeDebuff",
+    description: {
+      key: "1A1E9E4B4047620608E7CD8664A6E03E",
+      default:
+        "Apply <rt.effect>Voidbringer's Touch</> to target enemy for 15 seconds, causing <rt.warning>{VoidTouchAccum}</> of all damage you deal to any enemy to be replicated and stored in the effect.\r\n\r\nOnce <rt.effect>Voidbringer's Touch</> expires, or a total of <rt.warning>{VoidTouchDmg}</> damage has been accumulated, the effect erupts in a shadowy explosion, <rt.warning>instantly dealing the accumulated damage to the target</>.\r\n\r\n<rt.effect>Voidbringer's Touch</> has <rt.warning>+100% critical strike chance</>.\r\n\r\n<rt.effect>Voidbringer's Touch</> always triggers if the damage it holds is greater than the remaining health of the enemy it is applied to.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_VoidTouch",
+  },
+  {
+    name: {
+      key: "C00FCF274D2E4C2E9A02A7A21759D905",
+      default: "Zeraleth's Hunger",
+    },
+    id: "GA_Weapon_CastedHealAndDamageChannel",
+    description: {
+      key: "30277B7A4813160F40C252A6FDA31912",
+      default:
+        "Deal <rt.warning>{ZeralethTickDmg}</> magic damage <rt.bold>every</> <rt.warning>{ZeralethTickPeriod}</> <rt.bold>seconds for 3 seconds</> to target enemy <rt.bold>while channeling</>. You are <rt.heal>healed for 100% of the damage dealt</>.\r\n\r\nAny amount of <rt.heal>overhealing on you</> from <rt.absorb>Zarelth's Hunger</> is projected to up to 3 allies within 3000 radius of you, <rt.heal>healing those players for the overhealing amount, evenly divided</>.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_Vampiric",
+  },
+  {
+    name: {
+      key: "9ECFE0FF422AFC2AD598F8BBF31835A6",
+      default: "Repository of Frozen Light",
+    },
+    id: "GA_Weapon_CastedBuffStacksHealOnDamage",
+    description: {
+      key: "3D7EE66249D0697FA09896A9EDBBA920",
+      default:
+        "Applies up to 60 stacks of <rt.effect>Frozen Light</> evenly divided between all players within 6000 radius for 21 seconds. Each time a player with <rt.effect>Frozen Light</> takes damage, 1 stack is consumed and the player is healed for {RepLivLightHeal}. The stack count can not exceed 20 per player.\r\n\r\nUpon expiration, each remaining stack of  <rt.effect>Frozen Light</> causes <rt.absorb>Repository of Frozen Light's</> cooldown to be reduced by 0.3 seconds.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_FrostLightRepository",
+  },
+  {
+    name: { key: "DFAE6B414D86950833E704938D43A3CC", default: "Fated Strike" },
+    id: "GA_Weapon_CleaveDamageBuffCooldownReduction",
+    description: {
+      key: "8D65B24943379958E03AF4A18449D9A3",
+      default:
+        "Strike target enemy, dealing <rt.warning>{FatedStrkDirectDmg}</> damage to it and cleaving for <rt.warning>{FatedStrkCleaveDmg}</> damage to nearby enemies.\r\n\r\n<rt.absorb>Fated Strike</> applies <rt.effect>Glorious Purpose</> to you for <rt.bold>6 seconds</>, increasing your <rt.warning>Expertise by +20%</> and granting you <rt.meikoability2>+{CDR} increased Cooldown Acceleration</> for the duration.\r\n\r\nIf used at range, <rt.absorb>Fated Strike</> will cause you to charge to your target.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_CDstrike",
+  },
+  {
+    name: {
+      key: "1E498BCB470C042C2E328390CE9B6E07",
+      default: "Al'zerac's Shackle",
+    },
+    id: "GA_Weapon_StunDotAoeDamageSlow",
+    description: {
+      key: "5487EFEC4CC49846A09E318589C4A724",
+      default:
+        "Instantly <rt.effect>Freeze</> target enemy in a block of ice for <rt.effect>3 seconds</>, incapacitating them for the duration. While frozen, the target takes <rt.warning>{AlzeracMainTargetDotDmg}</> frost damage <rt.bold>every</> <rt.warning>{AlzeracMainTargetDotPeriod}</> <rt.bold>seconds for the duration</>.\r\n\r\nUpon Expiration, the target erupts in an explosion of frost magic, instantly dealing <rt.warning>{AlzeracAoeDamage}</> frost damage to all enemies in an 800 radius and <rt.effect>Chilling</> them, reducing their <rt.effect>Movement Speed by 65%</> and their <rt.effect>Attack Speed by 40%</> for 12 seconds.\r\n\r\nWhile <rt.effect>Chilled</>, the afflicted enemies take <rt.warning>{AlzeracAoeDotDmg}</> frost damage <rt.bold>every</> <rt.warning>{AlzeracAoeDotPeriod}</> <rt.bold>seconds for the duration</>.",
+    },
+    thumbnail: "weaponabilityicons_T_Weapon_IceShackle",
+  },
+  {
+    name: { key: "7FD76E1A4EA6F41B958E3BB1C203900D", default: "Chronoshift" },
+    id: "GA_Weapon_ChanneledCooldownReducer",
+    description: {
+      key: "99A6E1884ABC3F82D5674CBE08545D14",
+      default:
+        "Create an arcane anomaly <rt.bold>while channeling up to 3 seconds</>, causing you to pulse <rt.warning>{AshaTickDmg}</> <rt.bold>every</> <rt.warning>{AshaTickPeriod}</> <rt.bold>seconds</> to all enemies in a large radius around you.\r\n\r\nWhile channeling <rt.absorb>Chronoshift</> you gain <rt.meikoability2>800% increased cooldown recovery</> and are protected by a temporal barrier, causing you to take <rt.bold>50% reduced damage</>.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLoad",
+  },
+  {
+    name: { key: "D71493F74E02DF16107F5C916F27CECB", default: "Earthbreaker" },
+    id: "GA_Weapon_FrontalAOEConeRepeatingStunDamage",
+    description: {
+      key: "483832BA4230DBA86BDCC4829B13B1FE",
+      default:
+        "Conjure the <rt.absorb>Earthbreaker</> into your hands and instantly slam it into the ground, causing the ground to erupt with natural magic in a cone in front of you, dealing <rt.warning>{EarthBrkrInitialDmg}</> nature damage to all enemies in it and <rt.effect>Stunning</> them for 1.5 seconds.\r\n\r\nThe area continues to rupture for <rt.bold>10 seconds</>, dealing <rt.warning>{EarthBrkrTickDmg}</> <rt.bold>every</> <rt.warning>{EarthBrkrTickPeriod}</> <rt.bold>seconds</> to enemies in standing in it.\r\n\r\nAfter 10 seconds, the area erupts a 2nd time, dealing <rt.warning>{EarthBrkrFinalDmg}</> to all enemies in it and <rt.effect>stunning</> them for 1.5 seconds.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_NatureWave",
+  },
+  {
+    name: {
+      key: "946DE2BA47DED539FA6A158E3B139D13",
+      default: "Icicles of An'zhyr",
+    },
+    id: "GA_Weapon_CastedRepetitivelyAOEDamageDebuff",
+    description: {
+      key: "6D8143F5459F2B0A4C125DBF83FD75A7",
+      default:
+        "Conjure <rt.warning>3 waves</> of icicles to pelt the target area, dealing <rt.warning>{IcicleAnDirectDmg}</> frost damage to all enemies in the area with each wave.\r\n\r\nEnemies hit by the final wave of <rt.absorb>Icicles of An'zhyrz</> are afflicted by <rt.effect>Curse of An'zhyr</> permanently, taking <rt.warning>{IcicleAnTickDmg}</> frost damage <rt.bold>every</> <rt.warning>{IcicleAnTickPeriod}</> <rt.bold>seconds</>.\r\n\r\nEnemies afflicted by <rt.effect>Curse of An'zhyr</> take <rt.warning>+200% increased direct damage</> from <rt.absorb>Icicles of An'zhyr</>.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Icons_FrostRain",
+  },
+  {
+    name: { key: "8B4FB8CC482EA223F741F687681DC66C", default: "Shoot" },
+    id: "GA_CM_ElfLookout_AutoAttack_C",
+    thumbnail: "weapon_icons_Tex_crossbow_02_bg",
+  },
+  {
+    name: { key: "D470FB93464FDC4DF51D308485D33BB3", default: "Bolt Barrage" },
+    id: "GA_CM_ElfLookout_QuickShots",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_28",
+  },
+  {
+    name: { key: "94F7C9C449F4544140254B81FC9CADFC", default: "Attack" },
+    id: "GA_CM_ElfLookout_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
     name: { key: "D0B7161042D3CA12C50B398A15129964", default: "Attack" },
@@ -2593,435 +3552,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Fire_17",
   },
   {
-    name: { key: "0A986E3342713FACD72FFD8F4CF12EBE", default: "Attack" },
-    id: "GA_CM_ElfGoon_RangedSlow_C",
-    thumbnail: "weapon_icons_Tex_axe_06_bg",
-  },
-  {
-    name: { key: "1A82668B47A518F5C03C07B50BCDD15A", default: "Throw Stone" },
-    id: "GA_CM_ElfGoon_FirstThreatProjectile",
-    thumbnail: "geomancer_Geomancer1",
-  },
-  {
-    name: {
-      key: "54FF362B4351ED62F0A1F396C01A9DF2",
-      default: "Wrath of Winter",
-    },
-    id: "GA_Rime_FullResourcesSelfBuff",
-    description: {
-      key: "F0753CDF4F22B5560B0AB296856BD067",
-      default:
-        "Invoke the spirits of the frozen tundra for 20 seconds, granting you <rt.mana>1 Winter Orb</> every 4 seconds. You deal <rt.warning>+20% increased damage</> and your <rt.absorb>Glacial Blast</> ability is instant cast while <rt.absorb>Wrath of Winter</> is active.\r\n\r\n<rt.mana>WINTER ORBS</>\r\n<rt.mana>Winter Orbs</> are required to cast your powerful spender abilities; <rt.absorb>Glacial Blast</> and <rt.absorb>Ice Comet</>.\r\n\r\n<rt.effect>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "rime_T_Rime_SpiritAbility",
-  },
-  {
-    name: { key: "80AAB2F542A8BFE9756F8A8F4CB43C64", default: "Brain Freeze" },
-    id: "GA_Rime_InstantSingleInterrupt_C",
-    description: {
-      key: "DBC3EA7548B922A724759381ECBB6E80",
-      default:
-        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "rime_T_RimeIcon_Interrupt",
-  },
-  {
-    name: { key: "DC8674804DBA0B4C64B2B8896413DBEF", default: "Ice Dash" },
-    id: "GA_Rime_DashForward_C",
-    description: {
-      key: "163FEE1240E6740CC276BCB58C300486",
-      default:
-        "Quickly travel forward a short distance.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "rime_T_Rime_Dash",
-  },
-  {
-    name: { key: "D2DE1F6449CC9A77267A21AE18470348", default: "Glacial Blast" },
-    id: "GA_Rime_CastedProjectileDamageOrbSpender",
-    description: {
-      key: "921BCFB14DF558CF862D779EB9F6A286",
-      default:
-        "Hurl a mass of ice at target enemy, dealing <rt.warning>{GlacialBlast}</> damage.",
-    },
-    thumbnail: "rime_T_Rime_AnimaBolt",
-  },
-  {
-    name: { key: "674E49AF4214EDCD4F3CB6B42B368C6F", default: "Ice Comet" },
-    id: "GA_Rime_OnTargetPulsatingAoe",
-    description: {
-      key: "8E4545094915A0AA5F44959FADE15E45",
-      default:
-        "Unleash a large <rt.absorb>Ice Comet</> from above target enemy to crash down on them, dealing <rt.warning>{IceComet}</> damage to all enemies caught in the impact radius.",
-    },
-    thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
-  },
-  {
-    name: { key: "DD5F59F8480B193F5D9D429ACACCD458", default: "Frost Ward" },
-    id: "GA_Rime_SelfDefenceBuff_C",
-    description: {
-      key: "6A1ACEE34FFDBB8D8BB9A1AF5A0C5946",
-      default:
-        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "rime_T_Rime_SelfDefenceBuff",
-  },
-  {
-    name: { key: "E27036C748DFA573FA6E2D944025D74E", default: "Frost Bolt" },
-    id: "GA_Rime_CastedProjectileDamageFiller",
-    description: {
-      key: "53B4592441D928CBB66AA2BB762962FA",
-      default:
-        "Hurl a bolt of frost magic at target enemy, dealing <rt.warning>{FrostBolt}</> damage.\r\n\r\n<rt.mana>Generates 1 Anima</> \r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
-    },
-    thumbnail: "rime_T_Rime_SingleTargetBolt",
-  },
-  {
-    name: { key: "D62F5D0946EBCE9CA555F8971D4A3F4A", default: "Cold Snap" },
-    id: "GA_Rime_InstantSingleDamage",
-    description: {
-      key: "A878C64A4706B87CCC16C1B7FE71D862",
-      default:
-        "Assault the target with extreme cold, dealing <rt.warning>{ColdSnap}</> damage. \r\n\r\n<rt.absorb>Cold Snap</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.mana>Generates 1 Winter Orb</>\r\n\r\n<rt.mana>WINTER ORBS</>\r\n<rt.mana>Winter Orbs</> are required to cast your powerful spender abilities; <rt.absorb>Glacial Blast</>, <rt.absorb>Ice Comet</>, and <rt.absorb>Dance of Swallows</>.",
-    },
-    thumbnail: "rime_T_Rime_InstantHit",
-  },
-  {
-    name: {
-      key: "FD43123C453898DBEFDF88BE9853C614",
-      default: "Freezing Torrent",
-    },
-    id: "GA_Rime_ChanneledBeamSingleDamage",
-    description: {
-      key: "9BA8CB3542B862FBDBC5F0AB9646C583",
-      default:
-        "Flay your target with a beam of frost energy, dealing <rt.warning>{FreezeTorrTickDmg}</> damage <rt.bold>every</> <rt.warning>{FreezeTorrPeriod}</> <rt.bold>seconds for 2 seconds</> while channeling. \r\n\r\n<rt.mana>Generates 1 Anima per tick</>\r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
-    },
-    thumbnail: "rime_T_Rime_ChanneledBeam",
-  },
-  {
-    name: { key: "B82BC95F4E9BB38DC88084BCE3564952", default: "Bursting Ice" },
-    id: "GA_Rime_CastedDebuffAoeDamage",
-    description: {
-      key: "029C069A4E2A534A82BD769521DBFB28",
-      default:
-        "Conjures an icy crystal inside a target that pulses frost damage, dealing <rt.warning>{BurstIceTickDmg}</> <rt.bold>every</> <rt.warning>{BurstIcePeriod}</> <rt.bold>seconds for 3 seconds</> to the target and nearby enemies.\r\n\r\n<rt.mana>Generates 1 Anima each time it pulses</>\r\n\r\n<rt.mana>ANIMA</>\r\nYour <rt.mana>Anima</> is shown as a bar beneath your character. For every 9 Anima you generate, you gain <rt.mana>1 Winter Orb</>, used to cast your powerful spender abilities.",
-    },
-    thumbnail: "rime_T_Rime_CastedDebuffAOEdamage",
-  },
-  {
-    name: { key: "B31D7B5D49F4BF75C8C4DF84E0C5431B", default: "Frigid Winds" },
-    id: "GA_Rime_InstantConeKnockback_C",
-    description: {
-      key: "E1E0727448C5593D39368095D3BDF609",
-      default:
-        "Blast enemies in front of you with arctic winds, <rt.absorb>Knocking Back</> enemies and <rt.absorb>Slowing</> them by 50% for 12 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "rime_T_Rime_Knockback",
-  },
-  {
-    name: {
-      key: "9C4066AB411671C0D0E3C39A18623ACC",
-      default: "Frost Swallows",
-    },
-    id: "GA_Rime_Helper_AutoDamageProjectile",
-    description: {
-      key: "FD2E726F4DB064472DF73FA278D033F9",
-      default: "Rime commands Frost Swallows to attack her target.",
-    },
-    thumbnail: "rime_T_Rime_BirdCD",
-  },
-  {
-    name: { key: "A40889F04092609DC139B89210078FBC", default: "Ice Blitz" },
-    id: "GA_Rime_AutoProjectileOnResourceGainBuff",
-    description: {
-      key: "D4801C1A4EB7B3DF5AC2B780BA330C5B",
-      default:
-        "You enter a state of focused casting for 20 seconds, causing you to deal <rt.warning>20% more damage</> for the duration.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while casting</>",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
-  },
-  {
-    name: {
-      key: "67440B1D4C44F700D6E44A86711F9AA5",
-      default: "Flight of the Navir",
-    },
-    id: "GA_Rime_TargetedPeriodicProjectileAoe",
-    description: {
-      key: "5AAD68A74F93F06096CCF28970D5BE8B",
-      default:
-        'Summon <rt.effect>5 Frost Swallows</> to circle above Rime for 20 seconds. Your <rt.absorb>Cold Snap</> and <rt.absorb>Freezing Torrent</> command the frost swallows to swoop down on enemies, each dealing <rt.warning>{FrostSwallDmg}</> damage to their target.\r\n\r\n<rt.greyitalic>"She needed only whisper, and the Navir appeared."</>',
-    },
-    thumbnail: "rime_T_Rime_BirdCD",
-  },
-  {
-    name: {
-      key: "BB45FDB94A076E2A1C69F6853522CB07",
-      default: "Winter's Blessing",
-    },
-    id: "GA_Rime_DamageAsAoeHealingBuff",
-    description: {
-      key: "76D832244A8D7C0324A1F6A13FF03165",
-      default:
-        "Your <rt.absorb>Spirit is increased by 20%</> for 20 seconds and <rt.heal>30% of all damage you deal is replicated as healing</> divided equally between all allies.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "rime_T_Rime_HealingBuff",
-  },
-  {
-    name: { key: "544A760E48F9E3C00A9426A67B48C868", default: "Attack" },
-    id: "GA_Mara_AutoAttack_C",
-    thumbnail: "textures_Tex_swords_05_bg",
-  },
-  {
-    name: { key: "DCDBEB5B494C6090DDA88494AB3FFD32", default: "Backstab" },
-    id: "GA_Mara_StrongerBehindAttackBuilder_C",
-    description: {
-      key: "EEBA54A147BB411774166D939B26C9E5",
-      default:
-        "Deals <rt.warning>{BackstabDmg}</> damage to target enemy. Deals <rt.warning>40% more damage when attacking from behind</>.\r\n\r\n<rt.meikoability1>Generates 2 Combo Points. Critical Strikes generate 3 Combo Points.</>",
-    },
-    thumbnail: "mara_Mara_backstab",
-  },
-  {
-    name: { key: "8D47636E4009E90A4D21CD9EB8669886", default: "Widow's Bite" },
-    id: "GA_Mara_ChargedDoubleAttackBuilder_C",
-    description: {
-      key: "5EE740E440A7783909A4C19BF56FAD72",
-      default:
-        "Plunges both daggers into single target, dealing <rt.warning>{WidowBiteDmg1}</> with the right hand and <rt.warning>{WidowBiteDmg2}</> with the left hand.\r\n\r\n<rt.absorb>Widow's Bite</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.meikoability1>Generates 2 Combo Points with each strike. Critical Strikes generate 3 Combo Points.</>\r\n\r\n<rt.mana>Generates 30 Energy</>",
-    },
-    thumbnail: "mara_Mara_RegainEnergyHit",
-  },
-  {
-    name: {
-      key: "166FBB4D49E6EB4518D7B38D1DA3AC6D",
-      default: "Skittering Blades",
-    },
-    id: "GA_Mara_AoeAttackBuilder_C",
-    description: {
-      key: "B4DE41834286A97D1C55BD8A30AC2882",
-      default:
-        "Spins and throws daggers in all direction, dealing <rt.warning>{SkitterDmg}</> to all nearby enemies.\r\n\r\n<rt.meikoability1>Generates 1 Combo Point for each enemy hit. Critical Strikes generate 2 Combo Points.</>",
-    },
-    thumbnail: "mara_Mara_AOEBuilder",
-  },
-  {
-    name: { key: "0240DA2C4B3635AED1A86EBC0C8A7D74", default: "Stalker Step" },
-    id: "GA_Mara_ChargedTeleportBehindTarget_C",
-    description: {
-      key: "7B3521F248D51B7080FA9DAF7944EED4",
-      default:
-        "Instantly teleport behind target enemy or player and increase your movement speed by <rt.bold>50%</> for 4 seconds.\r\n\r\n<rt.absorb>Stalker Step</> does not break <rt.effect>Stealth</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "mara_Mara_Stalkerstep",
-  },
-  {
-    name: { key: "FA96019642F6A8776075708D24FC03AB", default: "Queen's Fang" },
-    id: "GA_Mara_HeavyAttackSpender_C",
-    description: {
-      key: "AEEC9B3942C49C6F9C5AB9B58270334B",
-      default:
-        "Deals <rt.warning>{QueenFangDmg}</> to target enemy. Damage increased for each combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: +20% damage</>\r\n<rt.meikoability1>2 Combo Points: +40% damage</>\r\n<rt.meikoability1>3 Combo Points: +60% damage</>\r\n<rt.meikoability1>4 Combo Points: +80% damage</>\r\n<rt.meikoability1>5 Combo Points: +100% damage</>\r\n<rt.meikoability1>6 Combo Points: +120% damage</>",
-    },
-    thumbnail: "mara_Mara_SingleTargetFinisher",
-  },
-  {
-    name: { key: "A4E0701B479EC42A4B1533A905AF5098", default: "Kick" },
-    id: "GA_Mara_MeleeInterrupt_C",
-    description: {
-      key: "6FD0B33048E85610D7040792EA1C0327",
-      default:
-        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "mara_Mara_Kick",
-  },
-  {
-    name: {
-      key: "8D57F0694E8D79EBD850C593538A9E9F",
-      default: "Maiden of Death",
-    },
-    id: "GA_Mara_ChargedResourceRefillSelfBuff_C",
-    description: {
-      key: "9EC0A4914AD3B075E55D74830AD44C42",
-      default:
-        "For the next 10 seconds, you deal <rt.warning>20% more damage</> and all combo point generating abilities generate <rt.meikoability1>6 Combo Points</>.\r\n\r\nAdditionally, your <rt.mana>Energy Generation is increased by 20%</> while <rt.absorb>Maiden of Death</> is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "mara_Mara_Maiden",
-  },
-  {
-    name: {
-      key: "519B2613432B18B23E758A89121F63B9",
-      default: "Arachnid Assault",
-    },
-    id: "GA_Mara_AoeAttackSpender_C",
-    description: {
-      key: "F23F3ECA4FC1636E76E9618B509A8D12",
-      default:
-        "Deal <rt.warning>{ArachniedDmg}</> to all targets in a radius around Mara. The damage is increased per combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: +20% damage</>\r\n<rt.meikoability1>2 Combo Points: +40% damage</>\r\n<rt.meikoability1>3 Combo Points: +60% damage</>\r\n<rt.meikoability1>4 Combo Points: +80% damage</>\r\n<rt.meikoability1>5 Combo Points: +100% damage</>\r\n<rt.meikoability1>6 Combo Points: +120% damage</>",
-    },
-    thumbnail: "mara_Mara_SpiderAOE",
-  },
-  {
-    name: {
-      key: "EFA8864B4A567B0B8AA2D9B7EE050B2E",
-      default: "Hunter's Ferocity",
-    },
-    id: "GA_Mara_EnergyDamageSelfBuff_C",
-    description: {
-      key: "A0553811419C4A4A83CCE0B7E4A36715",
-      default:
-        "Your energy regeneration is increased by 50% for 12 seconds and all damage you deal is increased by 20%.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareAura",
-  },
-  {
-    name: { key: "83F17A174C06EACBD6316BA65CCF3AE1", default: "Stealth (OLD)" },
-    id: "GA_Mara_ApplyPoisonSelfBuff_C",
-    description: {
-      key: "DAAD28D04077E154164D7B8AA22B4A22",
-      default:
-        "Instantly enter stealth, becoming more difficulty for enemies to detect you. When used in combat, Stealth triggers a 15 second cooldown.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\nYour <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</> or <rt.absorb>Skittering Blades</> apply various poisons when used from stealth.\r\n\r\n<rt.absorb>Backstab - Caustic Poison:</>\r\nInstantly deals <rt.warning>397% Agility</> poison damage to the target and generates <rt.meikoability1>6 Combo Points</>.\r\n\r\n<rt.absorb>Widow's Bite - Seething Poison:</>\r\nApplies Seething Poison to target enemy that deals <rt.warning>53% Agility</> damage every 2 seconds for 60 seconds. While Seething Poison is active on any enemy, you gain 25% increased Attack Speed and <rt.mana>25% Energy Regeneration</>. Seething Poison can only be active on 1 target at any time.\r\n\r\n<rt.absorb>Skittering Blades - Volatile Poison:</>\r\nApplies Volatile Poison to all enemies hit, dealing <rt.warning>20% Agility</> poison damage every 2s over 6 seconds. Upon expiration, Volatile Poison erupts dealing <rt.warning>40% Agility</> poison damage to the target and nearby enemies within 700 range.",
-    },
-    thumbnail: "textures_T_Icon_Shadow_120",
-  },
-  {
-    name: {
-      key: "2D55F6084624724D93027B8C1F285469",
-      default: "Hemorrhaging Strike",
-    },
-    id: "GA_Mara_BleedAttackSpender_C",
-    description: {
-      key: "4289F9BD404B3208E1F7A08CCCB72884",
-      default:
-        "Strike the target dealing <rt.warning>{HemoStrikeDirect}</> damage and apply a bleed dealing <rt.warning>{HemoStrikeTickDmg}</> <rt.bold>every</> <rt.warning>{HemoStrikePeriod}</> <rt.bold>seconds for 12 seconds</>. The bleed's duration is increased per combo point spent.\r\n\r\n<rt.meikoability1>1 Combo Point: 15 seconds</>\r\n<rt.meikoability1>2 Combo Points: 18 seconds</>\r\n<rt.meikoability1>3 Combo Points: 21 seconds</>\r\n<rt.meikoability1>4 Combo Points: 24 seconds</>\r\n<rt.meikoability1>5 Combo Points: 27 seconds</>\r\n<rt.meikoability1>6 Combo Points: 30 seconds</>\r\n\r\n<rt.mana>Each tick of Hemorrhaging Strike's bleed replenishes 3 energy.</>",
-    },
-    thumbnail: "mara_Mara_Bleed",
-  },
-  {
-    name: {
-      key: "CD5A9EA44E725282A69C55B7AF04B45F",
-      default: "Predator's Rush",
-    },
-    id: "GA_Mara_EnergyAutoAttackSelfBuffSpender_C",
-    description: {
-      key: "C5EAE7774B3D17873CE8A7BF78C1967D",
-      default:
-        "Increases Energy Regeneration and Auto-attack speed by 20%.\r\n\r\n<rt.meikoability1>1 Combo Point: 5 second duration</>\r\n<rt.meikoability1>2 Combo Points: 10 second duration</>\r\n<rt.meikoability1>3 Combo Points: 15 second duration</>\r\n<rt.meikoability1>4 Combo Points: 20 second duration</>\r\n<rt.meikoability1>5 Combo Points: 25 second duration</>\r\n<rt.meikoability1>6 Combo Points: 30 second duration</>\r\n",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Shadow_44",
-  },
-  {
-    name: {
-      key: "6CAEE9D64DF2B2E2105523939441DCCB",
-      default: "Brooding Shadows",
-    },
-    id: "GA_Mara_Stealth_C",
-    description: {
-      key: "23690FC64FA741E50D07C3AF928148E0",
-      default:
-        "Instantly enter <rt.absorb>Stealth</>, becoming more difficulty for enemies to detect you. When used in combat, <rt.absorb>Brooding Shadows</> triggers a 15 seconds cooldown.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\n<rt.absorb>Brooding Shadows</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\nYour <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</> and <rt.absorb>Skittering Blades</> abilities each apply poison when used from stealth.\r\n\r\n<rt.absorb>Backstab - Caustic Poison:</>\r\nInstantly deal <rt.warning>{CausticDmg}</> poison damage and generate <rt.meikoability1>6 Combo Points</>.\r\n\r\n<rt.absorb>Widow's Bite - Seething Poison:</>\r\nApplies Seething Poison to the target, dealing <rt.warning>{SeethingDmg}</> poison damage <rt.bold>every</> <rt.warning>{SeetingPeriod}</> <rt.bold>seconds for 60 seconds</>. While Seething Poison is active on any enemy, you gain <rt.effect>Predator's Rush</>, granting you <rt.mana>40% increased Energy Regeneration</>. Seething Poison <rt.bold>can only be active on 1 target at a time</>.\r\n\r\n<rt.absorb>Skittering Blades - Volatile Poison</>:\r\nApplies Volatile Poison to all enemies hit by your Skittering Blades, dealing <rt.warning>{VolatileTotalDmg}</> poison damage over 6 seconds. Upon expiration, Volatile Poison erupts dealing <rt.warning>{VolatileAoeDmg}</> poison damage to the target and nearby enemies within a 500 radius.",
-    },
-    thumbnail: "mara_Mara_stealth",
-  },
-  {
-    name: {
-      key: "67FFD9304781BC97161404AEA8E036AD",
-      default: "Enveloping Web",
-    },
-    id: "GA_Mara_StunSpender_C",
-    description: {
-      key: "4F163E0A44B49F23B66DBAA32898570F",
-      default:
-        "Instantly <rt.effect>Stun</> target enemy for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>",
-    },
-    thumbnail: "mara_Mara_Stun",
-  },
-  {
-    name: { key: "995218504D213A6C1876E0970D8D9975", default: "Spider's Grip" },
-    id: "GA_Mara_Disorient_C",
-    description: {
-      key: "A8A41B5240A11E7874161B9CDEC96FBD",
-      default:
-        "Instantly <rt.absorb>Disorient</> target enemy within 3000 range for 20 seconds. Casting Spider's Grip causes you to stop Auto-attacking the target. Any damage dealt to the target breaks the disorient effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>\r\n\r\n<rt.mana>Generates 1 Combo Point</>",
-    },
-    thumbnail: "mara_Mara_Stun",
-  },
-  {
-    name: {
-      key: "C508EACD466FD9CBBE311D9B4354B997",
-      default: "Shadow Protection",
-    },
-    id: "GA_Mara_SelfDefenceBuff_C",
-    description: {
-      key: "280A4EFE4C001689960CD88D007B824E",
-      default:
-        "You take <rt.absorb>40% reduced damage</> for 4 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "mara_Mara_Defensive",
-  },
-  {
-    name: {
-      key: "CD9833E74D0065E6A43E50AC89697672",
-      default: "Matriarch Macabre",
-    },
-    id: "GA_Mara_CopyCharacterDamage_C",
-    description: {
-      key: "0C04DEFE432E9C2A5031F994357ADA70",
-      default:
-        "For the next 20 seconds, you deal <rt.warning>20% more damage</> and your <rt.absorb>Queen's Fang</> and <rt.absorb>Arachnid Assault</> abilities summon two shadowy clones that both imitate the attack for 50% of your power.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "mara_Mara_Spirit",
-  },
-  {
-    name: {
-      key: "0754414F4352648FDBE8B19AF1C1004E",
-      default: "Final Stratagem",
-    },
-    id: "GA_Mara_ResetCooldownRefillResouces_C",
-    description: {
-      key: "40DCF6304BDB6FB5D82E4795CFCBCB1E",
-      default:
-        "Your <rt.mana>Energy</> and <rt.mana>Combo Points</> are instantly refilled and all your <rt.absorb>Hero Ability</> cooldowns are reset.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>",
-    },
-    thumbnail: "mara_Mara_Strategem",
-  },
-  {
-    name: { key: "D70E936744EAD803AB8086ADDAF0BE11", default: "Attack" },
-    id: "GA_CM_ElfInterrogator_AutoAttack_C",
-    thumbnail: "textures_Tex_kn_04_bg",
-  },
-  {
-    name: { key: "", default: "" },
-    id: "GA_CM_ElfInterrogator_DamageTakenIncreaseDebuff_C",
-  },
-  {
-    name: { key: "F4ED116C4CFA58928289BC976723DAA0", default: "Poison Dagger" },
-    id: "GA_CM_ElfInterrogator_PoisonDagger_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_Poison",
-  },
-  {
-    name: {
-      key: "ED7651214ED9507DD7060E9FFF66D2A9",
-      default: "Poisonous Strike",
-    },
-    id: "GA_CM_ElfInterrogator_WickedStrike_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_Poison",
-  },
-  {
-    name: { key: "8B4FB8CC482EA223F741F687681DC66C", default: "Shoot" },
-    id: "GA_CM_ElfLookout_AutoAttack_C",
-    thumbnail: "weapon_icons_Tex_crossbow_02_bg",
-  },
-  {
-    name: { key: "D470FB93464FDC4DF51D308485D33BB3", default: "Bolt Barrage" },
-    id: "GA_CM_ElfLookout_QuickShots",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_28",
-  },
-  {
-    name: { key: "94F7C9C449F4544140254B81FC9CADFC", default: "Attack" },
-    id: "GA_CM_ElfLookout_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
     name: { key: "6602B6FB4DFA048B8C2D1EBD0F5ADD5C", default: "Attack" },
     id: "GA_CM_ElfTaskmaster_ChainHook_C",
     thumbnail: "weapon_icons_Tex_kn_10g",
@@ -3038,6 +3568,11 @@ export default [
     name: { key: "A780CC9A465FD1A5305BE2A2DB57DEC6", default: "Sweeping Hook" },
     id: "GA_CM_Elf_Taskmaster_MeanCleave_0",
     thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
+  },
+  { id: "GA_CM_ImpatientBrawler_AutoAttackMelee_C" },
+  {
+    name: { key: "B2574D904B1F90EFE948F4A659FB7B39", default: "AutoAttack" },
+    id: "GA_CM_ReflectedHero_AutoAttack_C",
   },
   {
     name: { key: "522DD4D54D108AB66D95B2817E8F30F1", default: "Torment" },
@@ -3063,12 +3598,32 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ShadowRoar",
   },
   {
-    name: { key: "", default: "" },
-    id: "GA_CM_ImpatientBrawler_AutoAttackMelee_C",
+    name: { key: "E75248B1450177B9D1076ABC6835CACA", default: "Focused Light" },
+    id: "GA_CM_RubiliteFocus_Laser",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyArrow",
   },
   {
-    name: { key: "B2574D904B1F90EFE948F4A659FB7B39", default: "AutoAttack" },
-    id: "GA_CM_ReflectedHero_AutoAttack_C",
+    name: { key: "F512608C45B2F3C6FC50E7A47D4DC960", default: "Focusing" },
+    id: "GA_CM_RubiliteFocus_Vulnerable",
+  },
+  {
+    name: { key: "D70E936744EAD803AB8086ADDAF0BE11", default: "Attack" },
+    id: "GA_CM_ElfInterrogator_AutoAttack_C",
+    thumbnail: "textures_Tex_kn_04_bg",
+  },
+  { id: "GA_CM_ElfInterrogator_DamageTakenIncreaseDebuff_C" },
+  {
+    name: { key: "F4ED116C4CFA58928289BC976723DAA0", default: "Poison Dagger" },
+    id: "GA_CM_ElfInterrogator_PoisonDagger_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_Poison",
+  },
+  {
+    name: {
+      key: "ED7651214ED9507DD7060E9FFF66D2A9",
+      default: "Poisonous Strike",
+    },
+    id: "GA_CM_ElfInterrogator_WickedStrike_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_Poison",
   },
   {
     name: { key: "D3E6AF774267FB919FDAAB82A862563D", default: "Searing Beam" },
@@ -3084,23 +3639,6 @@ export default [
     name: { key: "D3E6AF774267FB919FDAAB82A862563D", default: "Searing Beam" },
     id: "GA_CM_RubiliteAurastone_LockOnLaser",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyBeam_2",
-  },
-  {
-    name: {
-      key: "EBD9D6364D924C16CA73B2B7FACA478F",
-      default: "Bloodstone Sacrifice",
-    },
-    id: "GA_CM_RubiliteTriggerstone_Trap",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodZap",
-  },
-  {
-    name: { key: "E75248B1450177B9D1076ABC6835CACA", default: "Focused Light" },
-    id: "GA_CM_RubiliteFocus_Laser",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyArrow",
-  },
-  {
-    name: { key: "F512608C45B2F3C6FC50E7A47D4DC960", default: "Focusing" },
-    id: "GA_CM_RubiliteFocus_Vulnerable",
   },
   {
     name: { key: "EE2D440640662125919B36895E86591C", default: "Auto Attack" },
@@ -3154,6 +3692,14 @@ export default [
     thumbnail: "ranger_Ranger7",
   },
   {
+    name: {
+      key: "EBD9D6364D924C16CA73B2B7FACA478F",
+      default: "Bloodstone Sacrifice",
+    },
+    id: "GA_CM_RubiliteTriggerstone_Trap",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodZap",
+  },
+  {
     name: { key: "74AFA6F54CD300DB891AC38FAD3CCF8D", default: "Attack" },
     id: "GA_DD_BossCadavrianMagi_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_BloodAxeStrike",
@@ -3174,42 +3720,9 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ShadowBeam",
   },
   {
-    name: { key: "83811497405C6F485BA1C7A572CE1BBB", default: "Attack" },
-    id: "DT_DD_DesertBrute_MeleeAutoAttack",
-    thumbnail: "textures_Tex_axe_04_bg",
-  },
-  {
-    name: {
-      key: "BCBC9031480A4F02319BC999F7EC8467",
-      default: "Crescent Cleave",
-    },
-    id: "GA_DD_DesertBrute_CastedGrowingEarthStomp_C",
-    thumbnail: "textures_T_Icon_Arcane_121",
-  },
-  {
-    name: { key: "601C5D5F40F54765A40B72A38428936C", default: "Decimate" },
-    id: "GA_DD_DesertBrute_AoePulse",
-    thumbnail: "textures_T_Icon_Cosmic_11",
-  },
-  {
     name: { key: "2334E9484C050C5A6CE1F798AF092B9F", default: "Attack" },
     id: "GA_DD_DesertNomad_AutoAttackMelee_C",
     thumbnail: "weapon_icons_Tex_sv_02_bg",
-  },
-  {
-    name: { key: "BC68026D4B7435395727C88056BBDBE9", default: "Attack" },
-    id: "GA_DD_DesertWarrior_AutoAttackMelee_C",
-    thumbnail: "weapon_icons_Tex_sv_02_bg",
-  },
-  {
-    name: { key: "06B5ABD4408E6A78E910CB9733B66516", default: "Whirlwind" },
-    id: "GA_DD_DesertWarrior_ChanneledAOE_C",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_03",
-  },
-  {
-    name: { key: "781D7D0948E908ADC5A5B0A0F5F49155", default: "Charge" },
-    id: "GA_DD_DesertWarrior_Charge_C",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_71",
   },
   {
     name: { key: "A383A5AB4647C48790ACBEB3D762DC60", default: "Attack" },
@@ -3267,6 +3780,24 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneShardsFall",
   },
   {
+    name: { key: "83811497405C6F485BA1C7A572CE1BBB", default: "Attack" },
+    id: "DT_DD_DesertBrute_MeleeAutoAttack",
+    thumbnail: "textures_Tex_axe_04_bg",
+  },
+  {
+    name: {
+      key: "BCBC9031480A4F02319BC999F7EC8467",
+      default: "Crescent Cleave",
+    },
+    id: "GA_DD_DesertBrute_CastedGrowingEarthStomp_C",
+    thumbnail: "textures_T_Icon_Arcane_121",
+  },
+  {
+    name: { key: "601C5D5F40F54765A40B72A38428936C", default: "Decimate" },
+    id: "GA_DD_DesertBrute_AoePulse",
+    thumbnail: "textures_T_Icon_Cosmic_11",
+  },
+  {
     name: { key: "65A7651E4D98C1932E6BBBA2F121F1D5", default: "Attack" },
     id: "GA_DR_BloodfangMauler_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
@@ -3285,6 +3816,115 @@ export default [
     name: { key: "7205A1BE4299FCC2EDB6E2B5A9D89F8C", default: "Shred" },
     id: "GA_DR_BloodfangMauler_PostJump_AOECone",
     thumbnail: "tex_skill_icons_pack_Tex_red_31",
+  },
+  {
+    name: { key: "2187C027469BC82559D9D397AA0B69E6", default: "Siphon Blood" },
+    id: "GA_DR_BossGateWizard_Football",
+    thumbnail: "textures_T_Nhance_RPG_Fire_57",
+  },
+  {
+    name: { key: "164104D14653E41CC646DDAB8F0E0CC5", default: "Attack" },
+    id: "GA_DR_BossGateWizard_MeleeAutoAttack",
+    thumbnail: "textures_Tex_kn_04_bg",
+  },
+  {
+    name: { key: "90025C524996A72E7812148C08E78B8B", default: "Pentagram" },
+    id: "GA_DR_BossGateWizard_SafeDangerZones",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireRune_2",
+  },
+  {
+    name: { key: "51185D7A4BD7D73F3F6B17B35D2B804C", default: "Blood Burst" },
+    id: "GA_DR_BossGateWizard_AbsorbDamagePulse",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
+  },
+  {
+    name: {
+      key: "E6557EBE4E08061D0A0692B1D3470CC4",
+      default: "Sacrificial Pyre",
+    },
+    id: "GA_DR_BossGateWizard_FirePillar",
+    thumbnail: "textures_T_Nhance_RPG_Gold_02",
+  },
+  {
+    name: {
+      key: "B6E4A22A407B9F354D8DF78E7A306A5B",
+      default: "Hemorrhaging Strike",
+    },
+    id: "GA_DR_BossGateWizard_TankDot",
+    thumbnail: "textures_T_Icon_BloodCombat_126",
+  },
+  {
+    name: { key: "738147B04EADA9AA324DC9B3D846D9CB", default: "Blood Burst" },
+    id: "GA_DR_BossGateWizard_FootballHitPulse",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
+  },
+  {
+    name: { key: "BC68026D4B7435395727C88056BBDBE9", default: "Attack" },
+    id: "GA_DD_DesertWarrior_AutoAttackMelee_C",
+    thumbnail: "weapon_icons_Tex_sv_02_bg",
+  },
+  {
+    name: { key: "06B5ABD4408E6A78E910CB9733B66516", default: "Whirlwind" },
+    id: "GA_DD_DesertWarrior_ChanneledAOE_C",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_03",
+  },
+  {
+    name: { key: "781D7D0948E908ADC5A5B0A0F5F49155", default: "Charge" },
+    id: "GA_DD_DesertWarrior_Charge_C",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_71",
+  },
+  {
+    name: { key: "7351FB764C112850FAB244BA6EB45CFA", default: "Hellfire" },
+    id: "GA_DR_BossSummonedDemon_ChanneledHellfire",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireTwist",
+  },
+  {
+    name: { key: "BC0D707A4289112A460E849954B2515F", default: "Cleave" },
+    id: "GA_DR_BossSummonedDemon_Cleave",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodAxeStrike",
+  },
+  {
+    name: { key: "0798FF43422C9674400D1B81A53E6C97", default: "Leap Slam" },
+    id: "GA_DR_BossSummonedDemon_LeapSlam",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ManaBoots",
+  },
+  {
+    name: { key: "1F84F96C433843ACC36BC5B3F31401E3", default: "Summon Portal" },
+    id: "GA_DR_BossSummonedDemon_SummonPortal",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireBlast",
+  },
+  {
+    name: {
+      key: "FEF9D16E496EDD68EC0E6E9B4C6A44BB",
+      default: "Mark of Gogmon",
+    },
+    id: "GA_DR_BossSummonedDemon_Debuff",
+    description: {
+      key: "41097BB9475D46955E3D489DFEFBF1D9",
+      default:
+        "Debuff a target, making it take increased damage per stack. Target gains a stack whenever it takes damage.",
+    },
+    thumbnail: "textures_T_Nhance_RPG_Shadow_15",
+  },
+  {
+    name: { key: "F228114D44ED02DBF53D09A1FFF2D5FB", default: "Enrage" },
+    id: "GA_DR_BossSummonedDemon_Enrage",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodRage",
+  },
+  {
+    name: { key: "D3D3439A4C70C4295186869AA20D4FF6", default: "Devastate" },
+    id: "GA_DR_BossSummonedDemon_TankSlam",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_59",
+  },
+  {
+    name: { key: "6B4C7E4D41ABEBF5128423A9677923FB", default: "Projectiles" },
+    id: "GA_DR_BossSummonedDemon_Portal_ShootProjectiles",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyArrow",
+  },
+  {
+    name: { key: "658F5519466A802D9BBB888D9851F0D8", default: "Call Demon" },
+    id: "GA_DR_BossSummonedDemon_Portal_SummonDemon",
+    thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
   },
   {
     name: { key: "AF5BE7234713FAA886753AADDC4F8E11", default: "Attack" },
@@ -3347,77 +3987,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyBeam",
   },
   {
-    name: { key: "7351FB764C112850FAB244BA6EB45CFA", default: "Hellfire" },
-    id: "GA_DR_BossSummonedDemon_ChanneledHellfire",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireTwist",
-  },
-  {
-    name: { key: "BC0D707A4289112A460E849954B2515F", default: "Cleave" },
-    id: "GA_DR_BossSummonedDemon_Cleave",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodAxeStrike",
-  },
-  {
-    name: { key: "0798FF43422C9674400D1B81A53E6C97", default: "Leap Slam" },
-    id: "GA_DR_BossSummonedDemon_LeapSlam",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ManaBoots",
-  },
-  {
-    name: { key: "1F84F96C433843ACC36BC5B3F31401E3", default: "Summon Portal" },
-    id: "GA_DR_BossSummonedDemon_SummonPortal",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireBlast",
-  },
-  {
-    name: {
-      key: "FEF9D16E496EDD68EC0E6E9B4C6A44BB",
-      default: "Mark of Gogmon",
-    },
-    id: "GA_DR_BossSummonedDemon_Debuff",
-    description: {
-      key: "41097BB9475D46955E3D489DFEFBF1D9",
-      default:
-        "Debuff a target, making it take increased damage per stack. Target gains a stack whenever it takes damage.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Shadow_15",
-  },
-  {
-    name: { key: "F228114D44ED02DBF53D09A1FFF2D5FB", default: "Enrage" },
-    id: "GA_DR_BossSummonedDemon_Enrage",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodRage",
-  },
-  {
-    name: { key: "D3D3439A4C70C4295186869AA20D4FF6", default: "Devastate" },
-    id: "GA_DR_BossSummonedDemon_TankSlam",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_59",
-  },
-  {
-    name: { key: "6B4C7E4D41ABEBF5128423A9677923FB", default: "Projectiles" },
-    id: "GA_DR_BossSummonedDemon_Portal_ShootProjectiles",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyArrow",
-  },
-  {
-    name: { key: "658F5519466A802D9BBB888D9851F0D8", default: "Call Demon" },
-    id: "GA_DR_BossSummonedDemon_Portal_SummonDemon",
-    thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
-  },
-  {
-    name: { key: "11A201544CF5045A4697F1A0110EB9BF", default: "Attack" },
-    id: "GA_DR_BurningDemon_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: {
-      key: "C23B3F894A1558856503AEA9923035DC",
-      default: "Demonbolt Volley",
-    },
-    id: "GA_DR_BurningDemon_DemonboltVolley",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_38",
-  },
-  {
-    name: { key: "286741AD4DA8501AEFF9739773D0496D", default: "Final Fury" },
-    id: "GA_DR_BurningDemon_Bombardment",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireBomb",
-  },
-  {
     name: { key: "83730610411DD551126725AA2C67D0EA", default: "Fixate" },
     id: "GA_DR_BossSummonedDemon_PortalDemon_FixateRandomTarget",
     thumbnail: "textures_T_Nhance_RPG_Icons_NatureTarget",
@@ -3456,47 +4025,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Unholy_08",
   },
   {
-    name: { key: "2187C027469BC82559D9D397AA0B69E6", default: "Siphon Blood" },
-    id: "GA_DR_BossGateWizard_Football",
-    thumbnail: "textures_T_Nhance_RPG_Fire_57",
-  },
-  {
-    name: { key: "164104D14653E41CC646DDAB8F0E0CC5", default: "Attack" },
-    id: "GA_DR_BossGateWizard_MeleeAutoAttack",
-    thumbnail: "textures_Tex_kn_04_bg",
-  },
-  {
-    name: { key: "90025C524996A72E7812148C08E78B8B", default: "Pentagram" },
-    id: "GA_DR_BossGateWizard_SafeDangerZones",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireRune_2",
-  },
-  {
-    name: { key: "51185D7A4BD7D73F3F6B17B35D2B804C", default: "Blood Burst" },
-    id: "GA_DR_BossGateWizard_AbsorbDamagePulse",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
-  },
-  {
-    name: {
-      key: "E6557EBE4E08061D0A0692B1D3470CC4",
-      default: "Sacrificial Pyre",
-    },
-    id: "GA_DR_BossGateWizard_FirePillar",
-    thumbnail: "textures_T_Nhance_RPG_Gold_02",
-  },
-  {
-    name: {
-      key: "B6E4A22A407B9F354D8DF78E7A306A5B",
-      default: "Hemorrhaging Strike",
-    },
-    id: "GA_DR_BossGateWizard_TankDot",
-    thumbnail: "textures_T_Icon_BloodCombat_126",
-  },
-  {
-    name: { key: "738147B04EADA9AA324DC9B3D846D9CB", default: "Blood Burst" },
-    id: "GA_DR_BossGateWizard_FootballHitPulse",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
-  },
-  {
     name: { key: "330744F248E2B02EA2EFF488E9A35DE7", default: "Wither" },
     id: "GA_DR_CultistCaster_CastedRangedProjectile",
     thumbnail: "textures_T_ArcaneDemon",
@@ -3520,6 +4048,24 @@ export default [
     name: { key: "C141E75C42596D66887018A44EE5D7F4", default: "Throw Dagger" },
     id: "GA_DR_CultistSickle_InitiateRangedAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_FireDagger",
+  },
+  {
+    name: { key: "11A201544CF5045A4697F1A0110EB9BF", default: "Attack" },
+    id: "GA_DR_BurningDemon_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: {
+      key: "C23B3F894A1558856503AEA9923035DC",
+      default: "Demonbolt Volley",
+    },
+    id: "GA_DR_BurningDemon_DemonboltVolley",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_38",
+  },
+  {
+    name: { key: "286741AD4DA8501AEFF9739773D0496D", default: "Final Fury" },
+    id: "GA_DR_BurningDemon_Bombardment",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireBomb",
   },
   {
     name: {
@@ -3562,36 +4108,6 @@ export default [
     id: "GA_DR_FranticImpMeleeAutoAttack",
   },
   {
-    name: { key: "0A2D22704ECF2C89BBFAC4B9DCD6FCBC", default: "Attack" },
-    id: "GA_DR_Mancatcher_MeleeAutoAttack",
-    thumbnail: "textures_Tex_axe_04_bg",
-  },
-  {
-    name: { key: "E4521C544A5722A565B9389A52FA58E4", default: "Grip" },
-    id: "GA_DR_Mancatcher_Grip",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
-  },
-  {
-    name: { key: "14EF609C494989D58ED193A81056BF73", default: "Shred" },
-    id: "GA_DR_Mancatcher_AOECone",
-    thumbnail: "tex_skill_icons_pack_Tex_red_31",
-  },
-  {
-    name: { key: "150109FF4138F6392775D896D787EA45", default: "Attack" },
-    id: "GA_DR_RuinsLasher_AutoAttackMelee_C",
-    thumbnail: "tex_skill_icons_pack_Tex_green_7",
-  },
-  {
-    name: { key: "92F19FDB4884E07F90FECBA5422A3AD6", default: "Acidic Sap" },
-    id: "GA_DR_RuinsLasher_PassiveAOEPools_C",
-    thumbnail: "textures_T_NatureRitual",
-  },
-  {
-    name: { key: "2FF553FE4FBF03CDA66FA686A424D2F7", default: "Attack" },
-    id: "GA_DR_Slaughtervine_AutoAttackMelee",
-    thumbnail: "tex_skill_icons_pack_Tex_green_7",
-  },
-  {
     name: { key: "704441FD4351BDB09B8C48A4D79426D2", default: "Attack" },
     id: "GA_DR_HornedDemon_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -3612,6 +4128,36 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_BloodGrowl",
   },
   {
+    name: { key: "150109FF4138F6392775D896D787EA45", default: "Attack" },
+    id: "GA_DR_RuinsLasher_AutoAttackMelee_C",
+    thumbnail: "tex_skill_icons_pack_Tex_green_7",
+  },
+  {
+    name: { key: "92F19FDB4884E07F90FECBA5422A3AD6", default: "Acidic Sap" },
+    id: "GA_DR_RuinsLasher_PassiveAOEPools_C",
+    thumbnail: "textures_T_NatureRitual",
+  },
+  {
+    name: { key: "0A2D22704ECF2C89BBFAC4B9DCD6FCBC", default: "Attack" },
+    id: "GA_DR_Mancatcher_MeleeAutoAttack",
+    thumbnail: "textures_Tex_axe_04_bg",
+  },
+  {
+    name: { key: "E4521C544A5722A565B9389A52FA58E4", default: "Grip" },
+    id: "GA_DR_Mancatcher_Grip",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
+  },
+  {
+    name: { key: "14EF609C494989D58ED193A81056BF73", default: "Shred" },
+    id: "GA_DR_Mancatcher_AOECone",
+    thumbnail: "tex_skill_icons_pack_Tex_red_31",
+  },
+  {
+    name: { key: "2FF553FE4FBF03CDA66FA686A424D2F7", default: "Attack" },
+    id: "GA_DR_Slaughtervine_AutoAttackMelee",
+    thumbnail: "tex_skill_icons_pack_Tex_green_7",
+  },
+  {
     name: { key: "6914F11C4B8CAC2B91A8A3811CF1A9EC", default: "Auto Attack" },
     id: "GA_DR_Slaughtervine_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_NatureRoots",
@@ -3628,6 +4174,41 @@ export default [
   {
     name: { key: "455D38E4435841545A2276BFA3EE3EA7", default: "Slaughter" },
     id: "GA_DR_SlaughtervineArchephyte_SlowMovingAOE",
+  },
+  {
+    name: { key: "C4E7A25B4C3FBCF2C664DAA696DC391D", default: "Summoning" },
+    id: "GA_DR_WaveSummoner_Summoning",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyInfusion",
+  },
+  {
+    name: { key: "8B11CBBF43A9568215AB13AF308FAC4A", default: "Attack" },
+    id: "GA_EM_Miner_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodAxeStrike",
+  },
+  {
+    name: { key: "ECDE05D04D74466BCC8649ACDC3C18A2", default: "Attack" },
+    id: "GA_EM_BossGiantTroll_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "887828834B02BAF8C1FD9798B33AA0FA", default: "Titanic Slam" },
+    id: "GA_EM_BossGiantTroll_MultiSoak",
+    thumbnail: "geomancer_Geomancer9",
+  },
+  {
+    name: { key: "12C3048042C73C0FDF157E880EB653DA", default: "Earthquake" },
+    id: "GA_EM_BossGiantTroll_ChanneledAoeDamage",
+    thumbnail: "geomancer_Geomancer1",
+  },
+  {
+    name: { key: "0F17018642744735D99D18958C114490", default: "Arcane Burst" },
+    id: "GA_EM_BossGiantTroll_AoeSequence",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_26",
+  },
+  {
+    name: { key: "66D2F495490944088645C58B87B82572", default: "Wardstones" },
+    id: "GA_EM_BossGiantTroll_SummonAdds",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_17",
   },
   {
     name: { key: "00344B5F4F89369661F3449F78DB0A13", default: "Mana Bomb" },
@@ -3664,41 +4245,6 @@ export default [
     name: { key: "1A42F1F5400D1D0EF16223990F60E691", default: "Retreat" },
     id: "GA_EM_BossVaerith_OnTrollDeathFlyAway",
     thumbnail: "textures_T_Nhance_RPG_Icons_ManaBoots",
-  },
-  {
-    name: { key: "ECDE05D04D74466BCC8649ACDC3C18A2", default: "Attack" },
-    id: "GA_EM_BossGiantTroll_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "887828834B02BAF8C1FD9798B33AA0FA", default: "Titanic Slam" },
-    id: "GA_EM_BossGiantTroll_MultiSoak",
-    thumbnail: "geomancer_Geomancer9",
-  },
-  {
-    name: { key: "12C3048042C73C0FDF157E880EB653DA", default: "Earthquake" },
-    id: "GA_EM_BossGiantTroll_ChanneledAoeDamage",
-    thumbnail: "geomancer_Geomancer1",
-  },
-  {
-    name: { key: "0F17018642744735D99D18958C114490", default: "Arcane Burst" },
-    id: "GA_EM_BossGiantTroll_AoeSequence",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_26",
-  },
-  {
-    name: { key: "66D2F495490944088645C58B87B82572", default: "Wardstones" },
-    id: "GA_EM_BossGiantTroll_SummonAdds",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_17",
-  },
-  {
-    name: { key: "8B11CBBF43A9568215AB13AF308FAC4A", default: "Attack" },
-    id: "GA_EM_Miner_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodAxeStrike",
-  },
-  {
-    name: { key: "C4E7A25B4C3FBCF2C664DAA696DC391D", default: "Summoning" },
-    id: "GA_DR_WaveSummoner_Summoning",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyInfusion",
   },
   {
     name: { key: "0EB1EB6647BE9640284D6284D9F75557", default: "Attack" },
@@ -3804,50 +4350,6 @@ export default [
     name: { key: "0BB5654C49494926CDCFE7B041EB2580", default: "Maelstrom" },
     id: "GA_FK_BossElfDragon_RadialSuckIn",
     thumbnail: "textures_T_Nhance_RPG_Icons_IceSwirl",
-  },
-  {
-    name: { key: "69382EAE452B7DD005BEB0BECB1F5A86", default: "Attack" },
-    id: "GA_FK_BossRangerCaptain_AutoAttack_C",
-    thumbnail: "weapon_icons_Tex_bow_04_bg",
-  },
-  {
-    name: {
-      key: "786CBEF2497E474FC4F3AEBB6FE4FFF4",
-      default: "Betrayer's Arrow",
-    },
-    id: "GA_FK_BossRangerCaptain_ExplosiveShot_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneArrow",
-  },
-  {
-    name: { key: "E82766A34EACCA67949257B6817E9045", default: "Arcane Volley" },
-    id: "GA_FK_BossRangerCaptain_HailOfArrows_C",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_39",
-  },
-  {
-    name: {
-      key: "925660A1412A4E2A2F538781C7BABCD5",
-      default: "Cold-blooded Twist",
-    },
-    id: "GA_FK_BossRangerCaptain_LeapAndBigCrosses_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
-  },
-  {
-    name: {
-      key: "016BDF4943567976C43AFAAA8B8CBFD8",
-      default: "Actuate Ambush",
-    },
-    id: "GA_FK_BossRangerCaptain_SpawnMirror_C",
-    thumbnail: "textures_T_Foreshadowing",
-  },
-  {
-    name: { key: "49D50B4748B3A528A9954CB954636EE3", default: "Razor Trap" },
-    id: "GA_FK_BossRangerCaptain_IceTrap_C",
-    thumbnail: "tex_skill_icons_pack_Tex_green_14",
-  },
-  {
-    name: { key: "9472DFBA428F506AA0675AA5E9BE6FB4", default: "Attack" },
-    id: "GA_FK_BossRangerCaptain_AutoAttackMelee",
-    thumbnail: "weapon_icons_Tex_bow_04_bg",
   },
   {
     name: { key: "864D83274147B9E0A39637A01805B4B3", default: "Attack" },
@@ -3973,6 +4475,57 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_GhostBlast",
   },
   {
+    name: { key: "69382EAE452B7DD005BEB0BECB1F5A86", default: "Attack" },
+    id: "GA_FK_BossRangerCaptain_AutoAttack_C",
+    thumbnail: "weapon_icons_Tex_bow_04_bg",
+  },
+  {
+    name: {
+      key: "786CBEF2497E474FC4F3AEBB6FE4FFF4",
+      default: "Betrayer's Arrow",
+    },
+    id: "GA_FK_BossRangerCaptain_ExplosiveShot_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneArrow",
+  },
+  {
+    name: { key: "E82766A34EACCA67949257B6817E9045", default: "Arcane Volley" },
+    id: "GA_FK_BossRangerCaptain_HailOfArrows_C",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_39",
+  },
+  {
+    name: {
+      key: "925660A1412A4E2A2F538781C7BABCD5",
+      default: "Cold-blooded Twist",
+    },
+    id: "GA_FK_BossRangerCaptain_LeapAndBigCrosses_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes",
+  },
+  {
+    name: {
+      key: "016BDF4943567976C43AFAAA8B8CBFD8",
+      default: "Actuate Ambush",
+    },
+    id: "GA_FK_BossRangerCaptain_SpawnMirror_C",
+    thumbnail: "textures_T_Foreshadowing",
+  },
+  {
+    name: { key: "49D50B4748B3A528A9954CB954636EE3", default: "Razor Trap" },
+    id: "GA_FK_BossRangerCaptain_IceTrap_C",
+    thumbnail: "tex_skill_icons_pack_Tex_green_14",
+  },
+  {
+    name: { key: "9472DFBA428F506AA0675AA5E9BE6FB4", default: "Attack" },
+    id: "GA_FK_BossRangerCaptain_AutoAttackMelee",
+    thumbnail: "weapon_icons_Tex_bow_04_bg",
+  },
+  {
+    name: {
+      key: "B6839BA142FA052E988CF5ACAB897160",
+      default: "(CUT) Battle Cry",
+    },
+    id: "GA_FK_MirroredRangerCaptain_BattleCry_C",
+  },
+  {
     name: { key: "7CFC677C423F8D736F8EE8A3DB5B925B", default: "Attack" },
     id: "GA_FK_IceGolem_AutoAttack_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -3990,497 +4543,6 @@ export default [
   {
     name: { key: "8FA8E87846DCB270D83D1AA0805BDFBC", default: "Auto Attack" },
     id: "GA_FK_MirroredElementalImage_AutoAttack_C",
-  },
-  {
-    name: { key: "C43D29AB4C27B1367F71A5A03F1F64A1", default: "Charge" },
-    id: "GA_Warmaster_MoveToTargetStun_C",
-    description: {
-      key: "53A014F741494303BE533692C88C2622",
-      default:
-        "Charge at target enemy, dealing <rt.warning>{ChargeDirect}</> physical damage and <rt.effect>Stunning</> them for 2 seconds.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Charge</> reduces the cooldown of your <rt.absorb>Shield Slam</>, <rt.absorb>Shield Throw</>, <rt.absorb>Shields Up</>, and <rt.absorb>Shockwave</> abilities by 6 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_Charge",
-  },
-  {
-    name: { key: "1EA663FA4822329CD8164B98377974AF", default: "Bash" },
-    id: "GA_Warmaster_MeleeInterrupt_C",
-    description: {
-      key: "48E57AD14CA59E5536F5E2AEAAAC22F1",
-      default:
-        "<rt.absorb>Interrupt</> the target's spellcasting and prevent it from casting for 4 sec. \r\nMust interrupt a spell, or it will have no effect.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_Warmaster_Interrupt",
-  },
-  {
-    name: { key: "35BFFAB348D156B296D608B9B5990429", default: "Shockwave" },
-    id: "GA_Warmaster_MeleeAoeSlow_C",
-    description: {
-      key: "217C9ED14918B49AD44B078DE51FFD4A",
-      default:
-        "Slam sword and shield together creating a forceful explosion, dealing <rt.warning>{ShockwaveDirect}</> physical damage to enemies in a large radius.\r\n\r\nEnemies that take damage from <rt.absorb>Shockwave</> have <rt.effect>reduced movement speed</> for 5 seconds, starting at 90% and dimishing by 10% every 0.5 seconds.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shockwave</> reduces the cooldown of your <rt.absorb>Shields Up</> ability by 6 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_shockwave",
-  },
-  {
-    name: { key: "C0311D9F48117829DE1039BCC2E3D861", default: "Shields Up" },
-    id: "GA_Warmaster_DefenceBuff_C",
-    description: {
-      key: "F6E6FAF44AEC40891B3399BC795E6F55",
-      default:
-        "Raise your shield, increasing your <rt.mana>Toughness by 60%</> and increasing your <rt.meikoability1>Block chance by 25%</> for 12 sec.\r\n\r\n<rt.absorb>Shields Up</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.meikoability1>Each time you succesfully Block an attack, you generate</> <rt.mana>3% Toughness</>.\r\n\r\n<rt.mana>TOUGHNESS</>\r\n<rt.mana>Toughness</> is displayed as a bar to the right of your character. The more Toughness you have, the less damage Helena takes. Your <rt.mana>maximum Toughness value (</><rt.heal>{MaxToughness}</><rt.mana>) is equal to {StrCoefficient} strength. Every 1% of Critical Strike, Haste, Expertise, and Spirit you have further increases the final amount by 2%</>.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_Warmaster_Shieldsup",
-  },
-  {
-    name: {
-      key: "6EF1C18E4C93C8966CEFF19565E52E14",
-      default: "Measured Strike",
-    },
-    id: "GA_Warmaster_LightMelee_C",
-    description: {
-      key: "F291BECC49DB7001253316B66C6390BA",
-      default:
-        "Strike target enemy with your sword, dealing <rt.warning>{MeaStrikeDirect}</> physical damage to them and nearby enemies.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Measured Strike</> reduces the cooldown of your <rt.absorb>Shield Slam</> and <rt.absorb>Shield Throw</> abilities by 1.5 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_BasicStrike",
-  },
-  {
-    name: { key: "FFEDE56F41EF9FC47CCE4C8F281DE1A8", default: "Power Strike" },
-    id: "GA_Warmaster_HeavyMelee_C",
-    description: {
-      key: "E6982FFD48E45843C0C0868727522008",
-      default:
-        "Perform a heavy strike, dealing <rt.warning>{PwrStrkDirect}</> physical damage to target.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Power Strike</> reduces the cooldown of your <rt.absorb>Shield Slam</> and <rt.absorb>Shield Throw</> abilities by 1.5 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_FatalBlow",
-  },
-  {
-    name: { key: "E5C2CC0B445045831DD5A6B38861A905", default: "Shield Slam" },
-    id: "GA_Warmaster_MeleeCleave_C",
-    description: {
-      key: "68ED0D7C4E6199B8D5797087ED1AAD15",
-      default:
-        "Deals <rt.warning>{ShieldSlamDirect}</> physical damage to your target and <rt.warning>{ShieldSlamCleave}</> physical damage to other enemies near your target.\r\n\r\n<rt.absorb>Shield Slam</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.absorb>Shield Slam</> generates <rt.mana>20% Toughness</>.\r\n\r\n<rt.effect>LINGERING CONCUSSION</>\r\n<rt.absorb>Shield Slam</> applies <rt.effect>Lingering Concussion</> to your main target, causing them to deal <rt.heal>3% reduced damage to you for 12 seconds</>. <rt.effect>Lingering Concussion</> stacks up to 5 times.\r\n\r\n<rt.mana>TOUGHNESS</>\r\n<rt.mana>Toughness</> is displayed as a bar to the right of your character. The more Toughness you have, the less damage Helena takes. Your <rt.mana>maximum Toughness value (</><rt.heal>{MaxToughness}</><rt.mana>) is equal to {StrCoefficient} strength. Every 1% of Critical Strike, Haste, Expertise, and Spirit you have further increases the final amount by 2%</>.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shield Slam</> reduces the cooldown of your <rt.absorb>Shockwave</> ability by 3.0 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_ShieldSlam",
-  },
-  {
-    name: { key: "73B69DC74B38BC077596E197D1842DBE", default: "Shield Throw" },
-    id: "GA_Warmaster_BouncyProjectile_C",
-    description: {
-      key: "4E4F7CF9458FD615CF72C48BC7F3EDB5",
-      default:
-        "Throw your shield at target enemy dealing <rt.warning>{ShieldThrwDirect}</> physical damage. The shield bounces to up to 5 additional nearby enemies.\r\n\r\n<rt.effect>VETERAN OF WAR</>\r\n<rt.absorb>Shield Throw</> reduces the cooldown of your <rt.absorb>Shockwave</> ability by 3.0 seconds.",
-    },
-    thumbnail: "warmaster_T_Warmaster_Shieldthrow",
-  },
-  {
-    name: { key: "D4A5B8FB4CD9F77DB8C454BCD6A67257", default: "Taunt" },
-    id: "GA_Warmaster_RangedTaunt_C",
-    description: {
-      key: "43EC4EDD43E2F44F50F5EA906A8579BA",
-      default:
-        "<rt.absorb>Taunt</> the target, forcing it to attack you for 6 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_warmaster_Taunt",
-  },
-  {
-    name: {
-      key: "6EB82D2549ABE592E49D15B9790013BF",
-      default: "Banner of Hope",
-    },
-    id: "GA_Warmaster_AoeHealthBuff_C",
-    description: {
-      key: "C84926F04A401A7CBEA6CE8934648F79",
-      default:
-        "Increase all party members <rt.absorb>Maximum Health</> by <rt.heal>20%</> for 15 sec.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Icons_MagicBanner",
-  },
-  {
-    name: {
-      key: "086D142D444816A089F713A669D2AEB6",
-      default: "Leader's Conviction",
-    },
-    id: "GA_Warmaster_FullResourcesSelfBuff",
-    description: {
-      key: "09A11CD541EF3CEA918485906BACDFF6",
-      default:
-        "Your damage reduction from <rt.absorb>Toughness</> is shared with all allies for 12 seconds. \r\n\r\nWhile <rt.absorb>Leader's Conviction</> is active you deal <rt.warning>15% increased damage</>.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "warmaster_T_Warmaster_Ultimate",
-  },
-  {
-    name: { key: "85C1EAEB47BC530655C690899BF1BF8A", default: "Attack" },
-    id: "GA_Warmaster_MeleeAutoAttack_C",
-    thumbnail: "textures_Tex_swords_01_bg",
-  },
-  {
-    name: { key: "2E8B946D417C88B191A117B6DC2527D1", default: "Hold the Line" },
-    id: "GA_Warmaster_MoveSpeedBuff",
-    description: {
-      key: "BAD27F754A1887128AA792A7AFB65360",
-      default:
-        "Instantly resets the cooldown of your <rt.absorb>Shield Slam</> ability and causes your next <rt.absorb>Shield Slam</> within 12 seconds to be <rt.effect>Empowered</>.\r\n\r\n<rt.effect>Empowered Shield Slam</>\r\nYour next <rt.absorb>Shield Slam</> applies a barrier on you, absorbing up to <rt.heal>{ShieldSlamAbsrb}</> damage taken for 8 seconds. Your <rt.mana>Toughness</> is not reduced while the barrier is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_WM_HoldTheLine",
-  },
-  {
-    name: {
-      key: "0C7A025644F1635BE8620AB09EF00E1B",
-      default: "Sweeping Strike",
-    },
-    id: "GA_Warmaster_InstantMeleeCleave",
-    description: {
-      key: "EE0C79CB4CF306145507278078FD4653",
-      default:
-        "Deals <rt.warning>{SweepStrkDirect}</> physical damage to your target and other nearby enemies.\r\n\r\nEnemies hit by <rt.absorb>Sweeping Strike</> bleed for <rt.warning>{SweepStrikDot}</> physical damage <rt.bold>every</> <rt.warning>{SweepStrikePeriod}</> <rt.bold> seconds for 12 seconds</> and <rt.heal>deal 10% reduced damage for the duration</>.",
-    },
-    thumbnail: "warmaster_T_Warmaster_BleedStrike",
-  },
-  {
-    name: { key: "8A6AE8844A573FA37F2271AF7ECB0F47", default: "Iron Wall" },
-    id: "GA_Warmaster_NoResourceLossSelfBuff_C",
-    description: {
-      key: "A2F2131A482582FF9D88AAB59EE087FD",
-      default:
-        "Your <rt.mana>Toughness</> can not be reduced for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_Warmaster_IronWall",
-  },
-  {
-    name: { key: "FB9E2F934006E07D24E0AB929E4F5865", default: "Grand Melee" },
-    id: "GA_Warmaster_AoeIncite",
-    description: {
-      key: "02C3CFC94ED3AACEACB3709CC0625790",
-      default:
-        "For the next 10 seconds, <rt.effect>Incite</> all enemies in a large radius around you, forcing them to only use <bold>Auto Attacks</> and only attack you.\r\n\r\nAll allies within the radius of <rt.absorb>Grand Melee</> take <rt.effect>20% reduced magic damage</> while it is active.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "warmaster_T_WM_Incite",
-  },
-  {
-    name: { key: "98D70AA942E318135E0492AEB16450B8", default: "Siegebreaker" },
-    id: "GA_Warmaster_ShieldSelfBuff",
-    description: {
-      key: "0FCEB8AE4D99F99E3EEC7B8CA5CD79B1",
-      default:
-        "For the next 20 seconds, the cooldown reduction granted by your <rt.effect>Veteran of War</> is doubled.\r\n\r\nWhile <rt.absorb>Siegebreaker</>is active, you take 25% reduced damage and your <rt.absorb>Shield Slam</>, <rt.absorb>Shield Throw</> and <rt.absorb>Shockwave</> abilities deal 25% increased damage.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste for 20 sec.</>",
-    },
-    thumbnail: "warmaster_T_Warmaster_Ultimate",
-  },
-  {
-    name: {
-      key: "B6839BA142FA052E988CF5ACAB897160",
-      default: "(CUT) Battle Cry",
-    },
-    id: "GA_FK_MirroredRangerCaptain_BattleCry_C",
-  },
-  {
-    name: { key: "E46160AF47F8B3611762629D16E8D07B", default: "Attack" },
-    id: "GA_IC_Assassin_AutoAttack_C",
-    thumbnail: "textures_Tex_kn_04_bg",
-  },
-  {
-    name: {
-      key: "CC9434D54B85E62A5ADBF6826EFFED08",
-      default: "Coldheart Poison",
-    },
-    id: "GA_IC_Assassin_PoisonDagger_C",
-    thumbnail: "hero_effects_T_Status_Poison",
-  },
-  {
-    name: {
-      key: "DF441B01421C76520B5A2699D1E866DE",
-      default: "Wicked Strikes",
-    },
-    id: "GA_IC_Assassin_WickedStrike_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceEmpower",
-  },
-  {
-    name: { key: "0FC57F78421675D5B948778B49C425D6", default: "Heart Bloom" },
-    id: "GA_Mosse_DurationalAoeHealPlacement_C",
-    description: {
-      key: "C6B18C9046A4375EB04B8D80A1B130BD",
-      default:
-        "Conjure a <rt.absorb>Heart Bloom</> at your side that stores <rt.meikoability1>12% of all Flutterfly healing</> you do inside it.\r\n\r\nEvery 3 seconds, the <rt.absorb>Heart Bloom</> releases a pulse, healing all allies within 4000 radius for an amount equal to the healing it has stored. Lasts 15 seconds.\r\n\r\n<rt.absorb>Heart Bloom</> spawns <rt.effect>3 Boomshrooms</> when it withers.",
-    },
-    thumbnail: "sylvie_T_Mosse_Bigheal",
-  },
-  {
-    name: {
-      key: "9F2720E845C929E11A6B5FBBEC225E2F",
-      default: "Soothing Touch (old)",
-    },
-    id: "GA_Mosse_CastedSingleTargetHeal_C",
-    description: {
-      key: "AC79A79F49980681DC12EDB55A59179F",
-      default: "Heal target ally for <rt.heal>518% Intellect</>.",
-    },
-    thumbnail: "sylvie_Sylvie_AbilityIcon_01",
-  },
-  {
-    name: { key: "3E392365419399A4BFA374B55F7A24CD", default: "Cure Ailment" },
-    id: "GA_Mosse_SingleTargetDispel_C",
-    description: {
-      key: "934830034980F993316A5DA6D955A23A",
-      default:
-        "Remove all <rt.debuff>Harmful</> <rt.bold>Magic Effects</> from target ally. ",
-    },
-    thumbnail: "sylvie_T_Mosse_Dispel",
-  },
-  {
-    name: { key: "7973A7F64FE05CB092F43AAFDFDFED44", default: "Nettlebolt" },
-    id: "GA_Mosse_CastedSingleTargetProjectile_C",
-    description: {
-      key: "C2E0B7DC461E0912B25D5DB98600268E",
-      default:
-        "Cast a bolt of nettles at target enemy, dealing <rt.warning>{NettleDmg}</> damage to them.\r\n\r\n<rt.absorb>Nettlebolt</> replenishes the <rt.mana>Mana Cost</> it spends once it deals damage to an enemy.\r\n\r\n<rt.Absorb>Petal Germination</>\r\nThe cooldown of your <rt.absorb>Life Petal</> is reduced by 1.5 seconds each time you deal damage with <rt.absorb>Nettlebolt</> and 3 seconds if it critically strikes.",
-    },
-    thumbnail: "sylvie_Sylvie_AbilityIcon_02",
-  },
-  {
-    name: {
-      key: "BF2236814FF3F1AFFF963BBEC2F35C90",
-      default: "Vicious Spores (old)",
-    },
-    id: "GA_Mosse_SingleTargetDot_C",
-    description: {
-      key: "4B0746B44B19AC793F6375825DA45771",
-      default:
-        "Conjure dangerous spores to assault the target enemy, dealing <rt.warning>656% Intellect</> damage over 18 sec.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Nature_04",
-  },
-  {
-    name: {
-      key: "BB159D074075691633423A87F4A2591C",
-      default: "Fluttercall: Protect",
-    },
-    id: "GA_Mosse_BlueButterfly_SendOut",
-    description: {
-      key: "4E6731FF4CE6332D1F28A3A96C2222C1",
-      default:
-        "Send your <rt.mana>Blue Flutterfly</> to protect target ally.\r\n\r\nWhile your <rt.bold>Blue Flutterfly</> is attached to an ally, that player receives <rt.heal>100% increased healing</> from your <rt.meikoability1>Flutterfly Healing</> effects.\r\n\r\nWhile the <rt.bold>Blue Flutterfly</> is on you, Your <rt.meikoability1>Flutterfly Healing</> on all allies is <rt.heal>increased by 50%</> and all your abilities have <rt.mana>20% reduced mana cost</>.",
-    },
-    thumbnail: "sylvie_T_Mosse_BlueButterfly",
-  },
-  {
-    name: {
-      key: "8A9A6E644D8BAC76DD6BDFAB10076963",
-      default: "Fluttercall: Embrace",
-    },
-    id: "GA_Mosse_BlueButterfly_Recall",
-    description: {
-      key: "BA68108A47E0D10F6CCAD9AE8036868E",
-      default:
-        "Recall your <rt.bold>Blue Flutterfly</> to you.\r\n\r\nWhile the <rt.bold>Blue Flutterfly</> is on you, Your <rt.meikoability1>Flutterfly Healing</> on all allies is <rt.heal>increased by 50%</> and all your abilities have <rt.mana>20% reduced mana cost</>.\r\n\r\nWhile your <rt.bold>Blue Flutterfly</> is attached to an ally, that player receives <rt.heal>100% increased healing</> from your <rt.meikoability1>Flutterfly Healing</> effects.",
-    },
-    thumbnail: "sylvie_T_Mosse_BlueButterfly",
-  },
-  {
-    name: {
-      key: "6B8DBEB54EE50B913F60B7937F490769",
-      default: "Fluttercall: Heal",
-    },
-    id: "GA_Mosse_PinkButterfly_Simple",
-    description: {
-      key: "EC0B204C42619D1CAB7D649DF27724FA",
-      default:
-        "Assign one of your <rt.meikoability1>Pink Flutterflies</> to an ally, healing them for {FlutterHeal} <rt.bold>every</> <rt.heal>{FlutterHealPeriod}</> <rt.bold>seconds</> until it is called away.\r\n\r\nAll healing done by <rt.absorb>Fluttercall: Heal</> counts as <rt.meikoability1>Flutterfly Healing</>.",
-    },
-    thumbnail: "sylvie_Sylvie_AbilityIcon_03",
-  },
-  {
-    name: {
-      key: "090567BD4FB3B2ACDB552A9D983B8BFB",
-      default: "Fluttercall: Restore Life",
-    },
-    id: "GA_Mosse_PinkButterfly_Double",
-    description: {
-      key: "E02B6BE14C1FD75305E3AF9D5DA71753",
-      default:
-        "Beckon two <rt.meikoability1>Pink Flutterflies</> to dance around target ally. <rt.bold>After</> <rt.heal>{RestoreLifeDelay}</> <rt.bold>seconds</>, the target is instantly healed for {RestoreLifeDirectHeal} plus an additional {RestoreLifeHotHeal} <rt.bold>every</> <rt.heal>{RestoreLifeHotPeriod}</> <rt.bold>seconds</> for 15 seconds.\r\n\r\nAll healing done by <rt.absorb>Fluttercall: Restore Life</> counts as <rt.meikoability1>Flutterfly Healing</>.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Shadow_58",
-  },
-  {
-    name: { key: "BAB5B0684D2F4414981F64B53C650A44", default: "Prickly Vine" },
-    id: "GA_Mosse_ProjectileTurrets",
-    description: {
-      key: "C3ABFDB54A16376FC3C5A6B6A3072384",
-      default:
-        "Summon a <rt.absorb>Prickly Vine</> for 27 seconds to continuously fling thorns at target enemy, dealing <rt.warning>{PricklyVineDmg}</> magic damage <rt.bold>every</> <rt.warning>{PricklyVinePeriod}</> <rt.bold>seconds</>.\r\n\r\nFor each <rt.absorb>Prickly Vine</> you have active, all <rt.meikoability1>Flutterfly Healing</> is <rt.heal>increased by 3%</>.\r\n\r\nEach <rt.absorb>Prickly Vine</> spawns <rt.effect>1 Boomshroom</> when it withers.",
-    },
-    thumbnail: "sylvie_T_Mosse_Vine",
-  },
-  {
-    name: {
-      key: "D63FF48A41C29F71D6E52EAC65378818",
-      default: "Fluttercall: Jubilee",
-    },
-    id: "GA_Mosse_SharedHealthBuff_C",
-    description: {
-      key: "4FA419764D27C614CC8514A550D89D4F",
-      default:
-        "Call upon <rt.bold>Dream Flutterflies</> to protect up to 4 players by evenly distributing all health between them every 1.5 seconds over 12 sec.\r\n\r\nUpon arriving, the <rt.bold>Dream Flutterflies</> cause <rt.absorb>6 Prickly Vines</> to spontaneously  spawn near you.\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste and +600% Mana Recovery for 20 sec.</>",
-    },
-    thumbnail: "sylvie_T_Mosse_Ultimate",
-  },
-  {
-    name: {
-      key: "36B65FF14FA2A0D3B3CC88A477FE87EE",
-      default: "Life Petal: Yellow Flutterfly",
-    },
-    id: "GA_Mosse_Passive_HealingMushroomPlacement_C",
-    description: {
-      key: "09EA2AD341C889199A9CF7817C74F50B",
-      default: "Heals you every 2 sec, for 16 sec.",
-    },
-  },
-  {
-    name: { key: "7EFC4DAA4D24223A0B4161B83A6A51E2", default: "Safe Haven" },
-    id: "GA_Mosse_PlacedAoeBuff",
-    description: {
-      key: "891FDA684302DF53DA08F09A404E31A2",
-      default:
-        "Place a <rt.absorb>Safe Haven</> in target location. For the next 15 seconds, all allies standing within the radius have <rt.absorb>40% increased healing taken</>.",
-    },
-    thumbnail: "sylvie_T_Mosse_LinkCD",
-  },
-  {
-    name: { key: "630F05A4405B762D9078D8830806B2D7", default: "Hidden Trail" },
-    id: "GA_Mosse_InstantSelfEscapeBuff",
-    description: {
-      key: "13F040714C09F8538AD5DAAF1405487E",
-      default:
-        "Your Movement Speed is increased by 50% for 6 seconds.\r\n\r\n<rt.absorb>Demure</>\r\nUpon activating <rt.absorb>Hidden Trail</> your threat is reduced by 50% with all enemies.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "sylvie_T_Mosse_Hide",
-  },
-  {
-    name: { key: "3E56552243CE8775523181AFCC21F11E", default: "Life Petal" },
-    id: "GA_Mosse_HealingAoeTotem",
-    description: {
-      key: "3FF030E045A4F77D52336DB7122D9077",
-      default:
-        "A <rt.absorb>Life Petal</> sprouts up near you, healing one ally for {LifePetalTickHeal} <rt.bold>every</> <rt.heal>{LifePetalPeriod}</> <rt.bold>seconds</> for 14 seconds, preferring the ally with the lowest health.\r\n\r\n<rt.absorb>Life Petal's</> healing wanes over time, healing for less the longer it has been active.\r\n\r\n<rt.absorb>Life Petal</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.\r\n\r\n<rt.absorb>Life Petal</> spawns <rt.effect>2 Boomshrooms</> when it withers.",
-    },
-    thumbnail: "sylvie_T_Mosse_Lifepetal",
-  },
-  {
-    name: { key: "0499C0C94E7FA57D54A45398DBB41B4D", default: "Ironleaf Ward" },
-    id: "GA_Mosse_SingleTargetCastedDamageReduction",
-    description: {
-      key: "64F0E46647DEE862FD8C64B680081797",
-      default:
-        "Target ally takes <rt.absorb>20% reduced damage</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "sylvie_T_Mosse_DR",
-  },
-  {
-    name: {
-      key: "FE2C621D4B617C6BB0D58F9CFACEC97B",
-      default: "Shroomsplosion",
-    },
-    id: "GA_Mosse_ExplosiveMinion_C",
-    description: {
-      key: "4D0E870A4539E13BD63EB38F8E330A76",
-      default:
-        "Command all mature <rt.absorb>Boomshrooms</> to attack causing them to leap at target enemy and explode, dealing <rt.warning>{ShroomSplDmg}</> magic damage to the target and nearby enemies.\r\n\r\n<rt.absorb>Boomshrooms</>\r\nEach time one of your plants expire, budding <rt.absorb>Boomshrooms</> start growing in that location. After 3 seconds, the <rt.absorb>Boomshroom</> has reached full maturity and is ready to be called into battle.",
-    },
-    thumbnail: "sylvie_T_Mosse_Boomshroom",
-  },
-  {
-    name: {
-      key: "183A415C43738AD19C40C3A123430A1D",
-      default: "Enfeebling Rootsap",
-    },
-    id: "GA_Mosse_TurretChannelHeal",
-    description: {
-      key: "2DA033644591843564B0C9BB588C81C7",
-      default:
-        "Command one of your <rt.absorb>Prickly Vines</> to <rt.effect>Enfeeble</> target enemy, reducing all damage that enemy deals by 20% for 10 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown.</>\r\n\r\nThe <rt.absorb>Prickly Vine</> withers upon completing it's cast of <rt.absorb>Enfeebling Rootsap</>.",
-    },
-    thumbnail: "textures_T_Nhance_RPG_Nature_04",
-  },
-  {
-    name: { key: "9C120D234C654C9D30F0C19582D324D0", default: "Attack" },
-    id: "GA_IC_GlacialSprite_AutoAttackMelee_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceBlizzard",
-  },
-  {
-    name: { key: "3E2D61274DBA738D7C2EB69D29DD4ECA", default: "Freezing Melt" },
-    id: "GA_IC_GlacialSprite_PassiveAOEPools_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceDrop",
-  },
-  {
-    name: { key: "EF694B3B42DBBEDC002FFE9E6903659B", default: "Attack" },
-    id: "GA_IC_BossMagistrate_MeleeAutoAttack",
-    thumbnail: "textures_Tex_staff_04_bg",
-  },
-  {
-    name: { key: "4D614EF34FEAD887FBF31D8D19987950", default: "Big Stun" },
-    id: "GA_IC_BossMagistrate_BigStun",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ColdSwirl",
-  },
-  {
-    name: { key: "19D6389F406EFB8549B3AEBE89714BD8", default: "Icy Death" },
-    id: "GA_IC_BossMagistrate_Frostbolt",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceShard",
-  },
-  {
-    name: { key: "BC5E29214CAB695252C491B1A5EBC697", default: "Howling Blast" },
-    id: "GA_IC_BossMagistrate_KnockbackCone",
-    thumbnail: "textures_T_WaterStrick",
-  },
-  {
-    name: {
-      key: "D0C5A3F74F1170CB47BB52995D35B390",
-      default: "Glacial Spikes",
-    },
-    id: "GA_IC_BossMagistrate_IceSpikes",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes_2",
-  },
-  {
-    name: {
-      key: "70AF3735416CBBD04BEA0AA47C5C8683",
-      default: "Splintering Ice",
-    },
-    id: "GA_IC_BossMagistrate_Redemption",
-    thumbnail: "textures_T_Icon_Elements_79",
-  },
-  {
-    name: { key: "B0941A1E4F1830CEA248A1A58A4AF9FC", default: "Frigid Mists" },
-    id: "GA_IC_BossMagistrate_FrigidMist",
-    thumbnail: "textures_T_Nhance_RPG_Frost_19",
-  },
-  {
-    name: { key: "CD7BB3BC49C27B3FF88D6C9E4410AD39", default: "Attack" },
-    id: "GA_IC_GreaterIceElemental_AutoAttack_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "762BDF894D66B73D3F32A785E2D3795F", default: "Avalanche" },
-    id: "GA_IC_GreaterIceElemental_EarthBreaker_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceGlacier",
-  },
-  {
-    name: { key: "6E014A1B456D2DE2B293B18F9DA502D7", default: "Frozen Stomp" },
-    id: "GA_IC_GreaterIceElemental_EarthStomp_C",
-    thumbnail: "tex_skill_icons_pack_Tex_blue_30",
-  },
-  {
-    name: {
-      key: "FF0D76094015CD838ED8EEB7A8EB1E49",
-      default: "(CUT) Burrowing Strike",
-    },
-    id: "GA_IC_GreaterIceElemental_Upheaval_C",
-    thumbnail: "weaponabilityicons_T_Weapon_IceShackle",
-  },
-  {
-    name: { key: "5C1A567E46E166D8CD86E3BC4D8DE376", default: "Attack" },
-    id: "GA_IC_Lookout_MeleeAutoAttack_C",
-    thumbnail: "textures_Tex_staff_04_bg",
   },
   {
     name: { key: "D66B88144B472396035740BAED6F95E0", default: "CastAndImpact" },
@@ -4642,6 +4704,106 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ShadowExplosion_2",
   },
   {
+    name: { key: "9C120D234C654C9D30F0C19582D324D0", default: "Attack" },
+    id: "GA_IC_GlacialSprite_AutoAttackMelee_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceBlizzard",
+  },
+  {
+    name: { key: "3E2D61274DBA738D7C2EB69D29DD4ECA", default: "Freezing Melt" },
+    id: "GA_IC_GlacialSprite_PassiveAOEPools_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceDrop",
+  },
+  {
+    name: { key: "EF694B3B42DBBEDC002FFE9E6903659B", default: "Attack" },
+    id: "GA_IC_BossMagistrate_MeleeAutoAttack",
+    thumbnail: "textures_Tex_staff_04_bg",
+  },
+  {
+    name: { key: "4D614EF34FEAD887FBF31D8D19987950", default: "Big Stun" },
+    id: "GA_IC_BossMagistrate_BigStun",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ColdSwirl",
+  },
+  {
+    name: { key: "19D6389F406EFB8549B3AEBE89714BD8", default: "Icy Death" },
+    id: "GA_IC_BossMagistrate_Frostbolt",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceShard",
+  },
+  {
+    name: { key: "BC5E29214CAB695252C491B1A5EBC697", default: "Howling Blast" },
+    id: "GA_IC_BossMagistrate_KnockbackCone",
+    thumbnail: "textures_T_WaterStrick",
+  },
+  {
+    name: {
+      key: "D0C5A3F74F1170CB47BB52995D35B390",
+      default: "Glacial Spikes",
+    },
+    id: "GA_IC_BossMagistrate_IceSpikes",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IcySpikes_2",
+  },
+  {
+    name: {
+      key: "70AF3735416CBBD04BEA0AA47C5C8683",
+      default: "Splintering Ice",
+    },
+    id: "GA_IC_BossMagistrate_Redemption",
+    thumbnail: "textures_T_Icon_Elements_79",
+  },
+  {
+    name: { key: "B0941A1E4F1830CEA248A1A58A4AF9FC", default: "Frigid Mists" },
+    id: "GA_IC_BossMagistrate_FrigidMist",
+    thumbnail: "textures_T_Nhance_RPG_Frost_19",
+  },
+  {
+    name: { key: "5C1A567E46E166D8CD86E3BC4D8DE376", default: "Attack" },
+    id: "GA_IC_Lookout_MeleeAutoAttack_C",
+    thumbnail: "textures_Tex_staff_04_bg",
+  },
+  {
+    name: { key: "CD7BB3BC49C27B3FF88D6C9E4410AD39", default: "Attack" },
+    id: "GA_IC_GreaterIceElemental_AutoAttack_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "762BDF894D66B73D3F32A785E2D3795F", default: "Avalanche" },
+    id: "GA_IC_GreaterIceElemental_EarthBreaker_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceGlacier",
+  },
+  {
+    name: { key: "6E014A1B456D2DE2B293B18F9DA502D7", default: "Frozen Stomp" },
+    id: "GA_IC_GreaterIceElemental_EarthStomp_C",
+    thumbnail: "tex_skill_icons_pack_Tex_blue_30",
+  },
+  {
+    name: {
+      key: "FF0D76094015CD838ED8EEB7A8EB1E49",
+      default: "(CUT) Burrowing Strike",
+    },
+    id: "GA_IC_GreaterIceElemental_Upheaval_C",
+    thumbnail: "weaponabilityicons_T_Weapon_IceShackle",
+  },
+  {
+    name: { key: "E46160AF47F8B3611762629D16E8D07B", default: "Attack" },
+    id: "GA_IC_Assassin_AutoAttack_C",
+    thumbnail: "textures_Tex_kn_04_bg",
+  },
+  {
+    name: {
+      key: "CC9434D54B85E62A5ADBF6826EFFED08",
+      default: "Coldheart Poison",
+    },
+    id: "GA_IC_Assassin_PoisonDagger_C",
+    thumbnail: "hero_effects_T_Status_Poison",
+  },
+  {
+    name: {
+      key: "DF441B01421C76520B5A2699D1E866DE",
+      default: "Wicked Strikes",
+    },
+    id: "GA_IC_Assassin_WickedStrike_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceEmpower",
+  },
+  {
     name: { key: "EC2E0CB94F7E5CAC079CAFAA923C7960", default: "Attack" },
     id: "GA_IC_Healer_AutoAttackMelee_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -4666,6 +4828,39 @@ export default [
     },
     id: "GA_IC_Healer_TwoTargetDot_C",
     thumbnail: "textures_T_Nhance_RPG_Arcane_32",
+  },
+  {
+    name: { key: "66EC9E2842887475D3863FB0F4D0521F", default: "Attack" },
+    id: "GA_JS_NPCRime_AutoAttackMelee_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "1430CFE241F4E6B9EA8A55A35A048752", default: "Frost Bolt" },
+    id: "GA_JS_NPCRime_CastProjectile",
+    thumbnail: "rime_T_Rime_SingleTargetBolt",
+  },
+  {
+    name: {
+      key: "DB0E5AAC459749E9B8270B9FCCE54804",
+      default: "Frigid Torrent",
+    },
+    id: "GA_JS_NPCRime_ChanneledDamageBeam",
+    thumbnail: "rime_T_Rime_ChanneledBeam",
+  },
+  {
+    name: { key: "0EBBB7BA42ADBC5203CE5DA3FB1267D7", default: "Icey Comet" },
+    id: "GA_JS_NPCRime_OnTargetPulsatingAoe",
+    thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
+  },
+  {
+    name: { key: "F8E094904C70182D0293B0AF8D2F76B7", default: "Attack" },
+    id: "GA_JS_TutorialOrcCaster_AutoAttackMelee_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "5613CFF243A99F6DAB9F6CBD32C9CFD8", default: "Heal" },
+    id: "GA_JS_TutorialOrcCaster_Heal",
+    thumbnail: "textures_T_Nhance_RPG_Icons_Heal",
   },
   {
     name: { key: "DC9839B44DA163A29780F7B88D158610", default: "Attack" },
@@ -4699,29 +4894,9 @@ export default [
     thumbnail: "sylvie_T_Mosse_DoubleHeal",
   },
   {
-    name: { key: "2E53E24142258BF5ED829FA837E133C3", default: "Attack" },
-    id: "GA_JS_TutorialOrc_AutoAttackMelee_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "99B31DDE4E0780D8E183E9BE2496B8D0", default: "Attack" },
-    id: "GA_JS_TutorialGoblin_AutoAttackMelee_C",
-    thumbnail: "textures_Tex_staff_04_bg",
-  },
-  {
     name: { key: "6C5321BF4DAC6C47BF49E0BDD993F6D1", default: "Attack" },
     id: "GA_JS_TutorialSmallGoblin_AutoAttackMelee_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "F8E094904C70182D0293B0AF8D2F76B7", default: "Attack" },
-    id: "GA_JS_TutorialOrcCaster_AutoAttackMelee_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "5613CFF243A99F6DAB9F6CBD32C9CFD8", default: "Heal" },
-    id: "GA_JS_TutorialOrcCaster_Heal",
-    thumbnail: "textures_T_Nhance_RPG_Icons_Heal",
   },
   {
     name: { key: "331F1094444A90D3A0929EA0F2AFA1D5", default: "Attack" },
@@ -4754,6 +4929,16 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ManaBoots",
   },
   {
+    name: { key: "99B31DDE4E0780D8E183E9BE2496B8D0", default: "Attack" },
+    id: "GA_JS_TutorialGoblin_AutoAttackMelee_C",
+    thumbnail: "textures_Tex_staff_04_bg",
+  },
+  {
+    name: { key: "2E53E24142258BF5ED829FA837E133C3", default: "Attack" },
+    id: "GA_JS_TutorialOrc_AutoAttackMelee_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
     name: { key: "2E3B8167444E7BA62FC1EC80F231929D", default: "Attack" },
     id: "GA_MF_BlightedMorningGlory_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -4770,50 +4955,6 @@ export default [
     name: { key: "B7DAE40843A38221B318A8BCFEB25850", default: "Glory" },
     id: "GA_MF_BlightedMorningGlory_OnDeathHeal",
     thumbnail: "paladin_Paladin6",
-  },
-  {
-    name: { key: "22B2A3A64686DD050C1EF983B47026E4", default: "Corruption" },
-    id: "GA_MF_BossTotem_AoePulse",
-    thumbnail: "tex_skill_icons_pack_Tex_violet_26",
-  },
-  {
-    name: { key: "925B95C840B9DF7CBB7649A6DBE9CEF9", default: "Attack" },
-    id: "GA_MF_DawnstoneGuardian_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: {
-      key: "3713DF2A44A0A19F87F66FBFB165F137",
-      default: "Earthcore Upheaval",
-    },
-    id: "GA_MF_DawnstoneGuardian_Spikes",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ChaoticSpikes",
-  },
-  {
-    name: {
-      key: "E063E1A349E664C7EE149B9440AEB42E",
-      default: "Bloodstone Erruption",
-    },
-    id: "GA_MF_DawnstoneGuardian_DamageReflect",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowSun",
-  },
-  {
-    name: { key: "A64A08C84C5F0CDF4BF6E085FE1B2D1E", default: "Attack" },
-    id: "GA_MF_BossUnicorn_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodStep",
-  },
-  {
-    name: {
-      key: "F2E5FCD940A749B6A6EA7D9D4BD79A32",
-      default: "Panicked Charge",
-    },
-    id: "GA_MF_BossUnicorn_Charge",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_04",
-  },
-  {
-    name: { key: "1DA1005C456BED7DB196B3990AB05496", default: "Charge" },
-    id: "GA_MF_BossUnicorn_Charge_Cooldown",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_04",
   },
   {
     name: { key: "329FBF564C83845E9A56ACAF974F0FA0", default: "Attack" },
@@ -4895,6 +5036,29 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Shadow_03",
   },
   {
+    name: { key: "22B2A3A64686DD050C1EF983B47026E4", default: "Corruption" },
+    id: "GA_MF_BossTotem_AoePulse",
+    thumbnail: "tex_skill_icons_pack_Tex_violet_26",
+  },
+  {
+    name: { key: "A64A08C84C5F0CDF4BF6E085FE1B2D1E", default: "Attack" },
+    id: "GA_MF_BossUnicorn_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodStep",
+  },
+  {
+    name: {
+      key: "F2E5FCD940A749B6A6EA7D9D4BD79A32",
+      default: "Panicked Charge",
+    },
+    id: "GA_MF_BossUnicorn_Charge",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_04",
+  },
+  {
+    name: { key: "1DA1005C456BED7DB196B3990AB05496", default: "Charge" },
+    id: "GA_MF_BossUnicorn_Charge_Cooldown",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_04",
+  },
+  {
     name: { key: "A3CFCBC746A64A38F6E942882B012768", default: "Attack" },
     id: "GA_MF_FoulTotemic_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -4926,14 +5090,25 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_BloodCombat_18",
   },
   {
-    name: { key: "8F0227F7473E46C59B8364982FBD3661", default: "Attack" },
-    id: "GA_MF_MangyBrute_MeleeAutoAttack",
-    thumbnail: "textures_Tex_staff_08_b",
+    name: { key: "925B95C840B9DF7CBB7649A6DBE9CEF9", default: "Attack" },
+    id: "GA_MF_DawnstoneGuardian_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
-    name: { key: "5AB7D888444056477A6C2A9417D3861A", default: "Bash" },
-    id: "GA_MF_MangyBrute_TankSlam",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
+    name: {
+      key: "3713DF2A44A0A19F87F66FBFB165F137",
+      default: "Earthcore Upheaval",
+    },
+    id: "GA_MF_DawnstoneGuardian_Spikes",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ChaoticSpikes",
+  },
+  {
+    name: {
+      key: "E063E1A349E664C7EE149B9440AEB42E",
+      default: "Bloodstone Erruption",
+    },
+    id: "GA_MF_DawnstoneGuardian_DamageReflect",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowSun",
   },
   {
     name: { key: "EB2A65AA4BD4B3DA150AA08BA5F19193", default: "Attack" },
@@ -4960,6 +5135,70 @@ export default [
     name: { key: "80736A2146F3F213DD61A8BBF78C7FB9", default: "Corruption" },
     id: "GA_MF_Totem_AoePulse",
     thumbnail: "tex_skill_icons_pack_Tex_violet_26",
+  },
+  {
+    name: { key: "8F0227F7473E46C59B8364982FBD3661", default: "Attack" },
+    id: "GA_MF_MangyBrute_MeleeAutoAttack",
+    thumbnail: "textures_Tex_staff_08_b",
+  },
+  {
+    name: { key: "5AB7D888444056477A6C2A9417D3861A", default: "Bash" },
+    id: "GA_MF_MangyBrute_TankSlam",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
+  },
+  {
+    name: { key: "05A17D314411E24F42F2799B7FB4D0C8", default: "Attack" },
+    id: "GA_NP_BossHellcaller_MeleeAutoAttack",
+    thumbnail: "textures_Tex_staff_08_b",
+  },
+  {
+    name: { key: "2CF9023D47EE5BA018E44BB3BBCA8AF9", default: "Charged Bolt" },
+    id: "GA_NP_BossHellcaller_CastedRangedProjectile",
+    thumbnail: "textures_T_Nhance_RPG_Energy_14",
+  },
+  {
+    name: { key: "48A98CDD455F743FF23BDB9E0FBEF56B", default: "Perfect Storm" },
+    id: "GA_NP_BossHellcaller_GrowingCircleCast",
+    thumbnail: "textures_T_Nhance_RPG_Icons_MagicVortex",
+  },
+  {
+    name: { key: "BABF6B5D4230B5420A7EB18A419462EC", default: "Dread Arc" },
+    id: "GA_NP_BossHellcaller_ChainLightning",
+    thumbnail: "tex_skill_icons_pack_Tex_blue_21",
+  },
+  {
+    name: { key: "8BD4D27E45C9605BBB216EA78620890E", default: "Lightning Rod" },
+    id: "GA_NP_BossHellcaller_SoakDebuff",
+    thumbnail: "textures_T_Nhance_RPG_Energy_15",
+  },
+  {
+    name: { key: "F3E35E914B0D47CBD0EB038DC91FA7CB", default: "Raiders!" },
+    id: "GA_NP_BossHellcaller_Summon",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
+  },
+  {
+    name: {
+      key: "C0931FC84AB3282516601AA82E65608C",
+      default: "Stormy Retreat",
+    },
+    id: "GA_NP_BossHellcaller_Retreat",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLightning",
+  },
+  {
+    name: {
+      key: "4DED207248C01418FDCEF983CDD802C4",
+      default: "Forked Lightning",
+    },
+    id: "GA_NP_BossHellcaller_TankSlamCone",
+    thumbnail: "textures_T_FrozenLightning",
+  },
+  {
+    name: {
+      key: "FA04C23946CC498011CF6B91270F879D",
+      default: "Storm's Conduit",
+    },
+    id: "GA_NP_BossHellcaller_PeriodicDamage",
+    thumbnail: "textures_T_SpiritualLightning",
   },
   {
     name: {
@@ -5044,93 +5283,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_EarthWall",
   },
   {
-    name: { key: "80A6B5EB4FC6A4E5C838ADB12B37AAB6", default: "Attack" },
-    id: "GA_NP_BullyBasher_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
-  },
-  {
-    name: { key: "57C520884A91F4C61A714588D29C77AF", default: "Bully Bash" },
-    id: "GA_NP_BullyBasher_TankSlam",
-    thumbnail: "textures_T_Nhance_RPG_Gold_07",
-  },
-  {
-    name: {
-      key: "39D9B8F34FBD9C2E67EA04B3D07D359E",
-      default: "Together Stronk!",
-    },
-    id: "GA_NP_BullyBasher_BuffAllies",
-    thumbnail: "textures_T_Nhance_RPG_Gold_20",
-  },
-  {
-    name: { key: "05A17D314411E24F42F2799B7FB4D0C8", default: "Attack" },
-    id: "GA_NP_BossHellcaller_MeleeAutoAttack",
-    thumbnail: "textures_Tex_staff_08_b",
-  },
-  {
-    name: { key: "2CF9023D47EE5BA018E44BB3BBCA8AF9", default: "Charged Bolt" },
-    id: "GA_NP_BossHellcaller_CastedRangedProjectile",
-    thumbnail: "textures_T_Nhance_RPG_Energy_14",
-  },
-  {
-    name: { key: "48A98CDD455F743FF23BDB9E0FBEF56B", default: "Perfect Storm" },
-    id: "GA_NP_BossHellcaller_GrowingCircleCast",
-    thumbnail: "textures_T_Nhance_RPG_Icons_MagicVortex",
-  },
-  {
-    name: { key: "BABF6B5D4230B5420A7EB18A419462EC", default: "Dread Arc" },
-    id: "GA_NP_BossHellcaller_ChainLightning",
-    thumbnail: "tex_skill_icons_pack_Tex_blue_21",
-  },
-  {
-    name: { key: "8BD4D27E45C9605BBB216EA78620890E", default: "Lightning Rod" },
-    id: "GA_NP_BossHellcaller_SoakDebuff",
-    thumbnail: "textures_T_Nhance_RPG_Energy_15",
-  },
-  {
-    name: { key: "F3E35E914B0D47CBD0EB038DC91FA7CB", default: "Raiders!" },
-    id: "GA_NP_BossHellcaller_Summon",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
-  },
-  {
-    name: {
-      key: "C0931FC84AB3282516601AA82E65608C",
-      default: "Stormy Retreat",
-    },
-    id: "GA_NP_BossHellcaller_Retreat",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLightning",
-  },
-  {
-    name: {
-      key: "4DED207248C01418FDCEF983CDD802C4",
-      default: "Forked Lightning",
-    },
-    id: "GA_NP_BossHellcaller_TankSlamCone",
-    thumbnail: "textures_T_FrozenLightning",
-  },
-  {
-    name: {
-      key: "FA04C23946CC498011CF6B91270F879D",
-      default: "Storm's Conduit",
-    },
-    id: "GA_NP_BossHellcaller_PeriodicDamage",
-    thumbnail: "textures_T_SpiritualLightning",
-  },
-  {
-    name: { key: "41ECBA594E89D4056819D0B71D31AE06", default: "Attack" },
-    id: "GA_NP_HalfMancatcher_MeleeAutoAttack",
-    thumbnail: "weapon_icons_Tex_kn_10g",
-  },
-  {
-    name: { key: "5CCCDA7E458E547876E0778730DC2ABF", default: "Grip" },
-    id: "GA_NP_HalfMancatcher_Grip",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
-  },
-  {
-    name: { key: "A221BFA848E52DC8FABC68B2D7200869", default: "Attack" },
-    id: "GA_NP_Facestabber_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
     name: { key: "CC2B5A5B45190A7FD1ACBC898BC06627", default: "Attack" },
     id: "GA_NP_Facestabber_MeleeAutoAttack_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -5157,205 +5309,37 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_FireDagger",
   },
   {
-    name: { key: "C6188AD1435C7577DD60E08444AD813D", default: "Remove Magic" },
-    id: "GA_Vigor_SingleAllyDispel_C",
-    description: {
-      key: "5D0010FF4987481FABA440ADE2EEB6B0",
-      default:
-        "Remove all <rt.debuff>Harmful</> <rt.bold>Magic Effects</> from target ally. ",
-    },
-    thumbnail: "vigor_T_Vigor_Dispel",
+    name: { key: "80A6B5EB4FC6A4E5C838ADB12B37AAB6", default: "Attack" },
+    id: "GA_NP_BullyBasher_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
   },
   {
-    name: { key: "9F60DD314D7083CF5EDF9EAF52CB29A6", default: "Soulbrand" },
-    id: "GA_Vigor_SingleTargetDot_C",
-    description: {
-      key: "5119C75D4DA1C7CE5A62C198DDF028F0",
-      default:
-        "Apply a searing rune to target enemy, dealing <rt.warning>{SoulbrandTickDmg}</> magic damage <rt.bold>every</> <rt.warning>{SoulbrandPeriod}</> <rt.bold>seconds for 24 seconds</>.\r\n\r\nWhen <rt.absorb>Soulbrand</> is applied to an enemy that already has the effect applied it triggers <rt.effect>Soulbrand: Remnant</>, instantly dealing an additional <rt.warning>{RemnantDamage}</> to them.\r\n\r\n<rt.absorb>Soulbrand</> generates <rt.mana>30% of a Radiant Rune</> over its duration.\r\n\r\n<rt.greyitalic>Vigour inscribes a searing rune onto the soul of his enemy, infusing it with radiant energy. The rune pulses painfully, steadily draining their life force while fueling Vigour’s power.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Soulbrand",
+    name: { key: "57C520884A91F4C61A714588D29C77AF", default: "Bully Bash" },
+    id: "GA_NP_BullyBasher_TankSlam",
+    thumbnail: "textures_T_Nhance_RPG_Gold_07",
   },
   {
     name: {
-      key: "F555D7CF4102FA0E58BB5FBD597D33C8",
-      default: "Rune of Renewal",
+      key: "39D9B8F34FBD9C2E67EA04B3D07D359E",
+      default: "Together Stronk!",
     },
-    id: "GA_Vigor_SingleTargetChargedHot_C",
-    description: {
-      key: "FDE384614C16F1D1020D1C89DBC99DEF",
-      default:
-        "Instantly heal target ally for {RenewalHealDirect} and apply <rt.absorb>Rune of Renewal</> on them for 30 seconds, causing all your direct healing effects on that ally to echo for an additional <rt.heal>25% of the initial heal's value</>.\r\n\r\n<rt.absorb>Rune of Renewal's</> <rt.heal>initial heal is increased by 200%</> when cast on a target that already has <rt.effect>Rune of Renewal</> active.\r\n\r\nThe bonus healing generated by <rt.absorb>Rune of Renewal</> generates <rt.mana>Radiant Rune power</> relative to the value of the heal.\r\n\r\n<rt.greyitalic>Vigour inscribes a resonating rune onto the spirit of an ally. When Vigor heals that ally, the rune pulses gently, further mending any wounds that linger as its light nourishes the body and spirit.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Rune",
+    id: "GA_NP_BullyBasher_BuffAllies",
+    thumbnail: "textures_T_Nhance_RPG_Gold_20",
   },
   {
-    name: {
-      key: "7F62234D40025BC91046A69C0FB6A19A",
-      default: "Luminous Barrier",
-    },
-    id: "GA_Vigor_SingleTargetAbsorb",
-    description: {
-      key: "B12AC07B4CA3D93ABD9DB6A56B67680E",
-      default:
-        "Apply a shield to target ally that absorbs up to <rt.heal>{LuminousAbsorb}</> damage while it persists. The shield lasts for 8 sec.\r\n\r\n<rt.greyitalic>Vigour inscribes a rune of protection onto an ally, causing light to be woven around them into a barrier of divine energy. The barrier stops all forms of attack, whether forged by steel or conjured by magic.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Shield",
+    name: { key: "41ECBA594E89D4056819D0B71D31AE06", default: "Attack" },
+    id: "GA_NP_HalfMancatcher_MeleeAutoAttack",
+    thumbnail: "weapon_icons_Tex_kn_10g",
   },
   {
-    name: {
-      key: "80CEC4FE4D7835ACF0A4D7BB1BBCD63F",
-      default: "Lightshaper's Ward",
-    },
-    id: "GA_Vigor_DamageReductionAndImmunityBuff_C",
-    description: {
-      key: "052D43344F351D90E2F9E88A0A2C3E67",
-      default:
-        "Target ally takes <rt.absorb>20% reduced damage</> for 12 seconds.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "vigor_T_Vigor_Ward",
+    name: { key: "5CCCDA7E458E547876E0778730DC2ABF", default: "Grip" },
+    id: "GA_NP_HalfMancatcher_Grip",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
   },
   {
-    name: { key: "1684B4F84BBD385C17440C99A6AA00D0", default: "Dawnflare" },
-    id: "GA_Vigor_CastedSingleTargetDamage_C",
-    description: {
-      key: "0C3742454F9D59C39770ED8198B92B1B",
-      default:
-        "Deals <rt.warning>{DawnflareDmg}</> magic damage to target enemy.\r\n\r\nEach cast of <rt.absorb>Dawnflare</> generates <rt.mana>20% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour can call upon the light to unleash a flare of divine light from above. This flash of radiant energy strikes the enemy with a sharp but controlled force.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Bolt",
-  },
-  {
-    name: { key: "38981D3C459751B5DA0C6BA0F0641FA9", default: "Radiant Blast" },
-    id: "GA_Vigor_InstantFrontalConeDamageHeal_C",
-    description: {
-      key: "3337E6384B29BBE44F5BC1A8E9F09988",
-      default:
-        "Within a cone in front of you, allies are healed for {RadiantBlastHeal} and enemies take <rt.warning>{RadiantBlastDmg}</> magic damage.\r\n\r\nWhen <rt.absorb>Radiant Blast</> deals damage to any number of enemies, it generates <rt.mana>30% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour expels an explosive flash of divine light from his outstretched hand, healing allies in its path, while searing enemies with its blinding brilliance.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Cone",
-  },
-  {
-    name: { key: "486797D649946FF6E9E62BBC1962AF69", default: "Greater Heal" },
-    id: "GA_Vigor_CastedSingleTargetHeal_C",
-    description: {
-      key: "380172DC48791AD2FE55A4BE084646EB",
-      default:
-        "Heal target ally for {GreaterHeal}.\r\n\r\n<rt.greyitalic>Vigour opens his sacred tome, drawing forth radiant power inscribed within its pages. With a solemn gesture, he calls forth a burst of healing energy to mend even the deepest wounds.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Heal",
-  },
-  {
-    name: {
-      key: "06D6D7794CCD83E83D3DDFAFFC99146B",
-      default: "Circle of Light",
-    },
-    id: "GA_Vigor_InstantAoeHeal_C",
-    description: {
-      key: "3FCDC39E45CB3F2220E95181877E699B",
-      default:
-        "Place a <rt.bold>Circle of Light</> on the ground, instantly healing all allies within its radius for {CircLightHeal}.\r\n\r\n<rt.greyitalic>Vigour calls upon the power of light to create a circle of divine healing on the ground. Allies within its boundaries are restored in a sudden flash, as the light pours into them, mending their wounds.</>",
-    },
-    thumbnail: "vigor_T_Vigor_AoEHeal",
-  },
-  {
-    name: { key: "D8B68FC3449010C70C9CE7BB8F4FD00E", default: "Throw Book" },
-    id: "GA_Vigor_SIngleTargetProjectileStun_C",
-    description: {
-      key: "3D890BEF4E26C533E4A599844FABDFEC",
-      default:
-        "Educate a target, <rt.absorb>Stunning</> them for 2 sec.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "vigor_T_Vigor_Book",
-  },
-  {
-    name: {
-      key: "1130F1414A5D37C6C6C1D79404DD24B6",
-      default: "Avatar of Light",
-    },
-    id: "GA_Vigor_PartyHealAndSelfBuff_C",
-    description: {
-      key: "567D0B0642A15BA47D59F5AEE8620897",
-      default:
-        "Instantly heal all allies within a large radius of you for {AvatarDirectHeal} and enter an enlightened state for 9 sec, enhancing your abilities.\r\n\r\n<rt.absorb>Radiant Blast</>\r\nDeals <rt.warning>50% increased damage</> and has no <bold>Cooldown</>.\r\n\r\n<rt.absorb>Heal</>\r\nCosts <rt.mana>50% less Mana</> and is <rt.bold>Instant Cast</>.\r\n\r\n<rt.absorb>Circle of Light</>\r\nCosts <rt.mana>50% less Mana</> and has no <bold>Cooldown</>.\r\n\r\n\r\n<rt.absorb>SPIRIT ABILITY</>\r\n<rt.greyitalic>When you activate your Spirit ability you gain </><rt.absorb> Spirit of Heroism</><rt.greyitalic>, granting +30% Haste and +600% Mana Recovery for 20 sec.</>",
-    },
-    thumbnail: "vigor_T_Vigor_Spirit",
-  },
-  {
-    name: {
-      key: "3C75DF0D4D60F04013D79891A1DE4BDA",
-      default: "Dawnbreaker Orb",
-    },
-    id: "GA_Vigor_SkillshotAoeProjectile",
-    description: {
-      key: "97B0DD144F7FA0CE7DEBE6841952DE80",
-      default:
-        "Conjure an orb of light that slowly travels forward, healing all allies it touches for {DawnOrbHeal} and damaging enemies for <rt.warning>{DawnOrbDmg}</>.\r\n\r\nEach ally and enemy touched by <rt.absorb>Dawnbreaker Orb</> generates <rt.mana>10% of a Radiant Rune</>.\r\n\r\n<rt.greyitalic>Vigour conjures an orb of intricate runes, humming with radiant power. The orb shines brilliantly as it slowly drifts forward, burning all darkness from its path and bolstering the lifeforce of Vigour's allies.</>",
-    },
-    thumbnail: "vigor_T_Vigor_DawnSphere",
-  },
-  {
-    name: {
-      key: "1E1072B64A446B5AA90C57A70DFB40E5",
-      default: "Runic Proliferation",
-    },
-    id: "GA_Vigor_InstantResourceGain",
-    description: {
-      key: "BD42BA2D4F9EF863A63AAFAE35A7C93E",
-      default:
-        "Instantly generate <rt.mana>3 Radiant Runes</>. For the next 8 seconds, any <rt.absorb>Rune Abilities</> you cast are empowered, increasing their effectiveness by 20%.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown</>",
-    },
-    thumbnail: "vigor_T_Vigor_HealRune",
-  },
-  {
-    name: { key: "7309A25A4F0EE90223905EA0CB76F88F", default: "Levitate" },
-    id: "GA_Vigor_ChargedMovementSpeedSelfBuff_C",
-    description: {
-      key: "26DBB369417F70FA49DCA8A7DB61CC20",
-      default:
-        "Your movement speed is increased by 50% for 6 seconds and you take <rt.bold>20% reduced Area of Effect damage</> for the duration.\r\n\r\n<rt.meikoability2>Can be used during Global Cooldown and while Casting or Channeling</>",
-    },
-    thumbnail: "vigor_T_Vigor_Levitate",
-  },
-  {
-    name: {
-      key: "44779978484A81045E6B7189D03883FD",
-      default: "Rune of Renewal",
-    },
-    id: "GA_Vigor_Passive_Echo_Monitor_C",
-  },
-  {
-    name: { key: "66EC9E2842887475D3863FB0F4D0521F", default: "Attack" },
-    id: "GA_JS_NPCRime_AutoAttackMelee_C",
+    name: { key: "A221BFA848E52DC8FABC68B2D7200869", default: "Attack" },
+    id: "GA_NP_Facestabber_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "1430CFE241F4E6B9EA8A55A35A048752", default: "Frost Bolt" },
-    id: "GA_JS_NPCRime_CastProjectile",
-    thumbnail: "rime_T_Rime_SingleTargetBolt",
-  },
-  {
-    name: {
-      key: "DB0E5AAC459749E9B8270B9FCCE54804",
-      default: "Frigid Torrent",
-    },
-    id: "GA_JS_NPCRime_ChanneledDamageBeam",
-    thumbnail: "rime_T_Rime_ChanneledBeam",
-  },
-  {
-    name: { key: "0EBBB7BA42ADBC5203CE5DA3FB1267D7", default: "Icey Comet" },
-    id: "GA_JS_NPCRime_OnTargetPulsatingAoe",
-    thumbnail: "rime_T_Rime_OnTargetPulsatingAOE",
-  },
-  {
-    name: { key: "D6B5F671441E5881DDFDC7A3AB4827E4", default: "Attack" },
-    id: "GA_PR_BarbarousLasher_MeleeAutoAttack",
-    thumbnail: "tex_skill_icons_pack_Tex_green_7",
-  },
-  {
-    name: { key: "86DEAFE542B9337D494C4DA8B93B8466", default: "Crush Armor" },
-    id: "GA_PR_BarbarousLasher_ShatterAmor",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NatureEntagle",
   },
   {
     name: {
@@ -5382,6 +5366,48 @@ export default [
     name: { key: "8A1E886B4CD07693A6FA2FB2F80CA5AE", default: "Attack" },
     id: "GA_Shared_PolymorphChicken_Spawn",
     thumbnail: "relicicons_T_Relic_Chicken",
+  },
+  {
+    name: { key: "1CADC0A04505CD7514A5359107AEB2C1", default: "Attack" },
+    id: "GA_PR_Bilgerat_MeleeAutoAttack_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
+  },
+  {
+    name: { key: "2F7FA160476043181B9214A10E6AFB04", default: "Vermin Tide" },
+    id: "GA_PR_Bilgerat_ChanneledActorSpawner_C",
+    thumbnail: "tex_strategyicons_Tex_wolf",
+  },
+  {
+    name: { key: "55FC7C70476F80F3F88A43B524925A9C", default: "Leaderless" },
+    id: "GA_PR_Bilgerat_MoveAwayDestroy_C",
+  },
+  {
+    name: { key: "D6B5F671441E5881DDFDC7A3AB4827E4", default: "Attack" },
+    id: "GA_PR_BarbarousLasher_MeleeAutoAttack",
+    thumbnail: "tex_skill_icons_pack_Tex_green_7",
+  },
+  {
+    name: { key: "86DEAFE542B9337D494C4DA8B93B8466", default: "Crush Armor" },
+    id: "GA_PR_BarbarousLasher_ShatterAmor",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NatureEntagle",
+  },
+  {
+    name: { key: "5D4A4848411B7AF2BEF0D9AAC6CD8EC6", default: "Shoot" },
+    id: "DT_PR_BlunderbussPirate_RangedAutoAttack",
+    thumbnail: "weapon_icons_Tex_gun_04_bg",
+  },
+  {
+    name: {
+      key: "2E79AD77468E2C92D8BE77B9F6765042",
+      default: "Soulpowder Shot",
+    },
+    id: "DT_PR_BlunderbussPirate_RangedDamageDebuff",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_03",
+  },
+  {
+    name: { key: "11ADDBFF405D95BB1B6B429001F740EC", default: "Attack" },
+    id: "DT_PR_BlunderbussPirate_RangedAutoAttack_0",
+    thumbnail: "weapon_icons_Tex_gun_04_bg",
   },
   {
     name: { key: "88D3296843E6AF38363BB98C46BB57F9", default: "Attack" },
@@ -5413,151 +5439,6 @@ export default [
     name: { key: "8DA23BE64F62A51F538528BBB8D3317B", default: "Sky Zapper" },
     id: "GA_NP_Stormscreamer_PeriodicDamage_Granted",
     thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLightning",
-  },
-  {
-    name: { key: "6E0D3B4044484A858EEFA48BCAA45C1A", default: "Anchor Strike" },
-    id: "GA_PR_BossAnchor_MeleeAutoAttack",
-    thumbnail: "weapon_icons_Tex_axe_06_bg",
-  },
-  {
-    name: { key: "AE0DD1FF44D2EA91A7D9AFB9F66E6771", default: "Wavestomp" },
-    id: "GA_PR_BossAnchor_CastedGrowingTankWave",
-    thumbnail: "textures_T_Nhance_RPG_Frost_22",
-  },
-  {
-    name: { key: "4A25DECC405C263D0E5434BE4AA11DEA", default: "High Tide" },
-    id: "GA_PR_BossAnchor_HighTideSwitchPhase",
-    thumbnail: "enemyabilities_T_Ability_Anchor",
-  },
-  {
-    name: { key: "4A25DECC405C263D0E5434BE4AA11DEA", default: "High Tide" },
-    id: "GA_PR_BossAnchor_HighTide",
-    thumbnail: "enemyabilities_T_Ability_Anchor",
-  },
-  {
-    name: {
-      key: "3430CB12458E2644A4598088885CDBB2",
-      default: "Cannonball Troops",
-    },
-    id: "GA_PR_BossAnchor_Reinforcements",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_45",
-  },
-  {
-    name: { key: "0B674FD04FE8C11F6A5362BC285C4A54", default: "Bombardment" },
-    id: "GA_PR_BossAnchor_CannonBarrage_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireBomb",
-  },
-  {
-    name: { key: "756EDA1F4442058F62555C893CB30B9B", default: "Anchor" },
-    id: "GA_PR_BossAnchor_HighTideTether",
-    thumbnail: "tex_strategyicons_Tex_Anchor",
-  },
-  {
-    name: { key: "46E295B04D8614CE20561A8429755EAF", default: "Anchor Strike" },
-    id: "GA_PR_BossAnchor_MeleeAutoAttack_AreaHit_C",
-    thumbnail: "weapon_icons_Tex_axe_06_bg",
-  },
-  {
-    name: { key: "B5246FAD459BD5496FB2F7B27F75BB10", default: "Keelhaul" },
-    id: "GA_PR_BossAnchor_PeriodicMultiSoak",
-    thumbnail: "tex_spellbookpage06_Tex_SpellBook06_05",
-  },
-  {
-    name: { key: "5D4A4848411B7AF2BEF0D9AAC6CD8EC6", default: "Shoot" },
-    id: "DT_PR_BlunderbussPirate_RangedAutoAttack",
-    thumbnail: "weapon_icons_Tex_gun_04_bg",
-  },
-  {
-    name: {
-      key: "2E79AD77468E2C92D8BE77B9F6765042",
-      default: "Soulpowder Shot",
-    },
-    id: "DT_PR_BlunderbussPirate_RangedDamageDebuff",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_03",
-  },
-  {
-    name: { key: "11ADDBFF405D95BB1B6B429001F740EC", default: "Attack" },
-    id: "DT_PR_BlunderbussPirate_RangedAutoAttack_0",
-    thumbnail: "weapon_icons_Tex_gun_04_bg",
-  },
-  {
-    name: { key: "1CADC0A04505CD7514A5359107AEB2C1", default: "Attack" },
-    id: "GA_PR_Bilgerat_MeleeAutoAttack_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
-  },
-  {
-    name: { key: "2F7FA160476043181B9214A10E6AFB04", default: "Vermin Tide" },
-    id: "GA_PR_Bilgerat_ChanneledActorSpawner_C",
-    thumbnail: "tex_strategyicons_Tex_wolf",
-  },
-  {
-    name: { key: "55FC7C70476F80F3F88A43B524925A9C", default: "Leaderless" },
-    id: "GA_PR_Bilgerat_MoveAwayDestroy_C",
-  },
-  {
-    name: { key: "92D8355E4B57A0699B56969B21C6C75E", default: "Attack" },
-    id: "GA_PR_BossTreasureDemon_AutoAttackMelee",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: {
-      key: "B76B60E64EF86297642E8DB2AEA95E1C",
-      default: "Shadowgreed Eclipse",
-    },
-    id: "GA_PR_BossTreasureDemon_Nova",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowWhirl",
-  },
-  {
-    name: { key: "CD31C0E347A9E70F78FE32AA2419149C", default: "Hoard" },
-    id: "GA_PR_BossTreasureDemon_SuckInCoins",
-    thumbnail: "textures_T_Nhance_RPG_Gold_21",
-  },
-  {
-    name: {
-      key: "7AD61EAE43F7FA242D3C9993680D82FA",
-      default: "Orb of Bael'Aurum",
-    },
-    id: "GA_PR_BossTreasureDemon_SummonBall",
-    thumbnail: "textures_T_Nhance_RPG_Gold_16",
-  },
-  {
-    name: { key: "610343D14212BC8D14F5C2B7060C8B4A", default: "Crushing Orb" },
-    id: "GA_PR_BossTreasureDemon_Ball_Knockback",
-    thumbnail: "textures_T_Nhance_RPG_Gold_16",
-  },
-  {
-    name: {
-      key: "ABEC5D6E4878AF110D17269C23B916DD",
-      default: "Cursed Treasure",
-    },
-    id: "GA_PR_BossTreasureDemon_ScatterCoins",
-    thumbnail: "textures_T_Nhance_RPG_Gold_21",
-  },
-  {
-    name: { key: "CDB03A59433D70C4FBD3AFB8538844C2", default: "Temptation" },
-    id: "GA_PR_BossTreasureDemon_CastedRangedProjectile_C",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_35",
-  },
-  {
-    name: { key: "8C6A606C45C88AC084416DA29846A3D3", default: "Erupting Envy" },
-    id: "GA_PR_BossTreasureDemon_Cone_C",
-    thumbnail: "textures_T_CurseOfShadow",
-  },
-  {
-    name: {
-      key: "F858902C4AAD8AE0EB2A4CA3DB02E47C",
-      default: "Coalescing Avarice",
-    },
-    id: "GA_PR_BossTreasureDemon_Tornado_C",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_40",
-  },
-  {
-    name: {
-      key: "9167AA1F49A16F6ADCD85886CFB75C89",
-      default: "Select Ball Mover",
-    },
-    id: "GA_PR_BossTreasureDemon_SelectBallMoverPassive",
-    thumbnail: "textures_T_Nhance_RPG_Gold_16",
   },
   {
     name: { key: "55C4A14440EC33E16B2B06AEB5989220", default: "Attack" },
@@ -5625,26 +5506,52 @@ export default [
     thumbnail: "modified_T_NatureSpikes_Demonic",
   },
   {
-    name: { key: "A31111F64B75C99C8011758BA3ED6FFD", default: "Attack" },
-    id: "GA_PR_FoB_RangedAutoAttack_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareCrystal",
+    name: { key: "6E0D3B4044484A858EEFA48BCAA45C1A", default: "Anchor Strike" },
+    id: "GA_PR_BossAnchor_MeleeAutoAttack",
+    thumbnail: "weapon_icons_Tex_axe_06_bg",
+  },
+  {
+    name: { key: "AE0DD1FF44D2EA91A7D9AFB9F66E6771", default: "Wavestomp" },
+    id: "GA_PR_BossAnchor_CastedGrowingTankWave",
+    thumbnail: "textures_T_Nhance_RPG_Frost_22",
+  },
+  {
+    name: { key: "4A25DECC405C263D0E5434BE4AA11DEA", default: "High Tide" },
+    id: "GA_PR_BossAnchor_HighTideSwitchPhase",
+    thumbnail: "enemyabilities_T_Ability_Anchor",
+  },
+  {
+    name: { key: "4A25DECC405C263D0E5434BE4AA11DEA", default: "High Tide" },
+    id: "GA_PR_BossAnchor_HighTide",
+    thumbnail: "enemyabilities_T_Ability_Anchor",
   },
   {
     name: {
-      key: "D4B93AB94FC6BD7B1C1C53A4EBB50AD9",
-      default: "Mindrender Barrage",
+      key: "3430CB12458E2644A4598088885CDBB2",
+      default: "Cannonball Troops",
     },
-    id: "GA_PR_FoB_CastedStun_C",
-    thumbnail: "hero_effects_effect_stunned_icon",
+    id: "GA_PR_BossAnchor_Reinforcements",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_45",
   },
   {
-    name: { key: "7F6AFCFE492ACA5B1CE00C8CC8EA77D1", default: "Amalgamate" },
-    id: "GA_PR_FoB_ChanneledSlowedMoveToTarget_C",
+    name: { key: "0B674FD04FE8C11F6A5362BC285C4A54", default: "Bombardment" },
+    id: "GA_PR_BossAnchor_CannonBarrage_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireBomb",
   },
   {
-    name: { key: "A31111F64B75C99C8011758BA3ED6FFD", default: "Attack" },
-    id: "GA_PR_FoB_RangedAutoAttack_C_0",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareCrystal",
+    name: { key: "756EDA1F4442058F62555C893CB30B9B", default: "Anchor" },
+    id: "GA_PR_BossAnchor_HighTideTether",
+    thumbnail: "tex_strategyicons_Tex_Anchor",
+  },
+  {
+    name: { key: "46E295B04D8614CE20561A8429755EAF", default: "Anchor Strike" },
+    id: "GA_PR_BossAnchor_MeleeAutoAttack_AreaHit_C",
+    thumbnail: "weapon_icons_Tex_axe_06_bg",
+  },
+  {
+    name: { key: "B5246FAD459BD5496FB2F7B27F75BB10", default: "Keelhaul" },
+    id: "GA_PR_BossAnchor_PeriodicMultiSoak",
+    thumbnail: "tex_spellbookpage06_Tex_SpellBook06_05",
   },
   {
     name: { key: "42D6C8AF427D42CB2409F0A628A3190D", default: "Attack" },
@@ -5734,6 +5641,71 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_FrozenGhost",
   },
   {
+    name: { key: "92D8355E4B57A0699B56969B21C6C75E", default: "Attack" },
+    id: "GA_PR_BossTreasureDemon_AutoAttackMelee",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: {
+      key: "B76B60E64EF86297642E8DB2AEA95E1C",
+      default: "Shadowgreed Eclipse",
+    },
+    id: "GA_PR_BossTreasureDemon_Nova",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowWhirl",
+  },
+  {
+    name: { key: "CD31C0E347A9E70F78FE32AA2419149C", default: "Hoard" },
+    id: "GA_PR_BossTreasureDemon_SuckInCoins",
+    thumbnail: "textures_T_Nhance_RPG_Gold_21",
+  },
+  {
+    name: {
+      key: "7AD61EAE43F7FA242D3C9993680D82FA",
+      default: "Orb of Bael'Aurum",
+    },
+    id: "GA_PR_BossTreasureDemon_SummonBall",
+    thumbnail: "textures_T_Nhance_RPG_Gold_16",
+  },
+  {
+    name: { key: "610343D14212BC8D14F5C2B7060C8B4A", default: "Crushing Orb" },
+    id: "GA_PR_BossTreasureDemon_Ball_Knockback",
+    thumbnail: "textures_T_Nhance_RPG_Gold_16",
+  },
+  {
+    name: {
+      key: "ABEC5D6E4878AF110D17269C23B916DD",
+      default: "Cursed Treasure",
+    },
+    id: "GA_PR_BossTreasureDemon_ScatterCoins",
+    thumbnail: "textures_T_Nhance_RPG_Gold_21",
+  },
+  {
+    name: { key: "CDB03A59433D70C4FBD3AFB8538844C2", default: "Temptation" },
+    id: "GA_PR_BossTreasureDemon_CastedRangedProjectile_C",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_35",
+  },
+  {
+    name: { key: "8C6A606C45C88AC084416DA29846A3D3", default: "Erupting Envy" },
+    id: "GA_PR_BossTreasureDemon_Cone_C",
+    thumbnail: "textures_T_CurseOfShadow",
+  },
+  {
+    name: {
+      key: "F858902C4AAD8AE0EB2A4CA3DB02E47C",
+      default: "Coalescing Avarice",
+    },
+    id: "GA_PR_BossTreasureDemon_Tornado_C",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_40",
+  },
+  {
+    name: {
+      key: "9167AA1F49A16F6ADCD85886CFB75C89",
+      default: "Select Ball Mover",
+    },
+    id: "GA_PR_BossTreasureDemon_SelectBallMoverPassive",
+    thumbnail: "textures_T_Nhance_RPG_Gold_16",
+  },
+  {
     name: { key: "2421A70B4DA2174FC21572847100CD8C", default: "Shoot" },
     id: "DT_PR_CannonPirate_RangedAutoAttack",
     thumbnail: "weapon_icons_Tex_gun_02_bg",
@@ -5780,23 +5752,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ArcaneLoad",
   },
   {
-    name: { key: "557AAB8348BEE3E74511A9B3A69F6218", default: "Attack" },
-    id: "DT_PR_PirateGrunt_MeleeAutoAttack_C",
-    thumbnail: "weapon_icons_Tex_axe_06_bg",
-  },
-  {
-    name: { key: "AEBA869249AC89626940059B47CACF96", default: "Dark Cleave" },
-    id: "DT_PR_PirateGrunt_CastedTankAoeDamage_C",
-    thumbnail: "textures_T_ReaperScythe",
-  },
-  {
-    name: {
-      key: "B24455C14D84867009CB64BBBCB2DCF2",
-      default: "(CUT) Fiendish Whirlwind",
-    },
-    id: "DT_PR_PirateGrunt_ChanneledAoe_C",
-  },
-  {
     name: { key: "212DA4134C55B7F56EEAC8A4EBC4D2A0", default: "Attack" },
     id: "DT_PR_Scallywag_MeleeAutoAttack_C",
     thumbnail: "weapon_icons_Tex_sv_02_bg",
@@ -5805,26 +5760,6 @@ export default [
     name: { key: "B6E35DCC49B4C19652078FBFE9BF4C07", default: "Salted Blade" },
     id: "DT_PR_Scallywag_Jump",
     thumbnail: "hero_effects_T_Status_Bleed",
-  },
-  {
-    name: { key: "93787A9E46118B1D5C1401904298EB8D", default: "Bite" },
-    id: "GA_PR_Shark_BiteAttached",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodBite",
-  },
-  {
-    name: { key: "11A647DF42F89F3699E212B17FE30082", default: "Leap" },
-    id: "GA_PR_Shark_JumpAttack",
-    thumbnail: "textures_T_Nhance_RPG_Elements_23",
-  },
-  {
-    name: { key: "11A647DF42F89F3699E212B17FE30082", default: "Leap" },
-    id: "GA_PR_Shark_JumpAttack_Projectile",
-    thumbnail: "textures_T_Nhance_RPG_Elements_23",
-  },
-  {
-    name: { key: "19BDD579435A01C939FAD5B4DD5C11DE", default: "Torpedo" },
-    id: "GA_PR_Shark_Projectile",
-    thumbnail: "textures_T_Nhance_RPG_Energy_14",
   },
   {
     name: { key: "EA92AF464F4CA9882D1A058B9C61E824", default: "Attack" },
@@ -5845,19 +5780,46 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_FieryExplosion",
   },
   {
-    name: { key: "31BB2E864E41A270E7D439A76D541320", default: "Anchor Strike" },
-    id: "DT_PR_Swashbuckler_MeleeAutoAttack",
-    thumbnail: "weapon_icons_Tex_axe_06_bg",
+    name: { key: "A31111F64B75C99C8011758BA3ED6FFD", default: "Attack" },
+    id: "GA_PR_FoB_RangedAutoAttack_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareCrystal",
   },
   {
-    name: { key: "505F31FC4B511D89579062B3D7D263FE", default: "Bonebreaker" },
-    id: "DT_PR_Swashbuckler_CastedAoeKnockup",
-    thumbnail: "tex_skill_icons_pack_Tex_yellow_3",
+    name: {
+      key: "D4B93AB94FC6BD7B1C1C53A4EBB50AD9",
+      default: "Mindrender Barrage",
+    },
+    id: "GA_PR_FoB_CastedStun_C",
+    thumbnail: "hero_effects_effect_stunned_icon",
   },
   {
-    name: { key: "E9561B9E4476A04CE4EAFD8A5B07069A", default: "Rupture Earth" },
-    id: "GA_PR_Swashbuckler_CastedGrowingEarthStomp_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_EarthWall",
+    name: { key: "7F6AFCFE492ACA5B1CE00C8CC8EA77D1", default: "Amalgamate" },
+    id: "GA_PR_FoB_ChanneledSlowedMoveToTarget_C",
+  },
+  {
+    name: { key: "A31111F64B75C99C8011758BA3ED6FFD", default: "Attack" },
+    id: "GA_PR_FoB_RangedAutoAttack_C_0",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareCrystal",
+  },
+  {
+    name: { key: "93787A9E46118B1D5C1401904298EB8D", default: "Bite" },
+    id: "GA_PR_Shark_BiteAttached",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodBite",
+  },
+  {
+    name: { key: "11A647DF42F89F3699E212B17FE30082", default: "Leap" },
+    id: "GA_PR_Shark_JumpAttack",
+    thumbnail: "textures_T_Nhance_RPG_Elements_23",
+  },
+  {
+    name: { key: "11A647DF42F89F3699E212B17FE30082", default: "Leap" },
+    id: "GA_PR_Shark_JumpAttack_Projectile",
+    thumbnail: "textures_T_Nhance_RPG_Elements_23",
+  },
+  {
+    name: { key: "19BDD579435A01C939FAD5B4DD5C11DE", default: "Torpedo" },
+    id: "GA_PR_Shark_Projectile",
+    thumbnail: "textures_T_Nhance_RPG_Energy_14",
   },
   {
     name: { key: "9C54C3124CC55E1D8D757297DFDB5842", default: "Attack" },
@@ -5894,6 +5856,25 @@ export default [
     name: { key: "4B1E84D64873DD802C37078C0CB640BE", default: "Sunken Gale" },
     id: "DT_PR_WaterCaster_CastedAoeProjectile",
     thumbnail: "textures_T_Nhance_RPG_Icons_IceWave",
+  },
+  {
+    name: { key: "8C42AE23441AC8CFC5EA3FBD5AE800FD", default: "Move To Boss" },
+    id: "GA_PR_BossTreasureDemon_CastedBurstAndDot",
+  },
+  {
+    name: { key: "31BB2E864E41A270E7D439A76D541320", default: "Anchor Strike" },
+    id: "DT_PR_Swashbuckler_MeleeAutoAttack",
+    thumbnail: "weapon_icons_Tex_axe_06_bg",
+  },
+  {
+    name: { key: "505F31FC4B511D89579062B3D7D263FE", default: "Bonebreaker" },
+    id: "DT_PR_Swashbuckler_CastedAoeKnockup",
+    thumbnail: "tex_skill_icons_pack_Tex_yellow_3",
+  },
+  {
+    name: { key: "E9561B9E4476A04CE4EAFD8A5B07069A", default: "Rupture Earth" },
+    id: "GA_PR_Swashbuckler_CastedGrowingEarthStomp_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_EarthWall",
   },
   {
     name: { key: "C71820A847B1B38D7CB3F4A9B71AE165", default: "Attack" },
@@ -5950,6 +5931,41 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_DeathSwing",
   },
   {
+    name: { key: "EDD0016F45A3BF15EC05F3A65565EDAA", default: "Attack" },
+    id: "GA_SG_DrownedSailor_AutoAttack_C",
+    thumbnail: "textures_Tex_swords_06_bg",
+  },
+  {
+    name: { key: "4F77FB8641357D42FBCC70929CAE5286", default: "Bitter Frenzy" },
+    id: "GA_SG_DrownedSailor_EnrageTarget_C",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_23",
+  },
+  {
+    name: {
+      key: "68F4034D4346C01847BCE5837B2CEA4F",
+      default: "Curse of Drowning",
+    },
+    id: "GA_SG_DrownedSailor_DaggerThrow_C",
+    thumbnail: "textures_T_GhostWater",
+  },
+  {
+    name: { key: "557AAB8348BEE3E74511A9B3A69F6218", default: "Attack" },
+    id: "DT_PR_PirateGrunt_MeleeAutoAttack_C",
+    thumbnail: "weapon_icons_Tex_axe_06_bg",
+  },
+  {
+    name: { key: "AEBA869249AC89626940059B47CACF96", default: "Dark Cleave" },
+    id: "DT_PR_PirateGrunt_CastedTankAoeDamage_C",
+    thumbnail: "textures_T_ReaperScythe",
+  },
+  {
+    name: {
+      key: "B24455C14D84867009CB64BBBCB2DCF2",
+      default: "(CUT) Fiendish Whirlwind",
+    },
+    id: "DT_PR_PirateGrunt_ChanneledAoe_C",
+  },
+  {
     name: { key: "F49726CA47BA893D43A16E8D8C352555", default: "Attack" },
     id: "GA_SG_CoralLasher_MeleeAutoAttack",
     thumbnail: "tex_skill_icons_pack_Tex_green_7",
@@ -5961,24 +5977,6 @@ export default [
     },
     id: "GA_SG_CoralLasher_ResizingAoeCircles",
     thumbnail: "hero_effects_T_Status_Poison",
-  },
-  {
-    name: {
-      key: "A443C9294F9B36ADD82EC1AE1EA8AD99",
-      default: "Anguish Unleashed",
-    },
-    id: "GA_SG_EchoingSpirit_ChainLightning_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_SoulDrain",
-  },
-  {
-    name: { key: "FF2116D4422F4447C5B8C19411B65B4D", default: "Attack" },
-    id: "GA_SG_EchoingSpirit_AutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "F7D7A234462EF44BE0DF8782F9341F47", default: "Attack" },
-    id: "GA_SG_EchoingSpirit_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
     name: { key: "21A927774FE16AD4D79BEA80E4FF5FAB", default: "Attack" },
@@ -6012,43 +6010,26 @@ export default [
     thumbnail: "textures_T_Icon_Frost_130",
   },
   {
-    name: { key: "EDD0016F45A3BF15EC05F3A65565EDAA", default: "Attack" },
-    id: "GA_SG_DrownedSailor_AutoAttack_C",
-    thumbnail: "textures_Tex_swords_06_bg",
-  },
-  {
-    name: { key: "4F77FB8641357D42FBCC70929CAE5286", default: "Bitter Frenzy" },
-    id: "GA_SG_DrownedSailor_EnrageTarget_C",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_23",
-  },
-  {
     name: {
-      key: "68F4034D4346C01847BCE5837B2CEA4F",
-      default: "Curse of Drowning",
+      key: "A443C9294F9B36ADD82EC1AE1EA8AD99",
+      default: "Anguish Unleashed",
     },
-    id: "GA_SG_DrownedSailor_DaggerThrow_C",
-    thumbnail: "textures_T_GhostWater",
+    id: "GA_SG_EchoingSpirit_ChainLightning_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_SoulDrain",
   },
   {
-    name: { key: "8C42AE23441AC8CFC5EA3FBD5AE800FD", default: "Move To Boss" },
-    id: "GA_PR_BossTreasureDemon_CastedBurstAndDot",
+    name: { key: "FF2116D4422F4447C5B8C19411B65B4D", default: "Attack" },
+    id: "GA_SG_EchoingSpirit_AutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "F7D7A234462EF44BE0DF8782F9341F47", default: "Attack" },
+    id: "GA_SG_EchoingSpirit_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
     name: { key: "3F32B8EB4E1D8F7FC15820BE035FBADF", default: "Attack" },
     id: "GA_SG_GhostFerventSoldier_AutoAttackMelee_C",
-    thumbnail: "weapon_icons_Tex_sv_02_bg",
-  },
-  {
-    name: {
-      key: "1CBD2BB54E89B68A98745883779E0528",
-      default: "Wailing Strike",
-    },
-    id: "GA_SG_GhostOrc_Cleave",
-    thumbnail: "hero_effects_T_Status_Bleed",
-  },
-  {
-    name: { key: "4F858D1E4A7BC1C2564E0995F814EECC", default: "Attack" },
-    id: "GA_SG_GhostOrc_MeleeAutoAttack",
     thumbnail: "weapon_icons_Tex_sv_02_bg",
   },
   {
@@ -6075,6 +6056,19 @@ export default [
     id: "GA_SG_GreaterWaterElemental_Upheaval_C",
   },
   {
+    name: {
+      key: "1CBD2BB54E89B68A98745883779E0528",
+      default: "Wailing Strike",
+    },
+    id: "GA_SG_GhostOrc_Cleave",
+    thumbnail: "hero_effects_T_Status_Bleed",
+  },
+  {
+    name: { key: "4F858D1E4A7BC1C2564E0995F814EECC", default: "Attack" },
+    id: "GA_SG_GhostOrc_MeleeAutoAttack",
+    thumbnail: "weapon_icons_Tex_sv_02_bg",
+  },
+  {
     name: { key: "590042614565A5C37B227DB47BB3978C", default: "Auto Attack" },
     id: "DT_SG_SaltSprite_MeleeAutoAttack",
   },
@@ -6085,24 +6079,6 @@ export default [
   {
     name: { key: "F2AAA01444694A6C23C731B36F89B433", default: "Surge" },
     id: "DT_SG_SaltSpriteJump",
-  },
-  {
-    name: { key: "0F4A43B8414B770B45C3E5BAE34AB948", default: "Attack" },
-    id: "GA_SG_WaterElemental_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "F9C5FE084561588A2AC12386ED0096F8", default: "Hydrobolt" },
-    id: "DT_SG_WaterElemental_CastedRangedProjectile",
-    thumbnail: "textures_Tex_element_water__b_01",
-  },
-  {
-    name: {
-      key: "E764B851458F45A06EBF1CBC9D463304",
-      default: "Healing Waters",
-    },
-    id: "GA_SG_WaterElemental_CastedSingleTargetHeal_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceWaterBlast",
   },
   {
     name: {
@@ -6132,22 +6108,27 @@ export default [
     id: "GA_SG_Wisp_MeleeAutoAttack",
   },
   {
-    name: { key: "C21FB6B34C72A5C0878733BA75852781", default: "Attack" },
-    id: "GA_SH_CarrionHorror_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
+    name: { key: "0F4A43B8414B770B45C3E5BAE34AB948", default: "Attack" },
+    id: "GA_SG_WaterElemental_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "F9C5FE084561588A2AC12386ED0096F8", default: "Hydrobolt" },
+    id: "DT_SG_WaterElemental_CastedRangedProjectile",
+    thumbnail: "textures_Tex_element_water__b_01",
   },
   {
     name: {
-      key: "4D789FA44C1BFC318B99A19AA333A114",
-      default: "Bursting Brood",
+      key: "E764B851458F45A06EBF1CBC9D463304",
+      default: "Healing Waters",
     },
-    id: "GA_SH_CarrionHorror_ExplodeCorpse",
-    thumbnail: "geomancer_Geomancer13",
+    id: "GA_SG_WaterElemental_CastedSingleTargetHeal_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceWaterBlast",
   },
   {
-    name: { key: "6224087546318C4335F921B39DC45BF1", default: "Deathrattle" },
-    id: "GA_SH_CarrionHorror_OnDeathExplosion",
-    thumbnail: "textures_T_Nhance_RPG_Icons_SpiderWeb",
+    name: { key: "AF5CF58445889BB496648BA418819D56", default: "Attack" },
+    id: "GA_SH_Eggbearer_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
     name: { key: "19EA771148218872FC2F34B53C1EF24C", default: "Attack" },
@@ -6193,9 +6174,22 @@ export default [
     thumbnail: "textures_T_Icon_Unholy_197",
   },
   {
-    name: { key: "AF5CF58445889BB496648BA418819D56", default: "Attack" },
-    id: "GA_SH_Eggbearer_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+    name: { key: "C21FB6B34C72A5C0878733BA75852781", default: "Attack" },
+    id: "GA_SH_CarrionHorror_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
+  },
+  {
+    name: {
+      key: "4D789FA44C1BFC318B99A19AA333A114",
+      default: "Bursting Brood",
+    },
+    id: "GA_SH_CarrionHorror_ExplodeCorpse",
+    thumbnail: "geomancer_Geomancer13",
+  },
+  {
+    name: { key: "6224087546318C4335F921B39DC45BF1", default: "Deathrattle" },
+    id: "GA_SH_CarrionHorror_OnDeathExplosion",
+    thumbnail: "textures_T_Nhance_RPG_Icons_SpiderWeb",
   },
   {
     name: { key: "9BC262324035E33B2466CE8BC227648A", default: "Attack" },
@@ -6271,6 +6265,22 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ManaBoots",
   },
   {
+    name: { key: "4059EE354E83539DE689D4BF587541D1", default: "Auto Attack" },
+    id: "GA_UB_BossCaster_MeleeAutoAttack",
+  },
+  {
+    name: { key: "49475892411909B8D4ABDD84A12F4651", default: "Soul Bolt" },
+    id: "GA_UB_BossCaster_CastedRangedProjectile",
+  },
+  {
+    name: { key: "2EDD645E4CAFF526ABA08D8AF707BCB7", default: "Resurrection" },
+    id: "GA_UB_BossLifebringer_Resurection",
+  },
+  {
+    name: { key: "8CC890E24662486DEDB5A7A014488094", default: "Auto Attack" },
+    id: "GA_UB_BossLifebringer_MeleeAutoAttack",
+  },
+  {
     name: { key: "D6C3DD984AFA69E1F62FDA84E6362A9F", default: "Attack" },
     id: "GA_UB_BossArchbishop_AutoAttackMelee_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_FireClaw",
@@ -6318,20 +6328,16 @@ export default [
     thumbnail: "textures_T_Icon_Energy_113",
   },
   {
-    name: { key: "4059EE354E83539DE689D4BF587541D1", default: "Auto Attack" },
-    id: "GA_UB_BossCaster_MeleeAutoAttack",
+    name: { key: "4CC238A54836A0BD180164AA2325CC99", default: "Auto Attack" },
+    id: "GA_UB_BossLunatic_MeleeAutoAttack",
   },
   {
-    name: { key: "49475892411909B8D4ABDD84A12F4651", default: "Soul Bolt" },
-    id: "GA_UB_BossCaster_CastedRangedProjectile",
+    name: { key: "7923774A41BEE1EA31D14FA6ACE4627C", default: "Bomb Toss" },
+    id: "GA_UB_BossLunatic_BombToss",
   },
   {
-    name: { key: "2EDD645E4CAFF526ABA08D8AF707BCB7", default: "Resurrection" },
-    id: "GA_UB_BossLifebringer_Resurection",
-  },
-  {
-    name: { key: "8CC890E24662486DEDB5A7A014488094", default: "Auto Attack" },
-    id: "GA_UB_BossLifebringer_MeleeAutoAttack",
+    name: { key: "37BEBFF24DD526993F7AED9C9CE694E9", default: "Chase Player" },
+    id: "GA_UB_BossLunatic_ChasePlayer",
   },
   {
     name: { key: "6FB3B62744D5B8921499FA99B1948AB7", default: "Auto Attack" },
@@ -6345,22 +6351,6 @@ export default [
     name: { key: "E552B9694306C7568E366AA4079BEBA9", default: "Kill Command" },
     id: "GA_UB_BossMarcassCree_Minion_ChanneledAttack",
     thumbnail: "textures_T_Nhance_RPG_Shadow_15",
-  },
-  {
-    name: { key: "4CC238A54836A0BD180164AA2325CC99", default: "Auto Attack" },
-    id: "GA_UB_BossLunatic_MeleeAutoAttack",
-  },
-  {
-    name: { key: "7923774A41BEE1EA31D14FA6ACE4627C", default: "Bomb Toss" },
-    id: "GA_UB_BossLunatic_BombToss",
-  },
-  {
-    name: { key: "37BEBFF24DD526993F7AED9C9CE694E9", default: "Chase Player" },
-    id: "GA_UB_BossLunatic_ChasePlayer",
-  },
-  {
-    name: { key: "BA76B74E4366D84AAE5C4988AC03D70B", default: "Auto Attack" },
-    id: "GA_UB_BossOperator_MeleeAutoAttack",
   },
   {
     name: { key: "3A71414D437EF72625EBDE9D81984DBA", default: "Auto Attack" },
@@ -6413,40 +6403,8 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ShadowArrow",
   },
   {
-    name: { key: "6BD8F54E48C5202F854FADB6A36C94C3", default: "Attack" },
-    id: "GA_UB_BossSiegeGraveyard_MeleeAutoAttack",
-    thumbnail: "system_icons_icon_system_sword",
-  },
-  {
-    name: { key: "6B2CBB4E42DF444B6ED5AEAD14D40317", default: "Lob Corpse" },
-    id: "GA_UB_BossSiegeGraveyard_CastHomingProjectileSpawnCorpse",
-    thumbnail: "textures_T_Nhance_RPG_Unholy_56",
-  },
-  {
-    name: { key: "D26A48E34F4461349ED33C83D157AA67", default: "Crash Gate" },
-    id: "GA_UB_BossSiegeGraveyard_CrashGate",
-  },
-  {
-    name: {
-      key: "B1092BA04CFA42B6802ED1B435D711C6",
-      default: "Corpse Explose",
-    },
-    id: "GA_UB_BossSiegeGraveyard_TriggerNearbyCorpseAOE",
-  },
-  {
-    name: { key: "480F3BDD4B62F853E9490DB0E550C8C3", default: "Auto Attack" },
-    id: "GA_UB_BossWarrior_MeleeAutoAttack",
-  },
-  {
-    name: {
-      key: "DB96E937426E3FF7596D8D9D7FBF3E4E",
-      default: "Frontal Cleave",
-    },
-    id: "GA_UB_BossWarrior_FrontalConeAttack",
-  },
-  {
-    name: { key: "257515FB4B8407CE4D65EBA2F2ED83D1", default: "Axe Toss" },
-    id: "GA_UB_BossWarrior_RangedDotProjectile",
+    name: { key: "BA76B74E4366D84AAE5C4988AC03D70B", default: "Auto Attack" },
+    id: "GA_UB_BossOperator_MeleeAutoAttack",
   },
   {
     name: { key: "B8498A1C479595364CAA89878FF0CC9D", default: "Auto Attack" },
@@ -6489,6 +6447,42 @@ export default [
     },
     id: "GA_UB_BossWarMachine_FireSweep",
     thumbnail: "textures_T_Nhance_RPG_Fire_35",
+  },
+  {
+    name: { key: "6BD8F54E48C5202F854FADB6A36C94C3", default: "Attack" },
+    id: "GA_UB_BossSiegeGraveyard_MeleeAutoAttack",
+    thumbnail: "system_icons_icon_system_sword",
+  },
+  {
+    name: { key: "6B2CBB4E42DF444B6ED5AEAD14D40317", default: "Lob Corpse" },
+    id: "GA_UB_BossSiegeGraveyard_CastHomingProjectileSpawnCorpse",
+    thumbnail: "textures_T_Nhance_RPG_Unholy_56",
+  },
+  {
+    name: { key: "D26A48E34F4461349ED33C83D157AA67", default: "Crash Gate" },
+    id: "GA_UB_BossSiegeGraveyard_CrashGate",
+  },
+  {
+    name: {
+      key: "B1092BA04CFA42B6802ED1B435D711C6",
+      default: "Corpse Explose",
+    },
+    id: "GA_UB_BossSiegeGraveyard_TriggerNearbyCorpseAOE",
+  },
+  {
+    name: { key: "480F3BDD4B62F853E9490DB0E550C8C3", default: "Auto Attack" },
+    id: "GA_UB_BossWarrior_MeleeAutoAttack",
+  },
+  {
+    name: {
+      key: "DB96E937426E3FF7596D8D9D7FBF3E4E",
+      default: "Frontal Cleave",
+    },
+    id: "GA_UB_BossWarrior_FrontalConeAttack",
+  },
+  {
+    name: { key: "257515FB4B8407CE4D65EBA2F2ED83D1", default: "Axe Toss" },
+    id: "GA_UB_BossWarrior_RangedDotProjectile",
   },
   {
     name: { key: "055C72EF4DB3D3899E0C1DB8E1CDB335", default: "Stomp" },
@@ -6536,6 +6530,32 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Unholy_04",
   },
   {
+    name: { key: "1032F5044E62ADF93FB2C4BF6E1033A1", default: "Auto Attack" },
+    id: "GA_UB_DefendingCleric_MeleeAutoAttack",
+    thumbnail: "textures_Tex_swords_02_bg",
+  },
+  {
+    name: {
+      key: "DBA67E5E4CACCEA14F3928A243EBC870",
+      default: "Desperate Prayer",
+    },
+    id: "GA_UB_DefendingCleric_Heal",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyMeditation",
+  },
+  {
+    name: { key: "AA8F332547F915B8FB401B8E9FBC2A64", default: "Purify" },
+    id: "GA_UB_DefendingCleric_CastedProjectile",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyStrike",
+  },
+  {
+    name: {
+      key: "EB993EEA496CAF397071E98FB8EDD3F7",
+      default: "Cleric's Support",
+    },
+    id: "GA_UB_DefendingCleric_ExitCombatBuff",
+    thumbnail: "textures_T_Nhance_RPG_Gold_15",
+  },
+  {
     name: { key: "CEAF868849255EAF08C3CA91327C9AD1", default: "Bleed" },
     id: "GA_UB_Crusader_CastedHighestThreatDot_C",
     description: {
@@ -6580,32 +6600,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Gold_04",
   },
   {
-    name: { key: "1032F5044E62ADF93FB2C4BF6E1033A1", default: "Auto Attack" },
-    id: "GA_UB_DefendingCleric_MeleeAutoAttack",
-    thumbnail: "textures_Tex_swords_02_bg",
-  },
-  {
-    name: {
-      key: "DBA67E5E4CACCEA14F3928A243EBC870",
-      default: "Desperate Prayer",
-    },
-    id: "GA_UB_DefendingCleric_Heal",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyMeditation",
-  },
-  {
-    name: { key: "AA8F332547F915B8FB401B8E9FBC2A64", default: "Purify" },
-    id: "GA_UB_DefendingCleric_CastedProjectile",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyStrike",
-  },
-  {
-    name: {
-      key: "EB993EEA496CAF397071E98FB8EDD3F7",
-      default: "Cleric's Support",
-    },
-    id: "GA_UB_DefendingCleric_ExitCombatBuff",
-    thumbnail: "textures_T_Nhance_RPG_Gold_15",
-  },
-  {
     name: { key: "3F87655146080D52928FB995A946B782", default: "Auto Attack" },
     id: "GA_UB_FallenCleric_AutoAttackMelee_C",
   },
@@ -6621,27 +6615,6 @@ export default [
     name: { key: "BBC39E304E85989E46339D93D0A7C6AA", default: "Befoul" },
     id: "GA_UB_FallenCleric_CastedProjectile",
     thumbnail: "textures_T_Nhance_RPG_Fire_35",
-  },
-  {
-    name: { key: "8EAEE4FD4C4106AC49E811B06E6DCA2B", default: "Auto Attack" },
-    id: "GA_UB_DefendingKnight_AutoAttackMelee_C",
-  },
-  {
-    name: {
-      key: "E377B0A94767559F9F7446ADE908C2AE",
-      default: "Righteous Strike",
-    },
-    id: "GA_UB_DefendingKnight_FrontalCone",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolySword",
-  },
-  {
-    name: { key: "2C560067432EE61EBBD16CBD203632D8", default: "Knight's Oath" },
-    id: "GA_UB_DefendingKnight_ExitCombatBuff",
-    thumbnail: "textures_T_Nhance_RPG_Gold_07",
-  },
-  {
-    name: { key: "03C1485642AD18481CF1CC894DAFC72B", default: "Auto Attack" },
-    id: "GA_UB_FerventSoldier_AutoAttackMelee_C",
   },
   {
     name: { key: "66D4DA3B45CCE6AF7C3194A1014B999B", default: "Unholy Pulse" },
@@ -6668,6 +6641,27 @@ export default [
     id: "GA_UB_Healer_MeleeAutoAttack",
   },
   {
+    name: { key: "8EAEE4FD4C4106AC49E811B06E6DCA2B", default: "Auto Attack" },
+    id: "GA_UB_DefendingKnight_AutoAttackMelee_C",
+  },
+  {
+    name: {
+      key: "E377B0A94767559F9F7446ADE908C2AE",
+      default: "Righteous Strike",
+    },
+    id: "GA_UB_DefendingKnight_FrontalCone",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolySword",
+  },
+  {
+    name: { key: "2C560067432EE61EBBD16CBD203632D8", default: "Knight's Oath" },
+    id: "GA_UB_DefendingKnight_ExitCombatBuff",
+    thumbnail: "textures_T_Nhance_RPG_Gold_07",
+  },
+  {
+    name: { key: "03C1485642AD18481CF1CC894DAFC72B", default: "Auto Attack" },
+    id: "GA_UB_FerventSoldier_AutoAttackMelee_C",
+  },
+  {
     name: {
       key: "1AAB5C6840283972FD3FB8931EDEBC23",
       default: "Repair Bot: Healing",
@@ -6682,6 +6676,45 @@ export default [
     id: "GA_UB_HealingMinion_PostDeathCleanse",
   },
   {
+    name: { key: "AA5CF2A74C0427A41E73A48683765DB4", default: "Ground Stomp" },
+    id: "GA_UB_NightclawBreacher_CastedAoeStun_C",
+    description: {
+      key: "BCE243C94A14FF49AFD0488BAB39E10A",
+      default:
+        "Large aoe circle around War Troll. If hit will stun and deal high damage to targets within radius.",
+    },
+  },
+  {
+    name: { key: "D156096C4C4D80E5E6B26CBE5B2F7253", default: "Slam" },
+    id: "GA_UB_NightclawBreacher_Slam",
+    thumbnail: "textures_T_Nhance_RPG_Gold_35",
+  },
+  {
+    name: { key: "A30D961A4C0DC624A7C4228A9D94DD1F", default: "Auto Attack" },
+    id: "GA_UB_NightclawBreacher_MeleeAutoAttack",
+    thumbnail: "system_icons_icon_system_sword",
+  },
+  {
+    name: { key: "D6A453D1497BF445B43FABACEFDEE0B2", default: "Hurl Rock" },
+    id: "GA_UB_NightclawBreacher_ThrowRock",
+    thumbnail: "textures_T_Nhance_RPG_Gold_41",
+  },
+  {
+    name: {
+      key: "F3042075441628883D9F95AB51DA7070",
+      default: "Terrifying Howl",
+    },
+    id: "GA_UB_NightclawBreacher_Fear",
+    thumbnail: "textures_T_Nhance_RPG_Gold_40",
+  },
+  {
+    name: {
+      key: "FA319B2E446F4F64E486B59C740A9390",
+      default: "Revive and Convert",
+    },
+    id: "GA_UB_NecroticMass_CastedReviveAndConvert",
+  },
+  {
     name: { key: "4D9DF62F425E8C3DD6E1B689FAD9FA08", default: "Auto Attack" },
     id: "GA_UB_RaisedKnight_AutoAttackMelee_C",
   },
@@ -6692,23 +6725,6 @@ export default [
     },
     id: "UB_RaisedKnight_FrontalCone",
     thumbnail: "textures_T_Nhance_RPG_Unholy_38",
-  },
-  {
-    name: {
-      key: "FA319B2E446F4F64E486B59C740A9390",
-      default: "Revive and Convert",
-    },
-    id: "GA_UB_NecroticMass_CastedReviveAndConvert",
-  },
-  {
-    name: { key: "76E7B065404277B90F2607B122D6B62E", default: "Auto Attack" },
-    id: "GA_UB_ReanimatedArcher_RangedAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_UnholyArrow",
-  },
-  {
-    name: { key: "01046B764AADBA7F052EE38BDE5B6945", default: "Dark Volley" },
-    id: "GA_UB_ReanimatedArcher_Volley",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowArrow",
   },
   {
     name: { key: "B65735C94D53E70B9B61AE9E42713175", default: "Horse Slam" },
@@ -6728,8 +6744,22 @@ export default [
     },
   },
   {
+    name: { key: "76E7B065404277B90F2607B122D6B62E", default: "Auto Attack" },
+    id: "GA_UB_ReanimatedArcher_RangedAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_UnholyArrow",
+  },
+  {
+    name: { key: "01046B764AADBA7F052EE38BDE5B6945", default: "Dark Volley" },
+    id: "GA_UB_ReanimatedArcher_Volley",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowArrow",
+  },
+  {
     name: { key: "AD0EB55B41829D74AC2B0D9D0BA731D5", default: "Auto Attack" },
     id: "GA_UB_ShadowboundPhalanx_AutoAttackMelee_C",
+  },
+  {
+    name: { key: "E25094A14D3952F6F51C3FA4DCDA2170", default: "Auto Attack" },
+    id: "GA_UB_SoulSpreader_MeleeAutoAttack_C",
   },
   {
     name: { key: "2700F3F34916EC46CA555485B34F542B", default: "Firebolt" },
@@ -6767,46 +6797,6 @@ export default [
     thumbnail: "system_icons_icon_system_sword",
   },
   {
-    name: { key: "E25094A14D3952F6F51C3FA4DCDA2170", default: "Auto Attack" },
-    id: "GA_UB_SoulSpreader_MeleeAutoAttack_C",
-  },
-  {
-    name: { key: "9007A6AD479F65C1DFAC0E895C415954", default: "Auto Attack" },
-    id: "GA_UB_SoulstainedShambler_AutoAttackMelee_C",
-  },
-  {
-    name: { key: "AA5CF2A74C0427A41E73A48683765DB4", default: "Ground Stomp" },
-    id: "GA_UB_NightclawBreacher_CastedAoeStun_C",
-    description: {
-      key: "BCE243C94A14FF49AFD0488BAB39E10A",
-      default:
-        "Large aoe circle around War Troll. If hit will stun and deal high damage to targets within radius.",
-    },
-  },
-  {
-    name: { key: "D156096C4C4D80E5E6B26CBE5B2F7253", default: "Slam" },
-    id: "GA_UB_NightclawBreacher_Slam",
-    thumbnail: "textures_T_Nhance_RPG_Gold_35",
-  },
-  {
-    name: { key: "A30D961A4C0DC624A7C4228A9D94DD1F", default: "Auto Attack" },
-    id: "GA_UB_NightclawBreacher_MeleeAutoAttack",
-    thumbnail: "system_icons_icon_system_sword",
-  },
-  {
-    name: { key: "D6A453D1497BF445B43FABACEFDEE0B2", default: "Hurl Rock" },
-    id: "GA_UB_NightclawBreacher_ThrowRock",
-    thumbnail: "textures_T_Nhance_RPG_Gold_41",
-  },
-  {
-    name: {
-      key: "F3042075441628883D9F95AB51DA7070",
-      default: "Terrifying Howl",
-    },
-    id: "GA_UB_NightclawBreacher_Fear",
-    thumbnail: "textures_T_Nhance_RPG_Gold_40",
-  },
-  {
     name: { key: "B8675DA34BC1380D8675E981176ED14B", default: "Bleed" },
     id: "GA_UB_BossWarband_BleedBuff",
     thumbnail: "textures_T_Nhance_RPG_BloodCombat_16",
@@ -6815,6 +6805,10 @@ export default [
     name: { key: "B290E385474357B4A8BFB1A5FD94B01D", default: "Rising Heat" },
     id: "GA_UB_BossWarband_DotAura",
     thumbnail: "textures_T_Nhance_RPG_Fire_24",
+  },
+  {
+    name: { key: "9007A6AD479F65C1DFAC0E895C415954", default: "Auto Attack" },
+    id: "GA_UB_SoulstainedShambler_AutoAttackMelee_C",
   },
   {
     name: { key: "E46489274AEF35F7761213B88E53B628", default: "AutoAttack" },
@@ -6831,36 +6825,10 @@ export default [
     },
     id: "GA_UC_BossBaptist_CircleDebuff_C",
   },
-  {
-    name: { key: "", default: "" },
-    id: "GA_UC_BossBaptist_CircleDebuffPassive_C",
-  },
+  { id: "GA_UC_BossBaptist_CircleDebuffPassive_C" },
   {
     name: { key: "8ED75C424AFEF2CB1C98A3B83014544C", default: "Rotbringer" },
     id: "GA_UC_BossBaptist_HighestThreatSplitDamageDot_C",
-  },
-  {
-    name: { key: "AA16E69647ECB6BCC3252D87B35FCD11", default: "AutoAttack" },
-    id: "GA_UC_CadavrianArbalist_AutoAttackRanged_C",
-  },
-  {
-    name: {
-      key: "5FD3E283492955C8309A4196749ECF3B",
-      default: "Crippling Shot",
-    },
-    id: "GA_UC_CadavrianArbalist_RangedSlow_C",
-  },
-  {
-    name: { key: "D7B9E4184BABC32F1FF40A852F31293C", default: "Auto Attack" },
-    id: "GA_UC_CadavrianCrusader_AutoAttackMelee_C",
-  },
-  {
-    name: { key: "ABFB091848ABDFB07B5CC2BF77685837", default: "Whirlwind" },
-    id: "GA_UC_CadavrianCrusader_ChanneledAOE_C",
-  },
-  {
-    name: { key: "F5FFD25043F7972221DD539D1DEE858C", default: "Charge" },
-    id: "GA_UC_CadavrianCrusader_Charge_C",
   },
   {
     name: { key: "A9DFA2FD4B4EBC83A261C29990A5FEE7", default: "Auto Attack" },
@@ -6877,10 +6845,7 @@ export default [
     },
     id: "GA_UC_BossSoulKing_Incarcerate_C",
   },
-  {
-    name: { key: "", default: "" },
-    id: "GA_UC_BossSoulKing_Incarcerate_CoffinInteract_C",
-  },
+  { id: "GA_UC_BossSoulKing_Incarcerate_CoffinInteract_C" },
   {
     name: { key: "8D62348848B160A6FED631A082E4ACFA", default: "Toss Rubble" },
     id: "GA_UC_BossSoulKing_LargeHomingProjectile_C",
@@ -6893,10 +6858,7 @@ export default [
     id: "GA_UC_BossSoulKing_LargeSpewAOE_C",
     thumbnail: "tex_spellbookpage01_Tex_SpellBook01_24",
   },
-  {
-    name: { key: "", default: "" },
-    id: "GA_UC_BossSoulKing_PassiveAOEPools_C",
-  },
+  { id: "GA_UC_BossSoulKing_PassiveAOEPools_C" },
   {
     name: { key: "CFE5483E446638BB0A782F8DE98130EC", default: "Root" },
     id: "GA_UC_BossSoulKing_SingleRoot_C",
@@ -6906,6 +6868,51 @@ export default [
     name: { key: "76EA8EC24F599ABC63FE76B944D68A17", default: "Devastate" },
     id: "GA_UC_BossSoulKing_TankFrontalConeAOE_C",
   },
+  {
+    name: { key: "D7B9E4184BABC32F1FF40A852F31293C", default: "Auto Attack" },
+    id: "GA_UC_CadavrianCrusader_AutoAttackMelee_C",
+  },
+  {
+    name: { key: "ABFB091848ABDFB07B5CC2BF77685837", default: "Whirlwind" },
+    id: "GA_UC_CadavrianCrusader_ChanneledAOE_C",
+  },
+  {
+    name: { key: "F5FFD25043F7972221DD539D1DEE858C", default: "Charge" },
+    id: "GA_UC_CadavrianCrusader_Charge_C",
+  },
+  {
+    name: { key: "AA16E69647ECB6BCC3252D87B35FCD11", default: "AutoAttack" },
+    id: "GA_UC_CadavrianArbalist_AutoAttackRanged_C",
+  },
+  {
+    name: {
+      key: "5FD3E283492955C8309A4196749ECF3B",
+      default: "Crippling Shot",
+    },
+    id: "GA_UC_CadavrianArbalist_RangedSlow_C",
+  },
+  {
+    name: { key: "FD9F9FC74A7110A8AF0EF9A6375866C9", default: "Auto Attack" },
+    id: "GA_UC_CadavrianMonk_AutoAttackMelee_C",
+  },
+  { id: "GA_UC_CadavrianMonk_DeathBurstAOE_C" },
+  {
+    name: { key: "C732C98447EFCD54AC3AE1B5F486A8DD", default: "Spew Rot" },
+    id: "GA_UC_CadavrianMonk_TankFrontalConeAOE_C",
+  },
+  {
+    name: { key: "0217884F4A90B062FED1F09C7DF94005", default: "AimedShot" },
+    id: "GA_UC_CadavrianSharpshooter_AimedShot_C",
+  },
+  {
+    name: { key: "EDF6645F421451B353B207B145871B01", default: "AutoAttack" },
+    id: "GA_UC_CadavrianSharpshooter_AutoAttackRanged_C",
+  },
+  {
+    name: { key: "6332AB7941A7AB107C786683EB8FBD6F", default: "Shadowmeld" },
+    id: "GA_UC_CadavrianSharpshooter_Shadowmeld_C",
+  },
+  { id: "GA_UC_ConvertedSoldier_AutoAttackMelee_C" },
   {
     name: { key: "8E255151437DED2B1F9715B3F8948759", default: "AutoAttack" },
     id: "GA_UC_CadavrianDeathPriest_AutoAttackMelee_C",
@@ -6924,27 +6931,6 @@ export default [
   {
     name: { key: "F9BC1B044561EF2784752BBCF4DC94FA", default: "Corrupt Soul" },
     id: "GA_UC_CadavrianDeathPriest_TwoTargetDot_C",
-  },
-  {
-    name: { key: "FD9F9FC74A7110A8AF0EF9A6375866C9", default: "Auto Attack" },
-    id: "GA_UC_CadavrianMonk_AutoAttackMelee_C",
-  },
-  { name: { key: "", default: "" }, id: "GA_UC_CadavrianMonk_DeathBurstAOE_C" },
-  {
-    name: { key: "C732C98447EFCD54AC3AE1B5F486A8DD", default: "Spew Rot" },
-    id: "GA_UC_CadavrianMonk_TankFrontalConeAOE_C",
-  },
-  {
-    name: { key: "0217884F4A90B062FED1F09C7DF94005", default: "AimedShot" },
-    id: "GA_UC_CadavrianSharpshooter_AimedShot_C",
-  },
-  {
-    name: { key: "EDF6645F421451B353B207B145871B01", default: "AutoAttack" },
-    id: "GA_UC_CadavrianSharpshooter_AutoAttackRanged_C",
-  },
-  {
-    name: { key: "6332AB7941A7AB107C786683EB8FBD6F", default: "Shadowmeld" },
-    id: "GA_UC_CadavrianSharpshooter_Shadowmeld_C",
   },
   {
     name: { key: "7F3DD9C94C852EF37409F98163ABDA6A", default: "Bite" },
@@ -6969,17 +6955,10 @@ export default [
     id: "GA_UC_RotBringer_SpreadingAoeDot_C",
   },
   {
-    name: { key: "", default: "" },
-    id: "GA_UC_ConvertedSoldier_AutoAttackMelee_C",
-  },
-  {
     name: { key: "0F730E88497272FEC1681F8C46EC8C37", default: "Auto Attack" },
     id: "GA_UC_RottenWretchHands_AutoAttackMelee_C",
   },
-  {
-    name: { key: "", default: "" },
-    id: "GA_UC_RottenWretchHands_PassiveAOEPools_C",
-  },
+  { id: "GA_UC_RottenWretchHands_PassiveAOEPools_C" },
   {
     name: { key: "73CD3EBD46245333CB654AB567389E79", default: "Shackle" },
     id: "GA_UC_UndyingGuardian_CastedAoeRoot_C",
@@ -7119,29 +7098,6 @@ export default [
     thumbnail: "beastmaster_BeastMaster11",
   },
   {
-    name: { key: "E85A63D644A2CFCBD1285791D777A1E8", default: "Attack" },
-    id: "GA_UM_HornedSeer_MeleeAutoAttack",
-    thumbnail: "textures_T_HandsOfBlood",
-  },
-  {
-    name: { key: "D7D64E494B340298BD3DCAA0C418DCFC", default: "Orb of Blood" },
-    id: "GA_UM_HornedSeer_OrbProjectile",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
-  },
-  {
-    name: {
-      key: "F2C42D6C4685FE79E417F5805378D634",
-      default: "Sanguine Offering",
-    },
-    id: "GA_UM_HornedSeer_ChanneledOrbProjectiles",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodCell",
-  },
-  {
-    name: { key: "2D78405E4589B38E3FE02BAB488D64CD", default: "Pain Bolt" },
-    id: "GA_UM_HornedSeer_CastProjectile",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_12",
-  },
-  {
     name: { key: "19A19E5045BFE9652525D996084F4113", default: "Attack" },
     id: "GA_UM_Outrunner_MeleeAutoAttack",
     thumbnail: "textures_Tex_staff_08_b",
@@ -7155,24 +7111,6 @@ export default [
     name: { key: "611CF2A5454830F082B0DC8379D2757A", default: "Charge" },
     id: "GA_UM_Outrunner_ChargeTank",
     thumbnail: "textures_T_Nhance_RPG_Icons_BloodStep",
-  },
-  {
-    name: { key: "AAB5AA594EBF26430C92BCA3AF51E8C2", default: "Attack" },
-    id: "GA_UM_UrrakSlaver_MeleeAutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: {
-      key: "9E7FA53B42942A3E5FC18CB88BE7110D",
-      default: "Bloodlash Wake",
-    },
-    id: "GA_UM_UrrakSlaver_CastedMeleeKnockback",
-    thumbnail: "textures_T_Nhance_RPG_Icons_BloodBolt",
-  },
-  {
-    name: { key: "D7C47B40478F478DDFA9A2A5599B4B1C", default: "Barbed Chain" },
-    id: "GA_UM_UrrakSlaver_ProximityChain",
-    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
   },
   {
     name: { key: "2ACE97624B87EE819289438D515FF8A9", default: "Attack" },
@@ -7196,6 +7134,47 @@ export default [
     name: { key: "11368CDC473CBD8185E4CD884BF18E75", default: "Jungle Rot" },
     id: "GA_UM_UrrakWitch_ProjectileVolley",
     thumbnail: "textures_T_Nhance_RPG_Nature_05",
+  },
+  {
+    name: { key: "E85A63D644A2CFCBD1285791D777A1E8", default: "Attack" },
+    id: "GA_UM_HornedSeer_MeleeAutoAttack",
+    thumbnail: "textures_T_HandsOfBlood",
+  },
+  {
+    name: { key: "D7D64E494B340298BD3DCAA0C418DCFC", default: "Orb of Blood" },
+    id: "GA_UM_HornedSeer_OrbProjectile",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
+  },
+  {
+    name: {
+      key: "F2C42D6C4685FE79E417F5805378D634",
+      default: "Sanguine Offering",
+    },
+    id: "GA_UM_HornedSeer_ChanneledOrbProjectiles",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodCell",
+  },
+  {
+    name: { key: "2D78405E4589B38E3FE02BAB488D64CD", default: "Pain Bolt" },
+    id: "GA_UM_HornedSeer_CastProjectile",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_12",
+  },
+  {
+    name: { key: "AAB5AA594EBF26430C92BCA3AF51E8C2", default: "Attack" },
+    id: "GA_UM_UrrakSlaver_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: {
+      key: "9E7FA53B42942A3E5FC18CB88BE7110D",
+      default: "Bloodlash Wake",
+    },
+    id: "GA_UM_UrrakSlaver_CastedMeleeKnockback",
+    thumbnail: "textures_T_Nhance_RPG_Icons_BloodBolt",
+  },
+  {
+    name: { key: "D7C47B40478F478DDFA9A2A5599B4B1C", default: "Barbed Chain" },
+    id: "GA_UM_UrrakSlaver_ProximityChain",
+    thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
   },
   {
     name: { key: "105B1CBD47A46B00DC0366AC365A43F5", default: "Attack" },
@@ -7223,6 +7202,21 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_BloodCombat_19",
   },
   {
+    name: { key: "E697747E41592F16D33004976EFBAAB1", default: "Attack" },
+    id: "GA_VV_BlackmistCutthroat_AutoAttackMelee_C",
+    thumbnail: "textures_Tex_kn_04_bg",
+  },
+  {
+    name: { key: "60C92F6E49AB677827BBF9A20449AC78", default: "Mist Step" },
+    id: "GA_VV_BlackmistCutthroat_Teleport",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_44",
+  },
+  {
+    name: { key: "515815F54194A3F1F2E256A5E131B6FA", default: "Backstab" },
+    id: "GA_VV_BlackmistCutthroat_Backstab",
+    thumbnail: "textures_T_Nhance_RPG_Arcane_37",
+  },
+  {
     name: { key: "67D1B9EB47D34F4CFAA454A8B354194D", default: "Attack" },
     id: "GA_VV_BlackburnSlaver_AutoAttackMelee",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -7239,6 +7233,37 @@ export default [
     name: { key: "68D2D25A483CB95E4013229050BD7A8B", default: "Barbed Chain" },
     id: "GA_VV_BlackburnSlaver_ProximityChain",
     thumbnail: "textures_T_Nhance_RPG_Icons_NightmareChain",
+  },
+  {
+    name: { key: "DAAA9A944AB635BEB14224BD7A7CBAA1", default: "Attack" },
+    id: "GA_VV_BlackmistShadow_AutoAttackMelee_C",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "105ED4D548ECD5EBC1574489C8A11508", default: "Shadow Slam" },
+    id: "GA_VV_BlackmistShadow_MagicSlam_C",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_53",
+  },
+  {
+    name: { key: "98C0CC2D488F94E027DAC3BC3778DAEB", default: "Dark Ritual" },
+    id: "GA_VV_BlackmistShadow_RunePuzzle",
+    thumbnail: "textures_T_Nhance_RPG_Shadow_05",
+  },
+  {
+    name: {
+      key: "064A12E243B027440F6B1FB8D5823852",
+      default: "Devouring Darkness",
+    },
+    id: "GA_BlackmistShadowMinion_Cast",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowBeam",
+  },
+  {
+    name: {
+      key: "31AE934B45DA15EACBE244B163C090B6",
+      default: "False Rune Explosion",
+    },
+    id: "GA_BlackmistShadowMinion_OnDeathExplosion",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowExplosion_2",
   },
   {
     name: { key: "9817A4DD4D75D8CC62EDA3A5B298E6D0", default: "Attack" },
@@ -7264,50 +7289,66 @@ export default [
     thumbnail: "textures_T_Icon_Frost_115",
   },
   {
-    name: { key: "E697747E41592F16D33004976EFBAAB1", default: "Attack" },
-    id: "GA_VV_BlackmistCutthroat_AutoAttackMelee_C",
-    thumbnail: "textures_Tex_kn_04_bg",
-  },
-  {
-    name: { key: "60C92F6E49AB677827BBF9A20449AC78", default: "Mist Step" },
-    id: "GA_VV_BlackmistCutthroat_Teleport",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_44",
-  },
-  {
-    name: { key: "515815F54194A3F1F2E256A5E131B6FA", default: "Backstab" },
-    id: "GA_VV_BlackmistCutthroat_Backstab",
-    thumbnail: "textures_T_Nhance_RPG_Arcane_37",
-  },
-  {
-    name: {
-      key: "064A12E243B027440F6B1FB8D5823852",
-      default: "Devouring Darkness",
-    },
-    id: "GA_BlackmistShadowMinion_Cast",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowBeam",
-  },
-  {
-    name: {
-      key: "31AE934B45DA15EACBE244B163C090B6",
-      default: "False Rune Explosion",
-    },
-    id: "GA_BlackmistShadowMinion_OnDeathExplosion",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowExplosion_2",
-  },
-  {
-    name: { key: "DAAA9A944AB635BEB14224BD7A7CBAA1", default: "Attack" },
-    id: "GA_VV_BlackmistShadow_AutoAttackMelee_C",
+    name: { key: "9492C6BF49C7CD7A39C55E923B84784D", default: "Attack" },
+    id: "GA_VV_BossChilgar_AutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
-    name: { key: "105ED4D548ECD5EBC1574489C8A11508", default: "Shadow Slam" },
-    id: "GA_VV_BlackmistShadow_MagicSlam_C",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_53",
+    name: {
+      key: "1F39AC854137DBE4860121A47FAD6620",
+      default: "Freezing Flood",
+    },
+    id: "GA_VV_BossChilgar_LinearProjectiles",
+    thumbnail: "tex_strategyicons_Tex_water",
   },
   {
-    name: { key: "98C0CC2D488F94E027DAC3BC3778DAEB", default: "Dark Ritual" },
-    id: "GA_VV_BlackmistShadow_RunePuzzle",
-    thumbnail: "textures_T_Nhance_RPG_Shadow_05",
+    name: { key: "C25FB02F41C41417773EF3ABAD0F9289", default: "Arctic Winds" },
+    id: "GA_VV_BossChilgar_SwirlProjectile",
+    thumbnail: "textures_T_Icon_Frost_110",
+  },
+  {
+    name: {
+      key: "62D38ECA4BBEAE1BE31F2484A15D50D5",
+      default: "Tidal Presence",
+    },
+    id: "GA_VV_BossChilgar_SpawnAdds",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceWaterBlast",
+  },
+  {
+    name: { key: "B5053A584327B3E6C4E4998E1BFE3ECD", default: "Glacial Slam" },
+    id: "GA_VV_BossChilgar_TankSoakAoe",
+    thumbnail: "textures_T_Nhance_RPG_Icons_GhostHand",
+  },
+  {
+    name: {
+      key: "19E9EC794F84814133704CB6508C389B",
+      default: "Grasping Pillar",
+    },
+    id: "GA_VV_BossChilgar_IceSpike",
+    thumbnail: "textures_T_Nhance_RPG_Icons_GhostChain",
+  },
+  {
+    name: {
+      key: "1864F91842871AF0EA3BA684071BB43B",
+      default: "(CUT) Move to Body",
+    },
+    id: "GA_NPC_VV_BossChilgar_Shared_Orb_MoveToBoss",
+  },
+  {
+    name: {
+      key: "B9331531435523F12E03088E4CAB9FAA",
+      default: "(CUT) Tidal Explosion",
+    },
+    id: "GA_NPC_VV_BossChilgar_Shared_Orb_Explode",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceWave",
+  },
+  {
+    name: {
+      key: "D700E37A447948E89D03BA9D7259A61F",
+      default: "(CUT) Tidal Pulse",
+    },
+    id: "GA_NPC_VV_BossChilgar_Shared_Orb_PulsingDamage",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IceWave",
   },
   {
     name: { key: "C3BB90A749CCED9F953E4492EEBA518A", default: "Attack" },
@@ -7378,86 +7419,50 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Gold_49",
   },
   {
-    name: { key: "F010373C4DE676380773319D6FCEAD2C", default: "Attack" },
-    id: "GA_VV_BossKaldursonFire_MeleeAutoAttack",
+    name: { key: "07E14C0844DAD58C7FC122A42CEB504C", default: "Attack" },
+    id: "GA_VV_BossKaldursonIce_MeleeAutoAttack",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
-    name: { key: "8067B0694C9CCD56F8CFDF8A6C5644E3", default: "Burning Aura" },
-    id: "GA_VV_BossKaldursonFire_DotAuraPassive_0",
-    thumbnail: "textures_T_Nhance_RPG_Gold_49",
+    name: { key: "E8690BDC471BC58838884990A1D3A316", default: "Ice Spikes" },
+    id: "GA_VV_BossKaldursonIce_IceSpikes",
+    thumbnail: "textures_T_IceSpikes",
   },
   {
-    name: { key: "A209481042761AC32810F28627E85393", default: "Burning Aura" },
-    id: "GA_VV_BossKaldursonFire_CastDotAura",
-    thumbnail: "textures_T_Nhance_RPG_Gold_49",
+    name: { key: "CF4315D5435DAA97A2FA8D9B4280E44F", default: "Freezing Aura" },
+    id: "GA_VV_BossKaldursonIce_CastStationaryDot",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
   },
   {
-    name: { key: "32998E244FB04124FC71D3BC3F5FD503", default: "Blazing Slam" },
-    id: "GA_VV_BossKaldursonFire_Stomp",
-    thumbnail: "textures_T_Nhance_RPG_Fire_48",
+    name: { key: "B8012F8F420C55729E6839A77D6F0C9D", default: "Freezing Aura" },
+    id: "GA_VV_BossKaldursonIce_StationaryDotPassive",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
   },
   {
-    name: { key: "9492C6BF49C7CD7A39C55E923B84784D", default: "Attack" },
-    id: "GA_VV_BossChilgar_AutoAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+    name: { key: "D94DE67C4C1BF60B6A781597C447BEC3", default: "Freezing Aura" },
+    id: "GA_VV_BossKaldursonIce_SlowAura",
+    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
   },
   {
-    name: {
-      key: "1F39AC854137DBE4860121A47FAD6620",
-      default: "Freezing Flood",
-    },
-    id: "GA_VV_BossChilgar_LinearProjectiles",
-    thumbnail: "tex_strategyicons_Tex_water",
-  },
-  {
-    name: { key: "C25FB02F41C41417773EF3ABAD0F9289", default: "Arctic Winds" },
-    id: "GA_VV_BossChilgar_SwirlProjectile",
-    thumbnail: "textures_T_Icon_Frost_110",
+    name: { key: "01116A294784B879FC3B52A388306BCF", default: "Ice Tomb" },
+    id: "GA_VV_BossKaldursonIce_IceTomb",
+    thumbnail: "textures_T_Nhance_RPG_Icons_IcePrison",
   },
   {
     name: {
-      key: "62D38ECA4BBEAE1BE31F2484A15D50D5",
-      default: "Tidal Presence",
+      key: "C58FE7214812114BEE8755ADB499EC95",
+      default: "Devouring Darkness",
     },
-    id: "GA_VV_BossChilgar_SpawnAdds",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceWaterBlast",
-  },
-  {
-    name: { key: "B5053A584327B3E6C4E4998E1BFE3ECD", default: "Glacial Slam" },
-    id: "GA_VV_BossChilgar_TankSoakAoe",
-    thumbnail: "textures_T_Nhance_RPG_Icons_GhostHand",
+    id: "GA_BossVikingMystic_RuneMinion_Cast",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowBeam",
   },
   {
     name: {
-      key: "19E9EC794F84814133704CB6508C389B",
-      default: "Grasping Pillar",
+      key: "56B18F7548F23AF55F02F6B2D8824163",
+      default: "False Rune Explosion",
     },
-    id: "GA_VV_BossChilgar_IceSpike",
-    thumbnail: "textures_T_Nhance_RPG_Icons_GhostChain",
-  },
-  {
-    name: {
-      key: "1864F91842871AF0EA3BA684071BB43B",
-      default: "(CUT) Move to Body",
-    },
-    id: "GA_NPC_VV_BossChilgar_Shared_Orb_MoveToBoss",
-  },
-  {
-    name: {
-      key: "B9331531435523F12E03088E4CAB9FAA",
-      default: "(CUT) Tidal Explosion",
-    },
-    id: "GA_NPC_VV_BossChilgar_Shared_Orb_Explode",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceWave",
-  },
-  {
-    name: {
-      key: "D700E37A447948E89D03BA9D7259A61F",
-      default: "(CUT) Tidal Pulse",
-    },
-    id: "GA_NPC_VV_BossChilgar_Shared_Orb_PulsingDamage",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IceWave",
+    id: "GA_BossVikingMystic_RuneMinion_OnDeathExplosion",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowExplosion_2",
   },
   {
     name: { key: "43E1F11141D0780C89CB59817BAB1E2F", default: "Attack" },
@@ -7525,37 +7530,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ShadowSkull",
   },
   {
-    name: {
-      key: "C58FE7214812114BEE8755ADB499EC95",
-      default: "Devouring Darkness",
-    },
-    id: "GA_BossVikingMystic_RuneMinion_Cast",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowBeam",
-  },
-  {
-    name: {
-      key: "56B18F7548F23AF55F02F6B2D8824163",
-      default: "False Rune Explosion",
-    },
-    id: "GA_BossVikingMystic_RuneMinion_OnDeathExplosion",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowExplosion_2",
-  },
-  {
-    name: { key: "F971C50F4387376DBD50DEA7F2CC0A6C", default: "Attack" },
-    id: "GA_VV_ColdbrineElementalist_AutoAttackMelee_C",
-    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
-  },
-  {
-    name: { key: "D2A42779400C1FA322B5DA865CEAD9D3", default: "Brine Bolt" },
-    id: "GA_VV_ColdbrineElementalist_CastProjectile",
-    thumbnail: "tex_skill_icons_pack_Tex_blue_22",
-  },
-  {
-    name: { key: "0E51161E4FD65DFA73F82F9F354FA373", default: "Frost Nova" },
-    id: "GA_VV_ColdbrineElementalist_AoeImmobilize",
-    thumbnail: "textures_T_Nhance_RPG_Frost_10",
-  },
-  {
     name: { key: "AFC4C5094B00DF8EB0A8C889000A6EBE", default: "Attack" },
     id: "GA_VV_ColdbrineFiend_AutoAttackMelee_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
@@ -7574,59 +7548,49 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Frost_01",
   },
   {
-    name: { key: "43E3C59F4F4C330FBA69D7896AFDAD9D", default: "Attack" },
-    id: "GA_VV_CravenHiisi_AutoAttackMelee_C",
-    thumbnail: "textures_Tex_kn_04_bg",
-  },
-  {
-    name: { key: "965F83F74A3696E4A06CFC9A033CA75D", default: "Bonk Noggin" },
-    id: "GA_VV_CravenHiisi_AttachedAttack",
-    thumbnail: "textures_T_Nhance_RPG_BloodCombat_13",
-  },
-  {
-    name: { key: "0CBE766C44AB1A18A8E31BA1FE0DCBDA", default: "Craven Wound" },
-    id: "GA_VV_CravenHiisi_Bleed",
-    thumbnail: "hero_effects_T_Status_Bleed",
-  },
-  {
-    name: { key: "CAA86A89484B81248644BF9B77F0B334", default: "Jump 'n Bonk" },
-    id: "GA_VV_CravenHiisi_JumpAttack",
-    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowSpeed",
-  },
-  {
-    name: { key: "07E14C0844DAD58C7FC122A42CEB504C", default: "Attack" },
-    id: "GA_VV_BossKaldursonIce_MeleeAutoAttack",
+    name: { key: "F971C50F4387376DBD50DEA7F2CC0A6C", default: "Attack" },
+    id: "GA_VV_ColdbrineElementalist_AutoAttackMelee_C",
     thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
   },
   {
-    name: { key: "E8690BDC471BC58838884990A1D3A316", default: "Ice Spikes" },
-    id: "GA_VV_BossKaldursonIce_IceSpikes",
-    thumbnail: "textures_T_IceSpikes",
+    name: { key: "D2A42779400C1FA322B5DA865CEAD9D3", default: "Brine Bolt" },
+    id: "GA_VV_ColdbrineElementalist_CastProjectile",
+    thumbnail: "tex_skill_icons_pack_Tex_blue_22",
   },
   {
-    name: { key: "CF4315D5435DAA97A2FA8D9B4280E44F", default: "Freezing Aura" },
-    id: "GA_VV_BossKaldursonIce_CastStationaryDot",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
-  },
-  {
-    name: { key: "B8012F8F420C55729E6839A77D6F0C9D", default: "Freezing Aura" },
-    id: "GA_VV_BossKaldursonIce_StationaryDotPassive",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
-  },
-  {
-    name: { key: "D94DE67C4C1BF60B6A781597C447BEC3", default: "Freezing Aura" },
-    id: "GA_VV_BossKaldursonIce_SlowAura",
-    thumbnail: "textures_T_Nhance_RPG_Icons_FrozenStep",
-  },
-  {
-    name: { key: "01116A294784B879FC3B52A388306BCF", default: "Ice Tomb" },
-    id: "GA_VV_BossKaldursonIce_IceTomb",
-    thumbnail: "textures_T_Nhance_RPG_Icons_IcePrison",
+    name: { key: "0E51161E4FD65DFA73F82F9F354FA373", default: "Frost Nova" },
+    id: "GA_VV_ColdbrineElementalist_AoeImmobilize",
+    thumbnail: "textures_T_Nhance_RPG_Frost_10",
   },
   {
     name: { key: "F6F546344B08DBD9BC2AD39320A6A333", default: "Attack" },
     id: "GA_VV_FrenziedLooter_AutoAttackMelee_C",
     thumbnail: "textures_Tex_kn_04_bg",
+  },
+  {
+    name: { key: "F010373C4DE676380773319D6FCEAD2C", default: "Attack" },
+    id: "GA_VV_BossKaldursonFire_MeleeAutoAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_HolyHand",
+  },
+  {
+    name: { key: "8067B0694C9CCD56F8CFDF8A6C5644E3", default: "Burning Aura" },
+    id: "GA_VV_BossKaldursonFire_DotAuraPassive_0",
+    thumbnail: "textures_T_Nhance_RPG_Gold_49",
+  },
+  {
+    name: { key: "A209481042761AC32810F28627E85393", default: "Burning Aura" },
+    id: "GA_VV_BossKaldursonFire_CastDotAura",
+    thumbnail: "textures_T_Nhance_RPG_Gold_49",
+  },
+  {
+    name: { key: "32998E244FB04124FC71D3BC3F5FD503", default: "Blazing Slam" },
+    id: "GA_VV_BossKaldursonFire_Stomp",
+    thumbnail: "textures_T_Nhance_RPG_Fire_48",
+  },
+  {
+    name: { key: "E80CA750405660B77C78408791F5C80A", default: "Attack" },
+    id: "GA_VV_IcebitePillager_AutoAttackMelee_C",
+    thumbnail: "textures_Tex_axe_04_bg",
   },
   {
     name: { key: "E6628CAE4BC4C762C5C32E8B8D9D12B4", default: "Attack" },
@@ -7650,11 +7614,6 @@ export default [
     thumbnail: "textures_T_Nhance_RPG_Icons_ManaEmpower",
   },
   {
-    name: { key: "E80CA750405660B77C78408791F5C80A", default: "Attack" },
-    id: "GA_VV_IcebitePillager_AutoAttackMelee_C",
-    thumbnail: "textures_Tex_axe_04_bg",
-  },
-  {
     name: { key: "B180E5E74D9CF04175E08AB22525D7B8", default: "Attack" },
     id: "GA_VV_SoostainedArsonist_AutoAttackMelee_C",
     thumbnail: "textures_Tex_torch_b_01",
@@ -7671,5 +7630,25 @@ export default [
     },
     id: "GA_VV_SootstainedArsonist_LobProjectile",
     thumbnail: "textures_T_Nhance_RPG_Fire_03",
+  },
+  {
+    name: { key: "43E3C59F4F4C330FBA69D7896AFDAD9D", default: "Attack" },
+    id: "GA_VV_CravenHiisi_AutoAttackMelee_C",
+    thumbnail: "textures_Tex_kn_04_bg",
+  },
+  {
+    name: { key: "965F83F74A3696E4A06CFC9A033CA75D", default: "Bonk Noggin" },
+    id: "GA_VV_CravenHiisi_AttachedAttack",
+    thumbnail: "textures_T_Nhance_RPG_BloodCombat_13",
+  },
+  {
+    name: { key: "0CBE766C44AB1A18A8E31BA1FE0DCBDA", default: "Craven Wound" },
+    id: "GA_VV_CravenHiisi_Bleed",
+    thumbnail: "hero_effects_T_Status_Bleed",
+  },
+  {
+    name: { key: "CAA86A89484B81248644BF9B77F0B334", default: "Jump 'n Bonk" },
+    id: "GA_VV_CravenHiisi_JumpAttack",
+    thumbnail: "textures_T_Nhance_RPG_Icons_ShadowSpeed",
   },
 ] as const;

@@ -5,7 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Hero {
+export interface Hero_DO_NOT_IMPORT {
   id: string;
   class_color: {
     R: number;
@@ -62,10 +62,9 @@ export interface Hero {
     life_steal?: number;
     haste: number;
     dodge_chance: number;
-    parry_chance?: number;
     incoming_damage_multiplier: number;
-    max_mana: number;
     mana: number;
+    max_mana: number;
     move_speed: number;
     passive_move_speed: number;
     resist: number;
@@ -79,6 +78,7 @@ export interface Hero {
     damage_threat_multiplier: number;
     heal_threat_multiplier: number;
     stamina_to_max_health_multiplier: number;
+    expertise?: number;
     resources: number;
     max_resources: number;
     resources_second?: number;
@@ -94,7 +94,7 @@ export interface Hero {
     spirit_generation_heal: number;
     cooldown_recovery: number;
     spirit_refund_chance_scale: number;
-    expertise?: number;
+    parry_chance?: number;
     resources_tertiary?: number;
     max_resources_tertiary?: number;
   };
@@ -102,327 +102,337 @@ export interface Hero {
 
 export default [
   {
-    id: "Ink",
-    class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
-    thumbnail: "hero_portrait_Ink_01",
-    name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
+    id: "Bowguy",
+    class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
+    thumbnail: "hero_portrait_Bowguy_01",
+    name: { key: "ADCD24044D572984A7894487022E30B6", default: "Elarion" },
     title: {
-      key: "6595FCFC41B2AFCA2FDC578D9B0AA6E2",
-      default: "The Thunderlord",
+      key: "4AC02F244CC10CFDA70D2081ABEB3736",
+      default: "The Skystrider",
     },
     description: {
-      key: "47BAFD3D4120589C81BF1C8A2AA1DD6A",
+      key: "5B977E8F4089D531E062AB83F16AFB5D",
       default:
-        "Tariq channels storm and fury to deal immense damage to his enemies.\r\n\r\nTariq is a Melee Damage Dealer that uses Builder/Spender and Timing Mechanics. He excels in the front lines to flank his enemies while they face the Tank.\r\n\r\nTiming his abilities around his Swing Timer will maximize his damage and Fury generation.\r\n\r\nFury is required for Tariq to perform powerful attacks.",
+        "The Skystrider moves about the battlefield with the grace of a trained marksman.\r\n\r\nElarion is a Ranged Damage Dealer that builds and spends Focus to perform powerful abilities.\r\n\r\nAs an mythic bowman, Elarion has access to powerful buffs and debuffs that empower his shots and manipulate the battlefield.",
     },
     biography: {
-      key: "EE05B267473AD55F82CA52A2B63DF218",
+      key: "1D4C959D4F2EDBC9285435917EE8A2E9",
       default:
-        "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
+        "A sentinel of starlight, Elarion Beau'ghai has walked the world for millenia as the surviving half of an ancient myth that shaped the world.\r\n\r\nHe joins the Fellowship to watch over those who might one day fall to the same corrupting power he is fated to stop.",
     },
-    difficulty: 4,
+    difficulty: 2,
     talents: [
-      {
-        id: "Talent2",
-        name: {
-          key: "0F5CE1784BE3FB4A1E0DBC970FB1A734",
-          default: "Left Hand Path",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "BF84B21D48AAB7DF2D3B3893771A1DCC",
-          default:
-            "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>30%</> of the damage dealt is also dealt to enemies near your target, reduced beyond 5 targets.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
-        },
-        thumbnail: "ink_T_Ink_Facebreaker",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "A9DB45EE4A96339650CC8484AC3ECEA0",
-          default: "Concatenation",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "7BCD2F644D3BC2BE88CF319B4B7345EB",
-          default:
-            "Your <rt.bold>Attack Speed</> is increased by <rt.warning>50%</>.",
-        },
-        thumbnail: "berserker_Berserker6",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "7E54C35542F76B0CEA9AD897E467899F",
-          default: "Blood & Thunder",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "AAFC5F514731CF80ECB6319481C2D980",
-          default:
-            "Your <rt.absorb>Heavy Strike</> has a chance to cast a free <rt.absorb>Chain Lightning</> at the target.\r\n\r\n(2.0 PPM)",
-        },
-        thumbnail: "tex_spellbookpage01_Tex_SpellBook01_91",
-      },
-      {
-        id: "Talent6",
-        name: { key: "BE75035D42FB83A521E6619C5DD8EDEF", default: "Bloodline" },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "5BDC491341B506270ECBBBAD3A2C2114",
-          default:
-            "You generate <rt.mana>1 Fury</> every 1 second.\r\n\r\nYou no longer lose <rt.mana>Fury</> while out of combat.",
-        },
-        thumbnail: "textures_T_Icon_BloodCombat_141",
-      },
-      {
-        id: "Talent14",
-        name: { key: "BCA429A346A256C54AA96DAE02030E78", default: "High Road" },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "597184C94454FD481FD8B4859E2A0D39",
-          default:
-            "When your <rt.absorb>Leap Smash</> ability does not hit an enemy, its cooldown is reduced by <rt.bold>14</>  seconds and your movement speed is increased by <rt.bold>50%</> for 4 seconds.\r\n\r\nYour <rt.absorb>Leap Smash</> has <rt.warning>+20% increased critical strike chance</>.\r\n\r\nYou now only generate <rt.mana>Fury</> with <rt.absorb>Leap Smash</> when it deals damage to an enemy.",
-        },
-        thumbnail: "barbarian_Barbarian8",
-      },
       {
         id: "Talent7",
         name: {
-          key: "CF9BD954430236BB653DC3A459851975",
-          default: "Ride the Lightning",
+          key: "70C6E0AE45B0ACA1F77797820E5D1F01",
+          default: "Focused Expanse",
         },
         unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "915F6802419D2CCF4240EB8743DC13DE",
-          default:
-            "Your <rt.absorb>Thunder Call</> generates <rt.mana>60</> Fury over its duration.",
-        },
-        thumbnail: "ink_T_Ink_Selfbuff",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "B60ABA8B4B1DA58798688883BD0ACE56",
-          default: "Them Bones",
-        },
-        unlocked_at: 0,
-        row: 3,
+        row: 1,
         cost: 2,
         description: {
-          key: "039BC5A741FFCDF2BFE2C1A3EFDB61AB",
+          key: "EF40FA9C45DA1B5368F8848324B29F25",
           default:
-            "Your <rt.absorb>Skull Crusher</> has a <rt.bold>30%</> chance to have <rt.warning>+100%</> increased critical strike chance.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+            "Your <rt.absorb>Focused Shot</> has a 20% chance to generate <rt.effect>1 Empowered Multishot</> and all your <rt.effect>Empowered Multishots</> deal <rt.warning>+25% increased damage</>.\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\nYour next <rt.absorb>Multishot</> has <rt.mana>50% reduced Focus cost</> and always fires at least 3 arrow regardelss of how many targets are in range.",
         },
-        thumbnail: "ink_T_Ink_Skullcrusher",
+        thumbnail: "bowguy_Bowguy_Multishot",
       },
       {
-        id: "Talent18",
-        name: {
-          key: "F8DD387F4DF2430AA0B03FBC58FEA5F2",
-          default: "Kill 'Em All",
-        },
+        id: "Talent5",
+        name: { key: "48499EF5491C8BFEC003078933BC80C2", default: "Fusillade" },
         unlocked_at: 0,
-        row: 3,
+        row: 1,
         cost: 2,
         description: {
-          key: "0C1B8ECF4CF59415382ABEA44E2E2EDB",
+          key: "38219E1941A33B829C38628CA29F74D1",
           default:
-            "Your <rt.absorb>Hammer Storm</> now spins 3 times per use for the same <rt.mana>Fury</> cost, but each consecutive spin deals <rt.warning>35% more damage</>.",
+            "Your <rt.absorb>Heartseeker Barrage</> channel time is increased by 0.5 seconds and its <rt.warning>critical strike chance is increased by +20%</>.",
         },
-        thumbnail: "ink_T_Ink_Hammerstorm",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "7B19284F4857B452C35A92A2E7D9E729",
-          default: "Thunderstruck",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "280663A343A2615B1AFB0DA0B94F78BB",
-          default:
-            "Your <rt.absorb>Chain Lightning</> bounces <rt.warning>2</> additional times.",
-        },
-        thumbnail: "electromancer_Electromancer1",
-      },
-      {
-        id: "Talent4",
-        name: { key: "042D1432460604EF9FB759A7F3A5E4FC", default: "Pneuma" },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "1F659DF546B2CA1B71A7EBAF2A5093C7",
-          default:
-            "While <rt.absorb>Thunder Call</> is active you take <rt.bold>10%</> reduced damage and you passively restore health equal to <rt.heal>5% of any damage you deal</> for the duration.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Energy_18",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "80E892D0449360AC688865913C722311",
-          default: "Far Beyond Driven",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "2257DF2A4F0871081B2BF180AD5CD127",
-          default:
-            "Each time you use <rt.absorb>Heavy Strike</> you gain 1 stack of <rt.effect>Far Beyond Driven</> for 20 seconds, increasing your Spirit by <rt.warning>+2%</>.\r\n\r\n<rt.effect>Far Beyond Driven</> stacks up to 5 times.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Energy_13",
+        thumbnail: "textures_T_Icon_Energy_106",
       },
       {
         id: "Talent15",
         name: {
-          key: "C69CC9D5465CC8FBA6F38C8772F3A008",
+          key: "C96A63A04C9AFEE71E1386AC3053DD93",
+          default: "Final Crescendo",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "82D2D61E430FC99B93CEB18EFF9D55F6",
+          default:
+            "Each time you cast <rt.absorb>Highwind Arrow</>, you gain 1 stack of <rt.effect>Final Crescendo</>. At 3 stacks, your next <rt.absorb>Highwind Arrow</> consumes all stacks, causing it to deal <rt.warning>+100% increased damage</> and increasing the maximum number of ricochets up to 7.",
+        },
+        thumbnail: "bowguy_Bowguy_Ricochet",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "85311458452E428B8C9B1882BDFF16F0",
+          default: "Skylit Grace",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "CFC140E74C0EE534926B208893A39A75",
+          default:
+            "While <rt.absorb>Starfall Volley</> is active, your <rt.absorb>Skystrider's Grace</> has 100% increased cooldown recovery.",
+        },
+        thumbnail: "tex_scifiskillsicon_Tex_b_03",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "68099F78451CE715688D4DA1E8FCDDA5",
+          default: "Piercing Seekers",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "92772EF84049DD49EA5EFAB77078E0DB",
+          default:
+            "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>70% of the power of the initial hit</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_SoulArrow",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "EB5331824B861DFB763C91B8C9403231",
+          default: "Skyward Munitions",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "2614115E4E31EE2C4FB26F8EB7ABCACD",
+          default:
+            "Each time you cast <rt.absorb>Celestial Shot</> or <rt.absorb>Multishot</> the cooldown of <rt.absorb>Highwind Arrow</> & <rt.absorb>Heartseeker Barrage</> is reduced by 1 second.",
+        },
+        thumbnail: "bowguy_Bowguy_Shot",
+      },
+      {
+        id: "Talent1",
+        name: {
+          key: "18116CCE44856C4234B45F844BD0CF97",
+          default: "Repeating Stars",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "8A8C29164F7FBCE40DFE2CA8665DEBBC",
+          default:
+            "Each time your <rt.absorb>Multshot</> deals damage to an enemy, the cooldown of your <rt.absorb>Starfall Volley</> is reduced by 0.3 seconds.",
+        },
+        thumbnail: "bowguy_Bowguy_Rain",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "4A9E58EA4DB60BEC53144FB9352F0A20",
+          default: "Lunarlight Affinity",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "4942EB534D4596F3EA42FAB4381775EB",
+          default:
+            "Your <rt.absorb>Starfall Volley</> hits have twice the chance to trigger <rt.effect>Lunarlight Salvo</> when dealing damage to enemies with <rt.absorb>Lunarlight Mark</> active.\r\n\r\nAdditionally, your <rt.effect>Lunarlight Salvo</> has <rt.warning>+40% increased critical strike chance</>.",
+        },
+        thumbnail: "textures_T_Icon_Energy_108",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "B4FB01E44DE4B543A0E4838248D8C648",
+          default: "Lethal Shots",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "086FD59D4A3575CEF8BE1B86374DA233",
+          default:
+            "Your <rt.absorb>Highwind Arrow</> has a 30% chance to have <rt.warning>+100% increased critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "tex_strategyicons_Tex_arrow",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "592D9EB74AE17D1ABA5D529690988033",
+          default: "Path of Twilight",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "15BFB41B4AD9FD456D8E0B85FB60937A",
+          default:
+            "The duration of <rt.absorb>Pathfinder's Resilience</> is <rt.bold>increased to 8 seconds</> and all <rt.effect>dispellable harmful magic effects</> are instantly removed from you and again upon expiration. ",
+        },
+        thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "BC0D26C34B2099344A9115A5AEF096E8",
+          default: "Lunar Fury",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "398E0AC94A36BF9ADE30BCBF7BA5A8DC",
+          default:
+            "<rt.effect>Lunarlight Salvo</> deals <rt.warning>+30% increased damage</>.",
+        },
+        thumbnail: "bowguy_Bowguy_Mark",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "CB6E72D2463EA99CA599C9A89F6B347A",
           default: "Magic Ward",
         },
         unlocked_at: 0,
         row: 4,
         cost: 1,
         description: {
-          key: "737CB90C4201EB146F1754BC7B0172DA",
-          default: "You take 10% reduced Magic damage.",
+          key: "1315000D4041D18E426B8882F1EC6D8D",
+          default: "You take 10% less <bold>Magic damage</>.",
         },
         thumbnail: "textures_T_Arcane_Scroll",
       },
       {
-        id: "Talent5",
+        id: "Talent13",
         name: {
-          key: "F6B55C9E4900C82A42F8258F7FC085A8",
-          default: "Mouth for War",
+          key: "CF5320B5494870509EFCA0BEF2EB4BD4",
+          default: "Fervent Supremacy",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "C6946FDC46205D7CEADF36BEB3404397",
+          key: "5F07F2F945BF12A7403308B4AF8423B9",
           default:
-            "When your <rt.absorb>Leap Smash</> ability deals damage, you are granted 1 charge of <rt.absorb>Focused Wrath</>.",
+            "Your <rt.absorb>Skystrider's Supremacy's</> cooldown is reduced by 20 seconds and grants 4 charges of <rt.absorb>Empowered Multishot</> that last for up to 15 seconds.\r\n\r\nWhile <rt.effect>Fervant Supremacy</> is active, your <rt.absorb>Multishot</> deals <rt.warning>+50% increased damage</>.",
         },
-        thumbnail: "ink_T_Ink_FocusedWrath",
+        thumbnail: "bowguy_Bowguy_Supremacy",
       },
       {
-        id: "Talent9",
-        name: { key: "387DF58445A5443C0772B5AE23838EF7", default: "Schism" },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "EAB742B145274F2524AA97BDFB4309F0",
-          default:
-            "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
-      },
-      {
-        id: "Talent1",
+        id: "Talent14",
         name: {
-          key: "8129188741F53DDAB95E8C8ED8DE5F89",
-          default: "Square Hammer",
+          key: "FF16F8B346E9E8A186E4039CA5BF8E40",
+          default: "Impending Heartseeker",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "E039BA1C4D9B80B2D6B686B896A5425A",
+          key: "7A942CED43BFE73F69E40DACA57F1CDF",
           default:
-            "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
+            "When your <rt.absorb>Celestial Shot</> consumes <rt.effect>Celestial Impetus</> the cooldown of your <rt.absorb>Heartseeker Barrage</> is reset and you gain <rt.effect>Impending Heartseeker</>.\r\n\r\n<rt.effect>IMPENDING HEARTSEEKER</>\r\nYour <rt.absorb>Heartseeker Barrage</> deals <rt.warning>+10% increased damage</> with each arrow during its channel.",
         },
-        thumbnail: "ink_T_Ink_TimerAbility",
+        thumbnail: "bowguy_Bowguy_Spray",
       },
       {
-        id: "Talent12",
+        id: "Talent3",
         name: {
-          key: "1F7DB44C4210EF22D9A5ECBBC61641A6",
-          default: "Spit It Out",
+          key: "07DE1BDF49B00066DADB238E62437E92",
+          default: "Resurgent Winds",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "6E62CA7C4706FCCFD9C7229DDDF176F8",
+          default:
+            "Your <rt.absorb>Lunarlight Mark</> ability grants you <rt.effect>Resurgent Winds</> for 15 seconds, causing your next <rt.absorb>Highwind Arrow</> to be instant cast, <rt.mana>cost no Focus</>, require no charge, and deal <rt.warning>50% more damage</> against targets with <rt.absorb>Lunarlight Mark</> active.",
+        },
+        thumbnail: "textures_T_Icon_Tech_40",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "FC06586842A3AFDBDE11C7A32E2E0EB7",
+          default: " Last Lights",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "B85C08D94DCD61133A17D39F7FC63AA2",
-          default: "Your Critical Strike Power is increased by 10%.",
+          key: "424E4D044B8858E2400A199EFB3D5CFC",
+          default:
+            "Your attacks and abilities have <rt.warning>+30% additional critical strike chance</> when striking targets below 30% health.",
         },
-        thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
+        thumbnail: "tex_scifiskillsicon_Tex_b_24",
       },
       {
-        id: "Talent13",
+        id: "Talent12",
         name: {
-          key: "4ADF4F24459D922719E280AD834B5C81",
+          key: "1D89A7B84D67C4F18D44C4B5D78A2442",
           default: "Spirited Fortitude",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "449BEA7646608FB6CB590B88DBB7684E",
-          default:
-            "You take 10% less damage from <bold>Area of Effect</> attacks.",
+          key: "7B2552C54785C86EEACDDC9D82007127",
+          default: "You take 10% less <bold>Area of Effect damage</>.",
         },
         thumbnail: "barbarian_Barbarian3",
       },
       {
-        id: "Talent16",
+        id: "Talent17",
         name: {
-          key: "3D806F5640B6C3C98CF1F6B793DD94AE",
-          default: "Crack the Sky",
+          key: "E60648314803697330FA369D42C75135",
+          default: "The Weight of Gravity",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "0D351A0C45AA82187006AEB872DBEE01",
+          key: "25D1E40A48653761B3D76B8A5481DE12",
           default:
-            "Your <bold>Lightning damage</> has <rt.warning>+20%</> increased critical strike chance.",
+            "Your <rt.absorb>Grappling Arrow</> now has 2 charges, but its recharge time is increased to 120 seconds.\r\n\r\n<rt.absorb>Grappling Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
         },
-        thumbnail: "electromancer_Electromancer18",
+        thumbnail: "bowguy_Bowguy_GrappleShot",
       },
     ],
     abilities: [
-      "GA_Ink_MeleeInterrupt_C",
-      "GA_Ink_MeleeAutoAttack_C",
-      "GA_Ink_MoveToLocationAoeDamage_C",
-      "GA_Ink_HeavySingleTargetAttack_C",
-      "GA_Ink_AoeAttack_C",
-      "GA_Ink_AutoAttackBuff_C",
-      "GA_Ink_AutoAttackBuff_Attack_C",
-      "GA_Ink_SecondChanceSingleTargetAttack_C",
-      "GA_Ink_CleaveAttack_C",
-      "GA_Ink_ChargedBuff_C",
-      "GA_Ink_BouncyProjectile_C",
-      "GA_Ink_EnhancedChargedBuff",
-      "GA_Ink_LowHealthSingleTargetResourceDamage_C",
-      "GA_Ink_AoeFear_C",
-      "GA_Ink_CostReductionBuff_C",
-      "GA_Ink_SelfDefenceBuff_C",
-      "GA_Ink_Taunt_C",
+      "GA_Bowguy_RangedAutoAttack_C",
+      "GA_Bowguy_ChargedMoveWithDirection_C",
+      "GA_Bowguy_SingleProjectileDamage_C",
+      "GA_Bowguy_AoeProjectileDamage_C",
+      "GA_Bowguy_CastedBouncyProjectileDamage_C",
+      "GA_Bowguy_CastedProjectileHeavyDamage_C",
+      "GA_Bowguy_ProcHasteBuff_C",
+      "GA_Bowguy_InstantSingleInterrupt_C",
+      "GA_Bowguy_CastedProjectileDamage_C",
+      "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
+      "GA_Bowguy_TargetedAoePull_C",
+      "GA_Bowguy_SelfDefenceBuff_C",
+      "GA_Bowguy_InstantMarkTarget_C",
+      "GA_Bowguy_TargetedAoeDamage_C",
+      "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
+      "GA_Bowguy_SelfBuffForAoeProjectile_C",
+      "GA_Bowguy_DurationalAoeDamage_C",
+      "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
     ],
     stats: {
       armor: 0,
       power: 0,
-      base_health: 18113,
+      base_health: 17135,
       stamina: 1000,
-      strength: 1000,
-      agility: 0,
+      strength: 0,
+      agility: 1000,
       intellect: 0,
       block_chance: 0,
       crit_chance: 0.05,
@@ -430,10 +440,9 @@ export default [
       life_steal: 0,
       haste: 1,
       dodge_chance: 0.05,
-      parry_chance: 0.05,
       incoming_damage_multiplier: 1,
-      max_mana: 0,
       mana: 0,
+      max_mana: 0,
       move_speed: 1,
       passive_move_speed: 1,
       resist: 0,
@@ -446,11 +455,380 @@ export default [
       mana_regen_tick_time: 0,
       damage_threat_multiplier: 1,
       heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 43.567,
-      resources: 0,
+      stamina_to_max_health_multiplier: 39.081,
+      expertise: 0,
+      resources: 100,
       max_resources: 100,
       resources_second: 0,
-      max_resources_second: 100,
+      max_resources_second: 0,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0,
+      out_of_combat_mana_regen_tick_time: 0,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.3,
+      spirit_generation_heal: 0.3,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
+    id: "Mara",
+    class_color: { R: 111, G: 46, B: 241, A: 255, hex: "#6F2EF1" },
+    thumbnail: "hero_portrait_Mara_01",
+    name: { key: "04CCDB6C431FAB1E3B51B2B93EADF27A", default: "Mara" },
+    title: {
+      key: "52D0F80A4AAF544622F3B1A88EA2DBF4",
+      default: "The Hungering Blade",
+    },
+    description: {
+      key: "DC2E11714B6DE71E532D2491CA77F269",
+      default:
+        "Mara weaves in and out of the shadows to strike down her enemy.\r\n\r\nMara is a Melee Damage Dealer who utilizes abilities to build combo points that she spends on powerful finishing moves that make quick work of foes. \r\n\r\nAs an assassin, Mara also has access to a variety of poisons that, when used strategically, give her an upper hand in battle.",
+    },
+    biography: {
+      key: "ED61578B4F4D1005CBD010A1EC929B9A",
+      default:
+        "Hunted across continents, Mara hides from unseen pursuers who manipulate life and death from the shadows.\r\n\r\nShe joins the Fellowship seeking refuge and vengeance, under a new identity, against those who pull the strings of fate.",
+    },
+    difficulty: 3,
+    talents: [
+      {
+        id: "Talent1",
+        name: {
+          key: "6253C6074808A5EFF9C1A2861033A7CF",
+          default: "Red Ledger",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "861ADDDF48E106AB14B797BD0BDA8767",
+          default:
+            "When your <rt.absorb>Hemorrhaging Strike</> bleed is applied to an enemy you gain <rt.warning>+10% Haste</>.\r\n\r\nYou gain an additional <rt.warning>+2% haste</> for every additional enemy that has your <rt.absorb>Hemorrhaging Strike</> bleed applied, up to a maximum of bonus of <rt.warning>+20% haste</>.",
+        },
+        thumbnail: "mara_Mara_Bleed",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "041EA46B484A0C89F9723487AA5ABAA8",
+          default: "Corrosive Spill",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "296E56914E588BA49052D799BC063FD8",
+          default:
+            "Each <rt.meikoability1>Combo Point</> you spend has a 3% chance to cause you to coat the ground in front of you with a <rt.effect>Corrosive Spill</> for 3 seconds.\r\n\r\nEnemies that stand in <rt.effect>Corrosive Spill</> take <rt.warning>90% Agility</> poison damage <rt.bold>every 1.5 seconds</>.",
+        },
+        thumbnail: "textures_T_Icon_Unholy_197",
+      },
+      {
+        id: "Talent13",
+        name: {
+          key: "B16292104994A33883DC80AC468E234D",
+          default: "Assassin's Guile",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "2F2E4AD6467F88B5CEDB9784080FB9F7",
+          default:
+            "After attacking from <rt.bold>Stealth</>, you gain <rt.effect>Assassin's Guile</> for 5 seconds, causing your <rt.absorb>Queen's Fang</> & <rt.absorb>Arachnid Assault</> to deal <rt.warning>40% more damage</>.",
+        },
+        thumbnail: "textures_T_Icon_Shadow_121",
+      },
+      {
+        id: "Talent19",
+        name: { key: "579D3D394F011C32BA82A68CAC276D6A", default: "Bloodrush" },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "A97774DC411028BF3867E6BD7C9B5335",
+          default:
+            "Your <rt.absorb>Hemorrhaging Strike</> bleed <rt.warning>ticks 20% faster</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_BloodCombat_24",
+      },
+      {
+        id: "Talent5",
+        name: {
+          key: "19B524164D874CA68EBA60867637669C",
+          default: "Venomous Delight",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "8FD2964F4383F5C471D905AED4C0D64D",
+          default:
+            "Each time you deal <rt.absorb>Poison Damage</> to an enemy you have a 10% chance to generate <rt.mana>10 Energy</>.",
+        },
+        thumbnail: "tex_skill_icons_pack_Tex_green_23",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "DA8F25F04CE68D8A00160782554D9E64",
+          default: "Efficient Killer",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "BB1E74984BFF28F4D90F6696B751C058",
+          default:
+            "Each <rt.meikoability1>Combo Point</> you spend causes you to generate <rt.mana>1 Energy</>.",
+        },
+        thumbnail: "textures_T_ShadowStab",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "A0EDB82B4F7B25A0B47843B2F8B65928",
+          default: "Gushing Blood",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "827CF026476644E63E768BB41084C7B5",
+          default:
+            "While <rt.absorb>Maiden of Death</> is active, your <rt.absorb>Hemorrhaging Strike</> applies it's bleed to up to 4 additional nearby enemies.",
+        },
+        thumbnail: "berserker_Berserker5",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "EF6F24874DB8701ED7181FB262F25EB7",
+          default: "Feed the Queen",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "2EC65F77455CC13421AF5BA25CBC7F4E",
+          default:
+            "Each time your <rt.absorb>Skittering Blades</> deals damage you are granted <rt.effect>Feed the Queen</>, causing the next <rt.absorb>Queen's Fang</> you or your shadowy clones perform to deal <rt.warning>9% more damage</> per stack of <rt.effect>Feed the Queen</>.\r\n\r\n<rt.effect>Feed the Queen</> stacks up to 5 times.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Shadow_41",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "3EF522F644E55A9F5108D195929838E9",
+          default: "Deadly Scheme",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "32C68AE84532975A8B478281E18F0A23",
+          default:
+            "For every <rt.mana>10 Energy</> you generate you gain 1 stack of <rt.effect>Deadly Scheme</>. At 20 stacks it activates for 12 seconds, causing your next <rt.absorb>Queen's Fang</> or <rt.absorb>Arachnid Assault</> to have <rt.warning>+100% Critical Strike chance</>.\r\n\r\n<rt.absorb>Note:</><rt.mana>Mara has 200 max energy baseline</>.",
+        },
+        thumbnail: "tex_spellbookpage08_Tex_SpellBook08_71",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "F0A61E8D436FA8F3211FB5ABC35B6BA6",
+          default: "Veil of Shadows",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "C7A6119143A2FA23FA6BDB9B010D9068",
+          default:
+            "Your <rt.absorb>Shadow Protection's</> duration is <rt.bold>increased to 8 seconds</> and reduces <rt.bold>Magic Damage</> you take by another <rt.bold>10%</> while active.",
+        },
+        thumbnail: "mara_Mara_Defensive",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "16962D7D4C110F5DB51CEAAE8D485878",
+          default: "Maiden's Doom",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "7B9856E245125061CF6652B629CE95DE",
+          default:
+            "When you deal damage to enemies with 30% or less health, the damage bonus of <rt.absorb>Maiden of Death</> is increased to <rt.warning>40%</>. ",
+        },
+        thumbnail: "mara_Mara_Maiden",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "A2B3051841478C3F9DF807AC6A781775",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "D74D9E81465DEE8463DB098AFB9B4D04",
+          default: "You take 10% less <bold>Magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "132D3D874A0F2E6239856EB231E2418C",
+          default: "From the Shadows",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "6BDF16BD4E24A3D2CE896E91F588B774",
+          default:
+            "Each time you deal damage to an enemy with <rt.absorb>Hemorrhaging Strike's</> bleed effect, you have a <rt.bold>24%</> chance to summon a <rt.effect>Shadowy Clone</> to assault that enemy with a 6 combo point <rt.absorb>Queen's Fang</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_BloodCombat_23",
+      },
+      {
+        id: "Talent14",
+        name: { key: "E2123F8C43D435891B4CE6A9651F815D", default: "Hemotoxin" },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "30259EF8446DC6D1F876C687411E840F",
+          default:
+            "Your <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</>, and <rt.bold>Auto Attacks</> have a 6% chance to apply 1 stack of <rt.effect>Hemotoxin</> to the target. causing it to take <rt.warning>20% Agility</> poison damage <rt.bold>every 1.5 seconds over 9 seconds</>.\r\n\r\nUsing <rt.absorb>Hemorrhaging Strike</> on a target afflicted with <rt.effect>Hemotoxin</> consumes 1 stack, instantly dealing <rt.warning>100% of Hemorrhaging Strike's bleed damage</> to the target and <rt.warning>70% of Hemorrhaging Strike's bleed damage</> to other nearby targets as poison damage.\r\n\r\n<rt.absorb>Hemotoxin's</> area damage is reduced beyond 1 target.",
+        },
+        thumbnail: "textures_T_PoisonBlister",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "EC6E45734EBC72C787D5E0AFD29F0992",
+          default: "Malevolence",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "AD86954C4094D39CDA1A04AF03A748E6",
+          default:
+            "Your <rt.absorb>Queen's Fang</> and <rt.absorb>Arachnid's Assault</> abilities grant you 1 stack of <rt.effect>Malevolence: Arachnid Assault</> or 1 stack of <rt.effect>Malevolence: Queen's Fang</> respectively for 20 seconds.\r\n\r\n<rt.effect>Malevolence</> increases the damage of the matching ability by <rt.warning>100%</>.\r\n\r\nEach <rt.effect>Malevolence</> buff type stacks up to 2 times.",
+        },
+        thumbnail: "tex_skill_icons_pack_Tex_violet_7",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "A28FE959436DBA5DB0E6FBB5C44A4D06",
+          default: "Arachnid Onslaught",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "BAF327DA4A62B291F4C8478AF3160176",
+          default:
+            "Your <rt.absorb>Arachnid Assault</> deals <rt.warning>20% more damage</> against enemies that have your <rt.absorb>Hemorrhaging Strike</> bleed active.",
+        },
+        thumbnail: "mara_Mara_SpiderAOE",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "28373E884FF5F21393C7D695D63B31C9",
+          default: "Spirited Fortitude",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "88294D2F4D92BD1F75AD05BC8DF8AB77",
+          default: "You take 10% less <bold>Area of Effect damage</>.",
+        },
+        thumbnail: "barbarian_Barbarian3",
+      },
+      {
+        id: "Talent17",
+        name: { key: "6A84766746C38ECEABC3EFA2E0BAD847", default: "Puncture" },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "A8C1A7FA47422EF1676DA19755383135",
+          default:
+            "Your <rt.absorb>Widow's Bite</> has <rt.warning>+100% increased critical strike chance</>.",
+        },
+        thumbnail: "mara_Mara_RegainEnergyHit",
+      },
+    ],
+    abilities: [
+      "GA_Mara_AutoAttack_C",
+      "GA_Mara_StrongerBehindAttackBuilder_C",
+      "GA_Mara_ChargedDoubleAttackBuilder_C",
+      "GA_Mara_AoeAttackBuilder_C",
+      "GA_Mara_ChargedTeleportBehindTarget_C",
+      "GA_Mara_HeavyAttackSpender_C",
+      "GA_Mara_MeleeInterrupt_C",
+      "GA_Mara_ChargedResourceRefillSelfBuff_C",
+      "GA_Mara_AoeAttackSpender_C",
+      "GA_Mara_EnergyDamageSelfBuff_C",
+      "GA_Mara_ApplyPoisonSelfBuff_C",
+      "GA_Mara_BleedAttackSpender_C",
+      "GA_Mara_EnergyAutoAttackSelfBuffSpender_C",
+      "GA_Mara_Stealth_C",
+      "GA_Mara_StunSpender_C",
+      "GA_Mara_Disorient_C",
+      "GA_Mara_SelfDefenceBuff_C",
+      "GA_Mara_CopyCharacterDamage_C",
+      "GA_Mara_ResetCooldownRefillResouces_C",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 17239,
+      stamina: 1000,
+      strength: 0,
+      agility: 1000,
+      intellect: 0,
+      block_chance: 0,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      life_steal: 0,
+      haste: 1,
+      dodge_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      mana: 100,
+      max_mana: 100,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0,
+      mana_regen_tick_time: 0,
+      damage_threat_multiplier: 1,
+      heal_threat_multiplier: 0.5,
+      stamina_to_max_health_multiplier: 42.479,
+      expertise: 0,
+      resources: 200,
+      max_resources: 200,
+      resources_second: 0,
+      max_resources_second: 6,
       out_of_combat_health_regen_rate: 0.01,
       out_of_combat_health_regen_tick_time: 0.5,
       out_of_combat_mana_regen_rate: 0,
@@ -834,1453 +1212,329 @@ export default [
     },
   },
   {
-    id: "Bowguy",
-    class_color: { R: 137, G: 255, B: 0, A: 255, hex: "#89FF00" },
-    thumbnail: "hero_portrait_Bowguy_01",
-    name: { key: "ADCD24044D572984A7894487022E30B6", default: "Elarion" },
+    id: "Ink",
+    class_color: { R: 194, G: 124, B: 213, A: 255, hex: "#C27CD5" },
+    thumbnail: "hero_portrait_Ink_01",
+    name: { key: "87AE9D7D46E872F32A33FDB8D5A464BF", default: "Tariq" },
     title: {
-      key: "4AC02F244CC10CFDA70D2081ABEB3736",
-      default: "The Skystrider",
+      key: "6595FCFC41B2AFCA2FDC578D9B0AA6E2",
+      default: "The Thunderlord",
     },
     description: {
-      key: "5B977E8F4089D531E062AB83F16AFB5D",
+      key: "47BAFD3D4120589C81BF1C8A2AA1DD6A",
       default:
-        "The Skystrider moves about the battlefield with the grace of a trained marksman.\r\n\r\nElarion is a Ranged Damage Dealer that builds and spends Focus to perform powerful abilities.\r\n\r\nAs an mythic bowman, Elarion has access to powerful buffs and debuffs that empower his shots and manipulate the battlefield.",
+        "Tariq channels storm and fury to deal immense damage to his enemies.\r\n\r\nTariq is a Melee Damage Dealer that uses Builder/Spender and Timing Mechanics. He excels in the front lines to flank his enemies while they face the Tank.\r\n\r\nTiming his abilities around his Swing Timer will maximize his damage and Fury generation.\r\n\r\nFury is required for Tariq to perform powerful attacks.",
     },
     biography: {
-      key: "1D4C959D4F2EDBC9285435917EE8A2E9",
+      key: "EE05B267473AD55F82CA52A2B63DF218",
       default:
-        "A sentinel of starlight, Elarion Beau'ghai has walked the world for millenia as the surviving half of an ancient myth that shaped the world.\r\n\r\nHe joins the Fellowship to watch over those who might one day fall to the same corrupting power he is fated to stop.",
+        "Exiled from the Goremdal Mountains, Tariq honors his people by hunting monsters and preserving their traditions.\r\n\r\nStrong of hand and stronger of heart, he joins the Fellowship to uphold the legacy of his clan and find new family forged in honor.",
     },
-    difficulty: 2,
+    difficulty: 4,
     talents: [
-      {
-        id: "Talent7",
-        name: {
-          key: "70C6E0AE45B0ACA1F77797820E5D1F01",
-          default: "Focused Expanse",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "EF40FA9C45DA1B5368F8848324B29F25",
-          default:
-            "Your <rt.absorb>Focused Shot</> has a 20% chance to generate <rt.effect>1 Empowered Multishot</> and all your <rt.effect>Empowered Multishots</> deal <rt.warning>+25% increased damage</>.\r\n\r\n<rt.effect>EMPOWERED MULTISHOT</>\r\nYour next <rt.absorb>Multishot</> has <rt.mana>50% reduced Focus cost</> and always fires at least 3 arrow regardelss of how many targets are in range.",
-        },
-        thumbnail: "bowguy_Bowguy_Multishot",
-      },
-      {
-        id: "Talent5",
-        name: { key: "48499EF5491C8BFEC003078933BC80C2", default: "Fusillade" },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "38219E1941A33B829C38628CA29F74D1",
-          default:
-            "Your <rt.absorb>Heartseeker Barrage</> channel time is increased by 0.5 seconds and its <rt.warning>critical strike chance is increased by +20%</>.",
-        },
-        thumbnail: "textures_T_Icon_Energy_106",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "C96A63A04C9AFEE71E1386AC3053DD93",
-          default: "Final Crescendo",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "82D2D61E430FC99B93CEB18EFF9D55F6",
-          default:
-            "Each time you cast <rt.absorb>Highwind Arrow</>, you gain 1 stack of <rt.effect>Final Crescendo</>. At 3 stacks, your next <rt.absorb>Highwind Arrow</> consumes all stacks, causing it to deal <rt.warning>+100% increased damage</> and increasing the maximum number of ricochets up to 7.",
-        },
-        thumbnail: "bowguy_Bowguy_Ricochet",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "85311458452E428B8C9B1882BDFF16F0",
-          default: "Skylit Grace",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "CFC140E74C0EE534926B208893A39A75",
-          default:
-            "While <rt.absorb>Starfall Volley</> is active, your <rt.absorb>Skystrider's Grace</> has 100% increased cooldown recovery.",
-        },
-        thumbnail: "tex_scifiskillsicon_Tex_b_03",
-      },
       {
         id: "Talent2",
         name: {
-          key: "68099F78451CE715688D4DA1E8FCDDA5",
-          default: "Piercing Seekers",
+          key: "0F5CE1784BE3FB4A1E0DBC970FB1A734",
+          default: "Left Hand Path",
         },
         unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "92772EF84049DD49EA5EFAB77078E0DB",
-          default:
-            "Your <rt.absorb>Heartseeker Barrage</> arrows ricochet to 1 additional nearby enemy. Riccochets have <rt.warning>70% of the power of the initial hit</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_SoulArrow",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "EB5331824B861DFB763C91B8C9403231",
-          default: "Skyward Munitions",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "2614115E4E31EE2C4FB26F8EB7ABCACD",
-          default:
-            "Each time you cast <rt.absorb>Celestial Shot</> or <rt.absorb>Multishot</> the cooldown of <rt.absorb>Highwind Arrow</> & <rt.absorb>Heartseeker Barrage</> is reduced by 1 second.",
-        },
-        thumbnail: "bowguy_Bowguy_Shot",
-      },
-      {
-        id: "Talent1",
-        name: {
-          key: "18116CCE44856C4234B45F844BD0CF97",
-          default: "Repeating Stars",
-        },
-        unlocked_at: 0,
-        row: 3,
+        row: 1,
         cost: 2,
         description: {
-          key: "8A8C29164F7FBCE40DFE2CA8665DEBBC",
+          key: "BF84B21D48AAB7DF2D3B3893771A1DCC",
           default:
-            "Each time your <rt.absorb>Multshot</> deals damage to an enemy, the cooldown of your <rt.absorb>Starfall Volley</> is reduced by 0.3 seconds.",
+            "When <rt.absorb>Face Breaker</> deals critical strike damage, <rt.warning>30%</> of the damage dealt is also dealt to enemies near your target, reduced beyond 5 targets.\r\n\r\n<rt.absorb>Face Breaker's</> critical strike chance is increased by <rt.warning>+50%</>.",
         },
-        thumbnail: "bowguy_Bowguy_Rain",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "4A9E58EA4DB60BEC53144FB9352F0A20",
-          default: "Lunarlight Affinity",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "4942EB534D4596F3EA42FAB4381775EB",
-          default:
-            "Your <rt.absorb>Starfall Volley</> hits have twice the chance to trigger <rt.effect>Lunarlight Salvo</> when dealing damage to enemies with <rt.absorb>Lunarlight Mark</> active.\r\n\r\nAdditionally, your <rt.effect>Lunarlight Salvo</> has <rt.warning>+40% increased critical strike chance</>.",
-        },
-        thumbnail: "textures_T_Icon_Energy_108",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "B4FB01E44DE4B543A0E4838248D8C648",
-          default: "Lethal Shots",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "086FD59D4A3575CEF8BE1B86374DA233",
-          default:
-            "Your <rt.absorb>Highwind Arrow</> has a 30% chance to have <rt.warning>+100% increased critical strike chance</>.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "tex_strategyicons_Tex_arrow",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "592D9EB74AE17D1ABA5D529690988033",
-          default: "Path of Twilight",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "15BFB41B4AD9FD456D8E0B85FB60937A",
-          default:
-            "The duration of <rt.absorb>Pathfinder's Resilience</> is <rt.bold>increased to 8 seconds</> and all <rt.effect>dispellable harmful magic effects</> are instantly removed from you and again upon expiration. ",
-        },
-        thumbnail: "bowguy_Bowguy_Abilityicon_Defensive",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "BC0D26C34B2099344A9115A5AEF096E8",
-          default: "Lunar Fury",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "398E0AC94A36BF9ADE30BCBF7BA5A8DC",
-          default:
-            "<rt.effect>Lunarlight Salvo</> deals <rt.warning>+30% increased damage</>.",
-        },
-        thumbnail: "bowguy_Bowguy_Mark",
+        thumbnail: "ink_T_Ink_Facebreaker",
       },
       {
         id: "Talent11",
         name: {
-          key: "CB6E72D2463EA99CA599C9A89F6B347A",
+          key: "A9DB45EE4A96339650CC8484AC3ECEA0",
+          default: "Concatenation",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "7BCD2F644D3BC2BE88CF319B4B7345EB",
+          default:
+            "Your <rt.bold>Attack Speed</> is increased by <rt.warning>50%</>.",
+        },
+        thumbnail: "berserker_Berserker6",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "7E54C35542F76B0CEA9AD897E467899F",
+          default: "Blood & Thunder",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "AAFC5F514731CF80ECB6319481C2D980",
+          default:
+            "Your <rt.absorb>Heavy Strike</> has a chance to cast a free <rt.absorb>Chain Lightning</> at the target.\r\n\r\n(2.0 PPM)",
+        },
+        thumbnail: "tex_spellbookpage01_Tex_SpellBook01_91",
+      },
+      {
+        id: "Talent6",
+        name: { key: "BE75035D42FB83A521E6619C5DD8EDEF", default: "Bloodline" },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "5BDC491341B506270ECBBBAD3A2C2114",
+          default:
+            "You generate <rt.mana>1 Fury</> every 1 second.\r\n\r\nYou no longer lose <rt.mana>Fury</> while out of combat.",
+        },
+        thumbnail: "textures_T_Icon_BloodCombat_141",
+      },
+      {
+        id: "Talent14",
+        name: { key: "BCA429A346A256C54AA96DAE02030E78", default: "High Road" },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "597184C94454FD481FD8B4859E2A0D39",
+          default:
+            "When your <rt.absorb>Leap Smash</> ability does not hit an enemy, its cooldown is reduced by <rt.bold>14</>  seconds and your movement speed is increased by <rt.bold>50%</> for 4 seconds.\r\n\r\nYour <rt.absorb>Leap Smash</> has <rt.warning>+20% increased critical strike chance</>.\r\n\r\nYou now only generate <rt.mana>Fury</> with <rt.absorb>Leap Smash</> when it deals damage to an enemy.",
+        },
+        thumbnail: "barbarian_Barbarian8",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "CF9BD954430236BB653DC3A459851975",
+          default: "Ride the Lightning",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "915F6802419D2CCF4240EB8743DC13DE",
+          default:
+            "Your <rt.absorb>Thunder Call</> generates <rt.mana>60</> Fury over its duration.",
+        },
+        thumbnail: "ink_T_Ink_Selfbuff",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "B60ABA8B4B1DA58798688883BD0ACE56",
+          default: "Them Bones",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "039BC5A741FFCDF2BFE2C1A3EFDB61AB",
+          default:
+            "Your <rt.absorb>Skull Crusher</> has a <rt.bold>30%</> chance to have <rt.warning>+100%</> increased critical strike chance.\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "ink_T_Ink_Skullcrusher",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "F8DD387F4DF2430AA0B03FBC58FEA5F2",
+          default: "Kill 'Em All",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "0C1B8ECF4CF59415382ABEA44E2E2EDB",
+          default:
+            "Your <rt.absorb>Hammer Storm</> now spins 3 times per use for the same <rt.mana>Fury</> cost, but each consecutive spin deals <rt.warning>35% more damage</>.",
+        },
+        thumbnail: "ink_T_Ink_Hammerstorm",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "7B19284F4857B452C35A92A2E7D9E729",
+          default: "Thunderstruck",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "280663A343A2615B1AFB0DA0B94F78BB",
+          default:
+            "Your <rt.absorb>Chain Lightning</> bounces <rt.warning>2</> additional times.",
+        },
+        thumbnail: "electromancer_Electromancer1",
+      },
+      {
+        id: "Talent4",
+        name: { key: "042D1432460604EF9FB759A7F3A5E4FC", default: "Pneuma" },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "1F659DF546B2CA1B71A7EBAF2A5093C7",
+          default:
+            "While <rt.absorb>Thunder Call</> is active you take <rt.bold>10%</> reduced damage and you passively restore health equal to <rt.heal>5% of any damage you deal</> for the duration.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Energy_18",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "80E892D0449360AC688865913C722311",
+          default: "Far Beyond Driven",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "2257DF2A4F0871081B2BF180AD5CD127",
+          default:
+            "Each time you use <rt.absorb>Heavy Strike</> you gain 1 stack of <rt.effect>Far Beyond Driven</> for 20 seconds, increasing your Spirit by <rt.warning>+2%</>.\r\n\r\n<rt.effect>Far Beyond Driven</> stacks up to 5 times.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Energy_13",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "C69CC9D5465CC8FBA6F38C8772F3A008",
           default: "Magic Ward",
         },
         unlocked_at: 0,
         row: 4,
         cost: 1,
         description: {
-          key: "1315000D4041D18E426B8882F1EC6D8D",
-          default: "You take 10% less <bold>Magic damage</>.",
+          key: "737CB90C4201EB146F1754BC7B0172DA",
+          default: "You take 10% reduced Magic damage.",
         },
         thumbnail: "textures_T_Arcane_Scroll",
       },
       {
-        id: "Talent13",
+        id: "Talent5",
         name: {
-          key: "CF5320B5494870509EFCA0BEF2EB4BD4",
-          default: "Fervent Supremacy",
+          key: "F6B55C9E4900C82A42F8258F7FC085A8",
+          default: "Mouth for War",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "5F07F2F945BF12A7403308B4AF8423B9",
+          key: "C6946FDC46205D7CEADF36BEB3404397",
           default:
-            "Your <rt.absorb>Skystrider's Supremacy's</> cooldown is reduced by 20 seconds and grants 4 charges of <rt.absorb>Empowered Multishot</> that last for up to 15 seconds.\r\n\r\nWhile <rt.effect>Fervant Supremacy</> is active, your <rt.absorb>Multishot</> deals <rt.warning>+50% increased damage</>.",
+            "When your <rt.absorb>Leap Smash</> ability deals damage, you are granted 1 charge of <rt.absorb>Focused Wrath</>.",
         },
-        thumbnail: "bowguy_Bowguy_Supremacy",
+        thumbnail: "ink_T_Ink_FocusedWrath",
       },
       {
-        id: "Talent14",
+        id: "Talent9",
+        name: { key: "387DF58445A5443C0772B5AE23838EF7", default: "Schism" },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "EAB742B145274F2524AA97BDFB4309F0",
+          default:
+            "Your <rt.absorb>Skull Crusher</> has a chance to make your next <rt.absorb>Hammer Storm</> deal +250% increased damage.\r\n\r\nYour <rt.absorb>Hammer Storm</> has a chance to make your next <rt.absorb>Skull Crusher</> deal +250% increased damage.\r\n\r\n(3.2 PPM)",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_TwoFace",
+      },
+      {
+        id: "Talent1",
         name: {
-          key: "FF16F8B346E9E8A186E4039CA5BF8E40",
-          default: "Impending Heartseeker",
+          key: "8129188741F53DDAB95E8C8ED8DE5F89",
+          default: "Square Hammer",
         },
         unlocked_at: 0,
         row: 5,
         cost: 3,
         description: {
-          key: "7A942CED43BFE73F69E40DACA57F1CDF",
+          key: "E039BA1C4D9B80B2D6B686B896A5425A",
           default:
-            "When your <rt.absorb>Celestial Shot</> consumes <rt.effect>Celestial Impetus</> the cooldown of your <rt.absorb>Heartseeker Barrage</> is reset and you gain <rt.effect>Impending Heartseeker</>.\r\n\r\n<rt.effect>IMPENDING HEARTSEEKER</>\r\nYour <rt.absorb>Heartseeker Barrage</> deals <rt.warning>+10% increased damage</> with each arrow during its channel.",
+            "<rt.absorb>Wild Swing</>, <rt.absorb>Face Breaker</>, <rt.absorb>Leap Smash</> & <rt.absorb>Chain Lightning</> each grant you 1 stack of <rt.effect>Square Hammer</>, up to <rt.bold>5</> stacks.\r\n\r\n<rt.effect>SQUARE HAMMER</>\r\nYour next <rt.absorb>Heavy Strike</> consumes all stacks of <rt.effect>Square Hammer</> and deals <rt.warning>20%</> more damage per stack consumed.",
         },
-        thumbnail: "bowguy_Bowguy_Spray",
+        thumbnail: "ink_T_Ink_TimerAbility",
       },
       {
-        id: "Talent3",
+        id: "Talent12",
         name: {
-          key: "07DE1BDF49B00066DADB238E62437E92",
-          default: "Resurgent Winds",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "6E62CA7C4706FCCFD9C7229DDDF176F8",
-          default:
-            "Your <rt.absorb>Lunarlight Mark</> ability grants you <rt.effect>Resurgent Winds</> for 15 seconds, causing your next <rt.absorb>Highwind Arrow</> to be instant cast, <rt.mana>cost no Focus</>, require no charge, and deal <rt.warning>50% more damage</> against targets with <rt.absorb>Lunarlight Mark</> active.",
-        },
-        thumbnail: "textures_T_Icon_Tech_40",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "FC06586842A3AFDBDE11C7A32E2E0EB7",
-          default: " Last Lights",
+          key: "1F7DB44C4210EF22D9A5ECBBC61641A6",
+          default: "Spit It Out",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "424E4D044B8858E2400A199EFB3D5CFC",
-          default:
-            "Your attacks and abilities have <rt.warning>+30% additional critical strike chance</> when striking targets below 30% health.",
+          key: "B85C08D94DCD61133A17D39F7FC63AA2",
+          default: "Your Critical Strike Power is increased by 10%.",
         },
-        thumbnail: "tex_scifiskillsicon_Tex_b_24",
+        thumbnail: "textures_T_Nhance_RPG_Icons_FieryHammer",
       },
       {
-        id: "Talent12",
+        id: "Talent13",
         name: {
-          key: "1D89A7B84D67C4F18D44C4B5D78A2442",
+          key: "4ADF4F24459D922719E280AD834B5C81",
           default: "Spirited Fortitude",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "7B2552C54785C86EEACDDC9D82007127",
-          default: "You take 10% less <bold>Area of Effect damage</>.",
-        },
-        thumbnail: "barbarian_Barbarian3",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "E60648314803697330FA369D42C75135",
-          default: "The Weight of Gravity",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "25D1E40A48653761B3D76B8A5481DE12",
+          key: "449BEA7646608FB6CB590B88DBB7684E",
           default:
-            "Your <rt.absorb>Grappling Arrow</> now has 2 charges, but its recharge time is increased to 120 seconds.\r\n\r\n<rt.absorb>Grappling Arrow</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
-        },
-        thumbnail: "bowguy_Bowguy_GrappleShot",
-      },
-    ],
-    abilities: [
-      "GA_Bowguy_RangedAutoAttack_C",
-      "GA_Bowguy_ChargedMoveWithDirection_C",
-      "GA_Bowguy_SingleProjectileDamage_C",
-      "GA_Bowguy_AoeProjectileDamage_C",
-      "GA_Bowguy_CastedBouncyProjectileDamage_C",
-      "GA_Bowguy_CastedProjectileHeavyDamage_C",
-      "GA_Bowguy_ProcHasteBuff_C",
-      "GA_Bowguy_InstantSingleInterrupt_C",
-      "GA_Bowguy_CastedProjectileDamage_C",
-      "GA_Bowguy_ChanneledMultiProjectileDebuff_C",
-      "GA_Bowguy_TargetedAoePull_C",
-      "GA_Bowguy_SelfDefenceBuff_C",
-      "GA_Bowguy_InstantMarkTarget_C",
-      "GA_Bowguy_TargetedAoeDamage_C",
-      "GA_Bowguy_Passive_InstantMarkTarget_Monitor_C",
-      "GA_Bowguy_SelfBuffForAoeProjectile_C",
-      "GA_Bowguy_DurationalAoeDamage_C",
-      "GA_Bowguy_ReducedCostCooldownRecoveryBuff_C",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 17135,
-      stamina: 1000,
-      strength: 0,
-      agility: 1000,
-      intellect: 0,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      life_steal: 0,
-      haste: 1,
-      dodge_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      mana: 0,
-      max_mana: 0,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0,
-      mana_regen_tick_time: 0,
-      damage_threat_multiplier: 1,
-      heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 39.081,
-      expertise: 0,
-      resources: 100,
-      max_resources: 100,
-      resources_second: 0,
-      max_resources_second: 0,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0,
-      out_of_combat_mana_regen_tick_time: 0,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.3,
-      spirit_generation_heal: 0.3,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
-    id: "Vigor",
-    class_color: { R: 221, G: 219, B: 197, A: 255, hex: "#DDDBC5" },
-    thumbnail: "hero_portrait_vigor_default",
-    name: { key: "481F857443DE80D8404C2FA1ABD4B241", default: "Vigour" },
-    title: {
-      key: "D68C88394EF7137B8B4C28B806817D60",
-      default: "The Lightshaper",
-    },
-    description: {
-      key: "AB91BB1046A62BDC237B3DBA5245786B",
-      default:
-        "As a dwarf who divines the true meaning of runes, Vigour wields powerful healing spells to bolster and protect his allies and smite his enemies.\r\n\r\nVigour is a Healer that uses Builder/Spender Mechanics. He excels in the middle of his allies where he can sustain them with powerful AoE heals.\r\n\r\nAs a wielder of Radiant Runes, he must choose how and when to cast his most powerful spells.\r\n\r\nHis strong Direct Healing grant him an advantage in reacting to an ever-changing battlefield.",
-    },
-    biography: {
-      key: "F8A9721A4E43A8BBDD4C5DB29C492114",
-      default:
-        "A dwarf of legend and the first Lightshaper to leave the mountain kingdoms.\r\n\r\nVigour has spent centuries traveling the world, mending wounds, banishing shadow, and gathering champions to his cause. He is the guiding light that unites the disparate heroes of the Fellowship.",
-    },
-    difficulty: 2,
-    talents: [
-      {
-        id: "Talent7",
-        name: {
-          key: "F1DEE85747300FFA91319C98EDD673B4",
-          default: "Master of Triage",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "D1D3FFCA4E4C6175E5149A8EF5852732",
-          default:
-            "Each time you generate a <rt.mana>Radiant Rune</>, a free <rt.absorb>Greater Heal</> of 30% efficiency is cast on a nearby ally, preferring the player with lowest health.\r\n\r\n<rt.bold>Master of Triage</> does not trigger <rt.absorb>Rune of Renewal</> healing.",
-        },
-        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_87",
-      },
-      {
-        id: "Talent2",
-        name: {
-          key: "EB29AE1B45845871B4A305AC4B6B77D3",
-          default: "Enduring Light",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "3A113EA942FE21DBBBB75EB5F401CDCF",
-          default:
-            "When your <rt.absorb>Circle of Light</> heals a player, they are healed for an additional <rt.heal>50% of the initial heal</> over 12 seconds, accumulatively.",
-        },
-        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_23",
-      },
-      {
-        id: "Talent1",
-        name: { key: "2864B22A4B04F8F51ADEE6BDB7B3F4AC", default: "Epiphany" },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "E2FC7153472FAEE92E76A3827963EF7A",
-          default:
-            "Each time you cast <rt.absorb>Dawnflare</>, <rt.absorb>Soulbrand</> or <rt.absorb>Radiant Blast</> you have a 10% chance to grant you <rt.effect>Epiphany</> for 15 seconds.\r\n\r\n<rt.effect>EPIPHANY</>\r\nYour next <rt.absorb>Dawnbreaker Orb</> has no cost and does not trigger its cooldown.",
-        },
-        thumbnail: "vigor_T_Vigor_DawnSphere",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "61809E61460328450B3F98B6676AFCD3",
-          default: "Alacritous Healing",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "B4A4B5F8477640B8FFBEE391B3FCC08F",
-          default:
-            "Your <rt.absorb>Greater Heal</> has 0.5 seconds reduced cast time and 20% increased Critical Strike chance.",
-        },
-        thumbnail: "vigor_T_Vigor_Heal",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "B91B9DC94CC978669325D2B0E0F6E473",
-          default: "Ruptured Soul",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "61DCA9DE42CF70EEACE797BF8AE882AD",
-          default:
-            "When an enemy dies while <rt.absorb>Soulbrand</> is active on them you instantly gain <rt.mana>50% of the Radiant Rune power it would have generated</> in the time that was remaining and trigger an explosion <rt.warning>dealing 25% of the damage that was remaining to all nearby enemies</>.",
-        },
-        thumbnail: "vigor_T_Vigor_Soulbrand",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "42480F0242EF812362B9A59ECB3C071F",
-          default: "Expansive Mind",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "2A84389F401810580C280CA4BBE16298",
-          default:
-            "Your <rt.absorb>Dawnflare</> casts have a chance to grant you <bold>Expansive Mind</>, increasing your Spirit by 20% for 12 seconds and replenishing <rt.mana>2% max mana</> every 3 seconds for the duration.\r\n\r\n(1.2 PPM)",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_ManaTome",
-      },
-      {
-        id: "Talent5",
-        name: {
-          key: "DF86ED0A4C482BEE3AF13EBEF9EA82F6",
-          default: "Sacred Barrier",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "AAD631664FB3396951BBB8A154D94A57",
-          default:
-            "Allies under the effects of any <rt.absorb>absorbs created from your hero abilities</> take 10% reduced damage.",
-        },
-        thumbnail: "textures_T_SunOrb",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "FEB4C77946BBE4A97AF6C7A2405735D1",
-          default: "Shimmering Brand",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "48BE586240B9090B1933998125469252",
-          default:
-            "Your <rt.effect>Soulbrand: Remnant</> damage also heals a nearby ally for <rt.heal>100% of the damage it dealt</>.\r\n\r\n<rt.effect>Shimmering Brand</> prefers the ally with lowest health.",
-        },
-        thumbnail: "textures_T_Icon_Tech_35",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "865EFED643054CCAB7F3769A2EB6D53F",
-          default: "Meticulous Runesmith",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "546A2F5446EA30FAC117D7B71316845B",
-          default:
-            "When your <rt.absorb>Dawnbreaker Orb</> heals a player, 100% of that healing is also applied as an absorb shield on that player for 12 seconds.",
-        },
-        thumbnail: "textures_T_LightPortal",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "A933E2854DCF1C0925A0C3B1BBCD47BB",
-          default: "Bracing Light",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "F31381D34EEA012B391A46AA84BB60B9",
-          default:
-            "When you cast <rt.absorb>Lightshaper's Ward</> on an ally, it is also applied to you.",
-        },
-        thumbnail: "vigor_T_Vigor_Ward",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "734140BB465DE69A7CF47E99AC6977D8",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "95A43BCF4614D98AEAC7FDB2B2FAC6B8",
-          default: "You take 10% less <bold>Magic damage</>.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent14",
-        name: {
-          key: "4B82608E4262F681240983B970DC8FCF",
-          default: "Spirited Fortitude",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "695C15CC49F84423237E7E86D38BD6D7",
-          default: "You take 10% less <bold>Area of effect damage</>.",
+            "You take 10% less damage from <bold>Area of Effect</> attacks.",
         },
         thumbnail: "barbarian_Barbarian3",
       },
       {
         id: "Talent16",
         name: {
-          key: "1CF4A4FA4392BFEE62C8B8839A4699A8",
-          default: "Radiant Soul",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "5F33FDC44977E1090AB802A5BB46CF03",
-          default:
-            "Your <rt.absorb>Radiant Blast</> adds 3 seconds to the duration of all your active <rt.absorb>Rune of Renewal</>, <rt.absorb>Soulbrand</>, and <rt.absorb>Luminous Barrier</> effects.\r\n\r\n<rt.absorb>Rune of Renewal's</> healing, <rt.absorb>Luminous Barrier's</> absorb, and <rt.absorb>Soulbrand's</> damage is increased by 25%.",
-        },
-        thumbnail: "textures_T_RuneOfGold",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "D79EE88D4555C56E6888B0B092AFEC26",
-          default: "Ascending Avatar",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "2E4AB5964E127DA30EF14EAFA19CBD84",
-          default:
-            "Your <rt.absorb>Levitate</> ability grants you <rt.absorb>Avatar of Light</> for 6 seconds.",
-        },
-        thumbnail: "vigor_T_Vigor_Spirit",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "523D563E44148B77D1EB47AFF3D3D74F",
-          default: "Grand Design",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "3373D5954369C32D8E678481C7A9717F",
-          default:
-            "Your <rt.absorb>Soulbrand</>, <rt.absorb>Rune of Renewal</> & <rt.absorb>Luminous Barrier</> abilities can now be <rt.effect>Overcharged</>, causing the ability to be cast on up to 4 applicable targets at once at <rt.heal>60% power</>.\r\n\r\n<rt.mana>Requires and costs 2 Radiant Runes</>\r\n\r\n<rt.effect>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the <rt.effect>overcharged</> version of the ability will trigger.",
-        },
-        thumbnail: "tex_spellbookpage07_Tex_SpellBook07_11",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "66B43D7A469BA0E1094AA6B92B393E16",
-          default: "Dawnbreaker's Legacy",
+          key: "3D806F5640B6C3C98CF1F6B793DD94AE",
+          default: "Crack the Sky",
         },
         unlocked_at: 0,
         row: 6,
         cost: 1,
         description: {
-          key: "990553B24F25048D4BFECFAB33D10FDE",
+          key: "0D351A0C45AA82187006AEB872DBEE01",
           default:
-            "Your <rt.absorb>Dawnbreaker Orb's</> Critical Strike chance is increased by 25%.",
+            "Your <bold>Lightning damage</> has <rt.warning>+20%</> increased critical strike chance.",
         },
-        thumbnail: "textures_Tex_orb_02_b",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "2F311A344A117C98212A65BDC09ED98D",
-          default: "Runic Revelations",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "458387E8436505FDAF32079D3F498C01",
-          default:
-            "Your <rt.absorb>Soulbrand</>, <rt.absorb>Rune of Renewal</> & <rt.absorb>Luminous Barrier</> have 25% increased duration.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Icons_CorruptionKnowledge",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "1D366CAE41868D43BA2C2AAEBC0293F0",
-          default: "Beacon in the Dark",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "FD44611F43037653842047814D03A968",
-          default:
-            "Your <rt.absorb>Dawnflare</> and <rt.absorb>Radiant Blast</> abilities have a 15% chance to grant you <bold>Beacon in the Dark</>, causing your next <rt.absorb>Radiant Blast</> to have an additional 50% Critical Strike chance.\r\n\r\nUpon gaining <bold>Beacon in the Dark</> the cooldown of <rt.absorb>Radiant Blast</> is instantly reset.",
-        },
-        thumbnail: "priest_Priest5",
+        thumbnail: "electromancer_Electromancer18",
       },
     ],
     abilities: [
-      "GA_Vigor_SingleAllyDispel_C",
-      "GA_Vigor_SingleTargetDot_C",
-      "GA_Vigor_SingleTargetChargedHot_C",
-      "GA_Vigor_SingleTargetAbsorb",
-      "GA_Vigor_DamageReductionAndImmunityBuff_C",
-      "GA_Vigor_CastedSingleTargetDamage_C",
-      "GA_Vigor_InstantFrontalConeDamageHeal_C",
-      "GA_Vigor_CastedSingleTargetHeal_C",
-      "GA_Vigor_InstantAoeHeal_C",
-      "GA_Vigor_SIngleTargetProjectileStun_C",
-      "GA_Vigor_PartyHealAndSelfBuff_C",
-      "GA_Vigor_SkillshotAoeProjectile",
-      "GA_Vigor_InstantResourceGain",
-      "GA_Vigor_ChargedMovementSpeedSelfBuff_C",
-      "GA_Vigor_Passive_Echo_Monitor_C",
+      "GA_Ink_MeleeInterrupt_C",
+      "GA_Ink_MeleeAutoAttack_C",
+      "GA_Ink_MoveToLocationAoeDamage_C",
+      "GA_Ink_HeavySingleTargetAttack_C",
+      "GA_Ink_AoeAttack_C",
+      "GA_Ink_AutoAttackBuff_C",
+      "GA_Ink_AutoAttackBuff_Attack_C",
+      "GA_Ink_SecondChanceSingleTargetAttack_C",
+      "GA_Ink_CleaveAttack_C",
+      "GA_Ink_ChargedBuff_C",
+      "GA_Ink_BouncyProjectile_C",
+      "GA_Ink_EnhancedChargedBuff",
+      "GA_Ink_LowHealthSingleTargetResourceDamage_C",
+      "GA_Ink_AoeFear_C",
+      "GA_Ink_CostReductionBuff_C",
+      "GA_Ink_SelfDefenceBuff_C",
+      "GA_Ink_Taunt_C",
     ],
     stats: {
       armor: 0,
       power: 0,
-      base_health: 16917,
-      stamina: 1000,
-      strength: 0,
-      agility: 0,
-      intellect: 1000,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      haste: 1,
-      dodge_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      max_mana: 1440,
-      mana: 1440,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0.0005,
-      mana_regen_tick_time: 0.1,
-      damage_threat_multiplier: 1,
-      heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 41.301,
-      resources: 3,
-      max_resources: 6,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0.0036,
-      out_of_combat_mana_regen_tick_time: 0.1,
-      expertise: 0,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.08,
-      spirit_generation_heal: 0.08,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
-    id: "Mosse",
-    class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
-    thumbnail: "hero_portrait_Mosse_01_default",
-    name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
-    title: {
-      key: "05ED62E745B745321C6806A5B84DF699",
-      default: "The Daughter of the Forest",
-    },
-    description: {
-      key: "46A8A058428C2AC7BD2D1F8F98E00CD9",
-      default:
-        "Sylvie is a healer who uses her innate connection to nature and its many friends to heal her allies and harm her foes.\r\n\r\nSylvie is a Healer that uses Pet Management Mechanics. She excels at sending her pets to heal her allies over time and attack her enemies.\r\n\r\nShe commands her Flutterflies and Plants to heal allies and attack enemies.\r\n\r\nHer powerful Heal over Time spells allow her to prepare for battle and endure long and sustained fights.",
-    },
-    biography: {
-      key: "08DADB074F7EED9DD6725A84AB7DA20D",
-      default:
-        "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
-    },
-    difficulty: 3,
-    talents: [
-      {
-        id: "Talent1",
-        name: {
-          key: "3A75326140BFA7C6290F3BA1B0398991",
-          default: "Nettle to the Petal",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "2BBC59F945C6A5243533B39211A3B271",
-          default:
-            "Each time you deal damage with <rt.absorb>Nettlebolt</>, your <rt.absorb>Life Petal</> triggers an additional tick of its healing.",
-        },
-        thumbnail: "sylvie_T_Mosse_Lifepetal",
-      },
-      {
-        id: "Talent2",
-        name: {
-          key: "EFB88164466E2D34A2EE388E16793033",
-          default: "Synchronized Fluttering",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "8C2E90E545B7B7D35D66CCB72DCE2A14",
-          default:
-            "Hold down <rt.absorb>Fluttercall: Heal</> for 2 seconds to overcharge it, causing the ability to be cast on up to 4 allies within 4000 range in one cast. The mana cost is increased by 100% when cast in this way.\r\n\r\n<bold>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the overcharged version of the ability will trigger.",
-        },
-        thumbnail: "sylvie_Sylvie_AbilityIcon_03",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "3249BF6548400871C589E3BCA409C976",
-          default: "Verdant Restoration",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "1BE7FFA54B34176844B493920F64AE4E",
-          default:
-            "The initial heal of your <rt.absorb>Fluttercall: Restore Life</> has +50% increased critical strike chance.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Shadow_58",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "2C60A9454A47B9F806D9408C282A8CCD",
-          default: "Sprouting Nettles",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "FCA8E9ED47BDCFC1EAC0FAB4EC7EBA42",
-          default:
-            "Each tick of <rt.meikoability1>Flutterfly Healing</> has a chance to make your next <rt.absorb>Nettlebolt</> <rt.bold>instant cast</> and have <rt.warning>+400% critical strike chance</>.\r\n\r\n(2.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
-        },
-        thumbnail: "sylvie_Sylvie_AbilityIcon_02",
-      },
-      {
-        id: "Talent5",
-        name: {
-          key: "065769AD4EA82D9C3CF87383C9BE582C",
-          default: "Natural Knowledge",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "5565A2D344A18E7D5400ED89BD4C5801",
-          default:
-            "Each time your Nettlebolt deals damage, you replenish 1% mana.",
-        },
-        thumbnail: "tex_skill_icons_pack_Tex_blue_9",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "BAD9E98A46A79C13E848AAAE3F8E4B07",
-          default: "Trailing Restoration",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "A6B1BA8442DA9368B91EDFA6CB556FCC",
-          default:
-            "The duration of your <rt.absorb>Fluttercall: Restore Life</> is increased by 9 seconds.",
-        },
-        thumbnail: "textures_T_ArcaneAid",
-      },
-      {
-        id: "Talent18",
-        name: { key: "23B77C43410F3C625BC77B9C86118B39", default: "Symbiosis" },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "E8087CEC4011198023BFA5BA7CDF5093",
-          default:
-            "Your <rt.absorb>Prickly Vines</> deal <rt.warning>12% more damage</> for each player that has a <rt.effect>Pink Flutterfly</>.",
-        },
-        thumbnail: "sylvie_T_Mosse_Vine",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "4D2A346D4EE8D944D9BBF3A08A51E06D",
-          default: "Will of Nature",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "4DF530204A7E808B8244D0935DBB044D",
-          default:
-            "Your healing is increased by 25% on players with <bold>30% or less health</>.\r\n",
-        },
-        thumbnail: "textures_T_Icon_Fel_07",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "8A6FDA13410372F10178D8930646AECB",
-          default: "Rowdy Rootsap",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "CC7C78D846BB2DABAA7A58A4ACCDAF7A",
-          default:
-            "Your <rt.absorb>Enfeebling Rootsap</> causes the target and all enemies within a 700 radius of the target to have 20% reduced attack speed and 50% reduced movement speed while active.",
-        },
-        thumbnail: "sylvie_T_Mosse_Rootheal",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "7463AAFD4EA1ADF20A5265888783FCB6",
-          default: "Nurtured Haven",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "40968DBD426F60FD404E51A224B78980",
-          default:
-            "The cooldown of your <rt.absorb>Safe Haven</> is reduced each time one of your plants wither.\r\n\r\n<rt.absorb>Prickly Vine</> - 1 second\r\n<rt.absorb>Life Petal</> - 2 seconds\r\n<rt.absorb>Heart Bloom</> - 3 seconds",
-        },
-        thumbnail: "sylvie_T_Mosse_LinkCD",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "5C172D0E449591E02B05898263F37FA6",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "2592EF3C4EA009BAAC1B969CA0275794",
-          default: "You take <rt.bold>10% less magic damage</>.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "48A5848F43DB11543AF94B8B2726D0EE",
-          default: "Bluey's Gambit",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "EF9A18864B3AEDE66C5626B0CB4A484D",
-          default:
-            "While your <bold>Blue Flutterfly</> is following you, you take 5% reduced damage.\r\n\r\nWhile your <bold>Blue Flutterfly</> is following another player, they take 5% reduced damage.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Elements_32",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "1ED4858E45F8BA172C288CB6263F1A62",
-          default: "Natural Protector",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "C5CA6B9E43AC73F6FD3DBFBF9FCCA165",
-          default:
-            "Your <rt.absorb>Ironleaf Ward</> and <rt.absorb>Safe Haven</> abilities shield players for 15 seconds, absorbing up to <rt.heal>4263% intellect</> damage.",
-        },
-        thumbnail: "druid_Druid17",
-      },
-      {
-        id: "Talent14",
-        name: {
-          key: "96E3640C456437149CD081999AEEF28E",
-          default: "Flutterswift",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "53DF8E464CF32486EF8450BFAC8173EE",
-          default:
-            "Your <rt.absorb>Fluttercall: Heal</> ticks 100% faster for the first 12 seconds each time it begins healing a player.",
-        },
-        thumbnail: "textures_T_ArcaneWhirl",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "DF99486A4609DD215A5505B5B1528B90",
-          default: "Flower Power",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "E4E95D924704DF7E01CC0C849C8A7725",
-          default:
-            "Your <rt.absorb>Heart Bloom</> has 2 charges but only accumulates 8% of all <rt.meikoability1>Flutterfly Healing</>.\r\n\r\n<rt.absorb>Heart Bloom</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
-        },
-        thumbnail: "sylvie_T_Mosse_Bigheal",
-      },
-      {
-        id: "Talent7",
-        name: {
-          key: "069A560441E7058DFF18A1A804FE490B",
-          default: "Elusive Wildling",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "C7CA0E0746EDD1EE6D7AEBA7233E2885",
-          default:
-            "You take <rt.bold>20% reduced damage</> while <rt.absorb>Hidden Trail</> is active.",
-        },
-        thumbnail: "sylvie_T_Mosse_Hide",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "2DC8302C4E61C3F357D06D892053DFD6",
-          default: "Spirited Fortitude",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "5C29F7F7472F394E4E32138404381645",
-          default: "You take <rt.bold>10% less Area of effect damage</>.",
-        },
-        thumbnail: "barbarian_Barbarian3",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "B218768B47A062019532709E1956C305",
-          default: "Bloomin' Boomshrooms",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "B6B6BFD6471169D0F439FCA01321066D",
-          default:
-            "Your <rt.absorb>Shroomsplosion</> ability can now target allies, sending up to 5 <bold>Boomshrooms</> to detonate on them, instantly healing them for <rt.heal>308% Intellect</> each.\r\n\r\nWhen targeting allies in this way, the <bold>Boomshroom</> still deals its normal damage to nearby enemies.",
-        },
-        thumbnail: "sylvie_T_Mosse_Boomshroom",
-      },
-    ],
-    abilities: [
-      "GA_Mosse_DurationalAoeHealPlacement_C",
-      "GA_Mosse_CastedSingleTargetHeal_C",
-      "GA_Mosse_SingleTargetDispel_C",
-      "GA_Mosse_CastedSingleTargetProjectile_C",
-      "GA_Mosse_SingleTargetDot_C",
-      "GA_Mosse_BlueButterfly_SendOut",
-      "GA_Mosse_BlueButterfly_Recall",
-      "GA_Mosse_PinkButterfly_Simple",
-      "GA_Mosse_PinkButterfly_Double",
-      "GA_Mosse_ProjectileTurrets",
-      "GA_Mosse_SharedHealthBuff_C",
-      "GA_Mosse_Passive_HealingMushroomPlacement_C",
-      "GA_Mosse_PlacedAoeBuff",
-      "GA_Mosse_InstantSelfEscapeBuff",
-      "GA_Mosse_HealingAoeTotem",
-      "GA_Mosse_SingleTargetCastedDamageReduction",
-      "GA_Mosse_ExplosiveMinion_C",
-      "GA_Mosse_TurretChannelHeal",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 16433,
-      stamina: 1000,
-      strength: 0,
-      agility: 0,
-      intellect: 1000,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      expertise: 0,
-      life_steal: 0,
-      haste: 1,
-      dodge_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      max_mana: 1440,
-      mana: 1440,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0.0005,
-      mana_regen_tick_time: 0.1,
-      damage_threat_multiplier: 1,
-      heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 39.978,
-      resources: 100,
-      max_resources: 100,
-      resources_tertiary: 4,
-      max_resources_tertiary: 4,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0.0036,
-      out_of_combat_mana_regen_tick_time: 0.1,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.04,
-      spirit_generation_heal: 0.04,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
-    id: "Warmaster",
-    class_color: { R: 180, G: 105, B: 50, A: 255, hex: "#B46932" },
-    thumbnail: "hero_portrait_warmaster_01",
-    name: { key: "146A66FE48F8FA30BF7AABA6210D2A28", default: "Helena" },
-    title: {
-      key: "E432BDB841C5C1F5AD62909DCE3C5980",
-      default: "The Warmaster",
-    },
-    description: {
-      key: "31D5BA72485C5885C74084BCB3F7BADD",
-      default:
-        "Despite being weighed down by full plate armor, Helena is always ready to charge into the fray to protect her companions.\r\n\r\nHelena is a Melee Tank and excels in the front lines taking hits instead of her allies.\r\n\r\nHer Veteran of War mechanic allows Helena to reduce the cooldowns of her ability to allow for more frequent use of her powerful attacks and Toughness generators.\r\n\r\nToughness is Helena's main resource for mitigating incoming damage and surviving dangerous encounters. Her Toughness is shown as a blue bar to the right of the character.",
-    },
-    biography: {
-      key: "010175254543D744B79AF08159556C0D",
-      default:
-        "Disillusioned after the Twelve Year War, Helena wandered the world fighting back evil where noble apathy or cruelty allowed it to fester.\r\n\r\nThe Warmaster joins the Fellowship to face threats she could not defeat alone. Helena is a stern presence, maintaining a seasoned warrior’s discipline and distance from her comrades lest she suffer the burden of loss again.",
-    },
-    difficulty: 2,
-    talents: [
-      {
-        id: "Talent1",
-        name: {
-          key: "EE6BBCDC4BB6FF2F52AE459C395B83CC",
-          default: "The Best Defense",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "A0237FE0438E11D51B1F6980CAC9777A",
-          default:
-            "Each time you <bold>Block</> an attack with your shield, you have a chance to reset the cooldown of <rt.absorb>Shield Throw</> and cause your next <rt.absorb>Shield Throw</> within 12 seconds to deal <rt.warning>20% increased damage</>.\r\n\r\n(2.0 PPM)",
-        },
-        thumbnail: "deprecatedicons_warmaster_shield_throw_3",
-      },
-      {
-        id: "Talent2",
-        name: {
-          key: "5D8296774A01311E1EEB8D9A9E0CF4B0",
-          default: "Shield Mastery",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "51A8C7644A592BC640BBE0BD9020952B",
-          default:
-            "The cooldown of your <rt.absorb>Shields Up</> and <rt.absorb>Shield Throw</> abilities are reduced relative to the amount of damage you mitigate with <rt.mana>Toughness</>.",
-        },
-        thumbnail: "tex_flatskillsicons_Tex_y_17_layered",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "522510A34D5726EACED1EDA5A72C0787",
-          default: "Sword & Board",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "68269F3642064234F3F914A5ECCEB537",
-          default:
-            "Your <rt.absorb>Power Strike</> has a chance to instantly replenish 1 charge of <rt.absorb>Shield Slam</> and grant you <rt.effect>Empowered Shield Slam</> for 12 seconds, causing your next <rt.absorb>Shield Slam</> to apply an <rt.heal>absorb on you equal to 2000% strength</> that lasts for 8 seconds.\r\n\r\n(1.0 PPM)",
-        },
-        thumbnail: "warmaster_T_Warmaster_ShieldSlam",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "169CC5D44A7288E36623DAB3BC0D6E66",
-          default: "Reinforced Steel",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "111EA0C646034C2782AC1CA175723EEB",
-          default: "Your <bold>Armor is increased by 20%</>.",
-        },
-        thumbnail: "armor_icons_Tex_armor_3_b",
-      },
-      {
-        id: "Talent5",
-        name: {
-          key: "7C3BE1C9415E5AFF23952B9FAEC0F662",
-          default: "Guarded Veteran",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "CED4642F482652AF79FECEB581F58D04",
-          default: "Your <rt.bold>block chance is increased by 10%</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Fire_08_Yellow",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "AA4058444A73CDD8264C84AB5027CF9C",
-          default: "Punishing Strikes",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "D5B232F8457C6400D8C28892AE85504D",
-          default:
-            "Your <rt.absorb>Power Strike</> and <rt.absorb>Shield Slam</> deal <rt.warning>15% more damage</>.",
-        },
-        thumbnail: "warmaster_T_Warmaster_FatalBlow",
-      },
-      {
-        id: "Talent7",
-        name: {
-          key: "806F3119410F58D9456C2BA58B039713",
-          default: "Aftershock",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "7D9B0826437C748C1E75E389C8F37EE1",
-          default:
-            "Enemies that take damage from your <rt.absorb>Shockwave</> ability take <rt.warning>30% more damage</> from you for 5 seconds.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Arcane_36",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "4FB7BDEA47551A6F2A16FC91347FF117",
-          default: "Sharpened Blade",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "5F5EDB9A42915DB3FABB43B246BA1D8B",
-          default:
-            "Enemies afflicted by your <rt.absorb>Sweeping Strike's</> bleed have <rt.effect>20% reduced attack speed</> and your <rt.absorb>Power Strike</> deals <rt.warning>200% more damage</> to them.",
-        },
-        thumbnail: "warmaster_T_Warmaster_BleedStrike",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "13A0EBA1481C3C188AD2F5B62556099B",
-          default: "Razor Shrapnel",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "5ECBAD474737AD3A8C02C1A7BF2E593E",
-          default:
-            "Your <rt.absorb>Shield Throw</> hits have a 20% chance to trigger an explosion of metal, dealing <rt.warning>damage equal to 40% of the Shield Throw hit that triggered the explosion</> to the target and up to 7 additional nearby enemies.",
-        },
-        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_48",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "5C77E2BD4010891B30880B90F516A2A3",
-          default: "High Command",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "1CBBC0F942267D836C64C9955DFCD79E",
-          default:
-            "Your <rt.absorb>Hold the Line</> cooldown is reduced by 6 seconds each time you use <rt.absorb>Shields Up</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Fire_05",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "0266D3924E5C147B1C13B497DF4577B5",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "C8FD064446A961DA848533AD6D5958C8",
-          default: "You take <rt.bold>10% reduced magic damage</>.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "E56007ED47FF2854C69BDB816693C011",
-          default: "Skull Cracker",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "295DD93D4A00583B59F7CD89F1DA1DDB",
-          default:
-            "Your <rt.absorb>Shield Throw</> has <rt.warning>+20% additional critical strike chance</> and deals <rt.warning>100% increased damage to the first target it hits</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_BloodCombat_01",
-      },
-      {
-        id: "Talent14",
-        name: {
-          key: "A39B5DF4439DAF94F28DD8A365CEA963",
-          default: "Second Wind",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "DE8CC8424AB03DE2CE37E9BB5772ECE5",
-          default:
-            "When your <rt.mana>Toughness</> has reduced an amount of damage equal to <rt.bold>30% of your Maximum Health</>, you gain <rt.effect>20% increased Strength</> for 8 sec.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Energy_07",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "0952AD8A4338E00493197EB01FF90835",
-          default: "Martial Command",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "5A3452C3469560E12897FA82503B4259",
-          default:
-            "While <rt.absorb>Siegebreaker</> is active you deal <rt.warning>25% more damage</> and your damage reduction from <rt.mana>Toughness</> is shared with all allies.\r\n\r\nYour <rt.bold>Spirit</> is increased by +5% passively.",
-        },
-        thumbnail: "warmaster_T_Warmaster_Ultimate",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "1863ED7546B2510958FCB39DCF72B4C8",
-          default: "Gleaming Shield",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "6CD3667349AA76CB9CA75BAD05569CB9",
-          default:
-            "While <rt.absorb>Shields up</> is active you gain an additional <rt.bold>+20% chance to block</>, all healing effects on you are <rt.heal>increased by 20%</>, and your <rt.absorb>Shield Slam</> deals <rt.warning>40% increased damage</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Gold_05",
-      },
-      {
-        id: "Talent17",
-        name: {
-          key: "8AA655A9438D3B9351AB2EB5C6F2D476",
-          default: "Front Line Defender",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "283FDFB54A5365F0CF86E0A67F5B5709",
-          default:
-            "Your <rt.mana>maximum toughness</> and <rt.mana>toughness generation</> is increased by <rt.mana>20%</>.",
-        },
-        thumbnail: "deprecatedicons_warmaster_shields_up",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "7F740CAA4316FE0C8EA566870343E812",
-          default: "Master of War",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "BC70D15F4335CB0744AB42B378C619AB",
-          default:
-            "Your <rt.absorb>Grand Melee</> ability has <rt.bold>20% reduced cooldown</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Gold_03",
-      },
-      {
-        id: "Talent19",
-        name: {
-          key: "CE1DC17242B5E2A5E2CB1CBF856A23FF",
-          default: "Greater Shockwave",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "870FD6A9442AF6B0DD3F7E96E1A8533B",
-          default:
-            "Your <rt.absorb>Shockwave</> deals <rt.warning>20% more damage</>.",
-        },
-        thumbnail: "warmaster_T_Warmaster_shockwave",
-      },
-    ],
-    abilities: [
-      "GA_Warmaster_MoveToTargetStun_C",
-      "GA_Warmaster_MeleeInterrupt_C",
-      "GA_Warmaster_MeleeAoeSlow_C",
-      "GA_Warmaster_DefenceBuff_C",
-      "GA_Warmaster_LightMelee_C",
-      "GA_Warmaster_HeavyMelee_C",
-      "GA_Warmaster_MeleeCleave_C",
-      "GA_Warmaster_BouncyProjectile_C",
-      "GA_Warmaster_RangedTaunt_C",
-      "GA_Warmaster_AoeHealthBuff_C",
-      "GA_Warmaster_FullResourcesSelfBuff",
-      "GA_Warmaster_MeleeAutoAttack_C",
-      "GA_Warmaster_MoveSpeedBuff",
-      "GA_Warmaster_InstantMeleeCleave",
-      "GA_Warmaster_NoResourceLossSelfBuff_C",
-      "GA_Warmaster_AoeIncite",
-      "GA_Warmaster_ShieldSelfBuff",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 25565,
+      base_health: 18113,
       stamina: 1000,
       strength: 1000,
       agility: 0,
       intellect: 0,
-      block_chance: 0.15,
+      block_chance: 0,
       crit_chance: 0.05,
       crit_multiplier: 2,
       life_steal: 0,
@@ -2300,381 +1554,13 @@ export default [
       health_regen_tick_time: 5,
       mana_regen_rate: 0,
       mana_regen_tick_time: 0,
-      damage_threat_multiplier: 9,
-      heal_threat_multiplier: 0.75,
-      stamina_to_max_health_multiplier: 71.105,
-      resources: 0,
-      max_resources: 5,
-      out_of_combat_health_regen_rate: 0.01,
-      out_of_combat_health_regen_tick_time: 0.5,
-      out_of_combat_mana_regen_rate: 0,
-      out_of_combat_mana_regen_tick_time: 0,
-      spirit: 0,
-      spirit_points: 0,
-      max_spirit_points: 100,
-      spirit_generation_damage: 0.12,
-      spirit_generation_heal: 0.12,
-      resources_second: 0,
-      max_resources_second: 0,
-      cooldown_recovery: 1,
-      spirit_refund_chance_scale: 1,
-    },
-  },
-  {
-    id: "Mara",
-    class_color: { R: 111, G: 46, B: 241, A: 255, hex: "#6F2EF1" },
-    thumbnail: "hero_portrait_Mara_01",
-    name: { key: "04CCDB6C431FAB1E3B51B2B93EADF27A", default: "Mara" },
-    title: {
-      key: "52D0F80A4AAF544622F3B1A88EA2DBF4",
-      default: "The Hungering Blade",
-    },
-    description: {
-      key: "DC2E11714B6DE71E532D2491CA77F269",
-      default:
-        "Mara weaves in and out of the shadows to strike down her enemy.\r\n\r\nMara is a Melee Damage Dealer who utilizes abilities to build combo points that she spends on powerful finishing moves that make quick work of foes. \r\n\r\nAs an assassin, Mara also has access to a variety of poisons that, when used strategically, give her an upper hand in battle.",
-    },
-    biography: {
-      key: "ED61578B4F4D1005CBD010A1EC929B9A",
-      default:
-        "Hunted across continents, Mara hides from unseen pursuers who manipulate life and death from the shadows.\r\n\r\nShe joins the Fellowship seeking refuge and vengeance, under a new identity, against those who pull the strings of fate.",
-    },
-    difficulty: 3,
-    talents: [
-      {
-        id: "Talent1",
-        name: {
-          key: "6253C6074808A5EFF9C1A2861033A7CF",
-          default: "Red Ledger",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "861ADDDF48E106AB14B797BD0BDA8767",
-          default:
-            "When your <rt.absorb>Hemorrhaging Strike</> bleed is applied to an enemy you gain <rt.warning>+10% Haste</>.\r\n\r\nYou gain an additional <rt.warning>+2% haste</> for every additional enemy that has your <rt.absorb>Hemorrhaging Strike</> bleed applied, up to a maximum of bonus of <rt.warning>+20% haste</>.",
-        },
-        thumbnail: "mara_Mara_Bleed",
-      },
-      {
-        id: "Talent4",
-        name: {
-          key: "041EA46B484A0C89F9723487AA5ABAA8",
-          default: "Corrosive Spill",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "296E56914E588BA49052D799BC063FD8",
-          default:
-            "Each <rt.meikoability1>Combo Point</> you spend has a 3% chance to cause you to coat the ground in front of you with a <rt.effect>Corrosive Spill</> for 3 seconds.\r\n\r\nEnemies that stand in <rt.effect>Corrosive Spill</> take <rt.warning>90% Agility</> poison damage <rt.bold>every 1.5 seconds</>.",
-        },
-        thumbnail: "textures_T_Icon_Unholy_197",
-      },
-      {
-        id: "Talent13",
-        name: {
-          key: "B16292104994A33883DC80AC468E234D",
-          default: "Assassin's Guile",
-        },
-        unlocked_at: 0,
-        row: 1,
-        cost: 2,
-        description: {
-          key: "2F2E4AD6467F88B5CEDB9784080FB9F7",
-          default:
-            "After attacking from <rt.bold>Stealth</>, you gain <rt.effect>Assassin's Guile</> for 5 seconds, causing your <rt.absorb>Queen's Fang</> & <rt.absorb>Arachnid Assault</> to deal <rt.warning>40% more damage</>.",
-        },
-        thumbnail: "textures_T_Icon_Shadow_121",
-      },
-      {
-        id: "Talent19",
-        name: { key: "579D3D394F011C32BA82A68CAC276D6A", default: "Bloodrush" },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "A97774DC411028BF3867E6BD7C9B5335",
-          default:
-            "Your <rt.absorb>Hemorrhaging Strike</> bleed <rt.warning>ticks 20% faster</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_BloodCombat_24",
-      },
-      {
-        id: "Talent5",
-        name: {
-          key: "19B524164D874CA68EBA60867637669C",
-          default: "Venomous Delight",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "8FD2964F4383F5C471D905AED4C0D64D",
-          default:
-            "Each time you deal <rt.absorb>Poison Damage</> to an enemy you have a 10% chance to generate <rt.mana>10 Energy</>.",
-        },
-        thumbnail: "tex_skill_icons_pack_Tex_green_23",
-      },
-      {
-        id: "Talent6",
-        name: {
-          key: "DA8F25F04CE68D8A00160782554D9E64",
-          default: "Efficient Killer",
-        },
-        unlocked_at: 0,
-        row: 2,
-        cost: 1,
-        description: {
-          key: "BB1E74984BFF28F4D90F6696B751C058",
-          default:
-            "Each <rt.meikoability1>Combo Point</> you spend causes you to generate <rt.mana>1 Energy</>.",
-        },
-        thumbnail: "textures_T_ShadowStab",
-      },
-      {
-        id: "Talent16",
-        name: {
-          key: "A0EDB82B4F7B25A0B47843B2F8B65928",
-          default: "Gushing Blood",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "827CF026476644E63E768BB41084C7B5",
-          default:
-            "While <rt.absorb>Maiden of Death</> is active, your <rt.absorb>Hemorrhaging Strike</> applies it's bleed to up to 4 additional nearby enemies.",
-        },
-        thumbnail: "berserker_Berserker5",
-      },
-      {
-        id: "Talent15",
-        name: {
-          key: "EF6F24874DB8701ED7181FB262F25EB7",
-          default: "Feed the Queen",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "2EC65F77455CC13421AF5BA25CBC7F4E",
-          default:
-            "Each time your <rt.absorb>Skittering Blades</> deals damage you are granted <rt.effect>Feed the Queen</>, causing the next <rt.absorb>Queen's Fang</> you or your shadowy clones perform to deal <rt.warning>9% more damage</> per stack of <rt.effect>Feed the Queen</>.\r\n\r\n<rt.effect>Feed the Queen</> stacks up to 5 times.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_Shadow_41",
-      },
-      {
-        id: "Talent3",
-        name: {
-          key: "3EF522F644E55A9F5108D195929838E9",
-          default: "Deadly Scheme",
-        },
-        unlocked_at: 0,
-        row: 3,
-        cost: 2,
-        description: {
-          key: "32C68AE84532975A8B478281E18F0A23",
-          default:
-            "For every <rt.mana>10 Energy</> you generate you gain 1 stack of <rt.effect>Deadly Scheme</>. At 20 stacks it activates for 12 seconds, causing your next <rt.absorb>Queen's Fang</> or <rt.absorb>Arachnid Assault</> to have <rt.warning>+100% Critical Strike chance</>.\r\n\r\n<rt.absorb>Note:</><rt.mana>Mara has 200 max energy baseline</>.",
-        },
-        thumbnail: "tex_spellbookpage08_Tex_SpellBook08_71",
-      },
-      {
-        id: "Talent8",
-        name: {
-          key: "F0A61E8D436FA8F3211FB5ABC35B6BA6",
-          default: "Veil of Shadows",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "C7A6119143A2FA23FA6BDB9B010D9068",
-          default:
-            "Your <rt.absorb>Shadow Protection's</> duration is <rt.bold>increased to 8 seconds</> and reduces <rt.bold>Magic Damage</> you take by another <rt.bold>10%</> while active.",
-        },
-        thumbnail: "mara_Mara_Defensive",
-      },
-      {
-        id: "Talent9",
-        name: {
-          key: "16962D7D4C110F5DB51CEAAE8D485878",
-          default: "Maiden's Doom",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "7B9856E245125061CF6652B629CE95DE",
-          default:
-            "When you deal damage to enemies with 30% or less health, the damage bonus of <rt.absorb>Maiden of Death</> is increased to <rt.warning>40%</>. ",
-        },
-        thumbnail: "mara_Mara_Maiden",
-      },
-      {
-        id: "Talent10",
-        name: {
-          key: "A2B3051841478C3F9DF807AC6A781775",
-          default: "Magic Ward",
-        },
-        unlocked_at: 0,
-        row: 4,
-        cost: 1,
-        description: {
-          key: "D74D9E81465DEE8463DB098AFB9B4D04",
-          default: "You take 10% less <bold>Magic damage</>.",
-        },
-        thumbnail: "textures_T_Arcane_Scroll",
-      },
-      {
-        id: "Talent12",
-        name: {
-          key: "132D3D874A0F2E6239856EB231E2418C",
-          default: "From the Shadows",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "6BDF16BD4E24A3D2CE896E91F588B774",
-          default:
-            "Each time you deal damage to an enemy with <rt.absorb>Hemorrhaging Strike's</> bleed effect, you have a <rt.bold>24%</> chance to summon a <rt.effect>Shadowy Clone</> to assault that enemy with a 6 combo point <rt.absorb>Queen's Fang</>.",
-        },
-        thumbnail: "textures_T_Nhance_RPG_BloodCombat_23",
-      },
-      {
-        id: "Talent14",
-        name: { key: "E2123F8C43D435891B4CE6A9651F815D", default: "Hemotoxin" },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "30259EF8446DC6D1F876C687411E840F",
-          default:
-            "Your <rt.absorb>Backstab</>, <rt.absorb>Widow's Bite</>, and <rt.bold>Auto Attacks</> have a 6% chance to apply 1 stack of <rt.effect>Hemotoxin</> to the target. causing it to take <rt.warning>20% Agility</> poison damage <rt.bold>every 1.5 seconds over 9 seconds</>.\r\n\r\nUsing <rt.absorb>Hemorrhaging Strike</> on a target afflicted with <rt.effect>Hemotoxin</> consumes 1 stack, instantly dealing <rt.warning>100% of Hemorrhaging Strike's bleed damage</> to the target and <rt.warning>70% of Hemorrhaging Strike's bleed damage</> to other nearby targets as poison damage.\r\n\r\n<rt.absorb>Hemotoxin's</> area damage is reduced beyond 1 target.",
-        },
-        thumbnail: "textures_T_PoisonBlister",
-      },
-      {
-        id: "Talent2",
-        name: {
-          key: "EC6E45734EBC72C787D5E0AFD29F0992",
-          default: "Malevolence",
-        },
-        unlocked_at: 0,
-        row: 5,
-        cost: 3,
-        description: {
-          key: "AD86954C4094D39CDA1A04AF03A748E6",
-          default:
-            "Your <rt.absorb>Queen's Fang</> and <rt.absorb>Arachnid's Assault</> abilities grant you 1 stack of <rt.effect>Malevolence: Arachnid Assault</> or 1 stack of <rt.effect>Malevolence: Queen's Fang</> respectively for 20 seconds.\r\n\r\n<rt.effect>Malevolence</> increases the damage of the matching ability by <rt.warning>100%</>.\r\n\r\nEach <rt.effect>Malevolence</> buff type stacks up to 2 times.",
-        },
-        thumbnail: "tex_skill_icons_pack_Tex_violet_7",
-      },
-      {
-        id: "Talent18",
-        name: {
-          key: "A28FE959436DBA5DB0E6FBB5C44A4D06",
-          default: "Arachnid Onslaught",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "BAF327DA4A62B291F4C8478AF3160176",
-          default:
-            "Your <rt.absorb>Arachnid Assault</> deals <rt.warning>20% more damage</> against enemies that have your <rt.absorb>Hemorrhaging Strike</> bleed active.",
-        },
-        thumbnail: "mara_Mara_SpiderAOE",
-      },
-      {
-        id: "Talent11",
-        name: {
-          key: "28373E884FF5F21393C7D695D63B31C9",
-          default: "Spirited Fortitude",
-        },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "88294D2F4D92BD1F75AD05BC8DF8AB77",
-          default: "You take 10% less <bold>Area of Effect damage</>.",
-        },
-        thumbnail: "barbarian_Barbarian3",
-      },
-      {
-        id: "Talent17",
-        name: { key: "6A84766746C38ECEABC3EFA2E0BAD847", default: "Puncture" },
-        unlocked_at: 0,
-        row: 6,
-        cost: 1,
-        description: {
-          key: "A8C1A7FA47422EF1676DA19755383135",
-          default:
-            "Your <rt.absorb>Widow's Bite</> has <rt.warning>+100% increased critical strike chance</>.",
-        },
-        thumbnail: "mara_Mara_RegainEnergyHit",
-      },
-    ],
-    abilities: [
-      "GA_Mara_AutoAttack_C",
-      "GA_Mara_StrongerBehindAttackBuilder_C",
-      "GA_Mara_ChargedDoubleAttackBuilder_C",
-      "GA_Mara_AoeAttackBuilder_C",
-      "GA_Mara_ChargedTeleportBehindTarget_C",
-      "GA_Mara_HeavyAttackSpender_C",
-      "GA_Mara_MeleeInterrupt_C",
-      "GA_Mara_ChargedResourceRefillSelfBuff_C",
-      "GA_Mara_AoeAttackSpender_C",
-      "GA_Mara_EnergyDamageSelfBuff_C",
-      "GA_Mara_ApplyPoisonSelfBuff_C",
-      "GA_Mara_BleedAttackSpender_C",
-      "GA_Mara_EnergyAutoAttackSelfBuffSpender_C",
-      "GA_Mara_Stealth_C",
-      "GA_Mara_StunSpender_C",
-      "GA_Mara_Disorient_C",
-      "GA_Mara_SelfDefenceBuff_C",
-      "GA_Mara_CopyCharacterDamage_C",
-      "GA_Mara_ResetCooldownRefillResouces_C",
-    ],
-    stats: {
-      armor: 0,
-      power: 0,
-      base_health: 17239,
-      stamina: 1000,
-      strength: 0,
-      agility: 1000,
-      intellect: 0,
-      block_chance: 0,
-      crit_chance: 0.05,
-      crit_multiplier: 2,
-      life_steal: 0,
-      haste: 1,
-      dodge_chance: 0.05,
-      incoming_damage_multiplier: 1,
-      mana: 100,
-      max_mana: 100,
-      move_speed: 1,
-      passive_move_speed: 1,
-      resist: 0,
-      reflect_heal: 0,
-      weapon_damage_max: 0,
-      weapon_damage_min: 0,
-      health_regen_rate: 0,
-      health_regen_tick_time: 5,
-      mana_regen_rate: 0,
-      mana_regen_tick_time: 0,
       damage_threat_multiplier: 1,
       heal_threat_multiplier: 0.5,
-      stamina_to_max_health_multiplier: 42.479,
-      expertise: 0,
-      resources: 200,
-      max_resources: 200,
+      stamina_to_max_health_multiplier: 43.567,
+      resources: 0,
+      max_resources: 100,
       resources_second: 0,
-      max_resources_second: 6,
+      max_resources_second: 100,
       out_of_combat_health_regen_rate: 0.01,
       out_of_combat_health_regen_tick_time: 0.5,
       out_of_combat_mana_regen_rate: 0,
@@ -3067,6 +1953,1120 @@ export default [
     },
   },
   {
+    id: "Mosse",
+    class_color: { R: 234, G: 79, B: 132, A: 255, hex: "#EA4F84" },
+    thumbnail: "hero_portrait_Mosse_01_default",
+    name: { key: "E0CF1169469B16621C48E3A819E61667", default: "Sylvie" },
+    title: {
+      key: "05ED62E745B745321C6806A5B84DF699",
+      default: "The Daughter of the Forest",
+    },
+    description: {
+      key: "46A8A058428C2AC7BD2D1F8F98E00CD9",
+      default:
+        "Sylvie is a healer who uses her innate connection to nature and its many friends to heal her allies and harm her foes.\r\n\r\nSylvie is a Healer that uses Pet Management Mechanics. She excels at sending her pets to heal her allies over time and attack her enemies.\r\n\r\nShe commands her Flutterflies and Plants to heal allies and attack enemies.\r\n\r\nHer powerful Heal over Time spells allow her to prepare for battle and endure long and sustained fights.",
+    },
+    biography: {
+      key: "08DADB074F7EED9DD6725A84AB7DA20D",
+      default:
+        "A changeling abandoned as a child, Sylvie was raised by the creatures of the Wyrdwoods and taught the language of flora and fauna.\r\n\r\nOutcast from civilization, she joins the Fellowship in search of kinship and a home she has never known.",
+    },
+    difficulty: 3,
+    talents: [
+      {
+        id: "Talent1",
+        name: {
+          key: "3A75326140BFA7C6290F3BA1B0398991",
+          default: "Nettle to the Petal",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "2BBC59F945C6A5243533B39211A3B271",
+          default:
+            "Each time you deal damage with <rt.absorb>Nettlebolt</>, your <rt.absorb>Life Petal</> triggers an additional tick of its healing.",
+        },
+        thumbnail: "sylvie_T_Mosse_Lifepetal",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "EFB88164466E2D34A2EE388E16793033",
+          default: "Synchronized Fluttering",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "8C2E90E545B7B7D35D66CCB72DCE2A14",
+          default:
+            "Hold down <rt.absorb>Fluttercall: Heal</> for 2 seconds to overcharge it, causing the ability to be cast on up to 4 allies within 4000 range in one cast. The mana cost is increased by 100% when cast in this way.\r\n\r\n<bold>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the overcharged version of the ability will trigger.",
+        },
+        thumbnail: "sylvie_Sylvie_AbilityIcon_03",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "3249BF6548400871C589E3BCA409C976",
+          default: "Verdant Restoration",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "1BE7FFA54B34176844B493920F64AE4E",
+          default:
+            "The initial heal of your <rt.absorb>Fluttercall: Restore Life</> has +50% increased critical strike chance.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Shadow_58",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "2C60A9454A47B9F806D9408C282A8CCD",
+          default: "Sprouting Nettles",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "FCA8E9ED47BDCFC1EAC0FAB4EC7EBA42",
+          default:
+            "Each tick of <rt.meikoability1>Flutterfly Healing</> has a chance to make your next <rt.absorb>Nettlebolt</> <rt.bold>instant cast</> and have <rt.warning>+400% critical strike chance</>.\r\n\r\n(2.0 PPM)\r\n\r\n<rt.warning>GRIEVOUS CRITICAL STRIKE</>\r\nAny critical strike chance you have beyond 100% causes a <rt.warning>grievous critical strike</>. <rt.warning>Grievous critical strikes</> increase the base damage of the hit by an amount equal to the overflowing critical strike chance.",
+        },
+        thumbnail: "sylvie_Sylvie_AbilityIcon_02",
+      },
+      {
+        id: "Talent5",
+        name: {
+          key: "065769AD4EA82D9C3CF87383C9BE582C",
+          default: "Natural Knowledge",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "5565A2D344A18E7D5400ED89BD4C5801",
+          default:
+            "Each time your Nettlebolt deals damage, you replenish 1% mana.",
+        },
+        thumbnail: "tex_skill_icons_pack_Tex_blue_9",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "BAD9E98A46A79C13E848AAAE3F8E4B07",
+          default: "Trailing Restoration",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "A6B1BA8442DA9368B91EDFA6CB556FCC",
+          default:
+            "The duration of your <rt.absorb>Fluttercall: Restore Life</> is increased by 9 seconds.",
+        },
+        thumbnail: "textures_T_ArcaneAid",
+      },
+      {
+        id: "Talent18",
+        name: { key: "23B77C43410F3C625BC77B9C86118B39", default: "Symbiosis" },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "E8087CEC4011198023BFA5BA7CDF5093",
+          default:
+            "Your <rt.absorb>Prickly Vines</> deal <rt.warning>12% more damage</> for each player that has a <rt.effect>Pink Flutterfly</>.",
+        },
+        thumbnail: "sylvie_T_Mosse_Vine",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "4D2A346D4EE8D944D9BBF3A08A51E06D",
+          default: "Will of Nature",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "4DF530204A7E808B8244D0935DBB044D",
+          default:
+            "Your healing is increased by 25% on players with <bold>30% or less health</>.\r\n",
+        },
+        thumbnail: "textures_T_Icon_Fel_07",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "8A6FDA13410372F10178D8930646AECB",
+          default: "Rowdy Rootsap",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "CC7C78D846BB2DABAA7A58A4ACCDAF7A",
+          default:
+            "Your <rt.absorb>Enfeebling Rootsap</> causes the target and all enemies within a 700 radius of the target to have 20% reduced attack speed and 50% reduced movement speed while active.",
+        },
+        thumbnail: "sylvie_T_Mosse_Rootheal",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "7463AAFD4EA1ADF20A5265888783FCB6",
+          default: "Nurtured Haven",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "40968DBD426F60FD404E51A224B78980",
+          default:
+            "The cooldown of your <rt.absorb>Safe Haven</> is reduced each time one of your plants wither.\r\n\r\n<rt.absorb>Prickly Vine</> - 1 second\r\n<rt.absorb>Life Petal</> - 2 seconds\r\n<rt.absorb>Heart Bloom</> - 3 seconds",
+        },
+        thumbnail: "sylvie_T_Mosse_LinkCD",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "5C172D0E449591E02B05898263F37FA6",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "2592EF3C4EA009BAAC1B969CA0275794",
+          default: "You take <rt.bold>10% less magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "48A5848F43DB11543AF94B8B2726D0EE",
+          default: "Bluey's Gambit",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "EF9A18864B3AEDE66C5626B0CB4A484D",
+          default:
+            "While your <bold>Blue Flutterfly</> is following you, you take 5% reduced damage.\r\n\r\nWhile your <bold>Blue Flutterfly</> is following another player, they take 5% reduced damage.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Elements_32",
+      },
+      {
+        id: "Talent13",
+        name: {
+          key: "1ED4858E45F8BA172C288CB6263F1A62",
+          default: "Natural Protector",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "C5CA6B9E43AC73F6FD3DBFBF9FCCA165",
+          default:
+            "Your <rt.absorb>Ironleaf Ward</> and <rt.absorb>Safe Haven</> abilities shield players for 15 seconds, absorbing up to <rt.heal>4263% intellect</> damage.",
+        },
+        thumbnail: "druid_Druid17",
+      },
+      {
+        id: "Talent14",
+        name: {
+          key: "96E3640C456437149CD081999AEEF28E",
+          default: "Flutterswift",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "53DF8E464CF32486EF8450BFAC8173EE",
+          default:
+            "Your <rt.absorb>Fluttercall: Heal</> ticks 100% faster for the first 12 seconds each time it begins healing a player.",
+        },
+        thumbnail: "textures_T_ArcaneWhirl",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "DF99486A4609DD215A5505B5B1528B90",
+          default: "Flower Power",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "E4E95D924704DF7E01CC0C849C8A7725",
+          default:
+            "Your <rt.absorb>Heart Bloom</> has 2 charges but only accumulates 8% of all <rt.meikoability1>Flutterfly Healing</>.\r\n\r\n<rt.absorb>Heart Bloom</> gains <rt.meikoability2>Cooldown Acceleration</> equal to your Haste.",
+        },
+        thumbnail: "sylvie_T_Mosse_Bigheal",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "069A560441E7058DFF18A1A804FE490B",
+          default: "Elusive Wildling",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "C7CA0E0746EDD1EE6D7AEBA7233E2885",
+          default:
+            "You take <rt.bold>20% reduced damage</> while <rt.absorb>Hidden Trail</> is active.",
+        },
+        thumbnail: "sylvie_T_Mosse_Hide",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "2DC8302C4E61C3F357D06D892053DFD6",
+          default: "Spirited Fortitude",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "5C29F7F7472F394E4E32138404381645",
+          default: "You take <rt.bold>10% less Area of effect damage</>.",
+        },
+        thumbnail: "barbarian_Barbarian3",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "B218768B47A062019532709E1956C305",
+          default: "Bloomin' Boomshrooms",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "B6B6BFD6471169D0F439FCA01321066D",
+          default:
+            "Your <rt.absorb>Shroomsplosion</> ability can now target allies, sending up to 5 <bold>Boomshrooms</> to detonate on them, instantly healing them for <rt.heal>308% Intellect</> each.\r\n\r\nWhen targeting allies in this way, the <bold>Boomshroom</> still deals its normal damage to nearby enemies.",
+        },
+        thumbnail: "sylvie_T_Mosse_Boomshroom",
+      },
+    ],
+    abilities: [
+      "GA_Mosse_DurationalAoeHealPlacement_C",
+      "GA_Mosse_CastedSingleTargetHeal_C",
+      "GA_Mosse_SingleTargetDispel_C",
+      "GA_Mosse_CastedSingleTargetProjectile_C",
+      "GA_Mosse_SingleTargetDot_C",
+      "GA_Mosse_BlueButterfly_SendOut",
+      "GA_Mosse_BlueButterfly_Recall",
+      "GA_Mosse_PinkButterfly_Simple",
+      "GA_Mosse_PinkButterfly_Double",
+      "GA_Mosse_ProjectileTurrets",
+      "GA_Mosse_SharedHealthBuff_C",
+      "GA_Mosse_Passive_HealingMushroomPlacement_C",
+      "GA_Mosse_PlacedAoeBuff",
+      "GA_Mosse_InstantSelfEscapeBuff",
+      "GA_Mosse_HealingAoeTotem",
+      "GA_Mosse_SingleTargetCastedDamageReduction",
+      "GA_Mosse_ExplosiveMinion_C",
+      "GA_Mosse_TurretChannelHeal",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 16433,
+      stamina: 1000,
+      strength: 0,
+      agility: 0,
+      intellect: 1000,
+      block_chance: 0,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      expertise: 0,
+      life_steal: 0,
+      haste: 1,
+      dodge_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      max_mana: 1440,
+      mana: 1440,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0.0005,
+      mana_regen_tick_time: 0.1,
+      damage_threat_multiplier: 1,
+      heal_threat_multiplier: 0.5,
+      stamina_to_max_health_multiplier: 39.978,
+      resources: 100,
+      max_resources: 100,
+      resources_tertiary: 4,
+      max_resources_tertiary: 4,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0.0036,
+      out_of_combat_mana_regen_tick_time: 0.1,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.04,
+      spirit_generation_heal: 0.04,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
+    id: "Vigor",
+    class_color: { R: 221, G: 219, B: 197, A: 255, hex: "#DDDBC5" },
+    thumbnail: "hero_portrait_vigor_default",
+    name: { key: "481F857443DE80D8404C2FA1ABD4B241", default: "Vigour" },
+    title: {
+      key: "D68C88394EF7137B8B4C28B806817D60",
+      default: "The Lightshaper",
+    },
+    description: {
+      key: "AB91BB1046A62BDC237B3DBA5245786B",
+      default:
+        "As a dwarf who divines the true meaning of runes, Vigour wields powerful healing spells to bolster and protect his allies and smite his enemies.\r\n\r\nVigour is a Healer that uses Builder/Spender Mechanics. He excels in the middle of his allies where he can sustain them with powerful AoE heals.\r\n\r\nAs a wielder of Radiant Runes, he must choose how and when to cast his most powerful spells.\r\n\r\nHis strong Direct Healing grant him an advantage in reacting to an ever-changing battlefield.",
+    },
+    biography: {
+      key: "F8A9721A4E43A8BBDD4C5DB29C492114",
+      default:
+        "A dwarf of legend and the first Lightshaper to leave the mountain kingdoms.\r\n\r\nVigour has spent centuries traveling the world, mending wounds, banishing shadow, and gathering champions to his cause. He is the guiding light that unites the disparate heroes of the Fellowship.",
+    },
+    difficulty: 2,
+    talents: [
+      {
+        id: "Talent7",
+        name: {
+          key: "F1DEE85747300FFA91319C98EDD673B4",
+          default: "Master of Triage",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "D1D3FFCA4E4C6175E5149A8EF5852732",
+          default:
+            "Each time you generate a <rt.mana>Radiant Rune</>, a free <rt.absorb>Greater Heal</> of 30% efficiency is cast on a nearby ally, preferring the player with lowest health.\r\n\r\n<rt.bold>Master of Triage</> does not trigger <rt.absorb>Rune of Renewal</> healing.",
+        },
+        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_87",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "EB29AE1B45845871B4A305AC4B6B77D3",
+          default: "Enduring Light",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "3A113EA942FE21DBBBB75EB5F401CDCF",
+          default:
+            "When your <rt.absorb>Circle of Light</> heals a player, they are healed for an additional <rt.heal>50% of the initial heal</> over 12 seconds, accumulatively.",
+        },
+        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_23",
+      },
+      {
+        id: "Talent1",
+        name: { key: "2864B22A4B04F8F51ADEE6BDB7B3F4AC", default: "Epiphany" },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "E2FC7153472FAEE92E76A3827963EF7A",
+          default:
+            "Each time you cast <rt.absorb>Dawnflare</>, <rt.absorb>Soulbrand</> or <rt.absorb>Radiant Blast</> you have a 10% chance to grant you <rt.effect>Epiphany</> for 15 seconds.\r\n\r\n<rt.effect>EPIPHANY</>\r\nYour next <rt.absorb>Dawnbreaker Orb</> has no cost and does not trigger its cooldown.",
+        },
+        thumbnail: "vigor_T_Vigor_DawnSphere",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "61809E61460328450B3F98B6676AFCD3",
+          default: "Alacritous Healing",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "B4A4B5F8477640B8FFBEE391B3FCC08F",
+          default:
+            "Your <rt.absorb>Greater Heal</> has 0.5 seconds reduced cast time and 20% increased Critical Strike chance.",
+        },
+        thumbnail: "vigor_T_Vigor_Heal",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "B91B9DC94CC978669325D2B0E0F6E473",
+          default: "Ruptured Soul",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "61DCA9DE42CF70EEACE797BF8AE882AD",
+          default:
+            "When an enemy dies while <rt.absorb>Soulbrand</> is active on them you instantly gain <rt.mana>50% of the Radiant Rune power it would have generated</> in the time that was remaining and trigger an explosion <rt.warning>dealing 25% of the damage that was remaining to all nearby enemies</>.",
+        },
+        thumbnail: "vigor_T_Vigor_Soulbrand",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "42480F0242EF812362B9A59ECB3C071F",
+          default: "Expansive Mind",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "2A84389F401810580C280CA4BBE16298",
+          default:
+            "Your <rt.absorb>Dawnflare</> casts have a chance to grant you <bold>Expansive Mind</>, increasing your Spirit by 20% for 12 seconds and replenishing <rt.mana>2% max mana</> every 3 seconds for the duration.\r\n\r\n(1.2 PPM)",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_ManaTome",
+      },
+      {
+        id: "Talent5",
+        name: {
+          key: "DF86ED0A4C482BEE3AF13EBEF9EA82F6",
+          default: "Sacred Barrier",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "AAD631664FB3396951BBB8A154D94A57",
+          default:
+            "Allies under the effects of any <rt.absorb>absorbs created from your hero abilities</> take 10% reduced damage.",
+        },
+        thumbnail: "textures_T_SunOrb",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "FEB4C77946BBE4A97AF6C7A2405735D1",
+          default: "Shimmering Brand",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "48BE586240B9090B1933998125469252",
+          default:
+            "Your <rt.effect>Soulbrand: Remnant</> damage also heals a nearby ally for <rt.heal>100% of the damage it dealt</>.\r\n\r\n<rt.effect>Shimmering Brand</> prefers the ally with lowest health.",
+        },
+        thumbnail: "textures_T_Icon_Tech_35",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "865EFED643054CCAB7F3769A2EB6D53F",
+          default: "Meticulous Runesmith",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "546A2F5446EA30FAC117D7B71316845B",
+          default:
+            "When your <rt.absorb>Dawnbreaker Orb</> heals a player, 100% of that healing is also applied as an absorb shield on that player for 12 seconds.",
+        },
+        thumbnail: "textures_T_LightPortal",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "A933E2854DCF1C0925A0C3B1BBCD47BB",
+          default: "Bracing Light",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "F31381D34EEA012B391A46AA84BB60B9",
+          default:
+            "When you cast <rt.absorb>Lightshaper's Ward</> on an ally, it is also applied to you.",
+        },
+        thumbnail: "vigor_T_Vigor_Ward",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "734140BB465DE69A7CF47E99AC6977D8",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "95A43BCF4614D98AEAC7FDB2B2FAC6B8",
+          default: "You take 10% less <bold>Magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent14",
+        name: {
+          key: "4B82608E4262F681240983B970DC8FCF",
+          default: "Spirited Fortitude",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "695C15CC49F84423237E7E86D38BD6D7",
+          default: "You take 10% less <bold>Area of effect damage</>.",
+        },
+        thumbnail: "barbarian_Barbarian3",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "1CF4A4FA4392BFEE62C8B8839A4699A8",
+          default: "Radiant Soul",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "5F33FDC44977E1090AB802A5BB46CF03",
+          default:
+            "Your <rt.absorb>Radiant Blast</> adds 3 seconds to the duration of all your active <rt.absorb>Rune of Renewal</>, <rt.absorb>Soulbrand</>, and <rt.absorb>Luminous Barrier</> effects.\r\n\r\n<rt.absorb>Rune of Renewal's</> healing, <rt.absorb>Luminous Barrier's</> absorb, and <rt.absorb>Soulbrand's</> damage is increased by 25%.",
+        },
+        thumbnail: "textures_T_RuneOfGold",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "D79EE88D4555C56E6888B0B092AFEC26",
+          default: "Ascending Avatar",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "2E4AB5964E127DA30EF14EAFA19CBD84",
+          default:
+            "Your <rt.absorb>Levitate</> ability grants you <rt.absorb>Avatar of Light</> for 6 seconds.",
+        },
+        thumbnail: "vigor_T_Vigor_Spirit",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "523D563E44148B77D1EB47AFF3D3D74F",
+          default: "Grand Design",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "3373D5954369C32D8E678481C7A9717F",
+          default:
+            "Your <rt.absorb>Soulbrand</>, <rt.absorb>Rune of Renewal</> & <rt.absorb>Luminous Barrier</> abilities can now be <rt.effect>Overcharged</>, causing the ability to be cast on up to 4 applicable targets at once at <rt.heal>60% power</>.\r\n\r\n<rt.mana>Requires and costs 2 Radiant Runes</>\r\n\r\n<rt.effect>Overcharged Abilities</>\r\nHold down the relevant ability button until a cast bar is displayed. Once the cast has completed, the <rt.effect>overcharged</> version of the ability will trigger.",
+        },
+        thumbnail: "tex_spellbookpage07_Tex_SpellBook07_11",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "66B43D7A469BA0E1094AA6B92B393E16",
+          default: "Dawnbreaker's Legacy",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "990553B24F25048D4BFECFAB33D10FDE",
+          default:
+            "Your <rt.absorb>Dawnbreaker Orb's</> Critical Strike chance is increased by 25%.",
+        },
+        thumbnail: "textures_Tex_orb_02_b",
+      },
+      {
+        id: "Talent13",
+        name: {
+          key: "2F311A344A117C98212A65BDC09ED98D",
+          default: "Runic Revelations",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "458387E8436505FDAF32079D3F498C01",
+          default:
+            "Your <rt.absorb>Soulbrand</>, <rt.absorb>Rune of Renewal</> & <rt.absorb>Luminous Barrier</> have 25% increased duration.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Icons_CorruptionKnowledge",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "1D366CAE41868D43BA2C2AAEBC0293F0",
+          default: "Beacon in the Dark",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "FD44611F43037653842047814D03A968",
+          default:
+            "Your <rt.absorb>Dawnflare</> and <rt.absorb>Radiant Blast</> abilities have a 15% chance to grant you <bold>Beacon in the Dark</>, causing your next <rt.absorb>Radiant Blast</> to have an additional 50% Critical Strike chance.\r\n\r\nUpon gaining <bold>Beacon in the Dark</> the cooldown of <rt.absorb>Radiant Blast</> is instantly reset.",
+        },
+        thumbnail: "priest_Priest5",
+      },
+    ],
+    abilities: [
+      "GA_Vigor_SingleAllyDispel_C",
+      "GA_Vigor_SingleTargetDot_C",
+      "GA_Vigor_SingleTargetChargedHot_C",
+      "GA_Vigor_SingleTargetAbsorb",
+      "GA_Vigor_DamageReductionAndImmunityBuff_C",
+      "GA_Vigor_CastedSingleTargetDamage_C",
+      "GA_Vigor_InstantFrontalConeDamageHeal_C",
+      "GA_Vigor_CastedSingleTargetHeal_C",
+      "GA_Vigor_InstantAoeHeal_C",
+      "GA_Vigor_SIngleTargetProjectileStun_C",
+      "GA_Vigor_PartyHealAndSelfBuff_C",
+      "GA_Vigor_SkillshotAoeProjectile",
+      "GA_Vigor_InstantResourceGain",
+      "GA_Vigor_ChargedMovementSpeedSelfBuff_C",
+      "GA_Vigor_Passive_Echo_Monitor_C",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 16917,
+      stamina: 1000,
+      strength: 0,
+      agility: 0,
+      intellect: 1000,
+      block_chance: 0,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      haste: 1,
+      dodge_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      max_mana: 1440,
+      mana: 1440,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0.0005,
+      mana_regen_tick_time: 0.1,
+      damage_threat_multiplier: 1,
+      heal_threat_multiplier: 0.5,
+      stamina_to_max_health_multiplier: 41.301,
+      resources: 3,
+      max_resources: 6,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0.0036,
+      out_of_combat_mana_regen_tick_time: 0.1,
+      expertise: 0,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.08,
+      spirit_generation_heal: 0.08,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
+    id: "Warmaster",
+    class_color: { R: 180, G: 105, B: 50, A: 255, hex: "#B46932" },
+    thumbnail: "hero_portrait_warmaster_01",
+    name: { key: "146A66FE48F8FA30BF7AABA6210D2A28", default: "Helena" },
+    title: {
+      key: "E432BDB841C5C1F5AD62909DCE3C5980",
+      default: "The Warmaster",
+    },
+    description: {
+      key: "31D5BA72485C5885C74084BCB3F7BADD",
+      default:
+        "Despite being weighed down by full plate armor, Helena is always ready to charge into the fray to protect her companions.\r\n\r\nHelena is a Melee Tank and excels in the front lines taking hits instead of her allies.\r\n\r\nHer Veteran of War mechanic allows Helena to reduce the cooldowns of her ability to allow for more frequent use of her powerful attacks and Toughness generators.\r\n\r\nToughness is Helena's main resource for mitigating incoming damage and surviving dangerous encounters. Her Toughness is shown as a blue bar to the right of the character.",
+    },
+    biography: {
+      key: "010175254543D744B79AF08159556C0D",
+      default:
+        "Disillusioned after the Twelve Year War, Helena wandered the world fighting back evil where noble apathy or cruelty allowed it to fester.\r\n\r\nThe Warmaster joins the Fellowship to face threats she could not defeat alone. Helena is a stern presence, maintaining a seasoned warrior’s discipline and distance from her comrades lest she suffer the burden of loss again.",
+    },
+    difficulty: 2,
+    talents: [
+      {
+        id: "Talent1",
+        name: {
+          key: "EE6BBCDC4BB6FF2F52AE459C395B83CC",
+          default: "The Best Defense",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "A0237FE0438E11D51B1F6980CAC9777A",
+          default:
+            "Each time you <bold>Block</> an attack with your shield, you have a chance to reset the cooldown of <rt.absorb>Shield Throw</> and cause your next <rt.absorb>Shield Throw</> within 12 seconds to deal <rt.warning>20% increased damage</>.\r\n\r\n(2.0 PPM)",
+        },
+        thumbnail: "deprecatedicons_warmaster_shield_throw_3",
+      },
+      {
+        id: "Talent2",
+        name: {
+          key: "5D8296774A01311E1EEB8D9A9E0CF4B0",
+          default: "Shield Mastery",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "51A8C7644A592BC640BBE0BD9020952B",
+          default:
+            "The cooldown of your <rt.absorb>Shields Up</> and <rt.absorb>Shield Throw</> abilities are reduced relative to the amount of damage you mitigate with <rt.mana>Toughness</>.",
+        },
+        thumbnail: "tex_flatskillsicons_Tex_y_17_layered",
+      },
+      {
+        id: "Talent3",
+        name: {
+          key: "522510A34D5726EACED1EDA5A72C0787",
+          default: "Sword & Board",
+        },
+        unlocked_at: 0,
+        row: 1,
+        cost: 2,
+        description: {
+          key: "68269F3642064234F3F914A5ECCEB537",
+          default:
+            "Your <rt.absorb>Power Strike</> has a chance to instantly replenish 1 charge of <rt.absorb>Shield Slam</> and grant you <rt.effect>Empowered Shield Slam</> for 12 seconds, causing your next <rt.absorb>Shield Slam</> to apply an <rt.heal>absorb on you equal to 2000% strength</> that lasts for 8 seconds.\r\n\r\n(1.0 PPM)",
+        },
+        thumbnail: "warmaster_T_Warmaster_ShieldSlam",
+      },
+      {
+        id: "Talent12",
+        name: {
+          key: "169CC5D44A7288E36623DAB3BC0D6E66",
+          default: "Reinforced Steel",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "111EA0C646034C2782AC1CA175723EEB",
+          default: "Your <bold>Armor is increased by 20%</>.",
+        },
+        thumbnail: "armor_icons_Tex_armor_3_b",
+      },
+      {
+        id: "Talent5",
+        name: {
+          key: "7C3BE1C9415E5AFF23952B9FAEC0F662",
+          default: "Guarded Veteran",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "CED4642F482652AF79FECEB581F58D04",
+          default: "Your <rt.bold>block chance is increased by 10%</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Fire_08_Yellow",
+      },
+      {
+        id: "Talent6",
+        name: {
+          key: "AA4058444A73CDD8264C84AB5027CF9C",
+          default: "Punishing Strikes",
+        },
+        unlocked_at: 0,
+        row: 2,
+        cost: 1,
+        description: {
+          key: "D5B232F8457C6400D8C28892AE85504D",
+          default:
+            "Your <rt.absorb>Power Strike</> and <rt.absorb>Shield Slam</> deal <rt.warning>15% more damage</>.",
+        },
+        thumbnail: "warmaster_T_Warmaster_FatalBlow",
+      },
+      {
+        id: "Talent7",
+        name: {
+          key: "806F3119410F58D9456C2BA58B039713",
+          default: "Aftershock",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "7D9B0826437C748C1E75E389C8F37EE1",
+          default:
+            "Enemies that take damage from your <rt.absorb>Shockwave</> ability take <rt.warning>30% more damage</> from you for 5 seconds.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Arcane_36",
+      },
+      {
+        id: "Talent10",
+        name: {
+          key: "4FB7BDEA47551A6F2A16FC91347FF117",
+          default: "Sharpened Blade",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "5F5EDB9A42915DB3FABB43B246BA1D8B",
+          default:
+            "Enemies afflicted by your <rt.absorb>Sweeping Strike's</> bleed have <rt.effect>20% reduced attack speed</> and your <rt.absorb>Power Strike</> deals <rt.warning>200% more damage</> to them.",
+        },
+        thumbnail: "warmaster_T_Warmaster_BleedStrike",
+      },
+      {
+        id: "Talent8",
+        name: {
+          key: "13A0EBA1481C3C188AD2F5B62556099B",
+          default: "Razor Shrapnel",
+        },
+        unlocked_at: 0,
+        row: 3,
+        cost: 2,
+        description: {
+          key: "5ECBAD474737AD3A8C02C1A7BF2E593E",
+          default:
+            "Your <rt.absorb>Shield Throw</> hits have a 20% chance to trigger an explosion of metal, dealing <rt.warning>damage equal to 40% of the Shield Throw hit that triggered the explosion</> to the target and up to 7 additional nearby enemies.",
+        },
+        thumbnail: "tex_spellbookpage06_Tex_SpellBook06_48",
+      },
+      {
+        id: "Talent4",
+        name: {
+          key: "5C77E2BD4010891B30880B90F516A2A3",
+          default: "High Command",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "1CBBC0F942267D836C64C9955DFCD79E",
+          default:
+            "Your <rt.absorb>Hold the Line</> cooldown is reduced by 6 seconds each time you use <rt.absorb>Shields Up</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Fire_05",
+      },
+      {
+        id: "Talent11",
+        name: {
+          key: "0266D3924E5C147B1C13B497DF4577B5",
+          default: "Magic Ward",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "C8FD064446A961DA848533AD6D5958C8",
+          default: "You take <rt.bold>10% reduced magic damage</>.",
+        },
+        thumbnail: "textures_T_Arcane_Scroll",
+      },
+      {
+        id: "Talent9",
+        name: {
+          key: "E56007ED47FF2854C69BDB816693C011",
+          default: "Skull Cracker",
+        },
+        unlocked_at: 0,
+        row: 4,
+        cost: 1,
+        description: {
+          key: "295DD93D4A00583B59F7CD89F1DA1DDB",
+          default:
+            "Your <rt.absorb>Shield Throw</> has <rt.warning>+20% additional critical strike chance</> and deals <rt.warning>100% increased damage to the first target it hits</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_BloodCombat_01",
+      },
+      {
+        id: "Talent14",
+        name: {
+          key: "A39B5DF4439DAF94F28DD8A365CEA963",
+          default: "Second Wind",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "DE8CC8424AB03DE2CE37E9BB5772ECE5",
+          default:
+            "When your <rt.mana>Toughness</> has reduced an amount of damage equal to <rt.bold>30% of your Maximum Health</>, you gain <rt.effect>20% increased Strength</> for 8 sec.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Energy_07",
+      },
+      {
+        id: "Talent15",
+        name: {
+          key: "0952AD8A4338E00493197EB01FF90835",
+          default: "Martial Command",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "5A3452C3469560E12897FA82503B4259",
+          default:
+            "While <rt.absorb>Siegebreaker</> is active you deal <rt.warning>25% more damage</> and your damage reduction from <rt.mana>Toughness</> is shared with all allies.\r\n\r\nYour <rt.bold>Spirit</> is increased by +5% passively.",
+        },
+        thumbnail: "warmaster_T_Warmaster_Ultimate",
+      },
+      {
+        id: "Talent16",
+        name: {
+          key: "1863ED7546B2510958FCB39DCF72B4C8",
+          default: "Gleaming Shield",
+        },
+        unlocked_at: 0,
+        row: 5,
+        cost: 3,
+        description: {
+          key: "6CD3667349AA76CB9CA75BAD05569CB9",
+          default:
+            "While <rt.absorb>Shields up</> is active you gain an additional <rt.bold>+20% chance to block</>, all healing effects on you are <rt.heal>increased by 20%</>, and your <rt.absorb>Shield Slam</> deals <rt.warning>40% increased damage</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Gold_05",
+      },
+      {
+        id: "Talent17",
+        name: {
+          key: "8AA655A9438D3B9351AB2EB5C6F2D476",
+          default: "Front Line Defender",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "283FDFB54A5365F0CF86E0A67F5B5709",
+          default:
+            "Your <rt.mana>maximum toughness</> and <rt.mana>toughness generation</> is increased by <rt.mana>20%</>.",
+        },
+        thumbnail: "deprecatedicons_warmaster_shields_up",
+      },
+      {
+        id: "Talent18",
+        name: {
+          key: "7F740CAA4316FE0C8EA566870343E812",
+          default: "Master of War",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "BC70D15F4335CB0744AB42B378C619AB",
+          default:
+            "Your <rt.absorb>Grand Melee</> ability has <rt.bold>20% reduced cooldown</>.",
+        },
+        thumbnail: "textures_T_Nhance_RPG_Gold_03",
+      },
+      {
+        id: "Talent19",
+        name: {
+          key: "CE1DC17242B5E2A5E2CB1CBF856A23FF",
+          default: "Greater Shockwave",
+        },
+        unlocked_at: 0,
+        row: 6,
+        cost: 1,
+        description: {
+          key: "870FD6A9442AF6B0DD3F7E96E1A8533B",
+          default:
+            "Your <rt.absorb>Shockwave</> deals <rt.warning>20% more damage</>.",
+        },
+        thumbnail: "warmaster_T_Warmaster_shockwave",
+      },
+    ],
+    abilities: [
+      "GA_Warmaster_MoveToTargetStun_C",
+      "GA_Warmaster_MeleeInterrupt_C",
+      "GA_Warmaster_MeleeAoeSlow_C",
+      "GA_Warmaster_DefenceBuff_C",
+      "GA_Warmaster_LightMelee_C",
+      "GA_Warmaster_HeavyMelee_C",
+      "GA_Warmaster_MeleeCleave_C",
+      "GA_Warmaster_BouncyProjectile_C",
+      "GA_Warmaster_RangedTaunt_C",
+      "GA_Warmaster_AoeHealthBuff_C",
+      "GA_Warmaster_FullResourcesSelfBuff",
+      "GA_Warmaster_MeleeAutoAttack_C",
+      "GA_Warmaster_MoveSpeedBuff",
+      "GA_Warmaster_InstantMeleeCleave",
+      "GA_Warmaster_NoResourceLossSelfBuff_C",
+      "GA_Warmaster_AoeIncite",
+      "GA_Warmaster_ShieldSelfBuff",
+    ],
+    stats: {
+      armor: 0,
+      power: 0,
+      base_health: 25565,
+      stamina: 1000,
+      strength: 1000,
+      agility: 0,
+      intellect: 0,
+      block_chance: 0.15,
+      crit_chance: 0.05,
+      crit_multiplier: 2,
+      life_steal: 0,
+      haste: 1,
+      dodge_chance: 0.05,
+      parry_chance: 0.05,
+      incoming_damage_multiplier: 1,
+      max_mana: 0,
+      mana: 0,
+      move_speed: 1,
+      passive_move_speed: 1,
+      resist: 0,
+      reflect_heal: 0,
+      weapon_damage_max: 0,
+      weapon_damage_min: 0,
+      health_regen_rate: 0,
+      health_regen_tick_time: 5,
+      mana_regen_rate: 0,
+      mana_regen_tick_time: 0,
+      damage_threat_multiplier: 9,
+      heal_threat_multiplier: 0.75,
+      stamina_to_max_health_multiplier: 71.105,
+      resources: 0,
+      max_resources: 5,
+      out_of_combat_health_regen_rate: 0.01,
+      out_of_combat_health_regen_tick_time: 0.5,
+      out_of_combat_mana_regen_rate: 0,
+      out_of_combat_mana_regen_tick_time: 0,
+      spirit: 0,
+      spirit_points: 0,
+      max_spirit_points: 100,
+      spirit_generation_damage: 0.12,
+      spirit_generation_heal: 0.12,
+      resources_second: 0,
+      max_resources_second: 0,
+      cooldown_recovery: 1,
+      spirit_refund_chance_scale: 1,
+    },
+  },
+  {
     id: "Rime",
     class_color: { R: 30, G: 163, B: 238, A: 255, hex: "#1EA3EE" },
     thumbnail: "hero_portrait_rime_default",
@@ -3369,10 +3369,21 @@ export default [
       },
     ],
     abilities: [
-      "GA_JS_NPCRime_AutoAttackMelee_C",
-      "GA_JS_NPCRime_CastProjectile",
-      "GA_JS_NPCRime_ChanneledDamageBeam",
-      "GA_JS_NPCRime_OnTargetPulsatingAoe",
+      "GA_Rime_FullResourcesSelfBuff",
+      "GA_Rime_InstantSingleInterrupt_C",
+      "GA_Rime_DashForward_C",
+      "GA_Rime_CastedProjectileDamageOrbSpender",
+      "GA_Rime_OnTargetPulsatingAoe",
+      "GA_Rime_SelfDefenceBuff_C",
+      "GA_Rime_CastedProjectileDamageFiller",
+      "GA_Rime_InstantSingleDamage",
+      "GA_Rime_ChanneledBeamSingleDamage",
+      "GA_Rime_CastedDebuffAoeDamage",
+      "GA_Rime_InstantConeKnockback_C",
+      "GA_Rime_Helper_AutoDamageProjectile",
+      "GA_Rime_AutoProjectileOnResourceGainBuff",
+      "GA_Rime_TargetedPeriodicProjectileAoe",
+      "GA_Rime_DamageAsAoeHealingBuff",
     ],
     stats: {
       armor: 0,

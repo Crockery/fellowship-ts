@@ -1,37 +1,42 @@
-import ABILITY_DATA, { type Ability } from "./data/abilities";
-import LOCALES from "./data/localization/locales";
+import ABILITY_DATA, { type Ability_DO_NOT_IMPORT } from "./data/abilities";
+import HERO_DATA, { type Hero_DO_NOT_IMPORT } from "./data/heroes";
+import NPC_DATA, { type NPC_DO_NOT_IMPORT } from "./data/npcs";
 
-import DE_LOC from "./data/localization/de";
-import EN_LOC from "./data/localization/en";
-import ES_LOC from "./data/localization/es";
-import FR_LOC from "./data/localization/fr";
-import IT_LOC from "./data/localization/it";
-import JA_LOC from "./data/localization/ja";
-import KO_LOC from "./data/localization/ko";
-import PT_LOC from "./data/localization/pt-BR";
-import RU_LOC from "./data/localization/ru";
-import ZH_CN_LOC from "./data/localization/zh-CN";
-import ZH_HANT_LOC from "./data/localization/zh-Hant";
+export type HeroId = (typeof HERO_DATA)[number]["id"];
+export type NpcId = (typeof NPC_DATA)[number]["id"];
+export type AbilityId = (typeof ABILITY_DATA)[number]["id"];
+export type TalenIds = (typeof HERO_DATA)[number]["talents"][number]["id"];
 
-type LocaleKey = (typeof LOCALES)["keys"][number];
+export interface Hero extends Hero_DO_NOT_IMPORT {
+  id: HeroId;
+}
 
-interface Args {
-  locale?: LocaleKey;
+export interface Ability extends Ability_DO_NOT_IMPORT {
+  id: AbilityId;
+}
+
+export interface Npc extends NPC_DO_NOT_IMPORT {
+  id: NpcId;
 }
 
 export class FellowshipTs {
   // Ability to ability id map.
-  private ability_map: Map<string, Ability>;
+  private ability_map: Map<string, Ability> = new Map();
+  private hero_map: Map<string, Hero> = new Map();
+  private npc_map: Map<string, Npc> = new Map();
+  translations: Record<string, string> | undefined = undefined;
 
-  locale: LocaleKey;
-
-  constructor({ locale }: Args) {
-    this.locale = locale ?? "en";
-
-    this.ability_map = new Map();
-
+  constructor() {
     ABILITY_DATA.forEach((ability) => {
       this.ability_map.set(ability.id, ability);
+    });
+
+    HERO_DATA.forEach((hero) => {
+      this.hero_map.set(hero.id, hero as unknown as Hero);
+    });
+
+    NPC_DATA.forEach((npc) => {
+      this.npc_map.set(npc.id, npc as unknown as Npc);
     });
   }
 
@@ -43,63 +48,13 @@ export class FellowshipTs {
     return ABILITY_DATA.filter(filter);
   }
 
-  // LOCALES
-  translate(key: string) {
-    let translation = key;
-    switch (this.locale) {
-      case "de": {
-        translation = DE_LOC[key];
-        break;
-      }
-      case "en": {
-        translation = EN_LOC[key];
-        break;
-      }
-      case "es": {
-        translation = ES_LOC[key];
-        break;
-      }
-      case "fr": {
-        translation = FR_LOC[key];
-        break;
-      }
-      case "it": {
-        translation = IT_LOC[key];
-        break;
-      }
-      case "ja": {
-        translation = JA_LOC[key];
-        break;
-      }
-      case "ko": {
-        translation = KO_LOC[key];
-        break;
-      }
-      case "pt-BR": {
-        translation = PT_LOC[key];
-        break;
-      }
-      case "ru": {
-        translation = RU_LOC[key];
-        break;
-      }
-      case "zh-CN": {
-        translation = ZH_CN_LOC[key];
-        break;
-      }
-      case "zh-Hant": {
-        translation = ZH_HANT_LOC[key];
-        break;
-      }
-      default: {
-        break;
-      }
-    }
-
-    return translation;
+  // HEROES
+  getHero(id: HeroId) {
+    return this.hero_map.get(id) as Hero;
   }
 
-  changeLocale(new_locale: LocaleKey) {
-    this.locale = new_locale;
+  // NPCS
+  getNpc(id: NpcId) {
+    return this.npc_map.get(id) as Npc;
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "fellowship-ts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Fellowship game data in typescript.",
   "homepage": "https://github.com/Crockery/fellowship-ts#readme",
   "bugs": {
@@ -31,6 +31,7 @@
   "scripts": {
     "format": "prettier --write ./src/*",
     "gen": "tsx scripts/gen",
+    "play": "tsx scripts/playground",
     "build": "tsdown",
     "copy-assets": "tsx scripts/copy-assets",
     "type-check": "tsc --skipLibCheck --noEmit",
@@ -39,13 +40,15 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/fs-extra": "^11.0.4",
+    "@types/to-json-schema": "^0.2.4",
     "del": "^8.0.1",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "fs-extra": "^11.3.2",
     "genson-js": "^0.0.8",
+    "install": "^0.13.0",
     "json-schema-to-typescript": "^15.0.4",
-    "maketypes": "^1.1.2",
+    "npm": "^11.6.4",
     "prettier": "^3.6.2",
     "promisify-child-process": "^4.1.2",
     "sharp": "^0.34.5",

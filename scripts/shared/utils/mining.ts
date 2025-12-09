@@ -10,9 +10,7 @@ export const resolveImageId = (raw_path: string) => {
   const path_parts = corrected.split("/");
 
   if (path_parts.length < 2) {
-    throw new Error(
-      `Unable to get image path id for ${raw_path}: ${path_parts.join(",")}`,
-    );
+    return undefined;
   }
 
   return `${path_parts[path_parts.length - 2].toLowerCase()}_${path_parts[path_parts.length - 1]}`;
@@ -94,7 +92,7 @@ export const isTranslateable = (
 
 export const resolveTranslateable = (
   to_translate: FSTransObj | undefined,
-): Translateable => {
+): Translateable | undefined => {
   if (!!to_translate && isTranslateable(to_translate)) {
     return {
       key: to_translate.Key,
@@ -102,8 +100,5 @@ export const resolveTranslateable = (
     };
   }
 
-  return {
-    key: "",
-    default: "",
-  };
+  return undefined;
 };
