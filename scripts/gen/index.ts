@@ -6,6 +6,7 @@ import { genLangKeys, addLocaleGenerators } from "./gen-lang";
 import { genAbilities } from "./gen-abilities";
 import { genHeroes } from "./gen-heroes";
 import { CharacterAttributeBp } from "./common";
+import { genNpcs } from "./gen-npcs";
 // import { genItems } from "./gen-items";
 
 try {
@@ -29,6 +30,13 @@ const gen = async () => {
     key: "abilities",
     generator: genAbilities,
     type_name: "Ability",
+    cast: "as const",
+  });
+
+  generator.addGenerator({
+    key: "npcs",
+    generator: genNpcs,
+    type_name: "NPC",
     cast: "as const",
   });
 
